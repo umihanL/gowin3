@@ -1,0 +1,594 @@
+
+开源汇总写在下面
+第18届全国大学生智能汽车竞赛四轮车开源讲解_Joshua.X的博客-CSDN博客
+开源链接写在下面
+https://gitee.com/joshua_xu/the-18th-smartcar
+https://gitee.com/joshua_xu/the-18th-smartcar
+注：文章中所有参数，角点范围之类的东西仅作为参考，实际参数，请根据需要实际调整！！！！！！！！！
+实际上，智能车所有参数都需要根据你的实际情况进行调整，万万不可照搬不误！！！！！
+一、元素识别
+智能车花费时间最多的就是元素识别这一环节，经过我们前几章摄像头矫正，边线提取，中线计算，速度/方向控制。这几个环节都做好的话，车子是可以在简单的赛道中间进行基本的寻迹。沿着直道，弯道走。
+但是想要完成比赛要求，需要对元素进行处理，包括但不限于：弯道，直道，十字，环岛，坡道，横断，断路，车库，三叉，T字等。
+我们从本章开始进行图像元素识别，元素识别主要是依靠特征点的排列组合，以及防止误判。
+而且元素识别最重要的是思路，我会详细讲解我的图像识别的思路，讲解特征点的提取。代码并不重要，我在下面提供的代码各位仅供参考。
+还是那句话：
+不同算法之间没有优劣之分，多少国赛选手仍跑着最简单的算法，这并不影响什么。
+注：以下方案有可能会用到一个或者多个下述变量，以下变量均在开源【3】边线提取一章有讲。
+const uint8  Standard_Road_Wide[MT9V03X_H];//标准赛宽数组
+volatile int Left_Line[MT9V03X_H]; //左边线数组
+volatile int Right_Line[MT9V03X_H];//右边线数组
+volatile int Mid_Line[MT9V03X_H];  //中线数组
+volatile int Road_Wide[MT9V03X_H]; //实际赛宽数组
+volatile int White_Column[MT9V03X_W];//每列白列长度
+volatile int Search_Stop_Line;     //搜索截止行,只记录长度，想要坐标需要用视野高度减去该值
+volatile int Boundry_Start_Left;   //左右边界起始点
+volatile int Boundry_Start_Right;  //第一个非丢线点,常规边界起始点
+volatile int Left_Lost_Time;       //边界丢线数
+volatile int Right_Lost_Time;
+volatile int Both_Lost_Time;//两边同时丢线数
+int Longest_White_Column_Left[2]; //最长白列,[0]是最长白列的长度，也就是Search_Stop_Line搜索截止行，[1】是第某列
+int Longest_White_Column_Right[2];//最长白列,[0]是最长白列的长度，也就是Search_Stop_Line搜索截止行，[1】是第某列
+int Left_Lost_Flag[MT9V03X_H] ; //左丢线数组，丢线置1，没丢线置0
+int Right_Lost_Flag[MT9V03X_H]; //右丢线数组，丢线置1，没丢线置0
+二、直道
+先看几张标准直道图像。
+   直道
+   直道
+   直道
+这几张图像都是在跑车时候实际的图片，各位可以看一看，长直道有什么特点。
+我在判断的时候用了以下几个特征点：
+前瞻很远，也就是Search_Stop_Line计数很大
+边界起始点很靠下
+赛道没有丢线，或者丢线很少
+摄像头获取到的误差很小
+代码如下
+/*-------------------------------------------------------------------------------------------------------------------
+  @brief     直道检测
+  @param     null
+  @return    null
+  Sample     Straight_Detect()；
+  @note      利用最长白列，边界起始点，中线起始点，
+-------------------------------------------------------------------------------------------------------------------*/
+void Straight_Detect(void)
+{
+    Straight_Flag=0;
+    if(Search_Stop_Line>=65)//截止行很远
+    {
+        if(Boundry_Start_Left>=68&&Boundry_Start_Right>=65)//起始点靠下
+        {
+            if(-5<=Err&&Err<=5)//误差很小
+            {
+                Straight_Flag=1;//认为是直道
+            }
+        }
+    }
+}
+我的直道判断写的其实不好，下面是我在比赛后看了一些技术报告，包括自己的一些想法
+中线分布方差
+视野远处到近处的斜率
+由于直道的情况下中线近乎是一条直线，所以中线数组的方差一定不会太大。
+视野远处到近处的斜率可以作为前方道路是否“直”的一个判断标准。
+三、弯道
+   缓弯
+   急弯
+弯道我没有进行处理，直接用的摄像头误差丢给pid进行计算的，但是想要跑的好，其实可以区分大小弯，这里可以提供一些建议。
+视野长度
+最长白列偏左还是偏右
+左/右边丢线数
+边界起始点位置
+中线位置
+曲率计算
+这些都可以组合起来，分辨出不同的弯，然后对应不同的参数，得到比较好的控制效果。
+s弯也是非常考验控制技术的一环。他不专门作为元素，但是比赛中可能会出现。处理的好可以做到如履平地，直线飞过。
+   小s弯
+   s弯
+实物图和图像图放在上面，大家可自行分析出特点，进行对应处理。
+四、十字
+说起十字，大家是不是想到这样的一张图
+   标准十字
+   正入十字环
+这是一张标准的十字，正常处理可以很简单。
+中间区域丢线多，找到四个拐点，连线即可即可。
+但是，你常常看到的是这样的十字：
+   超远十字
+   十字中途
+   近处变形十字
+   斜入十字
+   斜出十字
+这种斜入，斜出，弯道入，十字中途，都是十字。
+处理元素就要处理各种情况下的元素，不然没有实际意义。
+首先要观察这几张十字都有什么特征。
+存在双边丢线，且双边丢线基本位于视野中间。
+存在起码2个角点或者更多。
+最长白列较长。
+当发现以上情况可以启动十字判断流程。
+1.正入十字
+注：以下文章中：角点==拐点，两者是一个东西，没有区别。
+我们关注一下正入十字时的边线情况。
+   标准十字边线情况
+我们以左下角点为例，将图像放大来看。
+   左下角点放大情况
+画圆处是理想的角点，我们可以找一找他有什么规律。
+角点向下几个边线横坐标差距不大。
+角点向上几个边线横坐标差距较大，越向上横差距越大。
+角点向上可能会有丢线。
+当同时满足这些条件的时候，我认为我找到了一个角点。
+我将这种判断办法我称为边界撕裂法。
+   右下角点情况
+   右上角点情况
+   左上角点情况
+其他几个点的情况也差不多，都是在上角点上侧边线差距不大，下面边线差距很大，还有可能出现丢线，下角点同理。
+（角点只需要找到他所在的行数即可，找到所在行数，再去访问改行的左/右边线数组，就可以得到角点的坐标。举例：我找到左角点为i行，那么我访问Left_Line[i]，这个值即为他的列数，也就确定了这个角点的位置）
+左下角点判断函数参考如下：
+/*-------------------------------------------------------------------------------------------------------------------
+  @brief     左下角点检测
+  @param     起始行，终止行
+  @return    返回角点所在的行数，找不到返回0
+  Sample     left_down_guai[0]=Find_Left_Down_Point(MT9V03X_H-1,20);
+  @note      角点检测阈值可根据实际值更改
+-------------------------------------------------------------------------------------------------------------------*/
+int Find_Left_Down_Point(int start,int end)//找左下角点，返回值是角点所在的行数
+{
+    int i,t;
+    int left_down_line=0;
+    if(Left_Lost_Time>=0.9*MT9V03X_H)//大部分都丢线，没有拐点判断的意义
+       return left_down_line;
+    if(start<end)//--访问，要保证start>end
+    {
+        t=start;
+        start=end;
+        end=t;
+    }
+    if(start>=MT9V03X_H-1-5)//下面5行上面5行数据不稳定，不能作为边界点来判断，舍弃
+        start=MT9V03X_H-1-5;//另一方面，当判断第i行时，会访问到i+3和i-4行，防止越界
+    if(end<=MT9V03X_H-Search_Stop_Line)
+        end=MT9V03X_H-Search_Stop_Line;
+    if(end<=5)
+       end=5;
+    for(i=start;i>=end;i--)
+    {
+        if(left_down_line==0&&//只找第一个符合条件的点
+           abs(Left_Line[i]-Left_Line[i+1])<=5&&//角点的阈值可以更改
+           abs(Left_Line[i+1]-Left_Line[i+2])<=5&&  
+           abs(Left_Line[i+2]-Left_Line[i+3])<=5&&
+              (Left_Line[i]-Left_Line[i-2])>=5&&
+              (Left_Line[i]-Left_Line[i-3])>=10&&
+              (Left_Line[i]-Left_Line[i-4])>=10)
+        {
+            left_down_line=i;//获取行数即可
+            break;
+        }
+    }
+    return left_down_line;
+}
+注：
+有很多同学表示找不到角点，问我什么情况。
+其实我没见过你的车，也不知道你的代码怎么写的，也不知道你的图像什么样，我怎么知道为什么找不到角点呢？这里给大家写一下排查思路吧。
+角点判断与赛道边线有直接关系，建议先想办法看一下边线数据是否正常。
+我使用的是边线作差，有可能是你的图像和我不一样，角点处边线的差不是那么大，导致一直不满足撕裂条件，没有识别角点。
+也许丢线之类的条件根本没满足，都没进入到这里的函数，去查看一下丢线标志位之类的函数。
+相类似的角点判断这里不在重复阐述，核心原理是找到边界撕裂，记录边界撕裂起始处的行数。
+当找到四个角点时，对应连线即可。
+   左右对应点连上即可
+这里提供一下左边线连线函数，右边线同理，不再赘述。
+/*-------------------------------------------------------------------------------------------------------------------
+  @brief     左补线
+  @param     补线的起点，终点
+  @return    null
+  Sample     Left_Add_Line(int x1,int y1,int x2,int y2);
+  @note      补的直接是边界，点最好是可信度高的,不要乱补
+-------------------------------------------------------------------------------------------------------------------*/
+void Left_Add_Line(int x1,int y1,int x2,int y2)//左补线,补的是边界
+{
+    int i,max,a1,a2;
+    int hx;
+    if(x1>=MT9V03X_W-1)//起始点位置校正，排除数组越界的可能
+       x1=MT9V03X_W-1;
+    else if(x1<=0)
+        x1=0;
+     if(y1>=MT9V03X_H-1)
+        y1=MT9V03X_H-1;
+     else if(y1<=0)
+        y1=0;
+     if(x2>=MT9V03X_W-1)
+        x2=MT9V03X_W-1;
+     else if(x2<=0)
+             x2=0;
+     if(y2>=MT9V03X_H-1)
+        y2=MT9V03X_H-1;
+     else if(y2<=0)
+             y2=0;
+    a1=y1;
+    a2=y2;
+//这里有bug，下方循环++循环，只进行y的互换，但是没有进行x的互换
+//建议进行判断，根据a1和a2的大小关系，决定++或者--访问
+//这里修改各位自行操作
+    if(a1>a2)//坐标互换，这里建议修改，x坐标，y坐标一起交换，单纯换y坐标可能会导致bug
+    {
+        max=a1;
+        a1=a2;
+        a2=max;
+    }
+    for(i=a1;i<=a2;i++)//根据斜率补线即可
+    {
+        hx=(i-y1)*(x2-x1)/(y2-y1)+x1;
+        if(hx>=MT9V03X_W)
+            hx=MT9V03X_W;
+        else if(hx<=0)
+            hx=0;
+        Left_Line[i]=hx;
+    }
+}
+核心也就是两点确定一条直线。根据数学中的直线函数的两点式，填入对应数据，补线就行。
+当然，这是最理想的情况。
+2.斜入十字
+但凡车入十字时歪了，或者是急弯接着十字下面的两个拐点就看不见了。
+大家看一看上面我列举的几张斜入十字的图，但凡十字出现，下面的角点会有可能看不见，但是上面一定存在两个角点。
+所以我将十字判断的核心放到了上面两个角点上。
+只要上面两个拐点同时出现，且坐标位置合理，我就认为当前元素是十字，下面两个角点存在与否不重要，下面有点，那就连上，没有点就用其他办法。
+整套十字处理代码如下。
+全套函数中用到了
+void Find_Up_Point(int start,int end)； //搜索上角点，左上+右上
+void Find_Down_Point(int start,int end);//搜索下角点，左下+右下
+函数内容如下：
+/*-------------------------------------------------------------------------------------------------------------------
+  @brief     找下面的两个拐点，供十字使用
+  @param     搜索的范围起点，终点
+  @return    修改两个全局变量
+             Right_Down_Find=0;
+             Left_Down_Find=0;
+  Sample     Find_Down_Point(int start,int end)
+  @note      运行完之后查看对应的变量，注意，没找到时对应变量将是0
+-------------------------------------------------------------------------------------------------------------------*/
+void Find_Down_Point(int start,int end)
+{
+    int i,t;
+    Right_Down_Find=0;
+    Left_Down_Find=0;
+    if(start<end)
+    {
+        t=start;
+        start=end;
+        end=t;
+    }
+    if(start>=MT9V03X_H-1-5)//下面5行数据不稳定，不能作为边界点来判断，舍弃
+        start=MT9V03X_H-1-5;
+    if(end<=MT9V03X_H-Search_Stop_Line)
+        end=MT9V03X_H-Search_Stop_Line;
+    if(end<=5)
+       end=5;
+    for(i=start;i>=end;i--)
+    {
+        if(Left_Down_Find==0&&//只找第一个符合条件的点
+           abs(Left_Line[i]-Left_Line[i+1])<=5&&//角点的阈值可以更改
+           abs(Left_Line[i+1]-Left_Line[i+2])<=5&&
+           abs(Left_Line[i+2]-Left_Line[i+3])<=5&&
+              (Left_Line[i]-Left_Line[i-2])>=8&&
+              (Left_Line[i]-Left_Line[i-3])>=15&&
+              (Left_Line[i]-Left_Line[i-4])>=15)
+        {
+            Left_Down_Find=i;//获取行数即可
+        }
+        if(Right_Down_Find==0&&//只找第一个符合条件的点
+           abs(Right_Line[i]-Right_Line[i+1])<=5&&//角点的阈值可以更改
+           abs(Right_Line[i+1]-Right_Line[i+2])<=5&&
+           abs(Right_Line[i+2]-Right_Line[i+3])<=5&&
+              (Right_Line[i]-Right_Line[i-2])<=-8&&
+              (Right_Line[i]-Right_Line[i-3])<=-15&&
+              (Right_Line[i]-Right_Line[i-4])<=-15)
+        {
+            Right_Down_Find=i;
+        }
+        if(Left_Down_Find!=0&&Right_Down_Find!=0)//两个找到就退出
+        {
+            break;
+        }
+    }
+}
+/*-------------------------------------------------------------------------------------------------------------------
+  @brief     找上面的两个拐点，供十字使用
+  @param     搜索的范围起点，终点
+  @return    修改两个全局变量
+             Left_Up_Find=0;
+             Right_Up_Find=0;
+  Sample     Find_Up_Point(int start,int end)
+  @note      运行完之后查看对应的变量，注意，没找到时对应变量将是0
+-------------------------------------------------------------------------------------------------------------------*/
+void Find_Up_Point(int start,int end)
+{
+    int i,t;
+    Left_Up_Find=0;
+    Right_Up_Find=0;
+    if(start<end)
+    {
+        t=start;
+        start=end;
+        end=t;
+    }
+    if(end<=MT9V03X_H-Search_Stop_Line)
+        end=MT9V03X_H-Search_Stop_Line;
+    if(end<=5)//及时最长白列非常长，也要舍弃部分点，防止数组越界
+        end=5;
+    if(start>=MT9V03X_H-1-5)//下面5行数据不稳定，不能作为边界点来判断，舍弃
+        start=MT9V03X_H-1-5;
+    for(i=start;i>=end;i--)
+    {
+        if(Left_Up_Find==0&&//只找第一个符合条件的点
+           abs(Left_Line[i]-Left_Line[i-1])<=5&&
+           abs(Left_Line[i-1]-Left_Line[i-2])<=5&&
+           abs(Left_Line[i-2]-Left_Line[i-3])<=5&&
+              (Left_Line[i]-Left_Line[i+2])>=8&&
+              (Left_Line[i]-Left_Line[i+3])>=15&&
+              (Left_Line[i]-Left_Line[i+4])>=15)
+        {
+            Left_Up_Find=i;//获取行数即可
+        }
+        if(Right_Up_Find==0&&//只找第一个符合条件的点
+           abs(Right_Line[i]-Right_Line[i-1])<=5&&//下面两行位置差不多
+           abs(Right_Line[i-1]-Right_Line[i-2])<=5&&
+           abs(Right_Line[i-2]-Right_Line[i-3])<=5&&
+              (Right_Line[i]-Right_Line[i+2])<=-8&&
+              (Right_Line[i]-Right_Line[i+3])<=-15&&
+              (Right_Line[i]-Right_Line[i+4])<=-15)
+        {
+            Right_Up_Find=i;//获取行数即可
+        }
+        if(Left_Up_Find!=0&&Right_Up_Find!=0)//下面两个找到就出去
+        {
+            break;
+        }
+    }
+    if(abs(Right_Up_Find-Left_Up_Find)>=30)//纵向撕裂过大，视为误判
+    {
+        Right_Up_Find=0;
+        Left_Up_Find=0;
+    }
+}
+void Cross_Detect()
+{
+    int down_search_start=0;//下角点搜索开始行
+    Cross_Flag=0;
+    if(Island_State==0&&Ramp_Flag==0)//与环岛互斥开
+    {
+        Left_Up_Find=0;
+        Right_Up_Find=0;
+        if(Both_Lost_Time>=10)//十字必定有双边丢线，在有双边丢线的情况下再开始找角点
+        {
+            Find_Up_Point( MT9V03X_H-1, 0 );
+            if(Left_Up_Find==0&&Right_Up_Find==0)//只要没有同时找到两个上点，直接结束
+            {
+                return;
+            }
+        }
+        if(Left_Up_Find!=0&&Right_Up_Find!=0)//找到两个上点，就认为找到十字了
+        {
+            Cross_Flag=1;//确定对应标志位，便于各元素互斥掉
+            down_search_start=Left_Up_Find>Right_Up_Find?Left_Up_Find:Right_Up_Find;//用两个上拐点坐标靠下者作为下点的搜索上限
+            Find_Down_Point(MT9V03X_H-5,down_search_start+2);//在上拐点下2行作为下角点的截止行
+            if(Left_Down_Find<=Left_Up_Find)
+            {
+                Left_Down_Find=0;//下点不可能比上点还靠上
+            }
+            if(Right_Down_Find<=Right_Up_Find)
+            {
+                Right_Down_Find=0;//下点不可能比上点还靠上
+            }
+            if(Left_Down_Find!=0&&Right_Down_Find!=0)
+            {//四个点都在，无脑连线，这种情况显然很少
+                Left_Add_Line (Left_Line [Left_Up_Find ],Left_Up_Find ,Left_Line [Left_Down_Find ] ,Left_Down_Find);
+                Right_Add_Line(Right_Line[Right_Up_Find],Right_Up_Find,Right_Line[Right_Down_Find],Right_Down_Find);
+            }
+            else if(Left_Down_Find==0&&Right_Down_Find!=0)//11//这里使用的是斜率补线
+            {//三个点                                     //01
+                Lengthen_Left_Boundry(Left_Up_Find-1,MT9V03X_H-1);
+                Right_Add_Line(Right_Line[Right_Up_Find],Right_Up_Find,Right_Line[Right_Down_Find],Right_Down_Find);
+            }
+            else if(Left_Down_Find!=0&&Right_Down_Find==0)//11
+            {//三个点                                      //10
+                Left_Add_Line (Left_Line [Left_Up_Find ],Left_Up_Find ,Left_Line [Left_Down_Find ] ,Left_Down_Find);
+                Lengthen_Right_Boundry(Right_Up_Find-1,MT9V03X_H-1);
+            }
+            else if(Left_Down_Find==0&&Right_Down_Find==0)//11
+            {//就俩上点                                    //00
+                Lengthen_Left_Boundry (Left_Up_Find-1,MT9V03X_H-1);
+                Lengthen_Right_Boundry(Right_Up_Find-1,MT9V03X_H-1);
+            }
+        }
+        else
+        {
+            Cross_Flag=0;
+        }
+    }
+    //角点相关变量，debug使用
+    //ips200_showuint8(0,12,Cross_Flag);
+//    ips200_showuint8(0,13,Island_State);
+//    ips200_showuint8(50,12,Left_Up_Find);
+//    ips200_showuint8(100,12,Right_Up_Find);
+//    ips200_showuint8(50,13,Left_Down_Find);
+//    ips200_showuint8(100,13,Right_Down_Find);
+}
+判断流程如下
+当前状态不是环岛，不是坡道，因为需要做到元素互斥，一次只有可能是一个元素。
+图像中累计双边丢线数量大于10，开始找上拐点。
+上拐点找到了，以上拐点纵坐标靠下者作为下拐点搜索的上限。
+搜索下拐点。
+下拐点位置合理性判断，下拐点不可能比上拐点还靠上。
+如果四个点都存在，直接连线；三个点存在，根据条件使用斜率补线和直接连线。
+只有两个上点存在，进行斜率补线。
+   十字判断流程图
+这样处理十字有一个好处，不用进行十字的状态机处理。
+传统十字需要区分如下状态：
+车即将入十字，存在四个角点；
+车已经进入十字，只有两个上角点，
+车即将出十字，上角点靠下；
+车出十字，角点消失。
+我实测四个角点同时出现的情况太少了，几乎看不到，所以没有使用传统方法。
+用我们现在这种方法可以省去状态机，有几个角点就按照对应着连线，不再区分十字状态。
+3.补线
+我的十字补线函数有两种：
+Lengthen_Left_Boundry (Left_Up_Find-1,MT9V03X_H-1);
+Lengthen_Right_Boundry(Right_Up_Find-1,MT9V03X_H-1);
+Left_Add_Line (Left_Line [Left_Up_Find ],Left_Up_Find ,Left_Line [Left_Down_Find ] ,Left_Down_Find);
+Right_Add_Line(Right_Line[Right_Up_Find],Right_Up_Find,Right_Line[Right_Down_Find],Right_Down_Find);
+一个是Add_Line，一个是Lengthen_Left，两者有很大区别。
+Add_Line的用途：两点确定一条直线。
+Lengthen_Left用途：只有一个点，在这个点向上找点确定斜率，画出一根线。因为十字角点向上一定是短直道，那么我就沿着直道向下做一个斜率补线。
+Lengthen_Left详情如下。
+函数有两个参数，一个是补线起始行，一个是终止补线行。
+角点处开始，向上移动三行，顺便访问该行的边线的横坐标。
+这样我们就得到了两个点（补线起始行，补线起始行上面第3行，确定了行数再去找一下对应行数的边界的横坐标，就有了两个点的坐标），就可以算出这一条短线的斜率。
+有一个点（起始点），有斜率（起始点，起始点向上数3行的点，这两点之间的斜率），就可以向下补线，补到终止行即可。
+   斜率补线示意图
+这样补的线和下面的角点就没有关系，无论有没有下角点，都可以补出一条边界线。
+代码如下
+/*-------------------------------------------------------------------------------------------------------------------
+  @brief     右左边界延长
+  @param     延长起始行数，延长到某行
+  @return    null
+  Sample     Lengthen_Right_Boundry(int start,int end)；
+  @note      从起始点向上找3个点，算出斜率，向下延长，直至结束点
+-------------------------------------------------------------------------------------------------------------------*/
+void Lengthen_Right_Boundry(int start,int end)
+{
+    int i,t;
+    float k=0;
+    if(start>=MT9V03X_H-1)//起始点位置校正，排除数组越界的可能
+        start=MT9V03X_H-1;
+    else if(start<=0)
+        start=0;
+    if(end>=MT9V03X_H-1)
+        end=MT9V03X_H-1;
+    else if(end<=0)
+        end=0;
+    if(start<=5 && start <= end)//因为需要在开始点向上找3个点，对于起始点过于靠上，不能做延长，只能直接连线
+    {
+        Right_Add_Line(Right_Line[start],start,Right_Line[end],end);
+    }
+    else
+    {
+        k=(float)(Right_Line[start]-Right_Line[start-4])/5.0;//这里的k是1/斜率
+        if(start<=end)
+        {
+            for(i=start;i<=end;i++)
+            {
+                Right_Line[i]=(int)(i-start)*k+Right_Line[start];//(x=(y-y1)*k+x1),点斜式变形
+                if(Right_Line[i]>=MT9V03X_W-1)
+                {
+                    Right_Line[i]=MT9V03X_W-1;
+                }
+                else if(Right_Line[i]<=0)
+                {
+                    Right_Line[i]=0;
+                }
+            }
+        }
+        else
+        {
+            for(i=end;i<=start;i++)
+            {
+                Right_Line[i]=(int)(i-start)*k+Right_Line[start];//(x=(y-y1)*k+x1),点斜式变形
+                if(Right_Line[i]>=MT9V03X_W-1)
+                {
+                    Right_Line[i]=MT9V03X_W-1;
+                }
+                else if(Right_Line[i]<=0)
+                {
+                    Right_Line[i]=0;
+                }
+            }
+        }
+    }
+}
+但斜率补线也有bug，当图像的边界撕裂不是那么明显的时候，会找错角点，然后根据斜率补出一条有问题的线。
+   角点处撕裂不明显，斜率补线出现bug
+   十字出现bug
+上面一张图出现2个bug。
+左上角点附近撕裂不明显，角点附近过斜率缓，导致角点向上的边线斜率与正常直道斜率不一致，补线出现异常。
+右下角角点没判，是由于角向上几行撕裂程度小于阈值，就不认为他是角点。就没有使用上下角点之间直接拉线，用的斜率补线。
+所以需要我们将十字附近黑胶贴的稳定，笔直，牢固，防止反光之类的情况发生。
+另外角点的阈值也需要根据实际情况进行修改，做到稳定不误判。
+下面是我利用上面的十字判断方法实际跑出来的小s接十字环，效果很好。
+   小s入十字环
+五、关于屏幕显示边线，以及使用的建议
+最近好多人问我为什么在屏幕上显示边界，补线等信息后屏幕会一闪一闪的，这里我提出一些自己的想法和建议。
+首先，屏幕闪烁，很可能是屏幕在显示过程中显示不同东西，不同函数显示区域有重叠。显示一般放在while中（屏幕显示函数不建议放在中断），造成同一个区域两个函数左右互搏，造成闪烁。
+还有可能是先显示图像，再显示补线之类，这样其实就是左右互搏。图像显示区域必定和补线区域重合。所以我建议先补线，最后再显示图像。
+其次，即使已经十分合理的划分好了显示区域，函数调用时机不同，也有可能出现这种情况。比如在while最开始二值化后调用了图像显示。车模在十字时候，大家想看一下补线情况，就在十字判断处显示补线情况，在函数某处还调用了各自标志位显示函数，在while结束调用了边线显示函数。这样在不用时间对屏幕不同区域进行显示也有可能会对显示造成影响。尽量避免。
+这里给大家说下我推荐的做法。（当然在debug的时候肯定各种显示函数漫天放，这是没有办法的事情。但是在debug完毕后，大家一定记得将相关调试时的用于辅助的显示函数关闭）
+一些建议如下：
+所有显示函数放在一起。是指调用显示函数时候一起调用，第一行显示a，第二行显示b，只要把这一批函数注释掉，屏幕就空了。不然你有可能很奇怪，屏幕上的是什么玩意，明明已经把显示关掉了，其实是你在工程某个角落还调用了某个元素标志位显示。
+所有图像显示放在while的最后。如果是先进行图像显示，后又进行了补线，那么图像显示的仍然是原来没补线的内容。因为你显示函数运行的时候还没补线呢。
+我边线显示是
+在所有边线，元素处理完毕后
+直接修改二值化数组，不是在屏幕上使用点显示。（我也使用过点显示，在图线边线处使用红点将左边线显示出来，绿点中线，蓝点右线，这样有概率会屏幕闪烁）
+以下是我的边线显示函数，他其实是一个半成品，只是在
+《二值化数组》
+边界点处将相应的点涂黑，边线+1或者-1是为了让边线不贴合黑白交界处，让肉眼更清楚的看到边线。
+他并不具备显示功能，想要显示需要调用图像显示函数，也因此我只需要显示一次图像就好，不存在图像显示重叠的问题，而且使用图传也可以看见边线（补线其实也是修改的边线数据，所有不受补线影响）。
+/*-------------------------------------------------------------------------------------------------------------------
+  @brief     边界显示，用于图传，显示到屏幕上，
+  @param     null
+  @return    null
+  Sample     直接调用
+  @note      显示左中右边界，中线，
+             正常情况下不要用，因为直接在原图上写入了边界信息
+             会对元素判断造成干扰的，调试时候调用，
+             使用时请保证所有边线数据，元素处理都完成
+             此函数后请调用图线显示函数
+-------------------------------------------------------------------------------------------------------------------*/
+void Show_Boundry(void)
+{
+    int16 i;
+    for(i=MT9V03X_H-1;i>=MT9V03X_H-Search_Stop_Line;i--)//从最底下往上扫描
+    {
+        image_two_value[i][Left_Line[i]+1]=IMG_BLACK;
+        image_two_value[i][(Left_Line[i]+Right_Line[i])>>1]=IMG_BLACK;
+        image_two_value[i][Right_Line[i]-1]=IMG_BLACK;
+    }
+}
+这是main函中while（1）的函数调用顺序：
+ while(1)//实测一圈while基本10ms左右，理论上在15毫秒左右，都在可接受范围之内
+    {
+        if(mt9v03x_finish_flag)//图像获取
+        {
+            if(Img_Disappear_Flag==0)//图没有丢，正常计算阈值
+            {
+                Threshold=My_Adapt_Threshold(mt9v03x_image[0],MT9V03X_W, MT9V03X_H);//大津计算阈值
+            }
+            else
+            {
+              //出界后不算阈值，由于全局变量特性，会保留上次的阈值，确保出去之后屏幕是黑的，防止出现雪花屏
+            }
+            Image_Binarization(Threshold);//图像二值化
+            mt9v03x_finish_flag=0;//标志位清除，自行准备采集下一帧数据
+        }
+        Longest_White_Column();//最长白列巡线
+        //元素放在下面
+        if(Go==7)//GO==7才是常规寻迹，不在7里面，只做最简单的巡线，不去识别元素
+        {
+            Zebra_Stripes_Detect();
+            Ramp_Detect();
+            Barricade_Detect();
+            Break_Road_Detect();
+            Island_Detect();
+            Cross_Detect();
+            Img_Disappear_Detect();
+            ////Straight_Detect();//赛场上估计没有长直道
+        }
+        //元素放在上面
+        Err=Err_Sum();      //误差计算
+        Direction_Control();//方向控制
+//        Show_Boundry();
+//        ips200_show_gray_image(0,0,image_two_value[0],MT9V03X_W,MT9V03X_H,MT9V03X_W,MT9V03X_H,0);
+//        Zw_SendImage(image_two_value[0]);
+    }
+首先是图像预处理，阈值，二值化之类的操作；
+然后是基本巡线，搜索边线，丢线，记录赛道基本数据；
+元素判断，根据基本数据进行元素判断，在元素中会进行角点，单调点等进行进一步判断，同时进行边界补线等；
+误差计算，补线在元素处理中就完成了，到这里边线数据就可以变为误差控制数据；
+边线直接写入图像，由于我直接修改了二值化图像，所以必须等到所有图像处理后才可以使用此函数；
+显示，由于我的边线信息直接写进图像里面，那我直接使用图传，或者屏幕显示图像函都可看见边线。
+当然，出现问题时候，一行一行代码注释，一行一行再加回来，精确定位故障代码，没什么好办法。
+希望能够帮助到一些人。
+本人菜鸡一只，各位大佬发现问题欢迎留言指出
+  

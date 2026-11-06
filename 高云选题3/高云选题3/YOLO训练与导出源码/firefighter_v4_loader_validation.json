@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "policy_version": "preserve-visible-tiny-v1",
+  "ultralytics": "8.3.253",
+  "torch": "2.8.0+cu128",
+  "device": "CPU preprocessing only",
+  "model_loaded": false,
+  "training_performed": false,
+  "all_train_images_checked": true,
+  "counts": {
+    "tiny_boxes_before": 8154,
+    "tiny_boxes_after": 8154,
+    "images": 4656,
+    "boxes_before": 43708,
+    "boxes_after": 43708,
+    "negative_images": 512
+  },
+  "seconds": 65.78100000000268,
+  "data_yaml_sha256": "7e663b4f29e1956f20cd763499ba79a99d6a51dd9a6bc0129a36bc995da329de",
+  "trainer_source_sha256": "9bd1736a8a7f3c62e621930af38ded8a9e3e1017892b757ef1b7d45fec9ca40a",
+  "transforms": [
+    "LetterBox",
+    "RandomHSV",
+    "Format"
+  ],
+  "boundary": "Verifies data loading, label count and coordinates. It does not establish small-object detection accuracy."
+}

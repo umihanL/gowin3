@@ -1,0 +1,86 @@
+"""Reuse live MIPI YOLO; route Mission to X5 PD42 serial (or PWM) and pump GPIO.
+
+No camera or detector is started here. Defaults perform no hardware I/O.
+Do not start a second Mission/FPGA bridge alongside the full system launch.
+"""
+from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch_ros.actions import Node
+from launch_ros.parameter_descriptions import ParameterValue
+
+
+def generate_launch_description():
+    root = LaunchConfiguration('workspace_dir')
+    path = lambda name: PathJoinSubstitution([root, 'config', name])
+    flag = lambda name: ParameterValue(LaunchConfiguration(name), value_type=bool)
+    arguments = [
+        DeclareLaunchArgument('workspace_dir'),
+        DeclareLaunchArgument('actuator_dry_run', default_value='true'),
+        DeclareLaunchArgument('pd42_reference_confirmed', default_value='false'),
+        DeclareLaunchArgument('manual_pump_test_enabled', default_value='false'),
+        DeclareLaunchArgument('uart_dry_run', default_value='true'),
+        DeclareLaunchArgument('uart_port', default_value=''),
+        DeclareLaunchArgument('maneuver_enabled', default_value='true'),
+        DeclareLaunchArgument('manual_motion_enabled', default_value='false'),
+        DeclareLaunchArgument('task_profiles_enabled', default_value='false'),
+        DeclareLaunchArgument('fixed_camera_observation', default_value='false'),
+        DeclareLaunchArgument('extension_enabled', default_value='false'),
+        DeclareLaunchArgument('navigation_owner', default_value='x5'),
+        DeclareLaunchArgument('initial_mode', default_value='idle'),
+        DeclareLaunchArgument('arrival_policy', default_value='manual'),
+        DeclareLaunchArgument('traffic_config', default_value=path('traffic.json')),
+        DeclareLaunchArgument('require_target_selection', default_value='false'),
+        DeclareLaunchArgument('io_config', default_value=path('actuator_io.template.json')),
+        DeclareLaunchArgument('control_config', default_value=path('local_fire_control.template.json')),
+        DeclareLaunchArgument('mount_config', default_value=path('mount.template.json')),
+        DeclareLaunchArgument('servo_config', default_value=path('servo.template.json')),
+        DeclareLaunchArgument('fixed_camera_aim_config', default_value=''),
+        DeclareLaunchArgument('fixed_camera_landing_config', default_value=path('fixed_camera_landing.template.json')),
+        DeclareLaunchArgument('landing_calibration', default_value=path('landing.corrected.template.json')),
+        DeclareLaunchArgument('stereo_calibration', default_value=path('stereo.template.json')),
+        DeclareLaunchArgument('stereo_runtime', default_value=path('stereo_runtime.template.json')),
+        DeclareLaunchArgument('nozzle_calibration', default_value=path('nozzle.template.json')),
+        DeclareLaunchArgument('lens_intrinsics', default_value=path('gs130w_intrinsics_20261010.json')),
+        DeclareLaunchArgument('lens_alpha', default_value='0.0'),
+        DeclareLaunchArgument('fixed_observation_range_m', default_value='0.0'),
+        DeclareLaunchArgument('fixed_observation_verified', default_value='false'),
+    ]
+    def node(name, values):
+        # UART feedback has a short deadline while vision/OCR can saturate X5.
+        # Use ordinary CFS priority (never real-time/FIFO); no timing gate changes.
+        priority = {'prefix': 'nice -n -10'} if name == 'local_actuator' else {}
+        return Node(package='rescue_vision', executable=name, output='screen', parameters=[values], **priority)
+    return LaunchDescription(arguments + [
+        node('stereo_depth', dict(runtime_config=LaunchConfiguration('stereo_runtime'),
+             stereo_calibration=LaunchConfiguration('stereo_calibration'),
+             lens_intrinsics=LaunchConfiguration('lens_intrinsics'),
+             lens_alpha=ParameterValue(LaunchConfiguration('lens_alpha'), value_type=float))),
+        node('mission', dict(gimbal_transport='x5', traffic_config=LaunchConfiguration('traffic_config'),
+             navigation_owner=LaunchConfiguration('navigation_owner'),initial_mode=LaunchConfiguration('initial_mode'),
+             arrival_policy=LaunchConfiguration('arrival_policy'),
+             task_profiles_enabled=flag('task_profiles_enabled'),
+             fixed_camera_observation=flag('fixed_camera_observation'),
+             extension_enabled=flag('extension_enabled'),
+             mount_config=LaunchConfiguration('mount_config'))),
+        node('fpga_bridge', dict(dry_run=flag('uart_dry_run'),
+             maneuver_enabled=flag('maneuver_enabled'),
+             manual_motion_enabled=flag('manual_motion_enabled'),
+             port=LaunchConfiguration('uart_port'), gimbal_enabled=False)),
+        node('fire_aim', dict(servo_config=LaunchConfiguration('servo_config'),
+             fixed_camera_aim_config=LaunchConfiguration('fixed_camera_aim_config'),
+             fixed_camera_landing_config=LaunchConfiguration('fixed_camera_landing_config'),
+             require_selection=flag('require_target_selection'),
+             detections_topic='/perception/depth_detections',
+             nozzle_calibration=LaunchConfiguration('nozzle_calibration'),
+             stereo_calibration=LaunchConfiguration('stereo_calibration'),
+             landing_calibration=LaunchConfiguration('landing_calibration'),
+             fixed_observation_range_m=ParameterValue(LaunchConfiguration('fixed_observation_range_m'), value_type=float),
+             fixed_observation_verified=flag('fixed_observation_verified'))),
+        node('local_actuator', dict(dry_run=flag('actuator_dry_run'),
+             manual_pump_test_enabled=flag('manual_pump_test_enabled'),
+             pd42_reference_confirmed=flag('pd42_reference_confirmed'),
+             require_target_selection=flag('require_target_selection'),
+             io_config=LaunchConfiguration('io_config'),
+             control_config=LaunchConfiguration('control_config'))),
+    ])

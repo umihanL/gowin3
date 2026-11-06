@@ -1,0 +1,20 @@
+[
+  {
+    "case": 0,
+    "passed": true,
+    "log": "sim/navigation_followup_gate_0.log",
+    "sha256": "a7d9c6e7d0f18865072bc53e89451cd2f14d16c31dacbcb244cf46edfe15bf2e"
+  },
+  {
+    "case": 1,
+    "passed": true,
+    "log": "sim/navigation_followup_gate_1.log",
+    "sha256": "24a1dab08ab30fa0634cad56740c53b6b34213cd6fcd9d16a8ee5832293c1d00"
+  },
+  {
+    "case": 2,
+    "passed": true,
+    "log": "sim/navigation_followup_gate_2.log",
+    "sha256": "df1c1271bafeaa90c31fcd16ec16ff5d94dcce7568291ba06e61743d18644983"
+  }
+]

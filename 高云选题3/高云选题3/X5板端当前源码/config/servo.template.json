@@ -1,0 +1,15 @@
+{
+  "enabled": false,
+  "mounting_verified": false,
+  "pan_home_deg": 90.0,
+  "tilt_home_deg": 90.0,
+  "pan_limits_deg": [30.0, 150.0],
+  "tilt_limits_deg": [40.0, 140.0],
+  "pan_sign_for_right": 1,
+  "tilt_sign_for_up": 1,
+  "kp": 0.35,
+  "max_speed_deg_s": 20.0,
+  "max_step_deg": 1.5,
+  "pan_deg_per_px": null,
+  "tilt_deg_per_px": null
+}

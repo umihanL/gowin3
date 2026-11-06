@@ -1,0 +1,179 @@
+{
+  "mode": "fixed_camera_3d",
+  "calibrated": false,
+  "calibration_id": null,
+  "stereo_calibration_id": "gs130w_factory_ce8ac6b9c53913d9ad306b44",
+  "source_frame": "undistorted_left_optical",
+  "image_size_wh": [
+    1280,
+    1088
+  ],
+  "translation_unit": "m",
+  "R_camera_to_gimbal": [
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      -1,
+      0,
+      0
+    ],
+    [
+      0,
+      -1,
+      0
+    ]
+  ],
+  "t_camera_origin_in_gimbal_m": [
+    0.13,
+    0.095,
+    0
+  ],
+  "axis_model": "serial_pan_z_tilt_minus_y_with_offsets",
+  "tilt_origin_in_pan_m": [
+    0,
+    0,
+    0.03
+  ],
+  "nozzle_origin_in_tilt_m": [
+    0,
+    -0.007,
+    0.005
+  ],
+  "nozzle_direction_in_tilt": [
+    1,
+    0,
+    0
+  ],
+  "actuator_reference_id": null,
+  "axis_reference_verified": false,
+  "axes": {
+    "pan": {
+      "zero_angle_deg": null,
+      "positive_direction": null,
+      "limits_deg": null
+    },
+    "tilt": {
+      "zero_angle_deg": null,
+      "positive_direction": null,
+      "limits_deg": null
+    }
+  },
+  "valid_range_m": null,
+  "max_speed_deg_s": 12.0,
+  "max_step_deg": 0.6,
+  "angle_tolerance_deg": 0.3,
+  "line_tolerance_m": 0.002,
+  "min_forward_ray_m": 0.05,
+  "stable_lock_s": 0.35,
+  "max_frame_age_s": 0.5,
+  "max_encoder_age_s": 0.2,
+  "max_target_shift_m": 0.02,
+  "notes": "2026-11-03 r2 offsets remain authoritative: vehicle x forward/y left/z up, C-P=[-95,130,0] mm, T-P=[0,0,30] mm, N-T=[7,0,5] mm. P is the pan reference and T is 30 mm above P; the 7 mm is VEHICLE forward. Gimbal x=vehicle left, y=vehicle rear, z=up. The user confirms C is the physical-left lens centre, camera heading vehicle left with zero pitch and roll; its optical right/down/forward axes therefore map to gimbal -y/-z/+x. R_camera_to_gimbal is [[0,0,1],[-1,0,0],[0,-1,0]]. At the defined horizontal leftward geometric zero the nozzle points along gimbal +x; [1,0,0] is not the current standby direction or an encoder reference. Factory stereo gs130w_factory_ce8ac6b9c53913d9ad306b44 provides 1280x1088 undistorted_left_optical from physical-left /image_right_raw; the sidecar rotates rectified XYZ back by R1 transpose. The user requests straight nozzle-ray alignment without water drop or landing correction. Explicit water_aim_policy=straight_ray implements that request and skips water-drop/landing compensation. Geometry, verified stereo frames and real encoder/profile references remain required before automatic operation. Encoder zero/directions/reference, verified stereo depth and remaining commissioning are not fabricated. calibrated=false and all verification flags remain unchanged; no water impact samples or verified hit are asserted.",
+  "installation_measurement_id": "installation_user_20261103_r2",
+  "gimbal_base_frame": "x_vehicle_left_y_vehicle_rear_z_up",
+  "measurement_status": "user_reported_offsets_and_level_left_orientation_remaining_calibration_pending",
+  "installation_measurements": {
+    "date": "2026-11-03",
+    "revision": 2,
+    "supersedes": "installation_user_20261103",
+    "unit": "mm",
+    "vehicle_frame": "x_forward_y_left_z_up",
+    "origin": "P: user measured reference on pan axis; tilt reference T is 30 mm above P",
+    "camera_relative_to_pan_vehicle_mm": [
+      -95,
+      130,
+      0
+    ],
+    "tilt_relative_to_pan_vehicle_mm": [
+      0,
+      0,
+      30
+    ],
+    "nozzle_relative_to_tilt_vehicle_mm": [
+      7,
+      0,
+      5
+    ],
+    "initial_camera_and_nozzle_heading": "vehicle_left",
+    "Q_vehicle_to_gimbal": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "source": "Latest user measurement table supersedes previous dimensions and origin assumption",
+    "camera_reference": "physical_left_lens_center"
+  },
+  "vehicle_reference_measurements": {
+    "measurement_id": "vehicle_reference_user_20261103",
+    "unit": "m",
+    "vehicle_frame": "x_forward_y_left_z_up",
+    "origin": "ground_projection_of_nose_midpoint",
+    "pan_origin_vehicle_m": [
+      -0.25,
+      -0.055,
+      0.27
+    ],
+    "camera_reference": "physical_left_lens_center",
+    "camera_origin_vehicle_m": [
+      -0.345,
+      0.075,
+      0.27
+    ],
+    "tilt_origin_vehicle_m": [
+      -0.25,
+      -0.055,
+      0.3
+    ],
+    "nozzle_origin_at_geometric_zero_vehicle_m": [
+      -0.243,
+      -0.055,
+      0.305
+    ],
+    "source": "User confirmed C is left lens centre; P is 25cm behind, 5.5cm right, 27cm above ground relative to nose midpoint. Combined with installation_user_20261103_r2 offsets.",
+    "camera_orientation_measured": false,
+    "water_impact_measured": false,
+    "camera_orientation_source": "explicit_user_level_left_declaration_20261103"
+  },
+  "orientation_user_statement": {
+    "statement_id": "camera_level_left_user_20261103",
+    "source": "explicit_user_confirmation",
+    "camera_heading_vehicle": "left",
+    "camera_pitch_deg": 0,
+    "camera_roll_deg": 0,
+    "reference_optical_frame": "undistorted_left_optical",
+    "optical_axes_in_vehicle": {
+      "right": "+vehicle_x",
+      "down": "-vehicle_z",
+      "forward": "+vehicle_y"
+    },
+    "nozzle_geometric_zero_heading_vehicle": "left",
+    "nozzle_geometric_zero_elevation_deg": 0,
+    "notes": "Camera pitch/roll and shared leftward heading are user declarations. The nozzle vector describes the defined horizontal geometric zero, not the current standby posture or an encoder zero. No independent precision measurement, stereo verification or water impact verification is asserted."
+  },
+  "aiming_policy_request": {
+    "requested_model": "straight_nozzle_ray",
+    "water_drop_compensation": false,
+    "water_landing_compensation": false,
+    "source": "explicit_user_request_20261103",
+    "implementation_status": "implemented_pending_stereo_and_axis_commissioning",
+    "notes": "Explicit straight_ray policy is implemented. Automatic operation still requires verified current stereo frames, calibrated geometry and actual encoder reference, plus matching geometry/mount/pump profile identities. No water-impact claim or automatic readiness is asserted."
+  },
+  "water_aim_policy": "straight_ray",
+  "camera_nozzle_mount_id": null,
+  "pump_setting_id": null
+}

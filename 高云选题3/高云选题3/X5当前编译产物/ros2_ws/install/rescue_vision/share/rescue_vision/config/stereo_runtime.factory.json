@@ -1,0 +1,23 @@
+{
+  "enabled": true,
+  "observation_only": true,
+  "physical_eye_mapping_verified": false,
+  "synchronization_verified": false,
+  "metric_depth_verified": false,
+  "verification_id": null,
+  "physical_left_topic": "/image_right_raw",
+  "physical_right_topic": "/image_left_raw",
+  "input_rotation_deg": 90.0,
+  "process_fps": 2.5,
+  "max_frame_age_s": 0.5,
+  "observation_max_age_s": 1.5,
+  "max_pair_skew_s": 0.012,
+  "queue_size": 32,
+  "opencv_threads": 2,
+  "require_fire_mode": true,
+  "scene_probe_enabled": true,
+  "scene_probe_size_px": 100,
+  "regional_compute": true,
+  "matcher": {},
+  "notes": "Factory EEPROM depth observation. Estimates are displayed separately; no unverified depth is published as a control target. Capture pairing is not exposure synchronization verification. Pixel resolution is unchanged."
+}

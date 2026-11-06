@@ -1,0 +1,85 @@
+﻿{
+  "image_width": 640,
+  "image_height": 480,
+  "measured_mount": {
+    "height_mm": 175,
+    "forward_from_nose_mm": -25,
+    "left_from_centre_mm": 5,
+    "downward_pitch_deg": 25.0,
+    "centre_ground_from_nose_mm": 388,
+    "effective_projection_pitch_deg": 22.963773059854553
+  },
+  "provisional_intrinsics": {
+    "horizontal_fov_deg": 60,
+    "fx": 554.2562584220408,
+    "fy": 554.2562584220408,
+    "cx": 319.5,
+    "cy": 239.5,
+    "yaw_deg": 0,
+    "roll_deg": 0,
+    "distortion": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "intrinsics_calibrated": false,
+  "road_widths_mm": {
+    "outer_width_mm": 286,
+    "inner_width_mm": 254,
+    "outer_edge_radius_mm": 376
+  },
+  "measured_ground_calibration": {
+    "upper_left_forward_from_nose_mm": 600,
+    "upper_left_left_from_centre_mm": 100,
+    "lower_right_forward_from_nose_mm": 200,
+    "lower_right_left_from_centre_mm": -100,
+    "pixel_coordinates_supplied": false,
+    "note": "Ground coverage endpoints are known; their pixel coordinates and lens intrinsics remain unmeasured."
+  },
+  "assumptions": [
+    "lens is 25 mm behind nose",
+    "zero optical yaw and roll",
+    "60 degree horizontal field of view; square pixels",
+    "zero lens distortion",
+    "black road on light floor"
+  ],
+  "signal_units": {
+    "road_near": "lateral vehicle error at nose, mm",
+    "road_heading": "vehicle minus road heading, tenths of degree"
+  },
+  "scanlines": [
+    {
+      "name": "NEAR",
+      "row": 60,
+      "centre": 52,
+      "centre_q1": 105,
+      "mm_per_thumbnail_column": 3.158091421696429,
+      "forward_from_nose_mm": 209.76753138222946,
+      "minimum_run_columns": 36,
+      "maximum_run_columns": 100
+    },
+    {
+      "name": "MIDDLE",
+      "row": 46,
+      "centre": 52,
+      "centre_q1": 105,
+      "mm_per_thumbnail_column": 4.11322316254309,
+      "forward_from_nose_mm": 303.1971787322421,
+      "minimum_run_columns": 27,
+      "maximum_run_columns": 100
+    },
+    {
+      "name": "FAR",
+      "row": 32,
+      "centre": 52,
+      "centre_q1": 104,
+      "mm_per_thumbnail_column": 5.8965830823284335,
+      "forward_from_nose_mm": 477.64294498433554,
+      "minimum_run_columns": 19,
+      "maximum_run_columns": 71
+    }
+  ]
+}

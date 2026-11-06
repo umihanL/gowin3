@@ -1,0 +1,21 @@
+{
+  "exit_code": 1,
+  "inputs": {
+    "src/vehicle/host_uart_rx.v": "4f77c892c2adc04b1960e29b44ba1def45aa83510d75b8c51669f3aceff3bf1a",
+    "src/vehicle/vehicle_bypass.v": "c6152618718b7268cd3ac4b18a1b1350054958e5a98d0d7d49a58dc23363a19c",
+    "src/vehicle/vehicle_host_link.v": "686cf09e4483bc8bd24a0e3116f4fa0da4e762810a9626a566719e1e12f225f0",
+    "impl/baseline_navigation_startfix_20261027/src/vehicle/vehicle_motion.v": "d95929edb20f249698ca4e6de38a68bca9c0db5e7329c9440a33cae7ebc2edd9",
+    "src/vehicle/vehicle_odometry.v": "30153e70b240b97d39861f468fffcfdfad0e13c145396d02fbc64a0a77c2b43f",
+    "src/vehicle/vehicle_route_profile.v": "5b9c9ba9afa19b8f91998662491a5e8b4863df2ee0e16079860522d448876791",
+    "src/vehicle/vehicle_sincos.v": "d24c9d668718ae73def36c9e56916ae3110feb82d8682977ed27127ec56e138d",
+    "src/vehicle/vehicle_subsystem.v": "9a4ab115c340a3ac7edd0d5200dd9c6830ed4fc293898640360df038cc6e0225",
+    "src/vehicle/vehicle_tracker.v": "e835346e4d65a518088a6d71c929f8ead513815b7a03b5eac2952060757b2519",
+    "impl/baseline_navigation_startfix_20261027/src/vehicle/vehicle_vision_fusion.v": "bc8b07646fca7d91744ae1b0d2906e20366855febb8905f9f9511c1b0aef145a",
+    "src/vehicle/vehicle_visual_localizer.v": "799ca7ad78c20419691ea51ab87029eb24c7eadd2c6b8d56eac807e8a30ac280",
+    "src/imu/imu_math.v": "2663da396408c1ed487f5893bfbb883b6995f2f62ff77f0f458f96e1ef5d1835",
+    "sim/navigation_route_camera_tb.sv": "ee4fd25513089a786bc21f435dd4376b78ecf28826dd50d37d9995bdcee06330",
+    "sim/navigation_startfix_reported_route.csv": "d97ac09ad062d97d64718dcd24206aeed17df7ae6ff97fbd452bb32f649894f1"
+  },
+  "log": "sim/navigation_startfix_reported_previous.log",
+  "sha256": "8a28d847999599e01835376db47b09ce4200e01cc560d4aba9123a6fde15d63d"
+}

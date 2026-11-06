@@ -1,0 +1,331 @@
+#VRML_SIM R2025a utf8
+WorldInfo { basicTimeStep 16 coordinateSystem "ENU" }
+Viewpoint { position 13 9 -14 orientation 0.82 0.36 0.42 1.35 description "community fire map" }
+Background { skyColor [ 0.04 0.06 0.07 ] }
+DirectionalLight { direction -0.4 -1 -0.6 castShadows TRUE intensity 2 }
+Group { children [
+Solid {
+  translation 6 -0.025 4
+  name "ground"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.18 0.2 0.22 } } geometry Box { size 12 0.05 8 } } ]
+  boundingObject Box { size 12 0.05 8 }
+}
+Solid {
+  translation 0.075 0.15 4
+  name "boundary_west"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.3 0.32 0.34 } } geometry Box { size 0.15 0.3 8 } } ]
+  boundingObject Box { size 0.15 0.3 8 }
+}
+Solid {
+  translation 11.925 0.15 4
+  name "boundary_east"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.3 0.32 0.34 } } geometry Box { size 0.15 0.3 8 } } ]
+  boundingObject Box { size 0.15 0.3 8 }
+}
+Solid {
+  translation 6 0.15 0.075
+  name "boundary_south"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.3 0.32 0.34 } } geometry Box { size 11.7 0.3 0.15 } } ]
+  boundingObject Box { size 11.7 0.3 0.15 }
+}
+Solid {
+  translation 6 0.15 7.925
+  name "boundary_north"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.3 0.32 0.34 } } geometry Box { size 11.7 0.3 0.15 } } ]
+  boundingObject Box { size 11.7 0.3 0.15 }
+}
+Solid {
+  translation 6 0.001 4
+  name "road_east_west"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.1 0.12 0.14 } } geometry Box { size 11 0.002 1.8 } } ]
+  
+}
+Solid {
+  translation 6 0.001 4
+  name "road_north_south"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.1 0.12 0.14 } } geometry Box { size 1.8 0.002 7 } } ]
+  
+}
+Solid {
+  translation 6 0.001 6.2
+  name "north_connector"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.1 0.12 0.14 } } geometry Box { size 4.8 0.002 1.3 } } ]
+  
+}
+Solid {
+  translation 6 0.001 1.8
+  name "south_connector"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.1 0.12 0.14 } } geometry Box { size 4.8 0.002 1.3 } } ]
+  
+}
+Solid {
+  translation 4.6 0.001 4
+  name "west_link"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.1 0.12 0.14 } } geometry Box { size 1.2 0.002 5.7 } } ]
+  
+}
+Solid {
+  translation 7.4 0.001 4
+  name "east_link"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.1 0.12 0.14 } } geometry Box { size 1.2 0.002 5.7 } } ]
+  
+}
+Solid {
+  translation 2 0.9 6.35
+  name "B1"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.52 0.56 0.58 } } geometry Box { size 3 1.8 2.3 } } ]
+  boundingObject Box { size 3 1.8 2.3 }
+}
+Solid {
+  translation 3.506 0.702 6.35
+  name "D1_panel"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.12 0.16 0.18 } } geometry Box { size 0.012 1.404 0.738 } } ]
+  
+}
+Solid {
+  translation 3.514 0.742 5.9
+  name "D1_frame_left"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.85 0.85 0.85 } } geometry Box { size 0.018 1.484 0.045 } } ]
+  
+}
+Solid {
+  translation 3.514 0.742 6.8
+  name "D1_frame_right"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.85 0.85 0.85 } } geometry Box { size 0.018 1.484 0.045 } } ]
+  
+}
+Solid {
+  translation 3.514 1.484 6.35
+  name "D1_frame_top"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.85 0.85 0.85 } } geometry Box { size 0.018 0.045 0.945 } } ]
+  
+}
+Solid {
+  translation 10 0.9 6.35
+  name "B2"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.52 0.56 0.58 } } geometry Box { size 3 1.8 2.3 } } ]
+  boundingObject Box { size 3 1.8 2.3 }
+}
+Solid {
+  translation 8.494 0.702 6.35
+  name "D2_panel"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.12 0.16 0.18 } } geometry Box { size 0.012 1.404 0.738 } } ]
+  
+}
+Solid {
+  translation 8.486 0.742 5.9
+  name "D2_frame_left"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.85 0.85 0.85 } } geometry Box { size 0.018 1.484 0.045 } } ]
+  
+}
+Solid {
+  translation 8.486 0.742 6.8
+  name "D2_frame_right"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.85 0.85 0.85 } } geometry Box { size 0.018 1.484 0.045 } } ]
+  
+}
+Solid {
+  translation 8.486 1.484 6.35
+  name "D2_frame_top"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.85 0.85 0.85 } } geometry Box { size 0.018 0.045 0.945 } } ]
+  
+}
+Solid {
+  translation 2 0.9 1.65
+  name "B3"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.52 0.56 0.58 } } geometry Box { size 3 1.8 2.3 } } ]
+  boundingObject Box { size 3 1.8 2.3 }
+}
+Solid {
+  translation 3.506 0.702 1.65
+  name "D3_panel"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.12 0.16 0.18 } } geometry Box { size 0.012 1.404 0.738 } } ]
+  
+}
+Solid {
+  translation 3.514 0.742 1.2
+  name "D3_frame_left"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.85 0.85 0.85 } } geometry Box { size 0.018 1.484 0.045 } } ]
+  
+}
+Solid {
+  translation 3.514 0.742 2.1
+  name "D3_frame_right"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.85 0.85 0.85 } } geometry Box { size 0.018 1.484 0.045 } } ]
+  
+}
+Solid {
+  translation 3.514 1.484 1.65
+  name "D3_frame_top"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.85 0.85 0.85 } } geometry Box { size 0.018 0.045 0.945 } } ]
+  
+}
+Solid {
+  translation 10 0.9 1.65
+  name "B4"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.52 0.56 0.58 } } geometry Box { size 3 1.8 2.3 } } ]
+  boundingObject Box { size 3 1.8 2.3 }
+}
+Solid {
+  translation 8.494 0.702 1.65
+  name "D4_panel"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.12 0.16 0.18 } } geometry Box { size 0.012 1.404 0.738 } } ]
+  
+}
+Solid {
+  translation 8.486 0.742 1.2
+  name "D4_frame_left"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.85 0.85 0.85 } } geometry Box { size 0.018 1.484 0.045 } } ]
+  
+}
+Solid {
+  translation 8.486 0.742 2.1
+  name "D4_frame_right"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.85 0.85 0.85 } } geometry Box { size 0.018 1.484 0.045 } } ]
+  
+}
+Solid {
+  translation 8.486 1.484 1.65
+  name "D4_frame_top"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.85 0.85 0.85 } } geometry Box { size 0.018 0.045 0.945 } } ]
+  
+}
+Solid {
+  translation 3.56 0.6 5.18
+  name "wall_nw_outer"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.36 0.42 0.44 } } geometry Box { size 0.08 1.2 0.52 } } ]
+  boundingObject Box { size 0.08 1.2 0.52 }
+}
+Solid {
+  translation 3.78 0.6 5.48
+  name "wall_nw_inner"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.36 0.42 0.44 } } geometry Box { size 0.42 1.2 0.08 } } ]
+  boundingObject Box { size 0.42 1.2 0.08 }
+}
+Solid {
+  translation 8.44 0.6 5.18
+  name "wall_ne_outer"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.36 0.42 0.44 } } geometry Box { size 0.08 1.2 0.52 } } ]
+  boundingObject Box { size 0.08 1.2 0.52 }
+}
+Solid {
+  translation 8.22 0.6 5.48
+  name "wall_ne_inner"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.36 0.42 0.44 } } geometry Box { size 0.42 1.2 0.08 } } ]
+  boundingObject Box { size 0.42 1.2 0.08 }
+}
+Solid {
+  translation 3.56 0.6 2.82
+  name "wall_sw_outer"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.36 0.42 0.44 } } geometry Box { size 0.08 1.2 0.52 } } ]
+  boundingObject Box { size 0.08 1.2 0.52 }
+}
+Solid {
+  translation 3.78 0.6 2.52
+  name "wall_sw_inner"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.36 0.42 0.44 } } geometry Box { size 0.42 1.2 0.08 } } ]
+  boundingObject Box { size 0.42 1.2 0.08 }
+}
+Solid {
+  translation 8.44 0.6 2.82
+  name "wall_se_outer"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.36 0.42 0.44 } } geometry Box { size 0.08 1.2 0.52 } } ]
+  boundingObject Box { size 0.08 1.2 0.52 }
+}
+Solid {
+  translation 8.22 0.6 2.52
+  name "wall_se_inner"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.36 0.42 0.44 } } geometry Box { size 0.42 1.2 0.08 } } ]
+  boundingObject Box { size 0.42 1.2 0.08 }
+}
+Solid {
+  translation 5.3 0.82 5.16
+  name "traffic_light_pole"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.78 0.18 0.12 } } geometry Box { size 0.08 1.64 0.08 } } ]
+  boundingObject Box { size 0.08 1.64 0.08 }
+}
+Solid {
+  translation 5.3 1.58 5.16
+  name "traffic_light_head"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.78 0.18 0.12 } } geometry Box { size 0.18 0.28 0.12 } } ]
+  boundingObject Box { size 0.18 0.28 0.12 }
+}
+Solid {
+  translation 9.35 0.55 5.08
+  name "barrier_post"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.92 0.66 0.1 } } geometry Box { size 0.12 1.1 0.12 } } ]
+  boundingObject Box { size 0.12 1.1 0.12 }
+}
+Solid {
+  translation 9.8 1.02 5.08
+  name "barrier_arm"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.92 0.66 0.1 } } geometry Box { size 0.9 0.08 0.08 } } ]
+  boundingObject Box { size 0.9 0.08 0.08 }
+}
+Solid {
+  translation 8.12 0.45 6.95
+  name "bollard_north"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.88 0.46 0.08 } } geometry Cylinder { radius 0.1 height 0.9 } } ]
+  boundingObject Cylinder { radius 0.1 height 0.9 }
+}
+Solid {
+  translation 3.88 0.45 1.05
+  name "bollard_south"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.88 0.46 0.08 } } geometry Cylinder { radius 0.1 height 0.9 } } ]
+  boundingObject Cylinder { radius 0.1 height 0.9 }
+}
+Solid {
+  translation 6 0.4 7.15
+  name "water_source"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.04 0.42 0.62 } } geometry Box { size 0.4 0.8 0.4 } } ]
+  boundingObject Box { size 0.4 0.8 0.4 }
+}
+Solid {
+  translation 1.25 0.35 3
+  name "obstacle_bin_1"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.88 0.46 0.08 } } geometry Box { size 0.35 0.7 0.35 } } ]
+  boundingObject Box { size 0.35 0.7 0.35 }
+}
+Solid {
+  translation 10.75 0.35 5
+  name "obstacle_bin_2"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.88 0.46 0.08 } } geometry Box { size 0.35 0.7 0.35 } } ]
+  boundingObject Box { size 0.35 0.7 0.35 }
+}
+Solid {
+  translation 4.25 0.25 3
+  name "obstacle_cone_1"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.88 0.46 0.08 } } geometry Cylinder { radius 0.15 height 0.5 } } ]
+  boundingObject Cylinder { radius 0.15 height 0.5 }
+}
+Solid {
+  translation 7.75 0.25 5
+  name "obstacle_cone_2"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.88 0.46 0.08 } } geometry Cylinder { radius 0.15 height 0.5 } } ]
+  boundingObject Cylinder { radius 0.15 height 0.5 }
+}
+Solid {
+  translation 3 0.075 4.95
+  name "low_obstacle_1"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.75 0.15 0.12 } } geometry Box { size 0.45 0.15 0.3 } } ]
+  boundingObject Box { size 0.45 0.15 0.3 }
+}
+Solid {
+  translation 9 0.1 3.05
+  name "low_obstacle_2"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.75 0.15 0.12 } } geometry Box { size 0.45 0.2 0.3 } } ]
+  boundingObject Box { size 0.45 0.2 0.3 }
+}
+Solid {
+  translation 4.3 0.5 6.95
+  name "column_1"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.88 0.46 0.08 } } geometry Cylinder { radius 0.1 height 1 } } ]
+  boundingObject Cylinder { radius 0.1 height 1 }
+}
+Solid {
+  translation 7.7 0.5 1.05
+  name "column_2"
+  children [ Shape { appearance Appearance { material Material { diffuseColor 0.88 0.46 0.08 } } geometry Cylinder { radius 0.1 height 1 } } ]
+  boundingObject Cylinder { radius 0.1 height 1 }
+}
+] }

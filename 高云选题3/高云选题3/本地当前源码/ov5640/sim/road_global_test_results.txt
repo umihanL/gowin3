@@ -1,0 +1,20 @@
+PASS global road case 0: 0 waypoints, optimal ROM cost=32cm, 9 samples, 116677 cycles
+INFO global case=2 cycles=10000000 state=7 stage=5
+INFO global case=3 cycles=10000000 state=7 stage=7
+INFO global case=1 cycles=10000000 state=7 stage=1
+PASS global road case 1: 1 waypoints, optimal ROM cost=345cm, 88 samples, 13012686 cycles
+INFO global case=2 cycles=20000000 state=7 stage=4
+INFO global case=3 cycles=20000000 state=9 stage=6
+INFO global case=4 cycles=10000000 state=8 stage=1
+INFO global case=2 cycles=30000000 state=9 stage=3
+INFO global case=3 cycles=30000000 state=9 stage=5
+INFO global case=4 cycles=20000000 state=9 stage=1
+INFO global case=2 cycles=40000000 state=9 stage=2
+INFO global case=3 cycles=40000000 state=9 stage=4
+INFO global case=4 cycles=30000000 state=7 stage=1
+PASS global road case 4: 2 waypoints, optimal ROM cost=772cm, 197 samples, 30345199 cycles
+INFO global case=2 cycles=50000000 state=9 stage=1
+INFO global case=3 cycles=50000000 state=9 stage=3
+PASS global road case 5: 1 waypoints, optimal ROM cost=87cm, 23 samples, 9577421 cycles
+INFO global case=2 cycles=60000000 state=8 stage=1
+INFO global case=3 cycles=60000000 state=8 stage=2

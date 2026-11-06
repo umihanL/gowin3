@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "source": "ov5640/src/navigation/map_plan_2cm.mem",
+  "map_sha256": "7946ee6c68ebb2d04a8ba98e323d45ca6a4b5e43671f34a42eda2538627da7ed",
+  "width_cm": 352,
+  "height_cm": 320,
+  "cell_cm": 2,
+  "coordinates": "image cm: x right, y down",
+  "world_coordinates": "metres: x right, y up, origin bottom-left; z up",
+  "physical_geometry_verified": false,
+  "physical_geometry_note": "Road-map partition only. Live approach requires a measured camera-to-map registration, stereo calibration and checked standoff clearance.",
+  "regions": {
+    "A": {
+      "label": "A区（左上）",
+      "bounds_image_cm": [
+        0,
+        0,
+        176,
+        160
+      ],
+      "waypoints": [
+        {
+          "id": "A1",
+          "cell": [
+            12,
+            41
+          ],
+          "image_cm": [
+            25,
+            83
+          ],
+          "world_m": [
+            0.25,
+            2.37
+          ]
+        },
+        {
+          "id": "A2",
+          "cell": [
+            79,
+            13
+          ],
+          "image_cm": [
+            159,
+            27
+          ],
+          "world_m": [
+            1.59,
+            2.93
+          ]
+        },
+        {
+          "id": "A3",
+          "cell": [
+            52,
+            34
+          ],
+          "image_cm": [
+            105,
+            69
+          ],
+          "world_m": [
+            1.05,
+            2.51
+          ]
+        },
+        {
+          "id": "A4",
+          "cell": [
+            34,
+            60
+          ],
+          "image_cm": [
+            69,
+            121
+          ],
+          "world_m": [
+            0.69,
+            1.99
+          ]
+        }
+      ]
+    },
+    "B": {
+      "label": "B区（右上）",
+      "bounds_image_cm": [
+        176,
+        0,
+        352,
+        160
+      ],
+      "waypoints": [
+        {
+          "id": "B1",
+          "cell": [
+            163,
+            46
+          ],
+          "image_cm": [
+            327,
+            93
+          ],
+          "world_m": [
+            3.27,
+            2.27
+          ]
+        },
+        {
+          "id": "B2",
+          "cell": [
+            96,
+            13
+          ],
+          "image_cm": [
+            193,
+            27
+          ],
+          "world_m": [
+            1.93,
+            2.93
+          ]
+        },
+        {
+          "id": "B3",
+          "cell": [
+            123,
+            33
+          ],
+          "image_cm": [
+            247,
+            67
+          ],
+          "world_m": [
+            2.47,
+            2.53
+          ]
+        },
+        {
+          "id": "B4",
+          "cell": [
+            163,
+            70
+          ],
+          "image_cm": [
+            327,
+            141
+          ],
+          "world_m": [
+            3.27,
+            1.79
+          ]
+        }
+      ]
+    },
+    "C": {
+      "label": "C区（左下）",
+      "bounds_image_cm": [
+        0,
+        160,
+        176,
+        320
+      ],
+      "waypoints": [
+        {
+          "id": "C1",
+          "cell": [
+            32,
+            110
+          ],
+          "image_cm": [
+            65,
+            221
+          ],
+          "world_m": [
+            0.65,
+            0.99
+          ]
+        },
+        {
+          "id": "C2",
+          "cell": [
+            79,
+            147
+          ],
+          "image_cm": [
+            159,
+            295
+          ],
+          "world_m": [
+            1.59,
+            0.25
+          ]
+        },
+        {
+          "id": "C3",
+          "cell": [
+            52,
+            131
+          ],
+          "image_cm": [
+            105,
+            263
+          ],
+          "world_m": [
+            1.05,
+            0.57
+          ]
+        },
+        {
+          "id": "C4",
+          "cell": [
+            12,
+            88
+          ],
+          "image_cm": [
+            25,
+            177
+          ],
+          "world_m": [
+            0.25,
+            1.43
+          ]
+        }
+      ]
+    },
+    "D": {
+      "label": "D区（右下）",
+      "bounds_image_cm": [
+        176,
+        160,
+        352,
+        320
+      ],
+      "waypoints": [
+        {
+          "id": "D1",
+          "cell": [
+            163,
+            116
+          ],
+          "image_cm": [
+            327,
+            233
+          ],
+          "world_m": [
+            3.27,
+            0.87
+          ]
+        },
+        {
+          "id": "D2",
+          "cell": [
+            96,
+            147
+          ],
+          "image_cm": [
+            193,
+            295
+          ],
+          "world_m": [
+            1.93,
+            0.25
+          ]
+        },
+        {
+          "id": "D3",
+          "cell": [
+            123,
+            125
+          ],
+          "image_cm": [
+            247,
+            251
+          ],
+          "world_m": [
+            2.47,
+            0.69
+          ]
+        },
+        {
+          "id": "D4",
+          "cell": [
+            145,
+            96
+          ],
+          "image_cm": [
+            291,
+            193
+          ],
+          "world_m": [
+            2.91,
+            1.27
+          ]
+        }
+      ]
+    }
+  },
+  "checkpoint_policy": {
+    "revision": "straight_stops_20261103",
+    "terminal_radius_cm": 6,
+    "minimum_forward_clearance_cm": 16,
+    "heading_tolerance_deg": 35,
+    "note": "Stops are on bidirectional straight road sections. Validate every FPGA goal-tolerance node and both approach directions; use actual stopped pose for every next leg."
+  }
+}

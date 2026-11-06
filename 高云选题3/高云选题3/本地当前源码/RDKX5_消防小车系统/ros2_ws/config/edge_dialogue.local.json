@@ -1,0 +1,15 @@
+{
+  "enabled": true,
+  "mode": "generate",
+  "endpoint": "http://127.0.0.1:8088/v1/chat/completions",
+  "model": "qwen3-1.7b",
+  "timeout_s": 75.0,
+  "answer_timeout_s": 80.0,
+  "max_tokens": 256,
+  "temperature": 0.7,
+  "note": "Qwen3-1.7B text model, pinned Unsloth Q4_0 conversion; native llama.cpp on 4 X5 CPU threads, thinking disabled. Approx. 25-40 s for tested generated answers, not cloud-level reasoning. Exact live facts bypass generation. During eligible inspect dialogue, optional OCR/road preview yield and YOLO is capped at 6 fps without changing pixels. Snapshot analysis is historical/advisory and has no control authority.",
+  "scene_analysis_enabled": true,
+  "reply_max_chars": 160,
+  "brief_reply_max_chars": 48,
+  "analysis_reply_max_chars": 120
+}

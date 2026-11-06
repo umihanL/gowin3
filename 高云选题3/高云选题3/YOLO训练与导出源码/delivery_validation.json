@@ -1,0 +1,61 @@
+{
+  "generated_utc": "2026-10-08T05:28:34.619168+00:00",
+  "status": "data_and_training_code_ready",
+  "model": "YOLO11n Detect",
+  "classes": [
+    "fire",
+    "firefighter",
+    "person"
+  ],
+  "counts": {
+    "train": 2352,
+    "val": 252,
+    "test": 252
+  },
+  "totals": {
+    "boxes": 25066,
+    "images": 2856
+  },
+  "added_stereo_pairs": 240,
+  "added_packaged_images": 816,
+  "audits": {
+    "render": {
+      "file": "source_data/v6_ground_floor/render_audit.json",
+      "sha256": "b183f158e7a8b498004e9848b4df85fd9632f7c49cc8aa7e696f7f26493d8d05"
+    },
+    "dataset": {
+      "file": "dataset/independent_validation.json",
+      "sha256": "492a8e28025f7290d6238d718f4ecc48669a76c37dc8a63bd1666dd480513589"
+    },
+    "review": {
+      "file": "dataset/review_ui_validation.json",
+      "sha256": "4655bbb00518312dae60c4c1e64fdfe4df9f918d2a437829773f1c9c1b6c0f5c"
+    },
+    "code": {
+      "file": "training_code_validation.json",
+      "sha256": "f188d083c1da1e64832639d4472c22228dac152006db6cf1c4af28fcdd7ede14"
+    },
+    "paths": {
+      "file": "path_integration_validation.json",
+      "sha256": "491c014385442d7663a768f6cdef2dc5264a48b81a54d11f3b4d70704dbf0832"
+    }
+  },
+  "dataset_manifest_sha256": "b956675c0b0e2ee29a1052809d88d5108d17cf84124c8efb6e0bd54c86961e6b",
+  "initialization_checkpoint": {
+    "file": "yolo11n.pt",
+    "source_type": "existing_local_checkpoint",
+    "source_path": "D:\\yolo_data\\yolo11n.pt",
+    "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+    "bytes": 5613764,
+    "intended_official_download_url": "https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n.pt",
+    "official_download_status": "network_timeout; reused existing local checkpoint, not re-authenticated against remote release",
+    "metadata_inspection": "ZIP/pickle opcode inspection without executing pickle: DetectionModel + Detect, task detect, data coco.yaml, model yolo11n.yaml, checkpoint epoch -1; three local copies have identical hash",
+    "purpose": "COCO pretrained initialization, not trained on fire/firefighter/person rescue data",
+    "torch_load_test_performed": false
+  },
+  "training_environment_installed_this_task": false,
+  "actual_training_performed": false,
+  "actual_model_metrics_available": false,
+  "rdk_x5_bpu_bin_available": false,
+  "validation_boundary": "Dataset integrity and offline review passed; training code uses API stubs plus actual file/config resolution. No torch model load, training, model evaluation or GS130W real-camera test."
+}

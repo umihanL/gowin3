@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "name": "community_fire_mecanum_baseline",
+    "title": "社区消防麦轮小车无贴图参数化基准场景",
+    "status": "baseline_for_2026_gaoyun_fpga_track",
+    "official_dimensions_confirmed": false,
+    "bounds_order": ["x_min", "x_max", "y_min", "y_max"],
+    "semantic_points_master": true,
+    "notes": "官方选题指南没有给出赛场长宽、道路宽度或障碍物尺寸。本文件是可缩放的基准假设，拿到组委会场地图后应替换尺寸。几何材质为纯色，无图片贴图。",
+    "official_source": "2026高云选题指南.pdf，选题三基础任务1-4"
+  },
+  "units": "m",
+  "coordinate_frame": {
+    "origin": "southwest_ground_corner",
+    "x": "east",
+    "y": "north",
+    "z": "up",
+    "right_handed": true
+  },
+  "site": {
+    "length_x": 12.0,
+    "width_y": 8.0,
+    "ground_thickness": 0.05,
+    "boundary_margin": 0.15
+  },
+  "robot": {
+    "assumption": "design_assumption_until_measured",
+    "length": 0.48,
+    "width": 0.42,
+    "height": 0.28,
+    "footprint_radius": 0.319,
+    "physical_margin": 0.12,
+    "nav_inflation_radius": 0.20,
+    "lidar_z": 0.40,
+    "camera_z": 0.48,
+    "camera_fov_vertical_deg": 50,
+    "camera_resolution": [960, 540],
+    "stereo_baseline": 0.08,
+    "camera_forward": "x+"
+  },
+  "roads": [
+    {
+      "id": "road_east_west",
+      "polygon": [[0.5, 3.1], [11.5, 3.1], [11.5, 4.9], [0.5, 4.9]],
+      "clear_width": 1.8,
+      "centerline": [[0.5, 4.0], [11.5, 4.0]],
+      "allowed_headings": ["x+", "x-", "y+", "y-"]
+    },
+    {
+      "id": "road_north_south",
+      "polygon": [[5.1, 0.5], [6.9, 0.5], [6.9, 7.5], [5.1, 7.5]],
+      "clear_width": 1.8,
+      "centerline": [[6.0, 0.5], [6.0, 7.5]],
+      "allowed_headings": ["x+", "x-", "y+", "y-"]
+    },
+    {
+      "id": "north_connector",
+      "polygon": [[3.6, 5.55], [8.4, 5.55], [8.4, 6.85], [3.6, 6.85]],
+      "clear_width": 1.3,
+      "centerline": [[4.6, 6.2], [7.4, 6.2]],
+      "allowed_headings": ["x+", "x-"]
+    },
+    {
+      "id": "south_connector",
+      "polygon": [[3.6, 1.15], [8.4, 1.15], [8.4, 2.45], [3.6, 2.45]],
+      "clear_width": 1.3,
+      "centerline": [[4.6, 1.8], [7.4, 1.8]],
+      "allowed_headings": ["x+", "x-"]
+    },
+    { "id": "west_link", "polygon": [[4.0, 1.15], [5.2, 1.15], [5.2, 6.85], [4.0, 6.85]], "clear_width": 1.2, "centerline": [[4.6, 1.8], [4.6, 6.2]], "allowed_headings": ["y+", "y-"] },
+    { "id": "east_link", "polygon": [[6.8, 1.15], [8.0, 1.15], [8.0, 6.85], [6.8, 6.85]], "clear_width": 1.2, "centerline": [[7.4, 1.8], [7.4, 6.2]], "allowed_headings": ["y+", "y-"] }
+  ],
+  "buildings": [
+    { "id": "B1", "bounds": [0.5, 3.5, 5.2, 7.5], "height": 1.8, "door": { "id": "D1", "center": [3.55, 6.35, 0.0], "width": 0.9, "normal": [1, 0, 0] } },
+    { "id": "B2", "bounds": [8.5, 11.5, 5.2, 7.5], "height": 1.8, "door": { "id": "D2", "center": [8.45, 6.35, 0.0], "width": 0.9, "normal": [-1, 0, 0] } },
+    { "id": "B3", "bounds": [0.5, 3.5, 0.5, 2.8], "height": 1.8, "door": { "id": "D3", "center": [3.55, 1.65, 0.0], "width": 0.9, "normal": [1, 0, 0] } },
+    { "id": "B4", "bounds": [8.5, 11.5, 0.5, 2.8], "height": 1.8, "door": { "id": "D4", "center": [8.45, 1.65, 0.0], "width": 0.9, "normal": [-1, 0, 0] } }
+  ],
+  "objects": [
+    { "id": "wall_nw_outer", "type": "box", "center": [3.56, 5.18, 0.6], "size": [0.08, 0.52, 1.2], "layer": "collision", "semantic": "thin_wall", "printable": true },
+    { "id": "wall_nw_inner", "type": "box", "center": [3.78, 5.48, 0.6], "size": [0.42, 0.08, 1.2], "layer": "collision", "semantic": "thin_wall", "printable": true },
+    { "id": "wall_ne_outer", "type": "box", "center": [8.44, 5.18, 0.6], "size": [0.08, 0.52, 1.2], "layer": "collision", "semantic": "thin_wall", "printable": true },
+    { "id": "wall_ne_inner", "type": "box", "center": [8.22, 5.48, 0.6], "size": [0.42, 0.08, 1.2], "layer": "collision", "semantic": "thin_wall", "printable": true },
+    { "id": "wall_sw_outer", "type": "box", "center": [3.56, 2.82, 0.6], "size": [0.08, 0.52, 1.2], "layer": "collision", "semantic": "thin_wall", "printable": true },
+    { "id": "wall_sw_inner", "type": "box", "center": [3.78, 2.52, 0.6], "size": [0.42, 0.08, 1.2], "layer": "collision", "semantic": "thin_wall", "printable": true },
+    { "id": "wall_se_outer", "type": "box", "center": [8.44, 2.82, 0.6], "size": [0.08, 0.52, 1.2], "layer": "collision", "semantic": "thin_wall", "printable": true },
+    { "id": "wall_se_inner", "type": "box", "center": [8.22, 2.52, 0.6], "size": [0.42, 0.08, 1.2], "layer": "collision", "semantic": "thin_wall", "printable": true },
+    { "id": "traffic_light_pole", "type": "box", "center": [5.3, 5.16, 0.82], "size": [0.08, 0.08, 1.64], "layer": "collision", "semantic": "traffic_light", "printable": true },
+    { "id": "traffic_light_head", "type": "box", "center": [5.3, 5.16, 1.58], "size": [0.18, 0.12, 0.28], "layer": "collision", "semantic": "traffic_light", "printable": true },
+    { "id": "barrier_post", "type": "box", "center": [9.35, 5.08, 0.55], "size": [0.12, 0.12, 1.1], "layer": "collision", "semantic": "barrier_gate", "printable": true },
+    { "id": "barrier_arm", "type": "box", "center": [9.8, 5.08, 1.02], "size": [0.9, 0.08, 0.08], "layer": "collision", "semantic": "barrier_gate", "printable": true },
+    { "id": "bollard_north", "type": "cylinder", "center": [8.12, 6.95, 0.45], "radius": 0.10, "height": 0.9, "layer": "collision", "semantic": "bollard", "printable": true },
+    { "id": "bollard_south", "type": "cylinder", "center": [3.88, 1.05, 0.45], "radius": 0.10, "height": 0.9, "layer": "collision", "semantic": "bollard", "printable": true },
+    { "id": "water_source", "type": "box", "center": [6.0, 7.15, 0.4], "size": [0.4, 0.4, 0.8], "layer": "collision", "semantic": "water_source" },
+    { "id": "obstacle_bin_1", "type": "box", "center": [1.25, 3.0, 0.35], "size": [0.35, 0.35, 0.7], "layer": "collision", "semantic": "trash_can" },
+    { "id": "obstacle_bin_2", "type": "box", "center": [10.75, 5.0, 0.35], "size": [0.35, 0.35, 0.7], "layer": "collision", "semantic": "trash_can" },
+    { "id": "obstacle_cone_1", "type": "cone", "center": [4.25, 3.0, 0.25], "radius": 0.15, "height": 0.5, "layer": "collision", "semantic": "cone" },
+    { "id": "obstacle_cone_2", "type": "cone", "center": [7.75, 5.0, 0.25], "radius": 0.15, "height": 0.5, "layer": "collision", "semantic": "cone" },
+    { "id": "low_obstacle_1", "type": "box", "center": [3.0, 4.95, 0.075], "size": [0.45, 0.30, 0.15], "layer": "collision", "semantic": "low_obstacle" },
+    { "id": "low_obstacle_2", "type": "box", "center": [9.0, 3.05, 0.10], "size": [0.45, 0.30, 0.20], "layer": "collision", "semantic": "low_obstacle" },
+    { "id": "column_1", "type": "cylinder", "center": [4.3, 6.95, 0.5], "radius": 0.10, "height": 1.0, "layer": "collision", "semantic": "column" },
+    { "id": "column_2", "type": "cylinder", "center": [7.7, 1.05, 0.5], "radius": 0.10, "height": 1.0, "layer": "collision", "semantic": "column" }
+  ],
+  "semantic_points": [
+    { "id": "start", "type": "start", "pose": [1.2, 4.0, 0.0, 0.0] },
+    { "id": "goal_return", "type": "goal", "pose": [10.8, 4.0, 0.0, 3.141592654] },
+    { "id": "junction_center", "type": "junction", "pose": [6.0, 4.0, 0.0, 0.0] },
+    { "id": "junction_north", "type": "junction", "pose": [6.0, 6.0, 0.0, 1.570796327] },
+    { "id": "junction_south", "type": "junction", "pose": [6.0, 2.0, 0.0, -1.570796327] },
+    { "id": "west_gate", "type": "waypoint", "pose": [4.6, 4.0, 0.0, 0.0] },
+    { "id": "east_gate", "type": "waypoint", "pose": [7.4, 4.0, 0.0, 0.0] },
+    { "id": "north_west", "type": "waypoint", "pose": [4.6, 6.2, 0.0, 0.0] },
+    { "id": "north_east", "type": "waypoint", "pose": [7.4, 6.2, 0.0, 0.0] },
+    { "id": "south_west", "type": "waypoint", "pose": [4.6, 1.8, 0.0, 0.0] },
+    { "id": "south_east", "type": "waypoint", "pose": [7.4, 1.8, 0.0, 0.0] },
+    { "id": "north_cone_avoid_in", "type": "waypoint", "pose": [6.95, 5.55, 0.0, -1.570796327] },
+    { "id": "north_cone_avoid_out", "type": "waypoint", "pose": [6.95, 4.45, 0.0, -1.570796327] },
+    { "id": "south_cone_avoid_in", "type": "waypoint", "pose": [5.05, 3.45, 0.0, 1.570796327] },
+    { "id": "south_cone_avoid_out", "type": "waypoint", "pose": [5.05, 2.55, 0.0, 1.570796327] },
+    { "id": "door_D1", "type": "building_entrance", "pose": [4.35, 6.35, 0.0, 3.141592654] },
+    { "id": "door_D2", "type": "building_entrance", "pose": [7.65, 6.35, 0.0, 0.0] },
+    { "id": "door_D3", "type": "building_entrance", "pose": [4.35, 1.65, 0.0, 3.141592654] },
+    { "id": "door_D4", "type": "building_entrance", "pose": [7.65, 1.65, 0.0, 0.0] },
+    { "id": "fire_F1", "type": "fire_target_debug_only", "debug_only": true, "pose": [3.55, 6.35, 0.25, 0.0], "approach_pose": [4.8, 6.35, 0.0, 3.141592654], "surface_id": "B1_east_facade" },
+    { "id": "fire_F2", "type": "fire_target_debug_only", "debug_only": true, "pose": [8.45, 1.65, 0.25, 3.141592654], "approach_pose": [7.2, 1.65, 0.0, 0.0], "surface_id": "B4_west_facade" },
+    { "id": "water_source_stop", "type": "water_source", "pose": [6.0, 6.35, 0.0, 1.570796327] }
+  ],
+  "routes": [
+    { "id": "route_start_goal_east", "points": ["start", "junction_center", "goal_return"] },
+    { "id": "route_start_goal_north", "points": ["start", "west_gate", "north_west", "north_east", "north_cone_avoid_in", "north_cone_avoid_out", "east_gate", "goal_return"] },
+    { "id": "route_start_goal_south", "points": ["start", "west_gate", "south_cone_avoid_in", "south_cone_avoid_out", "south_west", "south_east", "east_gate", "goal_return"] },
+    { "id": "route_start_north_door", "points": ["start", "junction_center", "junction_north", "door_D1"] },
+    { "id": "route_start_south_fire", "points": ["start", "junction_center", "junction_south", "fire_F2"] },
+    { "id": "route_return", "points": ["fire_F2", "junction_south", "junction_center", "goal_return"] }
+  ],
+  "layers": { "scene": 0, "collision": 1, "debug": 2, "semantic_markers": "debug_only" },
+  "validation": {
+    "minimum_main_road_clear_width": 1.2,
+    "minimum_junction_open_area": 1.8,
+    "target_standoff_range": [1.0, 1.5],
+    "min_door_clear_width": 0.9,
+    "occupancy_resolution": 0.05,
+    "occupancy_is_preinflated": false,
+    "lidar_scan_height": 0.40
+  }
+}

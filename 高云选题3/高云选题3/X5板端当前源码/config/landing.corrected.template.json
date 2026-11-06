@@ -1,0 +1,21 @@
+{
+  "landing_calibrated": false,
+  "calibration_id": null,
+  "physical_eye": "left",
+  "eye": "left",
+  "coordinate_frame": "undistorted_left_optical",
+  "image_size_wh": [1280, 1088],
+  "camera_matrix": [
+    [436.82464992353863, 0.0, 640.2224645421431],
+    [0.0, 502.6057228760608, 539.0150333700744],
+    [0.0, 0.0, 1.0]
+  ],
+  "distortion_coefficients": [0.0, 0.0, 0.0, 0.0, 0.0],
+  "distance_reference": "left_camera_euclidean_m",
+  "pump_setting_id": null,
+  "camera_nozzle_mount_id": null,
+  "measurements": [],
+  "minimum_measured_ranges": 2,
+  "measurement_format": {"distance_m": 0.6, "landing_pixel": [null, null]},
+  "comment": "UNMEASURED TEMPLATE. Record actual water landing pixels in the full 1280x1088 corrected physical-left image at at least two different, ascending measured distances. Confirm K exactly matches /vision/camera_info for these measurements; do not enter raw, half-resolution, or browser-scaled pixel coordinates. Set calibration_id, rigid-mount ID and pump-setting ID only after measurement, then set landing_calibrated=true. Interpolation is permitted only between measured ranges; extrapolation is rejected. Keep camera/nozzle mounting, pump setting, observed target height and tested gimbal pitch regime unchanged. A verified fixed observation range is an assumption for a stationary demonstration, not stereo ranging. Image lock and this table do not certify physical water impact."
+}

@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+build/
+install/
+log/
+vendor/ocr_python/
+vendor/ocr_wheels/

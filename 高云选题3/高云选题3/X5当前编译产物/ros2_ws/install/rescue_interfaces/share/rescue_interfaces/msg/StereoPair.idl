@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rescue_interfaces/msg/StereoPair.msg
+// generated code does not contain a copyright notice
+
+#include "sensor_msgs/msg/Image.idl"
+#include "std_msgs/msg/Header.idl"
+
+module rescue_interfaces {
+  module msg {
+    struct StereoPair {
+      std_msgs::msg::Header header;
+
+      uint64 sequence;
+
+      sensor_msgs::msg::Image left;
+
+      sensor_msgs::msg::Image right;
+
+      @verbatim (language="comment", text=
+        "True only after exposure synchronization of this acquisition mode is verified.")
+      boolean synchronization_verified;
+
+      double skew_s;
+    };
+  };
+};

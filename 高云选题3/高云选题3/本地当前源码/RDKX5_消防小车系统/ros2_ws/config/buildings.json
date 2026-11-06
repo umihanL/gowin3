@@ -1,0 +1,321 @@
+{
+  "version": 1,
+  "map_version": "v6-ground-floor-lintel-decals",
+  "source_file": "map_assets/rescue_maze_v6/config.json",
+  "source_sha256": "ce072f96793dee49040e886bdee0d26e9500f43cc561a6bf257c11df111b1bf5",
+  "ocr_min_confidence": 0.85,
+  "buildings": [
+    {
+      "building_id": "A",
+      "number": "01",
+      "name": "安居楼",
+      "observation_point": {
+        "id": "observe_A",
+        "frame": "map",
+        "camera_xyz_m": [
+          0.64,
+          1.6000000000000005,
+          0.13
+        ],
+        "road_heading_deg": -90.0,
+        "look_at_xyz_m": [
+          1.1983000371932497,
+          1.580000034868631,
+          0.20600000000004393
+        ],
+        "road_id": "outer_loop",
+        "source_sign_id": "BUILDING_SIGN_A_3",
+        "map_registration_verified": false,
+        "note": "virtual-map camera observation pose; not a calibrated robot base goal"
+      }
+    },
+    {
+      "building_id": "B",
+      "number": "02",
+      "name": "向阳楼",
+      "observation_point": {
+        "id": "observe_B",
+        "frame": "map",
+        "camera_xyz_m": [
+          0.64,
+          4.12,
+          0.13
+        ],
+        "road_heading_deg": -90.0,
+        "look_at_xyz_m": [
+          1.1983000371932497,
+          4.100000015795044,
+          0.20600000000004404
+        ],
+        "road_id": "outer_loop",
+        "source_sign_id": "BUILDING_SIGN_B_3",
+        "map_registration_verified": false,
+        "note": "virtual-map camera observation pose; not a calibrated robot base goal"
+      }
+    },
+    {
+      "building_id": "C",
+      "number": "03",
+      "name": "春晖楼",
+      "observation_point": {
+        "id": "observe_C",
+        "frame": "map",
+        "camera_xyz_m": [
+          2.12,
+          5.0,
+          0.13
+        ],
+        "road_heading_deg": 0.0,
+        "look_at_xyz_m": [
+          1.6360000291466097,
+          5.526299748229669,
+          0.2060000000000436
+        ],
+        "road_id": "west_north_link",
+        "source_sign_id": "BUILDING_SIGN_C_0",
+        "map_registration_verified": false,
+        "note": "virtual-map camera observation pose; not a calibrated robot base goal"
+      }
+    },
+    {
+      "building_id": "D",
+      "number": "04",
+      "name": "和悦楼",
+      "observation_point": {
+        "id": "observe_D",
+        "frame": "map",
+        "camera_xyz_m": [
+          2.6,
+          1.7600000000000002,
+          0.13
+        ],
+        "road_heading_deg": 90.0,
+        "look_at_xyz_m": [
+          3.0862999294278692,
+          1.7400000651179028,
+          0.20600000000003948
+        ],
+        "road_id": "west_spine",
+        "source_sign_id": "BUILDING_SIGN_D_3",
+        "map_registration_verified": false,
+        "note": "virtual-map camera observation pose; not a calibrated robot base goal"
+      }
+    },
+    {
+      "building_id": "E",
+      "number": "05",
+      "name": "平安楼",
+      "observation_point": {
+        "id": "observe_E",
+        "frame": "map",
+        "camera_xyz_m": [
+          3.9653824,
+          3.7432428,
+          0.13
+        ],
+        "road_heading_deg": 15.000005804397567,
+        "look_at_xyz_m": [
+          3.5099999904630454,
+          3.1937000419615034,
+          0.2060000000000442
+        ],
+        "road_id": "s_street",
+        "source_sign_id": "BUILDING_SIGN_E_2",
+        "map_registration_verified": false,
+        "note": "virtual-map camera observation pose; not a calibrated robot base goal"
+      }
+    },
+    {
+      "building_id": "F",
+      "number": "06",
+      "name": "清风楼",
+      "observation_point": {
+        "id": "observe_F",
+        "frame": "map",
+        "camera_xyz_m": [
+          6.2,
+          1.36,
+          0.13
+        ],
+        "road_heading_deg": 90.0,
+        "look_at_xyz_m": [
+          5.633700099181814,
+          1.8050000627338176,
+          0.2060000000000442
+        ],
+        "road_id": "east_spine",
+        "source_sign_id": "BUILDING_SIGN_F_1",
+        "map_registration_verified": false,
+        "note": "virtual-map camera observation pose; not a calibrated robot base goal"
+      }
+    },
+    {
+      "building_id": "H",
+      "number": "08",
+      "name": "幸福楼",
+      "observation_point": {
+        "id": "observe_H",
+        "frame": "map",
+        "camera_xyz_m": [
+          2.92,
+          3.72,
+          0.13
+        ],
+        "road_heading_deg": 0.0,
+        "look_at_xyz_m": [
+          3.380000011324822,
+          4.266299996185211,
+          0.20600000000003532
+        ],
+        "road_id": "s_street",
+        "source_sign_id": "BUILDING_SIGN_H_0",
+        "map_registration_verified": false,
+        "note": "virtual-map camera observation pose; not a calibrated robot base goal"
+      }
+    },
+    {
+      "building_id": "I",
+      "number": "09",
+      "name": "同心楼",
+      "observation_point": {
+        "id": "observe_I",
+        "frame": "map",
+        "camera_xyz_m": [
+          8.16,
+          2.3200000000000003,
+          0.13
+        ],
+        "road_heading_deg": 90.0,
+        "look_at_xyz_m": [
+          7.601700034331964,
+          2.3000001391767744,
+          0.20600000000004393
+        ],
+        "road_id": "outer_loop",
+        "source_sign_id": "BUILDING_SIGN_I_1",
+        "map_registration_verified": false,
+        "note": "virtual-map camera observation pose; not a calibrated robot base goal"
+      }
+    },
+    {
+      "building_id": "J",
+      "number": "10",
+      "name": "晨光楼",
+      "observation_point": {
+        "id": "observe_J",
+        "frame": "map",
+        "camera_xyz_m": [
+          6.68,
+          3.2,
+          0.13
+        ],
+        "road_heading_deg": 0.0,
+        "look_at_xyz_m": [
+          7.163999787866701,
+          3.726300034332069,
+          0.20600000000004387
+        ],
+        "road_id": "east_link",
+        "source_sign_id": "BUILDING_SIGN_J_0",
+        "map_registration_verified": false,
+        "note": "virtual-map camera observation pose; not a calibrated robot base goal"
+      }
+    },
+    {
+      "building_id": "K",
+      "number": "11",
+      "name": "绿荫楼",
+      "observation_point": {
+        "id": "observe_K",
+        "frame": "map",
+        "camera_xyz_m": [
+          8.16,
+          6.039999999999999,
+          0.13
+        ],
+        "road_heading_deg": 90.0,
+        "look_at_xyz_m": [
+          7.6017000343319,
+          5.594999782144777,
+          0.20600000000004476
+        ],
+        "road_id": "outer_loop",
+        "source_sign_id": "BUILDING_SIGN_K_1",
+        "map_registration_verified": false,
+        "note": "virtual-map camera observation pose; not a calibrated robot base goal"
+      }
+    },
+    {
+      "building_id": "G",
+      "number": "07",
+      "name": "暖心楼",
+      "observation_point": {
+        "id": "observe_G",
+        "frame": "map",
+        "camera_xyz_m": [
+          6.44,
+          3.2,
+          0.13
+        ],
+        "road_heading_deg": 0.0,
+        "look_at_xyz_m": [
+          5.713700022887907,
+          3.189999946057668,
+          0.20600000000004481
+        ],
+        "road_id": "east_link",
+        "source_sign_id": "BUILDING_SIGN_G_1",
+        "map_registration_verified": false,
+        "note": "virtual-map camera observation pose; not a calibrated robot base goal"
+      }
+    },
+    {
+      "building_id": "L",
+      "number": "12",
+      "name": "瑞景楼",
+      "observation_point": {
+        "id": "observe_L",
+        "frame": "map",
+        "camera_xyz_m": [
+          4.6306032,
+          4.7928064,
+          0.13
+        ],
+        "road_heading_deg": 38.99974271405981,
+        "look_at_xyz_m": [
+          4.657500020563488,
+          5.506299767303314,
+          0.20600000000003954
+        ],
+        "road_id": "s_street",
+        "source_sign_id": "BUILDING_SIGN_L_0",
+        "map_registration_verified": false,
+        "note": "virtual-map camera observation pose; not a calibrated robot base goal"
+      }
+    },
+    {
+      "building_id": "M",
+      "number": "13",
+      "name": "康乐楼",
+      "observation_point": {
+        "id": "observe_M",
+        "frame": "map",
+        "camera_xyz_m": [
+          3.4000000000000004,
+          7.36,
+          0.13
+        ],
+        "road_heading_deg": 180.0,
+        "look_at_xyz_m": [
+          3.5700000444052438,
+          6.663700308990129,
+          0.20600000000004448
+        ],
+        "road_id": "outer_loop",
+        "source_sign_id": "BUILDING_SIGN_M_2",
+        "map_registration_verified": false,
+        "note": "virtual-map camera observation pose; not a calibrated robot base goal"
+      }
+    }
+  ]
+}

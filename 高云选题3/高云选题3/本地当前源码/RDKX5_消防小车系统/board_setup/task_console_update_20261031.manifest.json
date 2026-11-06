@@ -1,0 +1,1419 @@
+{
+  "schema_version": 1,
+  "release": "task_console_update_20261031",
+  "workspace": "/root/rescue/ros2_ws",
+  "revision": "field_centering_batch_identity_verified_corridor_20261103",
+  "search_navigation_recovery_revision": "visual_dropout_same_route_bounded_low_readback_20261103",
+  "extension2_state_revision": "atomic_pose_fair_poll_first_failure_measured_stop_20261104",
+  "centering_motion_revision": "shared_odometry_health_stable_stop_anchor_window_target_level_limit_20261104",
+  "centering_tolerance_norm": 0.05,
+  "fire_batch_revision": "stationary_gimbal_each_confirmed_target_high_low_before_resume_20261104",
+  "manual_pump_prepare_revision": "new_request_explicit_off_matched_low_ready_before_single_on_20261104",
+  "selected_straight_ray_revision": "admission_matches_explicit_unmeasured_water_policy_20261104",
+  "runtime_performance_revision": "unused_qos_events_removed_immutable_route_http_bytes_bounded_uart_burst_20261104",
+  "gimbal_revision": "bounded_reconnect_explicit_pan_reanchor_shared_mechanical_profiles_20261103",
+  "gimbal_fault_status_revision": "new_fault_invalidates_completed_recovery_20261103",
+  "manual_pump_receipt_revision": "matched_off_confirmation_independent_of_actuator_fault_20261103",
+  "manual_pump_recovery_revision": "page_denial_is_not_uart_disconnect_20261103",
+  "gimbal_water_policy_revision": "runtime_overlay_preserves_saved_reference_hash_20261103",
+  "fixed_nozzle_manual_revision": "explicit_per_request_stationary_nozzle_readonly_timeout_exception_20261104",
+  "fire_stop_trigger_revision": "post_start_complete_box_four_exposures_450ms_both_sides_20261103",
+  "preview_layout_revision": "native_default_stable_fit_layout_20261103",
+  "stereo_factory_revision": "eeprom_eye_mapping_native_roi_exact_pair_observation_20261103",
+  "manual_pump_test": {
+    "standalone_enabled": true,
+    "automatic_start": false,
+    "duration_ms": [
+      100,
+      1000
+    ],
+    "calibration_required": false
+  },
+  "fire_workflows": [
+    "identity_bound_selected_round",
+    "regional_all_target_statistics",
+    "calibration_draft_workbench"
+  ],
+  "region_modes": [
+    "search_only",
+    "search_and_extinguish"
+  ],
+  "region_fire_pause": {
+    "enabled_by_default": true,
+    "consecutive_frames": 4,
+    "stable_duration_s": 0.45,
+    "post_stop_confirm_frames": 3,
+    "min_confidence": 0.9,
+    "verified_centered_stop_dwell_s": 1.0,
+    "trigger": "confirmed_fire_during_continuous_navigation",
+    "centering_search_only": "all_visible_flames_signed_local_jogs",
+    "centering_search_and_extinguish": "stationary_gimbal_batch_no_wheel_approach",
+    "resume": "restore_original_pause_anchor_then_same_route",
+    "same_frame_overlay": "extension2_only_exact_capture_sequence_and_frame_id",
+    "retrigger_cooldown_s": 3.0,
+    "same_view_alias_window_s": 4.0,
+    "post_stop_confirmation": "seeded_candidates_fresh_stationary_evidence",
+    "local_corridor": "actual_pose_inflated_grid_retained_straight_span",
+    "transition_trace": "command_written_acknowledged_measured_stop"
+  },
+  "region_route": {
+    "planning": "once_for_all_waypoints_and_exit",
+    "pause_resume": "same_task_same_route",
+    "waypoint_policy": "pass_through",
+    "waypoint_stop": false,
+    "waypoint_speed_override": false,
+    "terminal_exit_stop": true
+  },
+  "semantic_regions_requires_fpga_capability": "map_caps:0x20|0x40|0x80; opcodes 0x21,0x25,0x26,0x37,0x3A,0x3B",
+  "centering_requires_fpga_capability": "extension_version:2; extension_caps:0x40; opcodes 0x3C,0x3D",
+  "region_approach_requires_measured_calibration": true,
+  "offline_neural_tts": [
+    "sherpa_matcha",
+    "sherpa_vits"
+  ],
+  "audio_revision": "complete_scene_answer_20261102",
+  "voice_switch_revision": "persistent_runtime_audio_toggle_keeps_typed_commands_20261104",
+  "motor_revision": "mixed_full_target_pulse_position_20261103",
+  "fixed_camera_impact_revision": "explicit_straight_ray_or_measured_impact_20261103",
+  "fixed_camera_geometry_revision": "user_installation_offsets_r2_20261103_calibration_pending",
+  "physical_calibration_generated": false,
+  "fpga_pump_capability": "extension_caps:0x20",
+  "pump_config_migration_required": true,
+  "pump_startup_revision": "preserve_explicit_fpga_output_region_off_prepare_20261103",
+  "numbered_navigation_requires_fpga_heading_capability": "0x10",
+  "board_tested": false,
+  "automatically_start_services": false,
+  "source_only": true,
+  "preserves": [
+    "models",
+    ".venv",
+    "config/*.local.json",
+    "config/extension_uart.json",
+    "active actuator/voice/traffic/calibration/nozzle/reference settings",
+    "existing native .so until board rebuild"
+  ],
+  "config_allowlist": [
+    "config/fpga_map_catalog.json",
+    "config/numbered_points.json",
+    "config/extension_map.json",
+    "config/actuator_io.mixed.template.json",
+    "config/fixed_camera_aim.template.json",
+    "config/fixed_camera_landing.template.json",
+    "config/semantic_regions.json",
+    "config/region_traversability.json",
+    "config/fire_commissioning.assumed.draft.json",
+    "config/fixed_camera_aim.installation.json",
+    "config/fire_commissioning.user_measurements.draft.json",
+    "config/stereo.factory.json",
+    "config/stereo_runtime.factory.json",
+    "config/gs130w_intrinsics.factory-mapped.json",
+    "config/extension_uart.json",
+    "config/traffic.fpga_navigation.json",
+    "config/region_approach.json",
+    "config/checkpoint_alignment.json"
+  ],
+  "create_if_missing": [
+    "config/extension_uart.json",
+    "config/traffic.fpga_navigation.json",
+    "config/region_approach.json",
+    "config/checkpoint_alignment.json"
+  ],
+  "files": [
+    {
+      "path": "config/actuator_io.mixed.template.json",
+      "bytes": 1953,
+      "sha256": "d424b998177e7cc6a7c838f2113f762d53c6f4f8470ab25c4567c8bd2a1b8625",
+      "policy": "replace"
+    },
+    {
+      "path": "config/checkpoint_alignment.json",
+      "bytes": 1021,
+      "sha256": "70c57d06ca3e921b47e5d3af886da711ffb3b8817d035b5f0b2ec3a760051c4e",
+      "policy": "create_if_missing"
+    },
+    {
+      "path": "config/extension_map.json",
+      "bytes": 3277,
+      "sha256": "7e6b3e6726ed1eff857f01d41de1a7a02c058d8d3236c22e126c51f6ddcdbed6",
+      "policy": "replace"
+    },
+    {
+      "path": "config/extension_uart.json",
+      "bytes": 432,
+      "sha256": "a96e145590a4898b26d96ceb5a614e784dfa01c9e4c50eeb471f86c56ffc8bbe",
+      "policy": "create_if_missing"
+    },
+    {
+      "path": "config/fire_commissioning.assumed.draft.json",
+      "bytes": 6502,
+      "sha256": "ac9a179b0dba6c7a8760a54f6b2f7de2d58b8ad407d6bcc720b33ae74ddcbece",
+      "policy": "replace"
+    },
+    {
+      "path": "config/fire_commissioning.user_measurements.draft.json",
+      "bytes": 18191,
+      "sha256": "c3081bd28d79569dcfdf0e242aec928476bdf5646e1a8392cf3ecf0d50cae72c",
+      "policy": "replace"
+    },
+    {
+      "path": "config/fixed_camera_aim.installation.json",
+      "bytes": 6240,
+      "sha256": "ac514e0573ded0bbc99d9fbaec6c052c31feafa3dd4574f69613ab3b40ba95f3",
+      "policy": "replace"
+    },
+    {
+      "path": "config/fixed_camera_aim.template.json",
+      "bytes": 1701,
+      "sha256": "4ebbe6a48d68e7e3fe4d60fdd8c437d59a79e14a1e2d042d29e844af5434d89a",
+      "policy": "replace"
+    },
+    {
+      "path": "config/fixed_camera_landing.template.json",
+      "bytes": 1421,
+      "sha256": "567ca5ef99a020f99e423134edc8b8a93713c908c3742524268a3054e730f082",
+      "policy": "replace"
+    },
+    {
+      "path": "config/fpga_map_catalog.json",
+      "bytes": 15228,
+      "sha256": "d185960f9ba8be7591180881863020873d00b600a2da3c2fe242f427129f55ec",
+      "policy": "replace"
+    },
+    {
+      "path": "config/gs130w_intrinsics.factory-mapped.json",
+      "bytes": 7191,
+      "sha256": "cca21ec5d3682e2897715d7af9876aef16bc89e13b587dd3d1ed02fc31b4d64b",
+      "policy": "replace"
+    },
+    {
+      "path": "config/numbered_points.json",
+      "bytes": 3623,
+      "sha256": "fc559cd6570b32ed654f1c556114d19b4e2b86929ab69f35a3f2600e94300b01",
+      "policy": "replace"
+    },
+    {
+      "path": "config/region_approach.json",
+      "bytes": 6347,
+      "sha256": "60beb401a6d627ab2b36a44ec8123134f9b0887ff56bc6654f2fc6947ee08f15",
+      "policy": "create_if_missing"
+    },
+    {
+      "path": "config/region_traversability.json",
+      "bytes": 577350,
+      "sha256": "a93d394aca481a55be970d15318cd8bd12f55c411d1dc5af460b00356d05eb5f",
+      "policy": "replace"
+    },
+    {
+      "path": "config/semantic_regions.json",
+      "bytes": 5843,
+      "sha256": "40307162b8f934f9eb8ce8a7e1d65f4cbdd7af534eea46d7f700ca06668b6e26",
+      "policy": "replace"
+    },
+    {
+      "path": "config/stereo.factory.json",
+      "bytes": 7295,
+      "sha256": "c5f90e3137d19d4687c2e0c97231d764a33a6a56c5d1ac0d7df99594fe443a1f",
+      "policy": "replace"
+    },
+    {
+      "path": "config/stereo_runtime.factory.json",
+      "bytes": 827,
+      "sha256": "52e02369299c77855182661464859c7f858500294e054051e89fe47a1a66c0eb",
+      "policy": "replace"
+    },
+    {
+      "path": "config/traffic.fpga_navigation.json",
+      "bytes": 1150,
+      "sha256": "ead9bf0688b0795278b5d4f89071d27e7ef51cec20ebbc2e49cb6bfbf3dcfd3a",
+      "policy": "create_if_missing"
+    },
+    {
+      "path": "docs/上位机任务驾驶台使用.md",
+      "bytes": 21937,
+      "sha256": "8ab8d88d0cae1539e308f6fc26be43878ea08aaf05ff1da942061ad86aa51e38",
+      "policy": "replace"
+    },
+    {
+      "path": "docs/云台接管与导航播报修复_20261102.md",
+      "bytes": 15361,
+      "sha256": "95f5c66f4e5072e77772c31e95b9740807691ee132c1edf5bf167f80db18d3f1",
+      "policy": "replace"
+    },
+    {
+      "path": "docs/固定相机云台标定操作.md",
+      "bytes": 18275,
+      "sha256": "1715c194ed192453614d075c9c170a23f1bc742b54c71203d8fd130f5c0b5d74",
+      "policy": "replace"
+    },
+    {
+      "path": "docs/固定相机实测落点接口.md",
+      "bytes": 4984,
+      "sha256": "51d70958a309f04d59af6370764fdb84ffd4f7e3acbf191c7153b6aee8423534",
+      "policy": "replace"
+    },
+    {
+      "path": "docs/完整学习与验收手册.md",
+      "bytes": 185737,
+      "sha256": "f5416b19b5dd956745dc438272795d76fa334b3c793634852c1284c1c8102b17",
+      "policy": "replace"
+    },
+    {
+      "path": "docs/当前任务流程与固定双目瞄准.md",
+      "bytes": 15412,
+      "sha256": "97a61119756a7ba47dbd7ed619de4c2277f60cfd6f60e459fa94d4a366e766e1",
+      "policy": "replace"
+    },
+    {
+      "path": "docs/拓展任务与水枪接线_20261031.md",
+      "bytes": 4538,
+      "sha256": "e7146d2684d20d2d85fef9501409ff33478a16661fe8f1ae29c21afb9a8afc4f",
+      "policy": "replace"
+    },
+    {
+      "path": "docs/本地全功能验收与标定说明.md",
+      "bytes": 9227,
+      "sha256": "6dd9846835724b4647f4c943a1feec48c94d273b2df7f72ee182b61393a411e4",
+      "policy": "replace"
+    },
+    {
+      "path": "docs/沿途灭火导航口令.md",
+      "bytes": 628,
+      "sha256": "57509d4447478726875f2d8791fd16455dfb9baa39585453d098e1b328638ad7",
+      "policy": "replace"
+    },
+    {
+      "path": "docs/火源统计与一键灭火使用.md",
+      "bytes": 9048,
+      "sha256": "e9e87d638ead8468d028890da22da99d19cd542bfa6aa05d7baa699a68a3b261",
+      "policy": "replace"
+    },
+    {
+      "path": "docs/语义区域搜索与地图导航.md",
+      "bytes": 28694,
+      "sha256": "909a8a1a7fd92d82ee6b3c9df7751cfe71b0b0835c10b288557570ebe085aad0",
+      "policy": "replace"
+    },
+    {
+      "path": "env.sh",
+      "bytes": 860,
+      "sha256": "907b48bb6884d08f214676259440fcf59a6eae8924cd6e1be7f5081a8f2c7d66",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_interfaces/CMakeLists.txt",
+      "bytes": 578,
+      "sha256": "5f7d3495e4627115df535b9887499e48b0f4f7534204a20ad47e0b627445b545",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_interfaces/msg/Detection.msg",
+      "bytes": 236,
+      "sha256": "3b3f53369ef92e1cccf1fb8e7b7f3791d42f85cb41c5eef630480323ceb488d8",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_interfaces/msg/DetectionArray.msg",
+      "bytes": 249,
+      "sha256": "985e8a29424cade3d650a9aa6b450efbfdef5512102b05137b4fa2f63617c9a8",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_interfaces/msg/FpgaEvent.msg",
+      "bytes": 311,
+      "sha256": "a040a84e20215489a590718cf0fd30f46316a93f4e5df4aa5176b291e84445f9",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_interfaces/msg/GimbalCommand.msg",
+      "bytes": 105,
+      "sha256": "3247d3a6877f48a20531388f0dbe59b5f2e4e39925913ccbda98b7b816f9da01",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_interfaces/msg/ManeuverCommand.msg",
+      "bytes": 239,
+      "sha256": "6b64bb723ce365aad68e0384a32f12740cfbd98bd821673f0def92e750074e2f",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_interfaces/msg/MotionPermission.msg",
+      "bytes": 87,
+      "sha256": "3ffca0c8b3adab512a7c69ccb9d9b6e168633ec547807a0c2f2c4065a6c409a4",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_interfaces/msg/StereoPair.msg",
+      "bytes": 212,
+      "sha256": "d0c5fb9c7d2b074a1a9947ee1606491ea780afde2e51c3abc79570899662f389",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_interfaces/package.xml",
+      "bytes": 680,
+      "sha256": "637c040ee4a66f203a5b5ff1170af1444b688515a52d6cd2c690ae9d2e8f113d",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/launch/local_fire_control.launch.py",
+      "bytes": 6053,
+      "sha256": "a5c51c5217f93f4d4f8c1baa5e8b966f65fc8113ab3ed3e3c92906c3b0b4b50d",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/launch/mipi_preview.launch.py",
+      "bytes": 1246,
+      "sha256": "19069f6cdf19486fb29d363dce86ec6e4e8ea513c2c88236e49ab3c6e2c8bbe3",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/launch/mipi_vision.launch.py",
+      "bytes": 6341,
+      "sha256": "e89fb71d85e9382ac0868db0e86cbf11687e0fbee4a2046a3caad2a2fb061aef",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/launch/rescue.launch.py",
+      "bytes": 4093,
+      "sha256": "dcf6542f55b53878711377fb075984deb5aa74da69e2a9c2c38eabf3138248e6",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/launch/task_modes.launch.py",
+      "bytes": 5658,
+      "sha256": "fbe90735bf2bb14c953493b3449ae2ed234616b937bc2032605af3e6b5e346fa",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/package.xml",
+      "bytes": 902,
+      "sha256": "18b0d971c766dfc841b6efe1c47afcaa38aee5cc2b6d0e45d2ae96da0b10c62e",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/__init__.py",
+      "bytes": 59,
+      "sha256": "92d8bc42ff31a6ac8f9758b3c726f72946a6917eb85be2bb9b32099b85d2c97f",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/absolute_reference.py",
+      "bytes": 7525,
+      "sha256": "393d00c978ff8a57ee32bd5392eb716066a3e91da211140be774df37c527e91b",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/aim_geometry.py",
+      "bytes": 5288,
+      "sha256": "9d7d19a6aac5c682b66715dc839dc0e653df24913c3fc203472d6019553e1216",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/area_navigation.py",
+      "bytes": 48296,
+      "sha256": "970c7ac7d32f4c941873a882d6f25acbf81e8faf1149a8ae62ce2023336b45c0",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/asr_backend.py",
+      "bytes": 12027,
+      "sha256": "0e6675c54911dfb3347d8d7ec1617b6d73bcacbb9611e54045f5ad825144e5b8",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/audio_pcm.py",
+      "bytes": 1846,
+      "sha256": "ed74b781f90a14ed96e29693d93f3853df5b7cb06726fca6beb58a6cb4cd5cf2",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/audio_test.py",
+      "bytes": 4530,
+      "sha256": "186aa29eb71aed526bc7706acc94115e8a80c4cce5b9dd5c0e7ca01694f7fddb",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/auto_fire.py",
+      "bytes": 19853,
+      "sha256": "f9b8b97b7892dea7ebb2b3ddb2d52613de57a58d15297f706c8777a6e13d2ce0",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/auto_fire_gate.py",
+      "bytes": 3718,
+      "sha256": "e3fd3c30852bc8c1eb78a75dad5e040e225e26a7b504650b5fabc35c87de52b1",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/auto_fire_node.py",
+      "bytes": 2554,
+      "sha256": "72fc4338da89da3c9dfe3564b3f49c63e60902b8efc5af857bd7ba6e633326db",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/building_ocr.py",
+      "bytes": 9562,
+      "sha256": "ac6767542dcd73b4a35a76f8d3e1b06d34bd3a1e03bf1ffd8dcbeea8a1c61cd1",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/camera_node.py",
+      "bytes": 2777,
+      "sha256": "9fc4160d19c6ee3f08310f4608f502c2f8aa8f52c4807ae0880a7788a2f9fa0d",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/checkpoint_alignment.py",
+      "bytes": 12991,
+      "sha256": "ba3894ec704483b7c5bcb8cbd427ce8d0c232633d720af359a3ea6fea22e43d6",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/checkpoint_alignment_route.py",
+      "bytes": 7142,
+      "sha256": "9b6b710c931f41648f7a44152feb185b904ed310f4d5d34db8f5777749280bcf",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/crosswalk.py",
+      "bytes": 7610,
+      "sha256": "9f21a697d9c4c8fd4495d31447b7bf3965606e9c29de26a471d625599c5ac4de",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/depth_frame_join.py",
+      "bytes": 2319,
+      "sha256": "6e9eb61da2eac0028c6831f02e5a4247ace4e896cbe3e8b04bf0dca368a45a9d",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/dialogue_workload.py",
+      "bytes": 1484,
+      "sha256": "d2178659be70ee2bcbd3ed4e8e24b9c202850f9dae3117825fbeaad5be8b7b0a",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/edge_dialogue.py",
+      "bytes": 26244,
+      "sha256": "cfb41eabc2298f5e8d314320b2f25d4905a3fb8ba3da2db8eb57565249d68e2b",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/extension_control.py",
+      "bytes": 35246,
+      "sha256": "84f32cb34da3a8e70646787c982979d288bdd35fe70d0010aa23889052daa806",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/extension_task_node.py",
+      "bytes": 45257,
+      "sha256": "818e95f863fe4dab8a1fad5200436c9a4a1398f8b8e331dda99e97cf9893d013",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/factory_stereo.py",
+      "bytes": 15648,
+      "sha256": "ad95b5fc669b5ddc3fe5b8b492472b6fa1789c4669735e03e201f7923fe26db8",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/fast_mipi_perception_node.py",
+      "bytes": 33681,
+      "sha256": "30104c5209094da79cdff56283919066a1564064d08f56dc95571fc8b4269838",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/fire_aim_geometry.py",
+      "bytes": 7884,
+      "sha256": "81755232ba23c9e04b987230f8549ed76f15470170237b26335d9796865f14f7",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/fire_aim_node.py",
+      "bytes": 28350,
+      "sha256": "dd52de168f8c143a74ee2373d31e5120314207f95ae7f01088cf92b8d5c242f9",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/fire_retrigger.py",
+      "bytes": 11348,
+      "sha256": "b8e10d35b96c901d6c057017a5d85b766d53ad54ce8367213ebaf03a71037165",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/fire_target_node.py",
+      "bytes": 5176,
+      "sha256": "b0eb9e83da56fa661c7307dfeabc95c664b2079e335e470a17f1f521f736d6db",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/fire_targets.py",
+      "bytes": 14749,
+      "sha256": "a25f9cdd77629a91e371f098f3305133b0a18e0b1df8c9f604db9638f689c247",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/fixed_camera_aim.py",
+      "bytes": 21907,
+      "sha256": "f776be827198f8c79edebd7a37eca5033158a78d35f3ba3a5e48ac365b4afc98",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/fixed_camera_landing.py",
+      "bytes": 8362,
+      "sha256": "3be1a882fcfb5c5f5c9f7c015fb9fd91cfce291d30e21e4e0122862e5ee54607",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/fixed_camera_pump_gate.py",
+      "bytes": 6039,
+      "sha256": "f6b91c7e30b988f9de849c6b7a6a84aa7238b0ebd609f6217300015fd81569ab",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/flame_centering.py",
+      "bytes": 24622,
+      "sha256": "e02aa6a60e372bb74a6f9e9af895ab7da4f5bc8c82e88ba2cdcd30d666289a68",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/flame_stop_trigger.py",
+      "bytes": 5277,
+      "sha256": "383a5b2bf81ef97667c0da4972f4b66bcd3add0a0ff3d5cdeb096669a054874a",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/fpga_bridge_node.py",
+      "bytes": 17547,
+      "sha256": "a362033ca2d3c7a05cb5dcc3762a36f75db3b6bc34ceebcf2b384cd2b5fe1c74",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/fpga_map.py",
+      "bytes": 6404,
+      "sha256": "d31f63a618baa2330a5bf9caba5691f72b3d71c6a5c75330df387f4f98b83e4a",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/fpga_map_transport.py",
+      "bytes": 22204,
+      "sha256": "8e4b9b56d3a1ae69b54104ccc597994cafe1323de81ddacf0aae84e2f4d3d5f6",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/fpga_navigation.py",
+      "bytes": 12741,
+      "sha256": "41720bb5f34748fdde26542141fe74a147e86f81c9f5609b46f9cedbf6854c5e",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/fpga_navigation_node.py",
+      "bytes": 3854,
+      "sha256": "6c9515adbf298124d877a4c51c964d7107f4d5b4bf9b09022c06c147f3514e99",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/fpga_pump_bridge.py",
+      "bytes": 11075,
+      "sha256": "6268e6ee6a4687fd2fc5349c58b82fc05fb7622a3b29bda73db38af76ecf1161",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/fpga_pump_io.py",
+      "bytes": 10333,
+      "sha256": "4675d7c7da2838b509e9e1c1cd5a2bfa9438835e569e8afa2dc09130c6a6e13b",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/gimbal_limits.py",
+      "bytes": 1181,
+      "sha256": "977a74d8f005c0a03cc625ed5a85e0965bdc0377a8e182288d9d95d7c413ef9b",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/gimbal_manual.py",
+      "bytes": 7106,
+      "sha256": "27120f53e2489e834cc78d530226f9866c03815eebc41af7b71391ffd4efa152",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/gimbal_reference_policy.py",
+      "bytes": 709,
+      "sha256": "c81d769765ced7e80aec9c20582921d2b67843a23049064fcb733018f29fba97",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/gimbal_reference_store.py",
+      "bytes": 4483,
+      "sha256": "f1e672692a69e414b3ff81c1649d2e959ff98d03dcfe6d5e620dcc93eb62c383",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/gimbal_self_test.py",
+      "bytes": 12661,
+      "sha256": "64c739c86acde957fdbef0d7d9b7ab0dc8047c5edc43336cf47f10c35031b4a9",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/interaction.py",
+      "bytes": 4161,
+      "sha256": "14bad05cd06671b0c9b776ef3e8daa304193ea98d92569b78a153f4e6cb5c196",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/interaction_node.py",
+      "bytes": 2400,
+      "sha256": "667d3c92d4a8ad79136b663cad3d30ea1a72ef3e38694dcd96f6598e0e02afa9",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/latest_slot.py",
+      "bytes": 956,
+      "sha256": "e9a7449fa0f98b9f807828755e31e7dc7bb721df304f2687440dafcda33aa335",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/legacy_aiming.py",
+      "bytes": 9960,
+      "sha256": "825208213b66b8130b0eb35603257886e7bb6f4e8a8a3ac7bbc0ef4bb12e7319",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/legacy_detector.py",
+      "bytes": 14862,
+      "sha256": "91c41a3948adbbc96f2f3dbfeb045ab3acfbc65d766500d41eb611beffdb72f2",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/legacy_landing_calibration.py",
+      "bytes": 1733,
+      "sha256": "c5a23850bbb2f83bc052ae44f124417507f89d24b9493939585a360d0789f51b",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/legacy_visual_servo.py",
+      "bytes": 3483,
+      "sha256": "2095d44d1eda6f8e80e3a7bc6bbe4f194934e39569c8e3d40189d2396ac5704a",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/lens_correction.py",
+      "bytes": 12061,
+      "sha256": "e8477ef554ea00d91a49ac0d80d088205b579631f8247e1b430fbab7998151bc",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/live_mixed_actuator_io.py",
+      "bytes": 40541,
+      "sha256": "78cc264382854f3963849244acffec0afc8497df84edaa963c3ae20205b1383d",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/local_actuator_guard.py",
+      "bytes": 9389,
+      "sha256": "e5745a8cceb8a74de5f73b7c1a10926dd5315602d4148e45ad1e99211f564a9a",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/local_actuator_io.py",
+      "bytes": 16078,
+      "sha256": "8cd1720ea9e7bdbce8b337c75a2f64fa4931920881bae243fd3e0ab6ac9995a3",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/local_actuator_node.py",
+      "bytes": 76422,
+      "sha256": "7e5a9bb7b414c012ece7372075e1d36b009b775d9508bfda86f7a9e58397a7a6",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/manual_motion.py",
+      "bytes": 3313,
+      "sha256": "facd0e72e064e0db50558cc24c456d47b3cd8b45c87125c000e0a65fcad41763",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/manual_pump_test.py",
+      "bytes": 18305,
+      "sha256": "6b0a88becc93e1e20a50b8fe1e05444143f5075fabdbe80bdcb28f5c93a7e25f",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/mipi_building_ocr.py",
+      "bytes": 7280,
+      "sha256": "88e243a68c4dccde78bc021ff0e664703b0d5cfc9e02017785d711bf14653bd6",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/mipi_building_ocr_node.py",
+      "bytes": 15644,
+      "sha256": "58aa91b83029d83d104c88d54de9220482fd04f87a2a9a6de787c479680ecbb7",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/mipi_camera_node.py",
+      "bytes": 7474,
+      "sha256": "05fe993667d2fe274962617db481918da2570fee3395321390f4873907d87755",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/mipi_image.py",
+      "bytes": 5537,
+      "sha256": "261408ce9cd563739b7862db3ef5a143adad810205175d5e266052670637b858",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/mission_node.py",
+      "bytes": 37464,
+      "sha256": "fb15643ada08eff8f8232fbb60da38f9a408cce0e5c782e40e9746a87cb481d5",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/mixed_actuator_io.py",
+      "bytes": 24934,
+      "sha256": "f3cde6e869cdfb9e5cd789dccf4a974adab1ad4d0a0b959573361409486e6ab1",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/native_preprocess.cpp",
+      "bytes": 8580,
+      "sha256": "6fbbc7e5ab0d5886f2a99ca6d504f1945446268dc72343b55f3f35d97f62dfc0",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/native_preprocess.py",
+      "bytes": 5233,
+      "sha256": "5849483f8dde20fcfe1562198e6941fa07f6f610aea93298bc59311e47f061ca",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/native_remap.cpp",
+      "bytes": 3528,
+      "sha256": "ff2fd2e219a4016b1d41d48e7b0b82819ab255aab6e1fa4ec7df6b8fbe68207a",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/native_remap.py",
+      "bytes": 2837,
+      "sha256": "d3cc1f00a465e96522fd34174089edd8b58dcbe83d8bee6429fb38fcfc777f16",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/native_runtime.cpp",
+      "bytes": 11112,
+      "sha256": "998266298b9e4bf550c9b2a8fb8be6a3b0a71fc647fd26282897d07b44c9359a",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/native_runtime.py",
+      "bytes": 4655,
+      "sha256": "c5db69a7a9c8080ee9250eae562d9331d98e11721b21f9ed6e12e8e6e148a23d",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/navigation.py",
+      "bytes": 17662,
+      "sha256": "0f702dd850154555ef71b07213e8d3233e700ff390e891acfaf0eb4935ded554",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/navigation_node.py",
+      "bytes": 3197,
+      "sha256": "05177ffc3588603a0343d4a36f3d36e1c5502f9b9b20f29adf408b9495f2484b",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/node_common.py",
+      "bytes": 2943,
+      "sha256": "3574e245f34920b10bdaef162f3471d329b5c6db23f15d32241e8484e3833a1e",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/nozzle_geometry.py",
+      "bytes": 10178,
+      "sha256": "7f5acd6fba79def632aa7375f24420e3d55ee2d047652cb82545632b1ed49bdc",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/numbered_navigation.py",
+      "bytes": 34464,
+      "sha256": "cab09ec2ef18e059f0c6b1d6a284973b52b71194131843df648c4e99a7cbf585",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/ov5640_protocol.py",
+      "bytes": 7854,
+      "sha256": "86904b2a2d89f48e244650981f46a2580942b6af256a7436b52ad953a513f122",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/pd42_actuator_io.py",
+      "bytes": 29044,
+      "sha256": "f3e5d2fa728aa0c78c00715b72802ac9f04ca6a6586aed0c2508c10e8726472e",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/pd42_protocol.py",
+      "bytes": 16257,
+      "sha256": "a0567072e5f29929e83948e0fe209a52ec620f08157425f9ad6c7c696841b6c4",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/pd42_test.py",
+      "bytes": 42588,
+      "sha256": "c0b39adee16539e1cd1f03e5d5cbe5d0f45526f39307f0de87e10efcaab43e63",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/pd42_test_node.py",
+      "bytes": 12688,
+      "sha256": "4cac29bac8b4650ebd7184f85c4a768c599b5d0c3b7c69ac7269328120d790d2",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/pd42_transport.py",
+      "bytes": 8818,
+      "sha256": "c5306adc99168a1bd0875475d25fcb406eee6bab3d173b2306fbc76425f9b53d",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/perception_node.py",
+      "bytes": 9141,
+      "sha256": "6395ec2bb5d278fc838e1363ded6dece6c9cca42597b643fda8ed8e726297e27",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/protocol.py",
+      "bytes": 10910,
+      "sha256": "e8d69cddfad6a29df7c1fa11f5b3aaa3a5ebc9941c4cbf8bd98a618640fa06f9",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/raw_image_cdr.py",
+      "bytes": 4663,
+      "sha256": "4ba49ed97c231eb44735eaa0cfdf63a5daf059b7b66c3958ea028d6610067a33",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/raw_image_relay.py",
+      "bytes": 2211,
+      "sha256": "043572d36fabd739acec44d413db8b01a2016ff636df4feede1d1d8869b8e77b",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/region_approach.py",
+      "bytes": 31748,
+      "sha256": "9c31426befa0c0feed2c1db7b6c335d3e8d77a38710e702ba6fee91edb223b75",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/region_control.py",
+      "bytes": 20539,
+      "sha256": "38572c9875e0feae643a72e375e565df66efe76423de3c6b74a33179305e7f77",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/region_route.py",
+      "bytes": 12852,
+      "sha256": "8a5f44572e1af6dc1a050257d838ce4dd23a8ca3f4faba511d4ffb9455fcfed8",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/region_search.py",
+      "bytes": 100608,
+      "sha256": "0ba62160eea714eb1e3c5205301501f09a41a56330901a05fdddb3e16bee0bf1",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/retained_centering.py",
+      "bytes": 34359,
+      "sha256": "eb75402a9adf4ab1d115666f57ed78ccc98afeda508cb0b26492ae13775d6961",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/retained_route.py",
+      "bytes": 21394,
+      "sha256": "27e095ed66d55ca837f24759bc151dda65e801d59ab3a823261628b07339e929",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/road_vision_node.py",
+      "bytes": 16775,
+      "sha256": "28061920f4ce0ca5c26d1122750a86dc835a60144f4514428b1b177ec15d8e8f",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/road_visualization.py",
+      "bytes": 8160,
+      "sha256": "31943ea0a164ee0f567a935b3465550e5cb3a9fccdcf01c405c2a5df83c99d59",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/route_fire_patrol.py",
+      "bytes": 12620,
+      "sha256": "bb68736084c45f36fd4cddf9877b762a6fdaaecf21e98937fb81b44fee93b876",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/scene_node.py",
+      "bytes": 6539,
+      "sha256": "d2662718cbdd8d2193a7c8e821b88d0c945b9c2e7af0753945dcc6183fb71230",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/search_pump_recovery.py",
+      "bytes": 14494,
+      "sha256": "ef57211b8f6b23db024ca9b48e5d92822e31a83ed9e8253cce2b91b33c7bd0ad",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/selected_fire_round.py",
+      "bytes": 6763,
+      "sha256": "6f63824148b3fe2cb48a19c7af6d02327ccf30f907494257a2b08065d661d151",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/semantic_routes.py",
+      "bytes": 6166,
+      "sha256": "52b40f6df52006162f29af852ef47df3271fd6e7f4b58802c0b22cd603078d8e",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/semantics.py",
+      "bytes": 6696,
+      "sha256": "586eb70ac28a4099f2563cd26b0ee5d3941cf1da734eb9041cebd937cfd66067",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/stereo.py",
+      "bytes": 17610,
+      "sha256": "d8f007e35e1fc4888c42727bb9f7f7404acaba8f551d3ba096fc31b07c330763",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/stereo_depth_node.py",
+      "bytes": 32921,
+      "sha256": "8e009cdfbbe4ae4d0fb91cfe40bb58d2570c22ae147e3e1275442ad6b24e4541",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/stereo_detection_geometry.py",
+      "bytes": 14061,
+      "sha256": "b29a9254d36f1391894318d38414545b6c81dac64852b108a096e41e86bb1fe9",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/task_drive.py",
+      "bytes": 2548,
+      "sha256": "ab437bcb0e75538c535784c178ab663669fe0e92eeecafc1fccc67752f144a07",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/task_interaction.py",
+      "bytes": 56557,
+      "sha256": "dce41e66383e379b6c14a683359699972377f73eafb829ea9d0a9665d0973aef",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/task_interaction_node.py",
+      "bytes": 12070,
+      "sha256": "72c0675d69100971d3feb73fed6fb4f41bba91ab661f973628511f1bb2211b56",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/task_scene.py",
+      "bytes": 43555,
+      "sha256": "2001ff98a99c0bb0b9de90066c87446c1f78f61d12eee70fe327e26f7fda99be",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/task_scene_node.py",
+      "bytes": 12337,
+      "sha256": "f876dc1696bbdfebb776b8ca21073d7d0a8a4cb5291d6c5eaa944dbfd5146ce3",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/telemetry.py",
+      "bytes": 12674,
+      "sha256": "1a9d14e08957791d1b07005e66b81325916994203168bf0c4036d5d4fc10d812",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/telemetry_node.py",
+      "bytes": 3331,
+      "sha256": "0fdff15a888102ea680bc9b00275e3145da988d5cf50035f85a5bf448e77730f",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/traffic.py",
+      "bytes": 19458,
+      "sha256": "4a8fb5a618d3253f3015f3c7dc6da7090ee9e65ff81e2a4a2edc2872bcb5a30e",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/traffic_lamps.py",
+      "bytes": 11270,
+      "sha256": "bd62f850bd55d3a20a1478f4e6fc6caf3af8974f5793722d2c4772747624fe8d",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/vision_task_gate.py",
+      "bytes": 1670,
+      "sha256": "c4ebb014255710ff4db674bebc20768899bb1b4a51ee7d7dff562b8c611666cd",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/voice.py",
+      "bytes": 8636,
+      "sha256": "35ba64b4e0fe58e18a407bde9067309000e9de725d44723c473c601c3fce81fd",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/voice_asr_process.py",
+      "bytes": 9491,
+      "sha256": "7ebede065afbfdd0baabbce24fc887f8d4874b970d16087927fa486587e11471",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/voice_capture.py",
+      "bytes": 5680,
+      "sha256": "ecf9b5a5b3c5eaaec47e1a8fc04632b4149363d7ba26a8dc7ba8cd8fe71db78b",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/voice_node.py",
+      "bytes": 68046,
+      "sha256": "641d9f7b3df30c11e710ad9cacc15c65a4501391a97aecb2d72770a2f0ad94a2",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/voice_runtime.py",
+      "bytes": 1569,
+      "sha256": "371702398128e46aba696cb50235d2e9895ad27aa47f31e45620de714f33601f",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/voice_tts_process.py",
+      "bytes": 11667,
+      "sha256": "3e050fe4446ff0f10e8eb07837b85748170c7614ef0af90b67b0a60b2c40ae4a",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/voice_verification.py",
+      "bytes": 3701,
+      "sha256": "83ab413ba6f5b867549804e092c52e9ff65ae8ac7e693cd37920b2fa693e3658",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/zdt_fd8_control.py",
+      "bytes": 18007,
+      "sha256": "bf68e7c39e609e7c672181f540b1fcfe2ff51ccf93948e78e9271e1b606d3c93",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/zdt_vendor_bench.py",
+      "bytes": 1830,
+      "sha256": "0274a42469b0431aa0ab54d86f8228196c5906b435cbe25761b67c465d2c7b12",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/zdt_xs_protocol.py",
+      "bytes": 27001,
+      "sha256": "1dd99dbb87fd8beb0eac190ebebf8180469c93343719af42215b7f9766b0c815",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/zdt_xs_transport.py",
+      "bytes": 7238,
+      "sha256": "2cdb73e4c961b10952c2d3b17ef1396f2758c53cd788e07b811aa9d2c9672bfa",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/resource/rescue_vision",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/setup.cfg",
+      "bytes": 200,
+      "sha256": "d97b9362d93f0925c5cdcfdcc29a67b973e398ff22f310260f2b0922f1cd6e15",
+      "policy": "replace"
+    },
+    {
+      "path": "src/rescue_vision/setup.py",
+      "bytes": 2675,
+      "sha256": "0e997695c28cb69913712e772b0345f1ddfee3ff42acfef486d449434d572247",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/build_board.sh",
+      "bytes": 1027,
+      "sha256": "ce452678d45c91125e84ad0f90809db53dcc944c33d6db3fefd5960e84e27ad2",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/build_native_preprocess.sh",
+      "bytes": 612,
+      "sha256": "2dd32d286b1f0ca00f05357c895947d2057fb0cb48fd914a4513633c73a49dc1",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/build_native_remap.sh",
+      "bytes": 453,
+      "sha256": "7fb101abe237264dd65c6dc050d8cecd0fdf81f12923125b4dddf13fd7e886a8",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/build_native_runtime.sh",
+      "bytes": 574,
+      "sha256": "183dad588cc6407a2782ee71f030a687a30736a894bf710e0769b89218d11cfc",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/capture_mixed_reference.py",
+      "bytes": 8371,
+      "sha256": "0592cf1ae0567a1a98c6376b6b3efdf44c85168cc4a2b5aab53eda4e93b75a08",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/check_fpga_uart.py",
+      "bytes": 2510,
+      "sha256": "7024e35e405a7c81536fe02a4407f85496e4147b5402b599e09a211722d88ae0",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/check_neural_tts.py",
+      "bytes": 2326,
+      "sha256": "1d05955a77a5614a4e237bba0d42d53af3f4a7e42c13c0402991942786642b51",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/check_semantic_navigation.py",
+      "bytes": 2329,
+      "sha256": "abdc6c1b67bac9a18e7103472b0bc206809882ce2e776246caf05a58ec943e3a",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/detection_preview.py",
+      "bytes": 26677,
+      "sha256": "d2dc19a526cf30ca3dd8e79058bd3633979832ec4ae9661a76acbfd618615ea8",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/export_fpga_map.py",
+      "bytes": 5180,
+      "sha256": "32ce40db9ec624e07a72bc607cfd24ad2b0c5f5145ef6db7e1c14d7016baa837",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/export_region_traversability.py",
+      "bytes": 6216,
+      "sha256": "42a9aab74c9a0db27ef5b8b57d30a209b3d1467c3fb90c9160b0e6fb2a3fb4dd",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/fixed_camera_start_config.py",
+      "bytes": 7304,
+      "sha256": "21a1bb2de467446a9ec1bb1bcc477e997ecd0165cf5080e58296c0f6c2c5bf82",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/gimbal_start_profile.py",
+      "bytes": 10604,
+      "sha256": "3e8ee0482ed5c7dd3938c940a00ed3d7d7593f7ef5324217996a2f712abd8334",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/gimbal_task_profiles.py",
+      "bytes": 4077,
+      "sha256": "e6010f8f1a19d28a22fbb537e091339eaec525fa5c7854beab47caf7865f7549",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/image_transport_env.sh",
+      "bytes": 741,
+      "sha256": "909c296db43040a391e186fbcf4b8cf9d4751687b2cd09793fc0747c8c475de7",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/import_factory_stereo.py",
+      "bytes": 4416,
+      "sha256": "90ac8c9070ff33e196a7dc76c8b2a58866809da92ad58061ee7d28564558142a",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/install_presentation_service.sh",
+      "bytes": 1775,
+      "sha256": "69282abcc6eb78e0dbaa893b18f759181c75bf9a35bf8a10961ea510eb5fbdc7",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/interaction_start_status.py",
+      "bytes": 2521,
+      "sha256": "27ebd8403e930f3c8a610ef5a67520541bb15fba19879b16b81277821565f2e1",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/migrate_pump_to_fpga.py",
+      "bytes": 2323,
+      "sha256": "844ea391d6aea26280b04fe418af07a2e21df631bac1c4f4cccf3c8e06496cc0",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/presentation_server.py",
+      "bytes": 101807,
+      "sha256": "e0ad75707903ed7f2dd3100daefa10a5c1479effd50d7ec7d4a1c901a74ac793",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/preview_fixed_camera_calibration.py",
+      "bytes": 15675,
+      "sha256": "68d408c9ebcb4db9317227284b59eb0e88db257ed068ac1dfc3784da344edfb1",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/reanchor_pan_reference.py",
+      "bytes": 6729,
+      "sha256": "3596792a9ace7f9cf5c76a2c06b1adff07a1064c4b5a4014d291ec9614185b6d",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/run_detection_preview.sh",
+      "bytes": 641,
+      "sha256": "e1ae749e57fc2196f4abc6ce4e8128180b78ab3c5fdc12f5a6ef440d093a03ee",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/run_local_fire_control.sh",
+      "bytes": 741,
+      "sha256": "3f896896478ea67e2235e04ff05a154249e5488e1c01a09e6cf9f819dd6d4a5b",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/run_mipi_camera.sh",
+      "bytes": 1028,
+      "sha256": "3f1be18f0a565aca39e93af379f9b4552344b16fe9c068cba4188884f0b9811b",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/run_mipi_vision.sh",
+      "bytes": 1125,
+      "sha256": "f2d5594671161c1e6e388cfa50208e1ae6cfb339d8e0090f4fd04467ee052e70",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/run_presentation.sh",
+      "bytes": 275,
+      "sha256": "f9009efb14a8f25d1c75c47db557be1dbaa57d779d932279ba36e1db63e72f9f",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/run_standalone_tasks.sh",
+      "bytes": 3653,
+      "sha256": "e8d16fc79d2c139b6d8178573b40004cc982bbf1b6284ff4fcd2315b252506c0",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/run_task_modes.sh",
+      "bytes": 1922,
+      "sha256": "9b32ba4d522d2a45cb93921433df6b82bc9557e38a30fba9ae4ad9116dbb0305",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/self_check.py",
+      "bytes": 18013,
+      "sha256": "4b1eaebe74d876e090ec3b2361b47b275d9dcc368dcbfc48f1d3f15e659b0505",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/start_interaction_services.sh",
+      "bytes": 2552,
+      "sha256": "97f918e15fb5e08cb46b3acc84e4e66e15e512193c55b2bd9dd06688793962b4",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/start_perception_services.sh",
+      "bytes": 1446,
+      "sha256": "494d216bd4ab46af895fb187ae1fb409102d100a0e461575f971a3beb3eb913a",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/stereo_start_profile.py",
+      "bytes": 1459,
+      "sha256": "684225c70bcaba346690600b557ee2451db50349b153ea8b08229f13c576d991",
+      "policy": "replace"
+    },
+    {
+      "path": "tools/verify_mixed_gimbal_closed_loop.py",
+      "bytes": 4468,
+      "sha256": "220ade18f0c1d490ae7ad672cd4e023989cd1e15d634019b9fd1aebc6361facc",
+      "policy": "replace"
+    },
+    {
+      "path": "web/app.js",
+      "bytes": 7393,
+      "sha256": "483d6529ee9d361f9d55026f8ebb601574e9b081394b95f1a147d0e6092a22ca",
+      "policy": "replace"
+    },
+    {
+      "path": "web/assets/fpga_map.svg",
+      "bytes": 18711,
+      "sha256": "81bc3acf92c93f12ed4b839b0020507c295a41d6419fa36dee866488b6baf2e1",
+      "policy": "replace"
+    },
+    {
+      "path": "web/detection-preview.html",
+      "bytes": 12225,
+      "sha256": "fa1ad11d3bb52795464e2869dd63c8e56422829e55e5ba525883de6f48c6025a",
+      "policy": "replace"
+    },
+    {
+      "path": "web/fire_commissioning.css",
+      "bytes": 2787,
+      "sha256": "468d2ac1f8b5c2ce87da1eeacb4b3e530fe741aefb7f44c53e3ad54d178e14c9",
+      "policy": "replace"
+    },
+    {
+      "path": "web/fire_commissioning.html",
+      "bytes": 13664,
+      "sha256": "7142eac980cc326ce395b7fb815573476be7f5612237e8b80e10ef896b107367",
+      "policy": "replace"
+    },
+    {
+      "path": "web/fire_commissioning.js",
+      "bytes": 28634,
+      "sha256": "bc4dd0713bc003ed8f6769423d01716bed731349bb15632220c3476faa2e447f",
+      "policy": "replace"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 5779,
+      "sha256": "28b108452eb58ebf54a08fe956c2447e0c351ec486b6ef1a702d34246f2684f7",
+      "policy": "replace"
+    },
+    {
+      "path": "web/presentation.css",
+      "bytes": 121981,
+      "sha256": "fda0760dfa7665ea814576b4d17b372ace53f158dc16b1a2622c8325cd598fb2",
+      "policy": "replace"
+    },
+    {
+      "path": "web/presentation.html",
+      "bytes": 57616,
+      "sha256": "c060c33fb1c65cc63722a4bff4c89bf4dd2aa5223a06f0ffd4ca4fa54a3e3700",
+      "policy": "replace"
+    },
+    {
+      "path": "web/presentation.js",
+      "bytes": 325662,
+      "sha256": "ee3725355bc9db08a7491b2686337b56c5432e07b35cd6ca53b96deb81288ea6",
+      "policy": "replace"
+    },
+    {
+      "path": "web/style.css",
+      "bytes": 6693,
+      "sha256": "f4372e56453b553b4216bf04a7d5daa9243abbd67629bcdf4171d93c70eaa5ec",
+      "policy": "replace"
+    }
+  ]
+}

@@ -1,0 +1,633 @@
+{
+  "release": "zebra_smooth_20261029",
+  "status": "place_route_timing_passed",
+  "bitstream": "impl/pnr/ov5640.fs",
+  "release_bitstream": "impl/pnr/ov5640_zebra_smooth_20261029.fs",
+  "sha256": "d35f72287b20c7e39ac34ef7df8886ff72f7231f2ae9fb292a00e8c39976b289",
+  "bytes": 20707059,
+  "generated_utc": "2026-10-29T15:25:11.216824+00:00",
+  "tool": "Gowin V1.9.12.03",
+  "device": "GW5AT-LV60PG484AC1/I0 B",
+  "hardware_tested": false,
+  "flashed": false,
+  "timing_passed": true,
+  "resources": {
+    "Logic": {
+      "used": 48568.0,
+      "total": 59904.0,
+      "remaining": 11336.0,
+      "percent": 81.08
+    },
+    "Register": {
+      "used": 16683.0,
+      "total": 60780.0,
+      "remaining": 44097.0,
+      "percent": 27.45
+    },
+    "CLS": {
+      "used": 26764.0,
+      "total": 29952.0,
+      "remaining": 3188.0,
+      "percent": 89.36
+    },
+    "BSRAM": {
+      "used": 106.0,
+      "total": 118.0,
+      "remaining": 12.0,
+      "percent": 89.83
+    },
+    "DSP": {
+      "used": 85.0,
+      "total": 118.0,
+      "remaining": 33.0,
+      "percent": 72.03
+    },
+    "I/O Port": {
+      "used": 124.0,
+      "total": 297.0,
+      "remaining": 173.0,
+      "percent": 41.75
+    }
+  },
+  "timing_violations": {
+    "Setup": 0,
+    "Hold": 0
+  },
+  "min_slack_ns": {
+    "Setup": 0.025,
+    "Hold": 0.045,
+    "Recovery": 1.543,
+    "Removal": 0.397
+  },
+  "build_metrics": {
+    "exit_code": 0,
+    "seconds": 748.218
+  },
+  "hardware_inputs": {
+    "src/ov5640_ddr3_tft.cst": "5530ef7a0d7c152127766aa6d73e7fa6851b8d9c0681bea5ac9f351ce18e5d91",
+    "src/ov5640_ddr3_tft.sdc": "d608b52d19a18f8edf76a1947517c794d2a39fb85a09b93a2fe0464de493f079",
+    "src/ov5640_ddr3_tft.v": "19adc43a91dd6060f2b6884584f59916feada462b975879348b007daa3e94b49",
+    "src/pll_init.v": "3fc6bef9a7086f0920bfa47265b1766854a53f6ca1c0f75084eaf6b6ef4d6258",
+    "src/pll_mDRP_intf.v": "6380774c682f607f11088cafa39ed1556e4c4db925ee2e72b78340026d4fd6ad",
+    "src/reset_sync.v": "3eda6f46e0598da852b734d9639a6dd6861c29d124c127ac0a274929dc615011",
+    "src/camera_init/camera_init.v": "f67549489a29185e8c302be2e2a27f70b677a29c3dd9dcf981ac3807aec218ae",
+    "src/camera_init/ov5640_init_table_jpeg.v": "354b6dcf00b3070fab0a99d511d2cad8cb85fc3ebdea19211733711779903b2c",
+    "src/camera_init/ov5640_init_table_rgb.v": "bec0a49e85694837cb63aba79db0b96507c53b196d9667433e1a96622b4819ee",
+    "src/camera_init/ov7725_init_table_rgb.v": "a52cee900a4eeded8b9500755449a8c4205d42f8d0251cb8830b38d056d2e3e1",
+    "src/camera_init/i2c_control/i2c_bit_shift.v": "00ffafdc833bda4ea094bcff65ec74ac25c0cd4215559457482e29119540338a",
+    "src/camera_init/i2c_control/i2c_control.v": "7d8106cd3e377afbfe03e1a959903a6ae409c061cd06da4d1c1650f550bad829",
+    "src/ddr3_ctrl_2port/ddr3_ctrl_2port.v": "9ebf69b442b7bd74029dfdd6bb293292c589ac4c2c6c6bb5bcb9ebe8bd8db816",
+    "src/ddr3_ctrl_2port/fifo_ddr3_adapter.v": "8a6ddc686fd38dffa876e36683c005a75835f8d0d95245010460f9e4fd07ea8c",
+    "src/ddr3_memory_interface/ddr3_memory_interface.ipc": "6ae2bd59536bada0288349af68c6052cd8ab7a5af07ff544f99be152f681a70d",
+    "src/ddr3_memory_interface/ddr3_memory_interface.v": "9aa5bce36ff79ef315c622d782108faf14ad38b8b1dec648712db83693528a6d",
+    "src/ddr3_memory_interface/ddr3_memory_interface.vo": "eb770ebbfffc93f28b735a90fd96a1d21896aaeb82369ff9388e655c3f0bb369",
+    "src/ddr_pll/ddr_pll.ipc": "61a7be95bf7793994e9b65ff335b632b89e6cff76bd07dd4d61c334b33a4331f",
+    "src/ddr_pll/ddr_pll.mod": "6f05cddc246eb03b36c01f4d07eb054214f5bac39c2005d71dc6f6580a0ecaf5",
+    "src/ddr_pll/ddr_pll.v": "7371791ee9e9be4ba7a016f7527cf73759f3e23e2729705bdf4c634f36371221",
+    "src/ddr_pll/ddr_pll_mod.v": "52e0b36c890c80e39d09cff38a39908a6e9ec2ddf3476c887e5ed93b58438055",
+    "src/DVP_Capture/DVP_Capture.v": "b25858bf7a1b50c14908252de767eba37edacf6fdfabdb41bd73ba074a897a48",
+    "src/gowin_pll/gowin_pll.ipc": "9b6d52845c67f431043bec90c4c4f88acc93ca22b4d7a904c9d5bb6569a6089a",
+    "src/gowin_pll/gowin_pll.mod": "1241caa945429189554d52e6520bdde4a983638070815381fffabedc25cc5d30",
+    "src/gowin_pll/gowin_pll.v": "f445e8acd1874481fe16f966ff52cf9d4d5e0cd339e06fec593399f8516f9f0e",
+    "src/gowin_pll/gowin_pll_mod.v": "62904a7f5fa8a60f0c12f51209f5c690b5ec22071eacbc0e79ed05378479d846",
+    "src/imu/attitude_overlay.v": "261ea683222b0655ad9d856e505d78302a4b1613f75934a1e73b89cdfbce4a59",
+    "src/imu/board_buttons.v": "4b59307f11c653fe86134763540cda6a9e6085a88abd5ecbb3dad382bd110987",
+    "src/imu/imu_attitude.v": "d46a2deac5e8e2cb0c850f51fcd1f04971ec19b2d0a7a9f722667a4dfd23d314",
+    "src/imu/imu_firewater_tx.v": "3300b04dff09734ff9c691db51e29f9583093fc2dbeb2a890a62bb1346b4b70a",
+    "src/imu/imu_math.v": "2663da396408c1ed487f5893bfbb883b6995f2f62ff77f0f458f96e1ef5d1835",
+    "src/imu/imu_rotation_vector.v": "c8cf8b39c2ed1cc1116fc4bc76ed717a9e7512cef1426470c03231320bff4286",
+    "src/imu/lsm6dsv16x_spi.v": "cc7856a770180317b265620baa8f44e12baeed46144e88346344dbe2b437567e",
+    "src/imu/spi_register.v": "ea73795c866ee75943ca49be72c588f5c492b83f6880086d4198aa9bc5010a3c",
+    "src/navigation/astar_grid.v": "a5a041e28a3d39c1a7366672e12f836f0e79516d7bca3063e2b2d41d42e4f142",
+    "src/navigation/map_central_2cm.mem": "d2122371c75cfbd0c5037a8d6ecfc6bcd77279db9c0ea89636f94971873edb57",
+    "src/navigation/map_heading_2cm.mem": "f75bf818d6c862611347e723bb4b36a4064374f8aef69851cbc449ddf976e07f",
+    "src/navigation/map_metadata.mem": "326be8abd8f7624da7a0ebec1b5c7439f1ae0ac5a3a3eff5c81e87613632fd8b",
+    "src/navigation/map_plan_2cm.mem": "5cdbd6c4f73f21eccfaac0f847847efeec4e131acee086145069bc0aa2bda2fb",
+    "src/navigation/map_raw_1cm.mem": "046cfce9203f5797f96d15736f99f0e0b1df3b3dfc047201d3e21f92c8ac38ea",
+    "src/navigation/navigation_ui.v": "64f3a9b7d6fdcf4d94f7f4e1a2878c52db7c4ca707c9e03bd7d78629f97c3008",
+    "src/navigation/nav_barrier_overlay.v": "bf5ab21bbed56363cb617041e01d21f5e9b14770794c4490767179a98f67c1e5",
+    "src/navigation/nav_centerline_bitmap.vh": "144b2cc6e5caa7e4dbd230d3ff23ed8ec4695dcf2fb37b32d8276c47b051624a",
+    "src/navigation/nav_centerline_config.vh": "1f0c6f5702ac30f04d368cedd1ad6acac601017664bfedcaa8ae5b401a7431d9",
+    "src/navigation/nav_centerline_init.vh": "bbdbe256d89f677747f625282908c4021b255208e2236852ed1eff1325c92501",
+    "src/navigation/nav_centerline_junctions.vh": "3f53e8b78b22da10be750c320cf1914895d04d6e69613f2062a7e8722286f030",
+    "src/navigation/nav_centerline_reverse.vh": "40c02c8a11fb3e3bd9080facbfff06cd4cda0b1f7bf4af998da01e5f55677e1a",
+    "src/navigation/nav_control.v": "684a00896cb49ff074c6a7cd2ab1c0b26c5dbba8014be5a751aafe0492801ae0",
+    "src/navigation/nav_font.vh": "acac7152b237e22d068052e4c973222d9754f40f334d5a3e169db2db2df1adf2",
+    "src/navigation/nav_font_rows.mem": "b8f4220b9b7bc2d58ba6783be3d46e055b1ce09c6f886060cba68c6da9d878e7",
+    "src/navigation/nav_map_init.vh": "3106bc18b4e9d920af5b1c2a13c23f7df42ea3260d839600a1f63424c2e99ca2",
+    "src/navigation/nav_map_rom.v": "b89898772b21d4a132636e8539fd687a93c98d2a457aaa47dbf18b9bd1787405",
+    "src/navigation/nav_metadata.vh": "660427c816cb899f6414ed3d316bf9a916255192381f05e0ee30ff868070d13f",
+    "src/navigation/nav_path_refiner.v": "4ac2f9c7c094a120f007631266ae12fd7af15a132b6301ca05e1b85c3f6f5cc2",
+    "src/navigation/nav_renderer.v": "a0c76e43805e2d2cea54fdc4f3b8c8ba690f727c3918b743c3f183c882aad1fc",
+    "src/navigation/nav_road_planner.v": "1fcffee0ce695a499321d3f0b6da75a85bea4dcb7e9c5a42459a0067ae5c8a65",
+    "src/navigation/vehicle_settings.v": "42bda0b51ff3a1fdba03c33e424545be0ef770fec0e551c936f290e891f773e1",
+    "src/portrait/gt911_touch.v": "c7a118ae4c691d7cb98ce3ea702b6b75efb20b941ff0f3dd3db6ab86a51e2df3",
+    "src/portrait/portrait_ddr_adapter.v": "a40a1393ae805912fbdeea30341df85dbca5ec1837a6d23b22779f8a9124bef9",
+    "src/portrait/portrait_display.v": "fc893cd13384056a2c363af799722271b3beadd9ca9253c31cbf91d465df4d48",
+    "src/portrait/portrait_tiles.v": "0728857ccf1df1a573b306d273585c3c2f1027eba9f6ac3a3009071e155869ea",
+    "src/portrait/vision_video.v": "aa6a0bc5a07d99442293fc0cf4cd354edb0eecbe771699458d6ddf5b60a36add",
+    "src/portrait/vision_zebra.v": "593a86aa499d01defb2b9c1166e9fd1b45308905b7965e57860b10b3cdc6fdfb",
+    "src/rd_data_fifo/rd_data_fifo.ipc": "a6b670a076fed98cdd29fab89aef4d7c842c0b47c4278b4451f3d341a01d3811",
+    "src/rd_data_fifo/rd_data_fifo.v": "711c5c3a61c6f8c0a6a1cd5efaa20b3941e38e7f76d495b51b8176e9b533035d",
+    "src/rd_data_fifo/rd_data_fifo.vo": "ab0833be05675be1a5a8c5ac7f5266b253ec82aeb41e63492603fef904c196ac",
+    "src/vehicle/host_uart_rx.v": "4f77c892c2adc04b1960e29b44ba1def45aa83510d75b8c51669f3aceff3bf1a",
+    "src/vehicle/rear_ratio.mem": "55e98bd36fb6392475982a11d1738663309c466f00d44683705f0ca041d49714",
+    "src/vehicle/servo_offset.mem": "428a81e9c605087f59de52390df3067c5e6b717ac28d9bd3bcd95087f6b26d17",
+    "src/vehicle/vehicle_bypass.v": "c6152618718b7268cd3ac4b18a1b1350054958e5a98d0d7d49a58dc23363a19c",
+    "src/vehicle/vehicle_config.vh": "1df9114f5c2291a385854a6b454d45adf3141eb4f951ccbd31833ed52f11b04c",
+    "src/vehicle/vehicle_host_link.v": "686cf09e4483bc8bd24a0e3116f4fa0da4e762810a9626a566719e1e12f225f0",
+    "src/vehicle/vehicle_motion.v": "0b165d51d3c08fccde93596a5458ce3a9bdb11973eb40336e2a1935d2f24227b",
+    "src/vehicle/vehicle_odometry.v": "30153e70b240b97d39861f468fffcfdfad0e13c145396d02fbc64a0a77c2b43f",
+    "src/vehicle/vehicle_route_profile.v": "5b9c9ba9afa19b8f91998662491a5e8b4863df2ee0e16079860522d448876791",
+    "src/vehicle/vehicle_sincos.v": "d24c9d668718ae73def36c9e56916ae3110feb82d8682977ed27127ec56e138d",
+    "src/vehicle/vehicle_subsystem.v": "5c4ba1a84659bdc2090197ff39f1300f273ed9101cf0a4eefd0d64a0cf89c1c8",
+    "src/vehicle/vehicle_tracker.v": "e835346e4d65a518088a6d71c929f8ead513815b7a03b5eac2952060757b2519",
+    "src/vehicle/motor/motor_closed_loop.v": "63390a0e59f23b05a2e8e8c12dac12a89eda08879fc654f54e872c04b8678465",
+    "src/vehicle/motor/motor_encoder.v": "3f727ac320e9dfd46305aa7121d5def2f9cd45cb5631c88c305b7c7db7aeeedc",
+    "src/vehicle/motor/motor_pi.v": "69286e15b990e1ec214d2879bc2681f4984556432c7fa2b1b563ff5477d4fe36",
+    "src/vehicle/motor/motor_PWM.v": "bdd728b1d7d89c5a2761396eca56fbf9b6dbbb08be6f2b4a2da402a69f34cb28",
+    "src/vehicle/motor/motor_speed.v": "29d35e90b4153bf3cc91bffddbdd91b03f46291b90e9d06ee46d9a5a858a1364",
+    "src/vehicle/motor/motor_target_counts.v": "760a9380ce21cce038594da07c95b742859875afe1abad31d0156c90cebde813",
+    "src/vehicle/motor/ps2_reference_controller.v": "ba9a0aef22317ff02ef186db2d07fccacd522e39262f9e63ab716089633241c6",
+    "src/vehicle/motor/ps2_reference_serial.v": "31c0abeab9e806440d20ed5e8381a20443c56da5ec608808d8bc25e70d82f73a",
+    "src/vehicle/motor/ps2_test_control.v": "6158a6eea8adde4e1349387816c80a746ccd764aaf785daecc8200e4603f9c5e",
+    "src/vehicle/motor/servo_pwm.v": "b07a3bbd3a0c9c20d91624d481938f3e8165167ac2f55b06effd5e5c2ca90bf7",
+    "src/vehicle/motor/speed_to_pwm.v": "c6a4dd854e4044df7ee87788f7f09fcc4d6d86bf65f6f2e88394b99cbcf6215a",
+    "src/vehicle/motor/uart_byte_tx.v": "5d39e5aaf9b8f8c201c729d74017d05f3cc3398ce84e96e38174322916667093",
+    "src/vehicle/motor/vl53l0x_array_controller.v": "4f7764514e8e4e840124f0b14066b0c2c80d8cd7ce409ed9e6480de488ad9f46",
+    "src/vehicle/motor/vl53l0x_i2c_master.v": "7a6cbdd5cb211285a12adbdd39218d95e58acf135662527c82f5f77e779538d3",
+    "src/vehicle/motor/vl53l1x_array_controller.v": "dd91ec12ef9490b7b506d826f1ccab01f860d22bf85448ac99e1cc7d0aed4a53",
+    "src/vehicle/motor/vl53l1x_i2c_master.v": "53fab283b7900221c5fa0c8e49b7c8ca161fd5bd3a3d581aaf6e1d6a42cc3b49",
+    "src/vehicle/motor/vofa_firewater_tx.v": "0122c87098188171c2070fe525a696a0769ce298c134c9813ff12be6ef7f765d",
+    "src/vga/disp_driver.v": "bcc9ef6b4b56cac425a643eb52891cf74bb778ba122817d52a56c701d26b4ee1",
+    "src/vga/disp_parameter_cfg.v": "5caaac5fdefe821b62763857ca987ff366060f63a0ee585be4ec7cd193311ddb",
+    "src/vga/tft_video_source.v": "73fbab6c112872b1c51e9ef343989a794b44eda3ff12b4f7e04e1dc6ec5bb540",
+    "src/wr_data_fifo/wr_data_fifo.ipc": "9a208f302be269774cb00967019c49108350a96a4006c8ef527050a5b45253b5",
+    "src/wr_data_fifo/wr_data_fifo.v": "0201549b2da4cea620e3deb8be54259be474392685e638a9771533d57837b6b3",
+    "src/wr_data_fifo/wr_data_fifo.vo": "b3dfc5be5e8fd0a592503d5ca3ff7c1c8cd4834f8c28c69638caf1f46fc5c87d",
+    "ov5640.gprj": "e8f3c03d31c58c78b771413705624089d5f4938012cbb7f9f078153f1b1b58bc",
+    "build.tcl": "3059821063e40ae8729e10697d47e601d82808fa1550cf392dbd0a65741613fd"
+  },
+  "changed_hardware_sources": [
+    "src/navigation/nav_centerline_config.vh",
+    "src/navigation/nav_centerline_init.vh",
+    "src/navigation/nav_centerline_reverse.vh",
+    "src/navigation/nav_renderer.v",
+    "src/navigation/navigation_ui.v",
+    "src/ov5640_ddr3_tft.v",
+    "src/portrait/vision_video.v",
+    "src/portrait/vision_zebra.v"
+  ],
+  "pins_verified": 118,
+  "rom_audits": {
+    "font": {
+      "rows": 4096,
+      "pixels": 65536,
+      "rom_instances": 4
+    },
+    "map": {
+      "raw_map": {
+        "cells": 112640,
+        "free": 42634,
+        "rom_instances": 8
+      },
+      "plan_map": {
+        "cells": 28160,
+        "free": 4000,
+        "rom_instances": 2
+      },
+      "heading_clearance": {
+        "used": false,
+        "reason": "body-heading and clearance costs removed"
+      }
+    },
+    "road": {
+      "graph": {
+        "words": 1764,
+        "rom_instances": 8,
+        "checked_bits": 127008,
+        "logical_bits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75
+        ]
+      },
+      "reverse_graph": {
+        "words": 1764,
+        "rom_instances": 5,
+        "checked_bits": 67032,
+        "logical_bits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ]
+      },
+      "centre_map": {
+        "words": 1760,
+        "rom_instances": 2,
+        "checked_bits": 28160,
+        "logical_bits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      }
+    }
+  },
+  "visual_navigation": {
+    "steering": false,
+    "pose_correction": false
+  },
+  "zebra": {
+    "bar_directions": "transverse and longitudinal",
+    "adaptive_luma": true,
+    "preview_threshold_independent": true,
+    "limit": "min(normal/2, 60 mm/s)",
+    "clear": "next complete clear frame"
+  },
+  "s_bend": {
+    "spacing_mm": 10,
+    "geometry_unchanged": true,
+    "tracker_unchanged": true
+  },
+  "post_synthesis_detector_simulation": {
+    "status": "passed",
+    "compared_cycles": 105482,
+    "source_netlist_sha256": "8573786ef10cd9487f81dbea6709b93d6ef6bb18f077bd51b938b39079c4e502",
+    "extracted_netlist": "sim/zebra_smooth_detector_synth.v",
+    "extracted_netlist_sha256": "50a741882c61bed4708522182e480ff5a18b9e585292f6e528366418d17962ce",
+    "wrapper": "sim/vision_zebra_synth_wrap.sv",
+    "wrapper_sha256": "327919327aab54d25290c26c6218a7f8ae9804206e82c0a6cc837777b0bbc53b",
+    "testbench": "sim/vision_zebra_synth_tb.sv",
+    "testbench_sha256": "4faf59436dbd5e68b42520df779ab0597dabea90f69e9e9b76e42692406a46ac",
+    "log": "sim/zebra_smooth_detector_netlist.log",
+    "log_sha256": "1e9507711a9c269f345d6d49374acc33e86f43be3739b05e222f637ce751d146",
+    "scope": "detector with constant centre=52 and binary samples; cross-boundary gates restored"
+  },
+  "simulation_evidence": {
+    "logs": [
+      {
+        "log": "sim/zebra_smooth_detector.log",
+        "sha256": "96689c3966963688c08d3729ecdc9aeb104ae3229dc3ae517019e943ed6dd6e8",
+        "results": [
+          "PASS vision zebra: both bar directions, slant, offset, noise, partial frame hold, clear release; single marking, lane boundaries, all-white image, noise and short texture rejected"
+        ]
+      },
+      {
+        "log": "sim/zebra_smooth_exposure.log",
+        "sha256": "a09e828893ec794734ce4e2fd21cff462159d51c44a1cb0d0f537c5be3cd2b08",
+        "results": [
+          "PASS zebra exposure: dim/bright longitudinal bars, preview slider 0/255 isolation, clear release"
+        ]
+      },
+      {
+        "log": "sim/zebra_smooth_camera.log",
+        "sha256": "8d43bcecf510a74831902492446d84283eaeee064f2c41a5fb612908cf985405",
+        "results": [
+          "PASS native camera->zebra->inertial motion: 200->60->200, low speed 80->40, incomplete-frame hold, isolated noise, false positives, unchanged targets/steering, pause, modes and emergency; frames=6"
+        ]
+      },
+      {
+        "log": "sim/zebra_smooth_overlay.log",
+        "sha256": "e27ea7a627ff921e115e9618033bce4c2c6e7e920c31bf192e9f11cb193968cb",
+        "results": [
+          "PASS telemetry decimal display: live refresh, 072.8 cm raster, negative heading, zero and invalid ranges",
+          "PASS zebra overlay: navigation badge, commanded 0060 mm/s, clear release, mode isolation",
+          "PASS vehicle overlay raster: distance and navigation screens with complete units/segment font"
+        ]
+      },
+      {
+        "log": "sim/zebra_smooth_detector_netlist.log",
+        "sha256": "1e9507711a9c269f345d6d49374acc33e86f43be3739b05e222f637ce751d146",
+        "results": [
+          "PASS netlist equivalence: 105482 cycles checked",
+          "PASS vision zebra: both bar directions, slant, offset, noise, partial frame hold, clear release; single marking, lane boundaries, all-white image, noise and short texture rejected"
+        ]
+      },
+      {
+        "log": "sim/inertial_zebra_settings.log",
+        "sha256": "a1a58230710854019614726109f92edd4ef02bd7731907a5f2a8d7f3bcb607fa",
+        "results": [
+          "PASS navigation menu: no algorithm selector, avoidance default OFF, ON/OFF, page persistence and source/speed independence",
+          "PASS new parameters: 35/150cm bypass bounds, invalid 34 rejected, 80/400mm/s independent brake speed",
+          "PASS settings: manual default/200, all menus, keypad/delete/confirm/limits, +/-5/50, touch driving, PS2 ignored in manual, circle/R1/R2 edge debounce, synchronized target, disarm/rearm, disconnect and reset"
+        ]
+      },
+      {
+        "log": "sim/inertial_zebra_modes.log",
+        "sha256": "5a1cbb4f3f3a34f895361cdaa5b3182a6f11d0ade324939ef61cba88def1a410",
+        "results": [
+          "PASS pure navigation: camera-free startup, zebra 200->60->200, invalid-frame hold, steering independent, pause/resume",
+          "PASS repeated mode handoff: eight in-flight prior targets cannot trap navigation startup",
+          "PASS pure navigation emergency obstacle/IMU stops"
+        ]
+      },
+      {
+        "log": "sim/inertial_zebra_avoidance.log",
+        "sha256": "74b8af36ff0953a325b7a073a5975474119e58695ff5fbd2a4360ae6b901b064",
+        "results": [
+          "PASS side ToF: both avoidance settings preserve left/right pure map corrections (4 cases)",
+          "PASS OFF stop: north=0 front=161 target=(2500,500)",
+          "PASS OFF stop: north=1 front=161 target=(500,2500)",
+          "PASS OFF/ON: stopping/clearance, both headings, latched setting and next-entry activation (2 cases)",
+          "PASS ON side selection, independent avoidance task, OFF emergency and IMU stop protections"
+        ]
+      }
+    ],
+    "plans": [
+      {
+        "name": "s_forward",
+        "passed": true,
+        "seconds": 12.5,
+        "log": "sim/zebra_smooth_plan_s_forward.log",
+        "log_sha256": "086f355139bf9f9be9fa2e5efa377c5a1a5d79fe4b5c4c1cfe11891e57570e52",
+        "route": "sim/zebra_smooth_s_forward_route.csv",
+        "points_on_continuous_directed_graph": 125,
+        "route_sha256": "d7771606aed7a8797a68579f5902ff0745f06b0b8a064163df4d972ddd69df00"
+      },
+      {
+        "name": "s_reverse",
+        "passed": true,
+        "seconds": 11.95,
+        "log": "sim/zebra_smooth_plan_s_reverse.log",
+        "log_sha256": "51f1758758bd771e66a7921ad18bb3810d7664d188014d8c2deda8ef861553a7",
+        "route": "sim/zebra_smooth_s_reverse_route.csv",
+        "points_on_continuous_directed_graph": 125,
+        "route_sha256": "ec6f630823843a8904fc60e934e6661c9c09caccd95a21c3fa765aa0054aec9b"
+      },
+      {
+        "name": "outer_left",
+        "passed": true,
+        "seconds": 5.14,
+        "log": "sim/zebra_smooth_plan_outer_left.log",
+        "log_sha256": "2f74f3a0f1b30b1bec3fa5f37a8a18d67e1fb5908c42fd160ec758bc0609da9d",
+        "route": "sim/zebra_smooth_outer_left_route.csv",
+        "points_on_continuous_directed_graph": 49,
+        "route_sha256": "034303807d9bfaf35cdbdbb655d9b96a002585bfb0048bc57409a0ed731a34cf"
+      },
+      {
+        "name": "outer_right",
+        "passed": true,
+        "seconds": 6.19,
+        "log": "sim/zebra_smooth_plan_outer_right.log",
+        "log_sha256": "9c03ff65361dde4f0173f75f907aeb0106ded0e78208efc4e2a3a0c3e0d1cd76",
+        "route": "sim/zebra_smooth_outer_right_route.csv",
+        "points_on_continuous_directed_graph": 49,
+        "route_sha256": "b7f6852d6e2ff02bc924a8ec37a55bbc0ee8fce269f6f1ea2999df0681b202f1"
+      },
+      {
+        "name": "photo",
+        "passed": true,
+        "seconds": 145.64,
+        "log": "sim/zebra_smooth_plan_photo.log",
+        "log_sha256": "cf71ea39fdee6e1f25a67353ebeaa764c8a4cc803444484923d3b006d614af9e",
+        "route": "sim/zebra_smooth_photo_route.csv",
+        "points_on_continuous_directed_graph": 226,
+        "route_sha256": "dab122eece7d5e352703e7e0cdde808e796a344b6f8cb0402b8cf0ed1aaf7360"
+      }
+    ],
+    "motions": [
+      {
+        "name": "s_forward",
+        "passed": true,
+        "seconds": 15.95,
+        "log": "sim/zebra_smooth_motion_s_forward.log",
+        "log_sha256": "954b0534365623644ee2ad63e4286b46ce46bef81f0d36c54740c5f437dc4051",
+        "metrics": {
+          "status": 3.0,
+          "index": 124.0,
+          "count": 125.0,
+          "max_cross_mm": 17.634791,
+          "max_pose_mm": 7.157136
+        },
+        "s_transition": {
+          "max_cross_mm": 7.573056,
+          "maximum_command_step_deg": 2,
+          "near_zero_command_ms": 220
+        },
+        "trace": "sim/zebra_smooth_s_forward_trace.csv",
+        "trace_sha256": "22a560239cb6a3e91968b214f10c152cea305f81b92960e7e5aba32395ff0686"
+      },
+      {
+        "name": "s_reverse",
+        "passed": true,
+        "seconds": 15.86,
+        "log": "sim/zebra_smooth_motion_s_reverse.log",
+        "log_sha256": "2c34bcf0e8c42d55001dddff5aa7ef915e2983d1e047ab6ef5c6cc8db0171c3a",
+        "metrics": {
+          "status": 3.0,
+          "index": 124.0,
+          "count": 125.0,
+          "max_cross_mm": 17.107864,
+          "max_pose_mm": 5.338775
+        },
+        "s_transition": {
+          "max_cross_mm": 5.270305,
+          "maximum_command_step_deg": 2,
+          "near_zero_command_ms": 160
+        },
+        "trace": "sim/zebra_smooth_s_reverse_trace.csv",
+        "trace_sha256": "9356c5ca1bf7957e9ef2c77e0d786fec626bf751bbd94f5d22bc01c7c2582dd6"
+      },
+      {
+        "name": "outer_left",
+        "passed": true,
+        "seconds": 11.55,
+        "log": "sim/zebra_smooth_motion_outer_left.log",
+        "log_sha256": "962fb8753cd5831cf7cf6b8a408d05cba3f5478b0ec9dc3ecc2b48faef7d0471",
+        "metrics": {
+          "status": 3.0,
+          "index": 48.0,
+          "count": 49.0,
+          "max_cross_mm": 5.549139,
+          "max_pose_mm": 2.750202
+        },
+        "identical_to_previous_release": true,
+        "trace": "sim/zebra_smooth_outer_left_trace.csv",
+        "trace_sha256": "1adcead9dc15e096b24caa4f8f6b70a4e04915487068f8d62c4e329ba30f1f4b"
+      },
+      {
+        "name": "outer_right",
+        "passed": true,
+        "seconds": 10.52,
+        "log": "sim/zebra_smooth_motion_outer_right.log",
+        "log_sha256": "e07dc6139fa743e61dec72dd03668d5c0667c2099ec45fdcb37e6d87fe2f702a",
+        "metrics": {
+          "status": 3.0,
+          "index": 48.0,
+          "count": 49.0,
+          "max_cross_mm": 5.602668,
+          "max_pose_mm": 4.401191
+        },
+        "identical_to_previous_release": true,
+        "trace": "sim/zebra_smooth_outer_right_trace.csv",
+        "trace_sha256": "0a704450920f48b3f7ad0c76028efd142622dd40c2885af29571392854bb3a87"
+      },
+      {
+        "name": "s_forward_zebra",
+        "passed": true,
+        "seconds": 14.44,
+        "log": "sim/zebra_smooth_motion_s_forward_zebra.log",
+        "log_sha256": "e448947105a7f217019e613acb40cc064bc40a37849a797752067495820f1169",
+        "metrics": {
+          "status": 3.0,
+          "index": 124.0,
+          "count": 125.0,
+          "max_cross_mm": 18.110143,
+          "max_pose_mm": 7.485476
+        },
+        "s_transition": {
+          "max_cross_mm": 7.696491,
+          "maximum_command_step_deg": 2,
+          "near_zero_command_ms": 160
+        },
+        "trace": "sim/zebra_smooth_s_forward_zebra_trace.csv",
+        "trace_sha256": "81fbd6f6a9f82e604af8c5d1ac14129260b4180dfd53a6bad419435de1ba7b4a"
+      },
+      {
+        "name": "photo",
+        "passed": true,
+        "seconds": 37.5,
+        "log": "sim/zebra_smooth_motion_photo.log",
+        "log_sha256": "bf9b1cbe6a4e3feb16b14f9c5922eb9907897213bf9b89dbee83ee42f939bc24",
+        "metrics": {
+          "status": 3.0,
+          "index": 225.0,
+          "count": 226.0,
+          "max_cross_mm": 19.976806,
+          "max_pose_mm": 9.488246
+        },
+        "s_transition": {
+          "max_cross_mm": 7.426787,
+          "maximum_command_step_deg": 3,
+          "near_zero_command_ms": 200
+        },
+        "trace": "sim/zebra_smooth_photo_trace.csv",
+        "trace_sha256": "d7990cb133550feb1accc424934cc76d13dd68d7fd0ac1bd405eec8d22911fe6"
+      }
+    ]
+  },
+  "known_limitations": [
+    "Not flashed and not tested on a physical vehicle.",
+    "S transition improvement is simulated; full-route peak error is essentially unchanged.",
+    "Full-map generator has an existing junction steering-limit precheck failure.",
+    "Legacy nav_ui_tb.v references removed planner.state and is not a passing test."
+  ]
+}

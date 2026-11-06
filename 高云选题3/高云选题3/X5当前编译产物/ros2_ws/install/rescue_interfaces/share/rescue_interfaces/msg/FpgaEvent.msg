@@ -1,0 +1,15 @@
+uint8 CROSSWALK=16
+uint8 CROSSING_COMPLETE=17
+uint8 STATUS=18
+uint8 ACK=19
+std_msgs/Header header
+uint8 event_type
+uint16 wire_sequence
+uint32 event_id
+bool vehicle_stopped
+bool gimbal_settled
+bool measured_angles_valid
+float32 pan_deg
+float32 tilt_deg
+uint16 acknowledged_sequence
+uint8 acknowledgement_result

@@ -1,0 +1,7 @@
+{
+  "source": "impl/baseline_navigation_corner_20261025/src/vehicle/vehicle_vision_fusion.v",
+  "source_sha256": "51bb61a5b2992afa3a320702830c043524012546d18899f5e80e1f26a0cca924",
+  "exit_code": 1,
+  "expected_failure": "EARLY_RELEASE_30_DEGREES",
+  "log": "sim/navigation_corner_old_failure_20261025.log"
+}

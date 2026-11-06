@@ -1,0 +1,50 @@
+[
+  {
+    "name": "authority_0",
+    "top": "navigation_authority_tb",
+    "passed": true,
+    "seconds": 0.11,
+    "log": "sim/navigation_authority_authority_0.log",
+    "sha256": "082c9a085c527eb60ba3e99e36248831c0167a06433320585fcc8a41c9b4699c"
+  },
+  {
+    "name": "authority_1",
+    "top": "navigation_authority_tb",
+    "passed": true,
+    "seconds": 0.12,
+    "log": "sim/navigation_authority_authority_1.log",
+    "sha256": "974910685a057a4c49c29577716c3627e1bb30f863d1fec5475f487f07c11eb4"
+  },
+  {
+    "name": "authority_2",
+    "top": "navigation_authority_tb",
+    "passed": true,
+    "seconds": 0.11,
+    "log": "sim/navigation_authority_authority_2.log",
+    "sha256": "9b40aacc72adf22f566704d1d4e2db075eca119899fde9824c790b2b51888c74"
+  },
+  {
+    "name": "authority_3",
+    "top": "navigation_authority_tb",
+    "passed": true,
+    "seconds": 0.11,
+    "log": "sim/navigation_authority_authority_3.log",
+    "sha256": "7aa68f46bfa3378c768697f65e59ffc484fcc1041851e3ad31e2cb5b7fd2f2b2"
+  },
+  {
+    "name": "handoff",
+    "top": "navigation_handoff_tb",
+    "passed": true,
+    "seconds": 0.2,
+    "log": "sim/navigation_authority_handoff.log",
+    "sha256": "521c8cb52a4f5adf8a396e44a61c8e0b6c1fcca6806ed6ed89894b6c9c182d4d"
+  },
+  {
+    "name": "video",
+    "top": "vision_video_tb",
+    "passed": true,
+    "seconds": 216.86,
+    "log": "sim/navigation_authority_video.log",
+    "sha256": "184f068f1ec942bfef8b3356db4af24f3c34af7ee360b072ce6e17f40b4cedf0"
+  }
+]

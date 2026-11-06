@@ -1,0 +1,32 @@
+{
+  "mode": "fixed_camera_3d",
+  "calibrated": false,
+  "calibration_id": null,
+  "stereo_calibration_id": null,
+  "source_frame": "undistorted_left_optical",
+  "image_size_wh": null,
+  "translation_unit": "m",
+  "R_camera_to_gimbal": null,
+  "t_camera_origin_in_gimbal_m": null,
+  "axis_model": "serial_pan_z_tilt_minus_y_with_offsets",
+  "tilt_origin_in_pan_m": null,
+  "nozzle_origin_in_tilt_m": null,
+  "nozzle_direction_in_tilt": null,
+  "actuator_reference_id": null,
+  "axis_reference_verified": false,
+  "axes": {
+    "pan": {"zero_angle_deg": null, "positive_direction": null, "limits_deg": null},
+    "tilt": {"zero_angle_deg": null, "positive_direction": null, "limits_deg": null}
+  },
+  "valid_range_m": null,
+  "max_speed_deg_s": 12.0,
+  "max_step_deg": 0.6,
+  "angle_tolerance_deg": 0.3,
+  "line_tolerance_m": 0.002,
+  "min_forward_ray_m": 0.05,
+  "stable_lock_s": 0.35,
+  "max_frame_age_s": 0.5,
+  "max_encoder_age_s": 0.2,
+  "max_target_shift_m": 0.02,
+  "notes": "UNMEASURED: fixed camera on vehicle, only nozzle rotates. Base x forward/y left/z up, pan +z, positive tilt about -y. p_gimbal=R_camera_to_gimbal*p_camera+t_camera_origin_in_gimbal_m. At geometric pan=tilt=0, explicitly measure tilt pivot offset and nozzle exit/direction; zero offsets are valid ONLY when physically measured. Geometric angle=(actuator angle-zero_angle_deg)*positive_direction. Match actuator_reference_id to servo.reference_id and exact limits in actuator status. Match source optical frame, image size and measured stereo calibration ID. No pixel-centering or fixed-distance fallback. Straight nozzle geometry can lock encoder angles but never authorizes water without measured impact calibration."
+}

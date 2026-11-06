@@ -1,0 +1,178 @@
+{
+  "coordinate_source": "existing road_centerlines.json; source x*352/895,y*320/817",
+  "road_geometry_changed": false,
+  "numbering": "annotated user map, counterclockwise from upper-left, S=9",
+  "points": [
+    {
+      "id": 1,
+      "location": "upper_left_arc_midpoint",
+      "planner_cell": [
+        17,
+        17
+      ],
+      "display_cm": [
+        35,
+        285
+      ],
+      "nearest_graph_node": 1570,
+      "graph_q8": [
+        9324,
+        8778
+      ],
+      "graph_primitive": 194,
+      "snap_error_manhattan_mm": 21.328
+    },
+    {
+      "id": 2,
+      "location": "left_straight_midpoint",
+      "planner_cell": [
+        12,
+        80
+      ],
+      "display_cm": [
+        25,
+        159
+      ],
+      "nearest_graph_node": 871,
+      "graph_q8": [
+        6544,
+        41164
+      ],
+      "graph_primitive": 129,
+      "snap_error_manhattan_mm": 7.656
+    },
+    {
+      "id": 3,
+      "location": "lower_left_arc_midpoint",
+      "planner_cell": [
+        17,
+        142
+      ],
+      "display_cm": [
+        35,
+        35
+      ],
+      "nearest_graph_node": 1546,
+      "graph_q8": [
+        8512,
+        72634
+      ],
+      "graph_primitive": 193,
+      "snap_error_manhattan_mm": 30.234
+    },
+    {
+      "id": 4,
+      "location": "bottom_straight_midpoint",
+      "planner_cell": [
+        88,
+        147
+      ],
+      "display_cm": [
+        177,
+        25
+      ],
+      "nearest_graph_node": 737,
+      "graph_q8": [
+        45056,
+        75402
+      ],
+      "graph_primitive": 118,
+      "snap_error_manhattan_mm": 14.609
+    },
+    {
+      "id": 5,
+      "location": "lower_right_arc_midpoint",
+      "planner_cell": [
+        158,
+        142
+      ],
+      "display_cm": [
+        317,
+        35
+      ],
+      "nearest_graph_node": 1521,
+      "graph_q8": [
+        81600,
+        72634
+      ],
+      "graph_primitive": 192,
+      "snap_error_manhattan_mm": 30.234
+    },
+    {
+      "id": 6,
+      "location": "right_straight_midpoint",
+      "planner_cell": [
+        163,
+        80
+      ],
+      "display_cm": [
+        327,
+        159
+      ],
+      "nearest_graph_node": 594,
+      "graph_q8": [
+        83568,
+        41368
+      ],
+      "graph_primitive": 107,
+      "snap_error_manhattan_mm": 11.562
+    },
+    {
+      "id": 7,
+      "location": "upper_right_arc_midpoint",
+      "planner_cell": [
+        158,
+        17
+      ],
+      "display_cm": [
+        317,
+        285
+      ],
+      "nearest_graph_node": 1497,
+      "graph_q8": [
+        80788,
+        8778
+      ],
+      "graph_primitive": 191,
+      "snap_error_manhattan_mm": 21.328
+    },
+    {
+      "id": 8,
+      "location": "top_straight_midpoint",
+      "planner_cell": [
+        88,
+        13
+      ],
+      "display_cm": [
+        177,
+        293
+      ],
+      "nearest_graph_node": 489,
+      "graph_q8": [
+        45056,
+        6818
+      ],
+      "graph_primitive": 101,
+      "snap_error_manhattan_mm": 13.672
+    },
+    {
+      "id": 9,
+      "location": "s_bend_inflection",
+      "planner_cell": [
+        88,
+        73
+      ],
+      "display_cm": [
+        177,
+        173
+      ],
+      "nearest_graph_node": 1677,
+      "graph_q8": [
+        45619,
+        37607
+      ],
+      "graph_primitive": 196,
+      "snap_error_manhattan_mm": 12.969
+    }
+  ]
+}

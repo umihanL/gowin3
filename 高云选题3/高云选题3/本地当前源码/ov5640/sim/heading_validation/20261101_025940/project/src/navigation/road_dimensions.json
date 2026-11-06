@@ -1,0 +1,30 @@
+{
+  "current_measurement": "measured_2026_10_27",
+  "measured_2026_10_27": {
+    "outer_width_mm": 373,
+    "inner_width_mm": 340,
+    "s_bend_width_mm": 340
+  },
+  "widening": {
+    "preserve_map_and_planned_centrelines": true,
+    "method": "equal widening on both sides of the existing road centre",
+    "map_geometry_measurement": "measured_2026_10_24",
+    "note": "The old radius belongs to the original map; no new physical edge radius was measured."
+  },
+  "map_geometry_kept": {
+    "source": "measured_2026_10_24",
+    "outer_edge_radius_mm": 376,
+    "generator_rerun": false,
+    "note": "Only the visual lane-width model uses the new physical widths; path centreline geometry remains the restored version."
+  },
+  "measured_2026_10_24": {
+    "outer_width_mm": 286,
+    "inner_width_mm": 254,
+    "outer_edge_radius_mm": 376
+  },
+  "provisional": {
+    "s_bend_source_radius_px": 80,
+    "horizontal_fov_deg": 60
+  },
+  "map_scale_matches_physical_road_widths": false
+}

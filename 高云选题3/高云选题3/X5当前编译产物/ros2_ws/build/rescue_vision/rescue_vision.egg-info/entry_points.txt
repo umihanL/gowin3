@@ -1,0 +1,25 @@
+[console_scripts]
+auto_fire = rescue_vision.auto_fire_node:main
+extension_task = rescue_vision.extension_task_node:main
+fast_mipi_perception = rescue_vision.fast_mipi_perception_node:main
+fire_aim = rescue_vision.fire_aim_node:main
+fire_targets = rescue_vision.fire_target_node:main
+fpga_bridge = rescue_vision.fpga_bridge_node:main
+fpga_navigation = rescue_vision.fpga_navigation_node:main
+interaction = rescue_vision.interaction_node:main
+local_actuator = rescue_vision.local_actuator_node:main
+mipi_building_ocr = rescue_vision.mipi_building_ocr_node:main
+mipi_camera = rescue_vision.mipi_camera_node:main
+mission = rescue_vision.mission_node:main
+navigation = rescue_vision.navigation_node:main
+pd42_test = rescue_vision.pd42_test_node:main
+perception = rescue_vision.perception_node:main
+road_vision = rescue_vision.road_vision_node:main
+scene = rescue_vision.scene_node:main
+stereo_camera = rescue_vision.camera_node:main
+stereo_depth = rescue_vision.stereo_depth_node:main
+task_interaction = rescue_vision.task_interaction_node:main
+task_scene = rescue_vision.task_scene_node:main
+telemetry = rescue_vision.telemetry_node:main
+voice = rescue_vision.voice_node:main
+

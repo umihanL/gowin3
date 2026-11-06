@@ -1,0 +1,242 @@
+{
+  "status": "digital_verification_passed_with_unresolved_map_constraints",
+  "recorded_utc": "2026-10-24T11:12:23.937995+00:00",
+  "source_input_manifest": "impl/vision_control_20261024_inputs.json",
+  "source_input_count": 93,
+  "source_inputs_unchanged": true,
+  "servo": {
+    "centre": 90,
+    "min_command": 40,
+    "max_command": 150,
+    "max_wheel_angle_deg": 28,
+    "left_calibration": [
+      [
+        90,
+        0
+      ],
+      [
+        100,
+        8
+      ],
+      [
+        110,
+        11
+      ],
+      [
+        120,
+        15
+      ],
+      [
+        130,
+        20
+      ],
+      [
+        140,
+        24
+      ],
+      [
+        150,
+        28
+      ]
+    ],
+    "right_calibration": [
+      [
+        90,
+        0
+      ],
+      [
+        80,
+        4
+      ],
+      [
+        70,
+        11
+      ],
+      [
+        60,
+        20
+      ],
+      [
+        50,
+        26
+      ],
+      [
+        40,
+        28
+      ]
+    ],
+    "parallel_front_wheels_assumed": true
+  },
+  "vision": {
+    "method": "width_normalized_image_domain_9_scanline_3_band",
+    "control_period_ms": 10,
+    "servo_pwm_period_ms": 20,
+    "image_observation_cadence": "complete camera frames; not assumed to be 100Hz",
+    "control_uses_inverse_perspective": false,
+    "photo_pixel_calibration_completed": false,
+    "photo_offsets_mm": [
+      0,
+      30,
+      -30
+    ],
+    "centre_reference": "original provisional Q1: 105/105/104",
+    "normal_visual_authority": true,
+    "map_role": "confirmed junction direction bias and vision-loss fallback; encoder/IMU still track route progress"
+  },
+  "bypass": {
+    "minimum_post_minimum_finite_rise_travel_mm": 2,
+    "rise_threshold_mm": 8,
+    "required_completed_rising_observations": 2,
+    "added_encoder_run_after_edge_confirmation_mm": 0,
+    "body_corner_extra_margin_mm": 5,
+    "minimum_lateral_offset_mm": 175,
+    "accepted_merge_control_logic_preserved": true,
+    "actual_delay_depends_on_sensor_samples_and_body_clearance": true
+  },
+  "regressions": [
+    {
+      "name": "vision",
+      "passed": true,
+      "expected_testbenches": 9,
+      "completed_testbenches": 9,
+      "log": "sim/vision_test_results.txt",
+      "sha256": "a101125e4b80133046ef8c12ee11a518b128bd7f453614b9c6a79ad84290f680"
+    },
+    {
+      "name": "centerline_and_bypass",
+      "passed": true,
+      "expected_testbenches": 9,
+      "completed_testbenches": 9,
+      "log": "sim/centerline_test_results.txt",
+      "sha256": "106f13f4ede771ce5d3b81897afbb351d36ae86e812a23e3a20a208e52f9ed1c"
+    },
+    {
+      "name": "vehicle_io",
+      "passed": true,
+      "expected_testbenches": 1,
+      "completed_testbenches": 1,
+      "log": "sim/vehicle_io_focus.log",
+      "sha256": "1bc0dbc87a8bc040afb17f8aa7d600defa912a83890fa27a9096e1c96e1f7625"
+    },
+    {
+      "name": "vehicle_motion",
+      "passed": true,
+      "expected_testbenches": 1,
+      "completed_testbenches": 1,
+      "log": "sim/vehicle_motion_focus.log",
+      "sha256": "9553f3fd749c59ddffec1d308a87183b387f3974a8e8c2bcf9d28482d2a6433a"
+    },
+    {
+      "name": "route_profile",
+      "passed": true,
+      "expected_testbenches": 1,
+      "completed_testbenches": 1,
+      "log": "sim/vehicle_profile_focus.log",
+      "sha256": "3919c141e45641ec10d3faa7bcd17c4f8811cf747f03358cf942b4ed02e9188c"
+    },
+    {
+      "name": "latest_bypass_edge",
+      "passed": true,
+      "expected_testbenches": 1,
+      "completed_testbenches": 1,
+      "log": "sim/bypass_edge_trend_tb_focus.log",
+      "sha256": "f6566a127bad6ef3c3c3afcdd248700699773d4d887390e7d3d7c75b4e214ab7"
+    }
+  ],
+  "road_steering_preflight": {
+    "passed": true,
+    "expected_rejection": true,
+    "generator_exit_code": 1,
+    "assets_unchanged": true,
+    "message": "ValueError: Existing junction geometry requires 32.35 deg wheel steering; the measured limit is 28 deg with a 1 deg planning margin. No road assets were overwritten. Recheck the metric road registration and feasible turn geometry; do not increase the measured servo limit to bypass this check."
+  },
+  "unresolved_limits": {
+    "existing_map_junction_peak_wheel_angle_deg": 32.3546,
+    "measured_max_wheel_angle_deg": 28,
+    "existing_map_turn_geometry_not_rewritten": true,
+    "source_map_metric_registration_calibrated": false,
+    "body_clearance_certified": false,
+    "prior_body_sweep": "docs/road_body_sweep_oct24.json"
+  },
+  "fpga_build": {
+    "completed": true,
+    "bitstream": "impl/pnr/ov5640.fs",
+    "size_bytes": 20778835,
+    "sha256": "8754810191548fb69ea76e4555548ce4afb5c5f0763e074613a985836526a98f",
+    "modified_utc": "2026-10-24T11:10:53.001868+00:00",
+    "source_input_count": 93,
+    "source_inputs_unchanged": true,
+    "bitstream_newer_than_build_start": true,
+    "resources": {
+      "Logic": {
+        "used": 48275,
+        "total": 59904,
+        "percent": 80.59
+      },
+      "Register": {
+        "used": 16601,
+        "total": 60780,
+        "percent": 27.31
+      },
+      "CLS": {
+        "used": 26749,
+        "total": 29952,
+        "percent": 89.31
+      },
+      "BSRAM": {
+        "used": 105,
+        "total": 118,
+        "percent": 88.98
+      },
+      "DSP": {
+        "used": 96,
+        "total": 118,
+        "percent": 81.36
+      },
+      "I/O Port": {
+        "used": 122,
+        "total": 297,
+        "percent": 41.08
+      }
+    },
+    "timing_violations": {
+      "Setup": 0,
+      "Hold": 0
+    },
+    "build_log": "impl/vision_servo_build_console.log",
+    "build_log_sha256": "d5ea8f8265ee7195bc8e23bc620273e11bc1bd7dcea31887ca0c2471def3f685",
+    "timing_report": "impl/pnr/ov5640.tr",
+    "timing_report_sha256": "fc731aeed90c73bb63094fee9ee8df7b373178930722322750a568a1db2d979e"
+  },
+  "synthesized_vision_equivalence": {
+    "completed": true,
+    "passed": true,
+    "preview_pixels_compared": 384000,
+    "frames_compared": 6,
+    "valid_frames_at_least": 5,
+    "actual_gowin_bsram": true,
+    "log": "sim/vision_netlist_results.txt",
+    "sha256": "e231bfe9a63badbc4a7e49a59b4d7cec4589e251ec58705e447303fa3bb5e92e",
+    "coverage": [
+      "textured_frame",
+      "ordinary_lane",
+      "wide_junction",
+      "one_missing_row_per_band_signed_average",
+      "learned_wide_lane",
+      "clipped_left_edge_negative_sign"
+    ],
+    "reference_matches_current_rtl": true,
+    "synthesized_netlist_newer_than_sources": true,
+    "synthesized_netlist_sha256": "90a3f642a85746cab41c51356b000ebd2e6398275f30585f5f0f1f958d36e7bb",
+    "testbench_sha256": "512e3c5b6d8ac7ff7ea08d3267692b0596e0241fe640f44798ac033b983e7bd4"
+  },
+  "hardware_programmed": false,
+  "real_car_verified": false,
+  "release_ready": false,
+  "verification_scope": "Digital simulation and FPGA implementation only; no programming or physical vehicle run.",
+  "baseline_backup": "impl/baseline_vision_servo_20261024/",
+  "implementation_summary": "docs/vision_servo_20261024.md",
+  "regression_testbenches_completed": 22,
+  "total_testbenches_including_synthesized_equivalence": 23,
+  "implementation_summary_sha256": "c4c9ff87cd4a5e2fdb90759cfce45b034b6307694697dff6440a1a849bb01b4e"
+}

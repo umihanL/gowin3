@@ -1,0 +1,81 @@
+"""Publish UTF-8 navigation notes from the verified build record; safe to rerun."""
+from pathlib import Path
+import datetime
+import json
+
+root = Path(__file__).resolve().parents[1]
+record = json.loads((root / "docs/navigation_corner_20261025_validation.json").read_text(encoding="utf-8"))
+local = datetime.datetime.fromisoformat(record["generated_utc"]).astimezone(
+    datetime.timezone(datetime.timedelta(hours=8))
+)
+count = sum(item["completed_runs"] for item in record["regressions"].values())
+summary = (
+    f"位流生成于 {local:%Y-%m-%d %H:%M:%S}（UTC+8），大小 {record['bytes']} 字节。"
+    f"{count} 项仿真通过；Setup/Hold 违例为 "
+    f"{record['violated_endpoints']['Setup']}/{record['violated_endpoints']['Hold']}，"
+    f"最小时序余量为 {record['min_slack_ns']['Setup']}/{record['min_slack_ns']['Hold']} ns。"
+    f"本次普通综合与布局布线共耗时 {record['build']['seconds']:.3f} 秒。"
+)
+notes = """# 导航 90°转弯修复（2026-10-25）
+
+本轮仅修改四个导航相关 RTL 文件：`vehicle_motion.v`、`vehicle_vision_fusion.v`、`vehicle_route_profile.v` 和 `vehicle_subsystem.v`。绕障、测距、IMU 驱动、图像道路提取、电机速度环和舵机标定源码保持不变。未烧录，未实车验证。
+
+## 中途判定偏离路线的原因
+
+旧视觉融合逻辑允许转过约 20°后，只要重新出现看似居中的道路就提前结束转弯。弯道中途看到的入口道路或交叉道路可能满足此条件，随后再次失视就触发普通丢线停车。另外，运动控制器还可能用车后方的旧路径采样点判断偏离。原有 8 秒转弯时限在 60 mm/s 的低速测试中也不足以完成弯道。
+
+## 当前转弯与接回视觉的流程
+
+1. 道路可见时仍由视觉居中；单侧边界消失时沿另一侧限角跟随。
+2. 已有可靠弯向提示、且两条边界在连续两个完整图像帧中都消失，才进入惯导辅助转弯。没有改成按编码器固定距离强行转弯。
+3. 开始转弯时锁定规划路线的出口航向。普通直角弯目标为出口的 90°方向；S 弯按实际出口切线处理。若没有可信出口信息，使用起始航向加或减 90°。
+4. 转弯过程中用 IMU 航向误差控制转向，接近出口的最后约 11.2°逐步减小打角；接近目标航向后保持方向，等待出口道路重新可见。
+5. 出口航向误差不超过 3.5°，并重新确认完整、居中的出口道路后，再交回视觉循迹。不会在只转过约 20°时因短暂看到道路而提前释放。
+
+已确认的转弯阶段清除普通丢线计数，并暂停用旧采样点判定偏离。中间路径点允许按到达截面与走廊条件推进，避免目标滞留在车后。直道视觉 PD 参数保持原值。
+
+转弯仍受 30 秒、800 mm、总转角 115°或反向转动超过 15°等边界限制。终点停车、急停、前方障碍物、编码器与堵转保护仍保留。30 秒是异常上限，不是要求正常弯道必须转这么久。
+
+## 综合一致性修复
+
+使用实际 Gowin 综合网表验证路径切线时，发现原先“坐标相减后直接乘 10”的组合表达式与 RTL 几何结果不一致。现将坐标差、比例换算和后续计算分时钟完成；修复后，S 弯左右弯段、左右直角弯及跨越 ±180°的航向均通过综合后仿真。
+
+## 验证内容
+
+- 22 项导航 RTL 仿真：左右 90°、30°处出现误导道路、短暂丢线、出口目标锁存、±180°换向、S 弯出口、反向保护、60/80 mm/s、起步摆歪及四种终点到达组合等。
+- 3 项补充仿真：完整图像帧进入视觉融合、车辆绕障与平滑制动回归、路径几何回归。
+- 2 项 Gowin 综合后原语仿真：视觉融合控制器和路径出口切线模块。
+- 旧版提前释放、旧采样点偏离判断，以及旧坐标表达式的综合不一致均有失败复现日志。
+
+详细测试记录、文件校验值和资源数据见 [验证记录](navigation_corner_20261025_validation.json)。地图、道路和字体 ROM 的综合内容已核对。
+
+## 构建与使用边界
+
+下载文件为 `impl/pnr/ov5640.fs`。本轮起点备份位于 `impl/baseline_navigation_corner_20261025/`，可以回退。
+
+此前实测增量布局布线匹配更慢，因此本次使用已有的普通构建回退方式；本次位流没有复用其他模块的既有布线。只改导航源码不代表其他模块的物理布线完全不变。
+
+仿真使用生成的道路图像和独立车辆运动模型，不能代替实车验证。本轮没有改成逆透视算法，没有套用尚未实测的 35°安装参数，也没有更改地图或全车身碰撞边界模型。
+
+## 最终构建记录
+
+""" + summary + "\n\nSHA-256：`" + record["sha256"] + "`\n"
+(root / "docs/navigation_corner_20261025.md").write_text(notes, encoding="utf-8")
+
+rows = [
+    f"| {name} | {item['used']:g} / {item['total']:g} | {item['percent']:.2f}% |"
+    for name, item in record["resources"].items()
+]
+resources = (
+    "# 当前构建资源与时序（2026-10-25）\n\n"
+    "对应位流：`impl/pnr/ov5640.fs`。详见 [90°转弯修复](navigation_corner_20261025.md) "
+    "和 [验证记录](navigation_corner_20261025_validation.json)。\n\n"
+    "| 资源 | 使用 / 总量 | 占用率 |\n| --- | ---: | ---: |\n"
+    + "\n".join(rows) + "\n\n" + summary + "\n\n"
+    "四个导航 RTL 文件有修改，其余 103 个硬件源码文件与本轮备份一致。"
+    "已核对引脚及地图、道路、字体 ROM。未烧录，未实车验证。\n\n"
+    "SHA-256：`" + record["sha256"] + "`\n"
+)
+(root / "docs/resource_usage.md").write_text(resources, encoding="utf-8")
+print(summary)
+print(record["sha256"])

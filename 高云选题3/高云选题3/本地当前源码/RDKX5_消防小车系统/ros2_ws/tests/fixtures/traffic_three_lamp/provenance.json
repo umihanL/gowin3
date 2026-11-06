@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-26",
+  "source": "User-provided real camera image attachments, cropped views of their three-lamp fixture",
+  "labels": {
+    "red_on.png": "red",
+    "green_on.png": "green",
+    "red_on_annotated.png": "red"
+  },
+  "ground_truth": "User explicitly identified first image as red and second as green",
+  "scope": "Three user-supplied regression images, one with preexisting overlay. Their capture independence is not verified; transformations/crops are correlated checks, not field accuracy. No all-off or yellow-on real photos were provided.",
+  "additional_sample": {
+    "date": "2026-10-27",
+    "file": "red_on_annotated.png",
+    "source": "User-supplied screenshot explicitly labeled red-on by the user. Contains preexisting pink/red rectangle and Chinese red-light text; these are not detector evidence.",
+    "sha256": "e05ba25fdeeb72e96425ed28a97589a473cc410e0d46f65eeddd20e531431e40",
+    "annotation_free_crop_xyxy": [
+      106,
+      75,
+      195,
+      254
+    ],
+    "derived_crop_note": "Crop inside overlay removes every drawn rectangle edge and text. It is a correlated derivative, not a new real capture."
+  }
+}

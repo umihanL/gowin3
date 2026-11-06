@@ -1,0 +1,10 @@
+FROM public.ecr.aws/docker/library/ros:humble-ros-base@sha256:860e53793ccf575e5369b5e9a19939de2bfcfb46a299954d06f54f2af54fed19
+
+# Isolated x86_64 build/smoke environment. It does not provide X5 BPU libraries.
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get -o Acquire::Retries=1 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 update \
+    && apt-get -o Acquire::Retries=1 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30 install -y --no-install-recommends \
+        ros-humble-cv-bridge python3-opencv python3-numpy python3-serial \
+        python3-colcon-common-extensions python3-pytest \
+    && rm -rf /var/lib/apt/lists/*
+WORKDIR /workspace

@@ -1,0 +1,14 @@
+{
+  "enabled": false,
+  "pump_enabled": false,
+  "external_pump_timeout_verified": false,
+  "max_speed_deg_s": 20.0,
+  "settle_s": 0.4,
+  "pump_guard": {
+    "burst_s": 0.4,
+    "cooldown_s": 1.0,
+    "max_bursts": 3,
+    "stable_lock_s": 0.35
+  },
+  "comment": "Template does not move hardware. Verify PWM limits/direction and measured nozzle landing pixels. A hardware timed pump cutoff is required for real pump enable; SIGKILL can leave GPIO asserted."
+}

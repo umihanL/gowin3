@@ -1,0 +1,102 @@
+{
+  "status": "digital_verification_passed",
+  "recorded_utc": "2026-10-27T14:33:43.362405+00:00",
+  "release": "navigation_roadwidth_20261027",
+  "measurements_mm": {
+    "outer_width_mm": 373,
+    "inner_width_mm": 340,
+    "s_bend_width_mm": 340
+  },
+  "bitstream": "impl/pnr/ov5640.fs",
+  "release_bitstream": "impl/pnr/ov5640_navigation_roadwidth_20261027.fs",
+  "sha256": "77e3351096cb91f6dd556dfb64035cb48fd4195e4a78d7e80d68e25af6b51a65",
+  "bytes": 20706411,
+  "generated_utc": "2026-10-27T14:33:38.623513+00:00",
+  "tool": "Gowin V1.9.12.03",
+  "device": "GW5AT-LV60PG484AC1/I0 B",
+  "hardware_tested": false,
+  "flashed": false,
+  "baseline_bitstream_sha256": "536e8b1d5c724ed80eeb78a268820be2633a9c452d8d64cd0a9259acfe857dfe",
+  "changed_hardware_sources": [
+    "src/portrait/vision_camera_config.vh",
+    "src/portrait/vision_ipm_lut.vh",
+    "src/portrait/vision_video.v"
+  ],
+  "map_files_unchanged": true,
+  "map_file_sha256": {
+    "src/navigation/map_raw_1cm.mem": "046cfce9203f5797f96d15736f99f0e0b1df3b3dfc047201d3e21f92c8ac38ea",
+    "src/navigation/map_plan_2cm.mem": "5cdbd6c4f73f21eccfaac0f847847efeec4e131acee086145069bc0aa2bda2fb",
+    "src/navigation/map_heading_2cm.mem": "f75bf818d6c862611347e723bb4b36a4064374f8aef69851cbc449ddf976e07f",
+    "src/navigation/map_central_2cm.mem": "d2122371c75cfbd0c5037a8d6ecfc6bcd77279db9c0ea89636f94971873edb57",
+    "src/navigation/nav_centerline_config.vh": "736e51bcae64518c7eb3c9be6ca212e32ef86aa875cf9d1b53962e075bacc837",
+    "src/navigation/nav_centerline_init.vh": "9bd98141518017bd03abd7afe9abd5a869fe7cca908577ab7ee3666b41025236",
+    "src/navigation/nav_centerline_reverse.vh": "871b8b9f5c6e6b8198454ed262e8240509d8ae094b8ab503004151f199c68003",
+    "src/navigation/nav_centerline_bitmap.vh": "144b2cc6e5caa7e4dbd230d3ff23ed8ec4695dcf2fb37b32d8276c47b051624a",
+    "src/navigation/nav_centerline_junctions.vh": "3f53e8b78b22da10be750c320cf1914895d04d6e69613f2062a7e8722286f030"
+  },
+  "build_metrics": {
+    "exit_code": 0,
+    "seconds": 2962.578,
+    "mode": "standard_synthesis_and_place_route",
+    "incremental_checkpoint_used": false,
+    "reason": "This project previously measured slower with incremental physical matching.",
+    "previous_bitstream_sha256": "536e8b1d5c724ed80eeb78a268820be2633a9c452d8d64cd0a9259acfe857dfe",
+    "changed_hardware_sources": [
+      "src/portrait/vision_camera_config.vh",
+      "src/portrait/vision_ipm_lut.vh",
+      "src/portrait/vision_video.v"
+    ]
+  },
+  "timing_violations": {
+    "Setup": 0,
+    "Hold": 0
+  },
+  "min_slack_ns": {
+    "Setup": 0.037,
+    "Hold": 0.126,
+    "Recovery": 2.153,
+    "Removal": 0.498
+  },
+  "timing_passed": true,
+  "resources": {
+    "Logic": {
+      "used": 54034.0,
+      "total": 59904.0,
+      "percent": 90.2
+    },
+    "Register": {
+      "used": 18280.0,
+      "total": 60780.0,
+      "percent": 30.08
+    },
+    "CLS": {
+      "used": 28668.0,
+      "total": 29952.0,
+      "percent": 95.71
+    },
+    "BSRAM": {
+      "used": 113.0,
+      "total": 118.0,
+      "percent": 95.76
+    },
+    "DSP": {
+      "used": 90.0,
+      "total": 118.0,
+      "percent": 76.27
+    },
+    "I/O Port": {
+      "used": 124.0,
+      "total": 297.0,
+      "percent": 41.75
+    }
+  },
+  "pins": {
+    "host_tx": "E14",
+    "host_rx": "E13"
+  },
+  "limitations": [
+    "Not flashed; physical car and camera conditions were not tested.",
+    "Map geometry remains the restored release geometry; only the visual road-width model changed.",
+    "Camera field of view and distortion remain provisional."
+  ]
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>社区消防街区 v3 · 双侧边线地图</title><link rel="icon" href="data:,">
+<style>
+:root{font-family:system-ui,"Microsoft YaHei",sans-serif;color:#ecf4f6;background:#162228;color-scheme:dark;--muted:#aec0c6;--edge:#49606a;--accent:#8de0e5}*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}canvas{display:block;width:100%;height:100%}header{position:absolute;top:0;left:0;right:0;z-index:2;padding:15px 20px;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(#122028ed,#12202800);pointer-events:none}h1{margin:0;font-size:17px;letter-spacing:.04em}.subtitle{margin-top:5px;font-size:11px;color:var(--muted)}.version{padding:5px 9px;border:1px solid #719a9f;border-radius:6px;color:var(--accent);font-size:12px}aside{position:absolute;top:91px;left:18px;width:266px;padding:16px;border:1px solid var(--edge);border-radius:12px;background:#122129eb;backdrop-filter:blur(12px);z-index:2}label{display:block;font-size:11px;color:var(--muted);margin:0 0 8px}button,select,a.file{border:1px solid var(--edge);border-radius:6px;background:#1d343e;color:#edf6f8;font:12px system-ui,"Microsoft YaHei",sans-serif;min-height:34px}button{cursor:pointer;flex:1;padding:5px 8px}button:hover,button.active{background:#245463;border-color:#7fcbd5}button:disabled,select:disabled{opacity:.45;cursor:wait}.buttons{display:flex;gap:6px;margin-bottom:17px}select{width:100%;padding:6px;margin-bottom:12px}.readout{line-height:1.7;font-size:12px;color:#d1e2e7;margin-bottom:14px}.readout strong{font-weight:500;color:#fff}.note{font-size:11px;color:var(--muted);line-height:1.7;margin:10px 0 0}.files{display:grid;gap:7px;border-top:1px solid #49606a80;padding-top:14px}a{color:#a6dce2;text-decoration:none}a:hover{text-decoration:underline}a.file{display:flex;align-items:center;padding:5px 10px}details{margin-top:13px;font-size:11px;color:#a8bec6}details a{display:block;margin:9px 0 0}summary{cursor:pointer}#bottom{position:absolute;bottom:13px;right:17px;background:#122129de;border:1px solid #49606a70;border-radius:7px;padding:8px 12px;font-size:11px;color:#c4d9df;z-index:2;max-width:calc(100% - 28px)}#error{display:none;position:absolute;inset:0;z-index:5;padding:90px 30px;background:#162027;white-space:pre-wrap;color:#ffccbd;font:14px/1.6 monospace}#loading{position:absolute;inset:0;display:grid;place-items:center;color:#e9f1f4;background:#162228e0;z-index:4;font-size:15px}#loading[hidden]{display:none}@media(max-width:650px){header{padding:12px}h1{font-size:15px}.subtitle{font-size:10px}aside{top:auto;bottom:12px;left:12px;right:12px;width:auto;padding:12px}.buttons{margin-bottom:10px}.readout,.files,details,.note{display:none}select{margin-bottom:0}#bottom{bottom:auto;top:70px;right:12px;font-size:10px}.version{font-size:10px}}
+</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<header><div><h1>社区消防街区 · 双侧边线感知</h1><div class="subtitle">22 × 20 m / 80 × 60 × 60 cm 小车 / 可编辑 Blender 地图</div></div><span class="version">V3</span></header>
+<aside><div class="buttons"><button id="orbit" class="active" disabled>自由视角</button><button id="top" disabled>俯视</button><button id="sensor" disabled>车载</button></div>
+<label for="camera">车载预设视角</label><select id="camera" disabled aria-label="车载预设视角"></select>
+<div class="readout">相机高 <strong>0.68 m</strong> / 下俯 <strong>10°</strong><br>水平视场 <strong>86°</strong> / 画幅 <strong>1280 : 800</strong><br><span id="current">加载中</span></div>
+<div class="files"><a class="file" href="rescue_maze_v3/community_fire_rescue_v3.blend" download>下载 Blender 工程</a><a class="file" href="rescue_maze_v3/community_fire_rescue_v3.glb" download>下载当前 GLB 模型</a><a href="rescue_maze_v3/使用说明.md">v3 使用说明 ↗</a></div>
+<p class="note">当前显示 GLB 的第 145 帧静态模型。道闸与红绿灯动画在 Blender 中播放。相机参数为待标定假设。</p>
+<details><summary>历史版本</summary><a href="scene-preview-baseline.html">最初无贴图基准预览</a><a href="rescue_maze_v2/community_fire_rescue_v2.blend" download>v2 · 18 × 14 m Blender</a><a href="community_fire_rescue_maze.blend" download>v1 · 12 × 8 m Blender</a></details></aside>
+<div id="bottom">GLB 静态预览 · 拖动旋转 / 滚轮缩放</div><div id="loading">正在加载 v3 地图和贴图…</div><div id="error"></div>
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+const $=id=>document.getElementById(id),base='rescue_maze_v3/';
+const names={'01_edges_crosswalk':'双侧边线与斑马线','02_obstacle_approach':'接近单侧箱堆','03_obstacle_pass':'从箱堆左侧绕行','04_construction_south':'施工区南侧','05_construction_north':'施工区北侧','06_parking':'独立停车数字牌','07_steps':'三级台阶与高地'};
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x76858c);
+const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.NoToneMapping;document.body.prepend(renderer.domElement);
+const orbitCam=new THREE.PerspectiveCamera(46,innerWidth/innerHeight,.025,250);orbitCam.up.set(0,0,1);
+const topCam=new THREE.OrthographicCamera(-15,15,15,-15,.025,250);topCam.up.set(0,1,0);
+const sensorCam=new THREE.PerspectiveCamera(60.4691403,1.6,.025,150);sensorCam.up.set(0,0,1);
+const controls=new OrbitControls(orbitCam,renderer.domElement);controls.enableDamping=true;controls.minDistance=2;controls.maxDistance=90;controls.maxPolarAngle=Math.PI/2-.01;
+const hemi=new THREE.HemisphereLight(0xd3e0e7,0x6a7777,1.45);hemi.position.set(0,0,1);scene.add(hemi);
+const sun=new THREE.DirectionalLight(0xffffff,1.6);sun.position.set(-10,-12,25);scene.add(sun);
+let cfg,mode='orbit',extent=22,center=new THREE.Vector3(11,10,.4);
+function orbitFit(){const a=innerWidth/innerHeight,distance=extent*(a<1?1.7/a:1.65);orbitCam.position.copy(center).add(new THREE.Vector3(.82,-1,.9).normalize().multiplyScalar(distance));controls.target.copy(center);controls.update()}
+function resize(){const w=innerWidth,h=innerHeight,a=w/h;renderer.setSize(w,h);orbitCam.aspect=a;orbitCam.updateProjectionMatrix();const half=extent*.57;topCam.left=-half*Math.max(1,a);topCam.right=-topCam.left;topCam.top=half*Math.max(1,1/a);topCam.bottom=-topCam.top;topCam.updateProjectionMatrix()}
+function updateSensor(){const s=cfg.camera_views.find(v=>v.id===$('camera').value)||cfg.camera_views[0],r=cfg.robot,heading=THREE.MathUtils.degToRad(s.heading_deg),pitch=THREE.MathUtils.degToRad(r.camera_pitch_down_deg);sensorCam.position.set(s.position[0],s.position[1],r.camera_height);sensorCam.lookAt(sensorCam.position.clone().add(new THREE.Vector3(Math.cos(heading)*Math.cos(pitch),Math.sin(heading)*Math.cos(pitch),-Math.sin(pitch))));$('current').textContent=names[s.id]||s.id;return s}
+function setMode(next){mode=next;controls.enabled=next==='orbit';for(const id of ['orbit','top','sensor'])$(id).classList.toggle('active',id===next);if(next==='orbit'){orbitFit();$('bottom').textContent='GLB 静态预览 · 拖动旋转 / 滚轮缩放'}else if(next==='top'){$('bottom').textContent='正俯视 · 22 × 20 m 地图'}else{updateSensor();$('bottom').textContent='固定 1280 : 800 传感器画幅 · 静态模型，未模拟车辆控制'}}
+for(const id of ['orbit','top','sensor'])$(id).onclick=()=>setMode(id);$('camera').onchange=()=>{updateSensor();setMode('sensor')};addEventListener('resize',resize);
+try{
+  const response=await fetch(base+'config.json',{cache:'no-store'});if(!response.ok)throw Error('config.json '+response.status);cfg=await response.json();
+  const gltf=await new GLTFLoader().loadAsync(base+'community_fire_rescue_v3.glb');
+  // Blender exports Z-up to glTF Y-up. Restore the world frame used by config.
+  const model=new THREE.Group();model.name='v3_map_z_up';model.rotation.x=Math.PI/2;model.add(gltf.scene);scene.add(model);model.updateMatrixWorld(true);
+  extent=Math.max(...cfg.site);center.set(cfg.site[0]/2,cfg.site[1]/2,.45);topCam.position.set(center.x,center.y,45);topCam.lookAt(center.x,center.y,0);
+  const r=cfg.robot;sensorCam.aspect=r.camera_resolution[0]/r.camera_resolution[1];sensorCam.fov=THREE.MathUtils.radToDeg(2*Math.atan(Math.tan(THREE.MathUtils.degToRad(r.camera_hfov_deg/2))/sensorCam.aspect));sensorCam.updateProjectionMatrix();
+  for(const spec of cfg.camera_views){const opt=document.createElement('option');opt.value=spec.id;opt.textContent=names[spec.id]||spec.id;$('camera').appendChild(opt)}
+  for(const id of ['orbit','top','sensor','camera'])$(id).disabled=false;updateSensor();resize();orbitFit();$('loading').hidden=true;
+  window.previewQA={version:3,model:'rescue_maze_v3/community_fire_rescue_v3.glb',site:cfg.site,sensor:{height:r.camera_height,pitch:r.camera_pitch_down_deg,hfov:r.camera_hfov_deg,vfov:sensorCam.fov,aspect:sensorCam.aspect},static_frame:145,ready:true};
+}catch(e){$('loading').hidden=true;$('error').style.display='block';$('error').textContent='v3 地图加载失败\n'+String(e?.stack||e)+'\n请从本地 HTTP 服务打开本页。';console.error(e)}
+function frame(){requestAnimationFrame(frame);if(mode==='orbit')controls.update();const w=innerWidth,h=innerHeight;renderer.setScissorTest(false);renderer.setViewport(0,0,w,h);if(mode==='sensor'){renderer.setClearColor(0x10191e,1);renderer.clear();const a=sensorCam.aspect,vw=Math.min(w,h*a),vh=vw/a,x=(w-vw)/2,y=(h-vh)/2;renderer.setViewport(x,y,vw,vh);renderer.setScissor(x,y,vw,vh);renderer.setScissorTest(true);renderer.render(scene,sensorCam);renderer.setScissorTest(false)}else renderer.render(scene,mode==='top'?topCam:orbitCam)}frame();
+</script></body></html>

@@ -1,0 +1,72 @@
+[
+  {
+    "top": "navigation_response_tb",
+    "variant": "response",
+    "seconds": 0.094
+  },
+  {
+    "top": "vision_fusion_tb",
+    "variant": "pd",
+    "seconds": 0.094
+  },
+  {
+    "top": "vision_blind_turn_tb",
+    "variant": "edge_sequence",
+    "seconds": 0.093
+  },
+  {
+    "top": "vision_turn_motion_tb",
+    "variant": "side-1_skip0",
+    "seconds": 6.204
+  },
+  {
+    "top": "vision_turn_motion_tb",
+    "variant": "side-1_skip1",
+    "seconds": 6.14
+  },
+  {
+    "top": "vision_turn_motion_tb",
+    "variant": "side1_skip0",
+    "seconds": 6.156
+  },
+  {
+    "top": "vision_turn_motion_tb",
+    "variant": "side1_skip1",
+    "seconds": 6.141
+  },
+  {
+    "top": "vision_motion_tb",
+    "variant": "yaw0",
+    "seconds": 6.0
+  },
+  {
+    "top": "vision_motion_tb",
+    "variant": "yaw80",
+    "seconds": 6.109
+  },
+  {
+    "top": "vision_motion_tb",
+    "variant": "yaw-80",
+    "seconds": 6.157
+  },
+  {
+    "top": "vision_goal_tb",
+    "variant": "dense0_vertical0",
+    "seconds": 4.484
+  },
+  {
+    "top": "vision_goal_tb",
+    "variant": "dense0_vertical1",
+    "seconds": 4.516
+  },
+  {
+    "top": "vision_goal_tb",
+    "variant": "dense1_vertical0",
+    "seconds": 4.625
+  },
+  {
+    "top": "vision_goal_tb",
+    "variant": "dense1_vertical1",
+    "seconds": 4.593
+  }
+]

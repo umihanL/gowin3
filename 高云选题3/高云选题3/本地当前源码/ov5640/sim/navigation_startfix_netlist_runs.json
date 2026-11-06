@@ -1,0 +1,46 @@
+[
+  {
+    "name": "fusion_navigation_start_acquire_tb",
+    "passed": true,
+    "seconds": 3.297,
+    "log": "sim/navigation_startfix_fusion_navigation_start_acquire_tb_netlist.log",
+    "sha256": "91d8e78aefe929ec50390bbe21432a61cee57e0a4679c6571216e443c16b05ea",
+    "inputs": {
+      "src/vehicle/vehicle_vision_fusion.v": "384b4af5b63801047fbb78385b35e4dab69cb508f4179fde097b48d8e0225447",
+      "sim/navigation_start_acquire_tb.sv": "cbe88881d25fcfcde797a16e018e66b71911f1a76f92b40aa627fd2f13da0a22"
+    }
+  },
+  {
+    "name": "fusion_navigation_branch_direction_tb",
+    "passed": true,
+    "seconds": 3.328,
+    "log": "sim/navigation_startfix_fusion_navigation_branch_direction_tb_netlist.log",
+    "sha256": "b4dde25a1c36a18cfab2c518aee0bb560d090239d595106ba04ed5780f13f1cb",
+    "inputs": {
+      "src/vehicle/vehicle_vision_fusion.v": "384b4af5b63801047fbb78385b35e4dab69cb508f4179fde097b48d8e0225447",
+      "sim/navigation_branch_direction_tb.sv": "11d4d9096547b19417530c8fe37d459357b478032997c81123c188bb79037bcf"
+    }
+  },
+  {
+    "name": "fusion_navigation_next_entry_tb",
+    "passed": true,
+    "seconds": 3.359,
+    "log": "sim/navigation_startfix_fusion_navigation_next_entry_tb_netlist.log",
+    "sha256": "e2f95b9ae1a2d1aba7c270a0fec1f33017627289063a6cc104157bd94c2e03d3",
+    "inputs": {
+      "src/vehicle/vehicle_vision_fusion.v": "384b4af5b63801047fbb78385b35e4dab69cb508f4179fde097b48d8e0225447",
+      "sim/navigation_next_entry_tb.sv": "3be435af68d1d2d6b78138efbbcb8a144063f026f10e155f55d0e145ea690b56"
+    }
+  },
+  {
+    "name": "fusion_navigation_handoff_tb",
+    "passed": true,
+    "seconds": 4.672,
+    "log": "sim/navigation_startfix_fusion_navigation_handoff_tb_netlist.log",
+    "sha256": "57ca336372839e1f5ff7e97500258b7c5e8166cbe1f97803e5bae0bfdd79353a",
+    "inputs": {
+      "src/vehicle/vehicle_vision_fusion.v": "384b4af5b63801047fbb78385b35e4dab69cb508f4179fde097b48d8e0225447",
+      "sim/navigation_handoff_tb.sv": "39599a144a9c9e6089068599c9e072ad49986a9f9e8c2c2d47b3a27d620972fe"
+    }
+  }
+]

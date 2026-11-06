@@ -1,0 +1,12 @@
+{
+  "package_name": "rescue_interfaces",
+  "non_idl_tuples": [
+    "/root/rescue/system_20261010/ros2_ws/src/rescue_interfaces:msg/StereoPair.msg",
+    "/root/rescue/system_20261010/ros2_ws/src/rescue_interfaces:msg/Detection.msg",
+    "/root/rescue/system_20261010/ros2_ws/src/rescue_interfaces:msg/DetectionArray.msg",
+    "/root/rescue/system_20261010/ros2_ws/src/rescue_interfaces:msg/FpgaEvent.msg",
+    "/root/rescue/system_20261010/ros2_ws/src/rescue_interfaces:msg/GimbalCommand.msg",
+    "/root/rescue/system_20261010/ros2_ws/src/rescue_interfaces:msg/MotionPermission.msg",
+    "/root/rescue/system_20261010/ros2_ws/src/rescue_interfaces:msg/ManeuverCommand.msg"
+  ]
+}

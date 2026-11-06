@@ -1,0 +1,57 @@
+[
+  {
+    "name": "fusion_navigation_turn_ownership_tb",
+    "passed": true,
+    "seconds": 3.297,
+    "log": "sim/navigation_turnfix_fusion_navigation_turn_ownership_tb_netlist.log",
+    "sha256": "685e288590a06f91448de2ecd58fb9a92db70bf930dc704fa5cea3d21dfba9c2",
+    "inputs": {
+      "src/vehicle/vehicle_vision_fusion.v": "76a7bd3ada1f2b2c3fc7e55a0f5ab28c05897d9182226e526f78882ea6b5eb26",
+      "sim/navigation_turn_ownership_tb.sv": "020750051d4b12eff14d646fe97dcc793cac2fdbe42dc034f802c873aaacfaa4"
+    }
+  },
+  {
+    "name": "fusion_navigation_branch_direction_tb",
+    "passed": true,
+    "seconds": 3.109,
+    "log": "sim/navigation_turnfix_fusion_navigation_branch_direction_tb_netlist.log",
+    "sha256": "158f76e0d4c321523c15886758e21b24fb301c064991fcef3d476896123f0b5c",
+    "inputs": {
+      "src/vehicle/vehicle_vision_fusion.v": "76a7bd3ada1f2b2c3fc7e55a0f5ab28c05897d9182226e526f78882ea6b5eb26",
+      "sim/navigation_branch_direction_tb.sv": "11d4d9096547b19417530c8fe37d459357b478032997c81123c188bb79037bcf"
+    }
+  },
+  {
+    "name": "fusion_navigation_next_entry_tb",
+    "passed": true,
+    "seconds": 3.094,
+    "log": "sim/navigation_turnfix_fusion_navigation_next_entry_tb_netlist.log",
+    "sha256": "25bc307a69314ff92dd05b0032cf2e143a2ebb74c456be0e23558b036b677d9c",
+    "inputs": {
+      "src/vehicle/vehicle_vision_fusion.v": "76a7bd3ada1f2b2c3fc7e55a0f5ab28c05897d9182226e526f78882ea6b5eb26",
+      "sim/navigation_next_entry_tb.sv": "3be435af68d1d2d6b78138efbbcb8a144063f026f10e155f55d0e145ea690b56"
+    }
+  },
+  {
+    "name": "fusion_navigation_handoff_tb",
+    "passed": true,
+    "seconds": 4.25,
+    "log": "sim/navigation_turnfix_fusion_navigation_handoff_tb_netlist.log",
+    "sha256": "1e93721a3071155a66f3ade21bd1b538c6f188ed0d741aaa7a04ff1a81883371",
+    "inputs": {
+      "src/vehicle/vehicle_vision_fusion.v": "76a7bd3ada1f2b2c3fc7e55a0f5ab28c05897d9182226e526f78882ea6b5eb26",
+      "sim/navigation_handoff_tb.sv": "39599a144a9c9e6089068599c9e072ad49986a9f9e8c2c2d47b3a27d620972fe"
+    }
+  },
+  {
+    "name": "entry_visual_entry_observer_tb",
+    "passed": true,
+    "seconds": 52.75,
+    "log": "sim/navigation_turnfix_entry_visual_entry_observer_tb_netlist.log",
+    "sha256": "ee3b1a6b789bb641eb9f3922210b01800c0faa042e1bf05f4c75688f99d00a5b",
+    "inputs": {
+      "src/vehicle/vehicle_visual_localizer.v": "232821de6172267fabcb2c95bea129bb5270ac51bac0118f0e6801a1babf308d",
+      "sim/visual_entry_observer_tb.sv": "2217c7a0dad70ac143de726f94af3a22e325ad736a7151e33782451065127483"
+    }
+  }
+]

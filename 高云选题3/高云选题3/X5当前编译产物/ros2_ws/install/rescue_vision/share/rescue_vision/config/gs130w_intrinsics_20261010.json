@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "captured_client_date": "2026-10-10",
+  "provenance": {
+    "host": "rdkx5",
+    "boot_id": "e8351361-5bfe-4b34-9709-15abe8b06c69",
+    "driver_version": "mipi_cam 2.5.2",
+    "ros_domain_id": 0,
+    "source": "Live sensor_msgs/CameraInfo plus recorded EEPROM startup log",
+    "eeprom_log": "/root/.ros/log/mipi_cam_7667_946685153293.log",
+    "eeprom_header": {
+      "bus": 4,
+      "flag": "SZYGSJKJ",
+      "cal_type": 0,
+      "angle": 1,
+      "d_num": 8
+    },
+    "calibration_rotation_degrees": 90,
+    "calibration_rotation_evidence": "Official tros_2.5.2 hobot_mipi_calibration.cpp: angle 0x01 means 90 degrees; log dimensions 1280x1088",
+    "eeprom_eye_assignment_verified": false,
+    "stereo_metric_calibration_verified": false,
+    "note": "CameraInfo is copied from EEPROM in fixed index order by the official driver. Physical eye observation establishes image order, not independent per-lens calibration identity."
+  },
+  "driver": {
+    "pid": 15172,
+    "argv": [
+      "/opt/tros/humble/lib/mipi_cam/mipi_cam",
+      "--ros-args",
+      "-p",
+      "device_mode:=dual",
+      "-p",
+      "dual_combine:=1",
+      "-p",
+      "image_width:=1280",
+      "-p",
+      "image_height:=1088",
+      "-p",
+      "framerate:=30.0",
+      "-p",
+      "rotation:=90.0",
+      "-p",
+      "gdc_enable:=False",
+      "-p",
+      "cal_rotation:=90.0",
+      "-p",
+      "lpwm_enable:=True",
+      "-p",
+      "frame_ts_type:=realtime",
+      "-p",
+      "out_format:=nv12",
+      "-p",
+      "channel:=2",
+      "-p",
+      "channel2:=0",
+      "--log-level",
+      "WARN"
+    ],
+    "parameters": {
+      "device_mode": "dual",
+      "dual_combine": "1",
+      "image_width": "1280",
+      "image_height": "1088",
+      "framerate": "30.0",
+      "rotation": "90.0",
+      "gdc_enable": "False",
+      "cal_rotation": "90.0",
+      "lpwm_enable": "True",
+      "frame_ts_type": "realtime",
+      "out_format": "nv12",
+      "channel": "2",
+      "channel2": "0"
+    }
+  },
+  "role_to_source": {
+    "left": "/image_right_raw",
+    "right": "/image_left_raw"
+  },
+  "role_mapping_evidence": "User stood behind camera facing its viewing direction; covering physical left darkened the lower combined image. Driver combines left topic above right topic.",
+  "sources": {
+    "/image_left_raw": {
+      "camera_info_topic": "/image_left_raw/camera_info",
+      "width": 1280,
+      "height": 1088,
+      "frame_id": "default_cam",
+      "header_stamp": {
+        "sec": 1791629500,
+        "nanosec": 917068032
+      },
+      "distortion_model": "plumb_bob",
+      "D": [
+        0.3938693404197693,
+        -0.00864123273640871,
+        -0.00023413232702296227,
+        -7.335534610319883e-05,
+        0.0019877376034855843,
+        0.7424823641777039,
+        0.04144749045372009,
+        0.0018659953493624926
+      ],
+      "K": [
+        666.0804443359375,
+        0.0,
+        641.4134521484375,
+        0.0,
+        666.2125854492188,
+        541.3174438476562,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "R": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "P": [
+        666.0804443359375,
+        0.0,
+        641.4134521484375,
+        0.0,
+        0.0,
+        666.2125854492188,
+        541.3174438476562,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "binning_x": 0,
+      "binning_y": 0,
+      "roi": {
+        "x_offset": 0,
+        "y_offset": 0,
+        "width": 0,
+        "height": 0,
+        "do_rectify": false
+      }
+    },
+    "/image_right_raw": {
+      "camera_info_topic": "/image_right_raw/camera_info",
+      "width": 1280,
+      "height": 1088,
+      "frame_id": "default_cam",
+      "header_stamp": {
+        "sec": 1791629500,
+        "nanosec": 917163520
+      },
+      "distortion_model": "plumb_bob",
+      "D": [
+        4.732460021972656,
+        2.046745538711548,
+        -0.00010017528984462842,
+        -0.00015451913350261748,
+        0.06431621313095093,
+        5.094394683837891,
+        3.59271240234375,
+        0.41878455877304077
+      ],
+      "K": [
+        666.4528198242188,
+        0.0,
+        640.4417724609375,
+        0.0,
+        666.8989868164062,
+        541.051025390625,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "R": [
+        0.9999971389770508,
+        0.0018748210277408361,
+        0.0014670448144897819,
+        -0.001874809036962688,
+        0.9999982714653015,
+        -9.56660915107932e-06,
+        -0.001467060181312263,
+        6.816153018007753e-06,
+        0.999998927116394
+      ],
+      "P": [
+        665.5113464645801,
+        1.253845109723838,
+        641.4188014948845,
+        -53289.789555888834,
+        -2.044062662633415,
+        666.9015219449468,
+        541.0440649438998,
+        138.46097909682248,
+        -0.001467060181312263,
+        6.816153018007753e-06,
+        0.999998927116394,
+        0.04350079596042633
+      ],
+      "binning_x": 0,
+      "binning_y": 0,
+      "roi": {
+        "x_offset": 0,
+        "y_offset": 0,
+        "width": 0,
+        "height": 0,
+        "do_rectify": false
+      }
+    }
+  }
+}

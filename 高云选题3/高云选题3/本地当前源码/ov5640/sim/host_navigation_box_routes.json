@@ -1,0 +1,62 @@
+{
+  "box_enter_north": {
+    "points": [
+      [
+        105,
+        245
+      ],
+      [
+        145,
+        174
+      ]
+    ],
+    "samples": 35,
+    "cost_cm": 101,
+    "file": "sim/host_navigation_box_enter_north_route.csv"
+  },
+  "box_enter_south": {
+    "points": [
+      [
+        105,
+        140
+      ],
+      [
+        145,
+        174
+      ]
+    ],
+    "samples": 22,
+    "cost_cm": 61,
+    "file": "sim/host_navigation_box_enter_south_route.csv"
+  },
+  "box_exit_north": {
+    "points": [
+      [
+        145,
+        174
+      ],
+      [
+        105,
+        140
+      ]
+    ],
+    "samples": 21,
+    "cost_cm": 61,
+    "file": "sim/host_navigation_box_exit_north_route.csv"
+  },
+  "box_exit_south": {
+    "points": [
+      [
+        145,
+        174
+      ],
+      [
+        105,
+        245
+      ]
+    ],
+    "samples": 35,
+    "cost_cm": 102,
+    "file": "sim/host_navigation_box_exit_south_route.csv"
+  }
+}

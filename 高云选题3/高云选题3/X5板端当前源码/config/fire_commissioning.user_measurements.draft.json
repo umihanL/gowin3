@@ -1,0 +1,287 @@
+{
+  "schema": "fire_commissioning_draft/v1",
+  "simulation_only": true,
+  "calibrated": false,
+  "hardware_written": false,
+  "pump_allowed": false,
+  "physical_hit_verified": false,
+  "configs": {
+    "fixed_camera_aim": {
+      "mode": "fixed_camera_3d",
+      "calibrated": false,
+      "calibration_id": null,
+      "stereo_calibration_id": "gs130w_factory_ce8ac6b9c53913d9ad306b44",
+      "source_frame": "undistorted_left_optical",
+      "image_size_wh": [
+        1280,
+        1088
+      ],
+      "translation_unit": "m",
+      "R_camera_to_gimbal": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ]
+      ],
+      "t_camera_origin_in_gimbal_m": [
+        0.13,
+        0.095,
+        0
+      ],
+      "axis_model": "serial_pan_z_tilt_minus_y_with_offsets",
+      "tilt_origin_in_pan_m": [
+        0,
+        0,
+        0.03
+      ],
+      "nozzle_origin_in_tilt_m": [
+        0,
+        -0.007,
+        0.005
+      ],
+      "nozzle_direction_in_tilt": [
+        1,
+        0,
+        0
+      ],
+      "actuator_reference_id": null,
+      "axis_reference_verified": false,
+      "axes": {
+        "pan": {
+          "zero_angle_deg": null,
+          "positive_direction": null,
+          "limits_deg": null
+        },
+        "tilt": {
+          "zero_angle_deg": null,
+          "positive_direction": null,
+          "limits_deg": null
+        }
+      },
+      "valid_range_m": null,
+      "max_speed_deg_s": 12.0,
+      "max_step_deg": 0.6,
+      "angle_tolerance_deg": 0.3,
+      "line_tolerance_m": 0.002,
+      "min_forward_ray_m": 0.05,
+      "stable_lock_s": 0.35,
+      "max_frame_age_s": 0.5,
+      "max_encoder_age_s": 0.2,
+      "max_target_shift_m": 0.02,
+      "notes": "2026-11-03 r2 offsets remain authoritative: vehicle x forward/y left/z up, C-P=[-95,130,0] mm, T-P=[0,0,30] mm, N-T=[7,0,5] mm. P is the pan reference and T is 30 mm above P; the 7 mm is VEHICLE forward. Gimbal x=vehicle left, y=vehicle rear, z=up. The user confirms C is the physical-left lens centre, camera heading vehicle left with zero pitch and roll; its optical right/down/forward axes therefore map to gimbal -y/-z/+x. R_camera_to_gimbal is [[0,0,1],[-1,0,0],[0,-1,0]]. At the defined horizontal leftward geometric zero the nozzle points along gimbal +x; [1,0,0] is not the current standby direction or an encoder reference. Factory stereo gs130w_factory_ce8ac6b9c53913d9ad306b44 provides 1280x1088 undistorted_left_optical from physical-left /image_right_raw; the sidecar rotates rectified XYZ back by R1 transpose. The user requests straight nozzle-ray alignment without water drop or landing correction. Explicit water_aim_policy=straight_ray implements that request and skips water-drop/landing compensation. Geometry, verified stereo frames and real encoder/profile references remain required before automatic operation. Encoder zero/directions/reference, verified stereo depth and remaining commissioning are not fabricated. calibrated=false and all verification flags remain unchanged; no water impact samples or verified hit are asserted.",
+      "installation_measurement_id": "installation_user_20261103_r2",
+      "gimbal_base_frame": "x_vehicle_left_y_vehicle_rear_z_up",
+      "measurement_status": "user_reported_offsets_and_level_left_orientation_remaining_calibration_pending",
+      "installation_measurements": {
+        "date": "2026-11-03",
+        "revision": 2,
+        "supersedes": "installation_user_20261103",
+        "unit": "mm",
+        "vehicle_frame": "x_forward_y_left_z_up",
+        "origin": "P: user measured reference on pan axis; tilt reference T is 30 mm above P",
+        "camera_relative_to_pan_vehicle_mm": [
+          -95,
+          130,
+          0
+        ],
+        "tilt_relative_to_pan_vehicle_mm": [
+          0,
+          0,
+          30
+        ],
+        "nozzle_relative_to_tilt_vehicle_mm": [
+          7,
+          0,
+          5
+        ],
+        "initial_camera_and_nozzle_heading": "vehicle_left",
+        "Q_vehicle_to_gimbal": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            -1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "source": "Latest user measurement table supersedes previous dimensions and origin assumption",
+        "camera_reference": "physical_left_lens_center"
+      },
+      "vehicle_reference_measurements": {
+        "measurement_id": "vehicle_reference_user_20261103",
+        "unit": "m",
+        "vehicle_frame": "x_forward_y_left_z_up",
+        "origin": "ground_projection_of_nose_midpoint",
+        "pan_origin_vehicle_m": [
+          -0.25,
+          -0.055,
+          0.27
+        ],
+        "camera_reference": "physical_left_lens_center",
+        "camera_origin_vehicle_m": [
+          -0.345,
+          0.075,
+          0.27
+        ],
+        "tilt_origin_vehicle_m": [
+          -0.25,
+          -0.055,
+          0.3
+        ],
+        "nozzle_origin_at_geometric_zero_vehicle_m": [
+          -0.243,
+          -0.055,
+          0.305
+        ],
+        "source": "User confirmed C is left lens centre; P is 25cm behind, 5.5cm right, 27cm above ground relative to nose midpoint. Combined with installation_user_20261103_r2 offsets.",
+        "camera_orientation_measured": false,
+        "water_impact_measured": false,
+        "camera_orientation_source": "explicit_user_level_left_declaration_20261103"
+      },
+      "orientation_user_statement": {
+        "statement_id": "camera_level_left_user_20261103",
+        "source": "explicit_user_confirmation",
+        "camera_heading_vehicle": "left",
+        "camera_pitch_deg": 0,
+        "camera_roll_deg": 0,
+        "reference_optical_frame": "undistorted_left_optical",
+        "optical_axes_in_vehicle": {
+          "right": "+vehicle_x",
+          "down": "-vehicle_z",
+          "forward": "+vehicle_y"
+        },
+        "nozzle_geometric_zero_heading_vehicle": "left",
+        "nozzle_geometric_zero_elevation_deg": 0,
+        "notes": "Camera pitch/roll and shared leftward heading are user declarations. The nozzle vector describes the defined horizontal geometric zero, not the current standby posture or an encoder zero. No independent precision measurement, stereo verification or water impact verification is asserted."
+      },
+      "aiming_policy_request": {
+        "requested_model": "straight_nozzle_ray",
+        "water_drop_compensation": false,
+        "water_landing_compensation": false,
+        "source": "explicit_user_request_20261103",
+        "implementation_status": "implemented_pending_stereo_and_axis_commissioning",
+        "notes": "Explicit straight_ray policy is implemented. Automatic operation still requires verified current stereo frames, calibrated geometry and actual encoder reference, plus matching geometry/mount/pump profile identities. No water-impact claim or automatic readiness is asserted."
+      },
+      "water_aim_policy": "straight_ray",
+      "camera_nozzle_mount_id": null,
+      "pump_setting_id": null
+    },
+    "fixed_camera_landing": {
+      "mode": "fixed_camera_measured_angular_grid",
+      "calibrated": false,
+      "calibration_id": null,
+      "measurement_session_id": null,
+      "geometry_calibration_id": null,
+      "stereo_calibration_id": null,
+      "actuator_reference_id": null,
+      "pump_setting_id": null,
+      "camera_nozzle_mount_id": null,
+      "angle_convention": "actuator_joint_delta_deg",
+      "distance_reference": "nominal_nozzle_forward_ray_m",
+      "measurement_unit": "m",
+      "acceptance_radius_m": null,
+      "water_impact_angle_tolerance_deg": null,
+      "measurements": [],
+      "independent_validation": [],
+      "notes": "UNMEASURED. Separate from moving-camera pixel tables. Measure angular corrections at a complete nominal-pan/nominal-tilt/nozzle-distance grid (at least 2 values per axis). Every row requires a unique measurement_id, measured=true, nominal_pan_deg, nominal_tilt_deg, nozzle_distance_m, angle_correction_deg=[pan_delta,tilt_delta] and actual measured_impact_error_m=[x,y,z]. Every interpolation cell also needs a distinct strictly-interior validation measurement with commanded_angles_deg equal to the interpolated target and actual measured_impact_error_m within the declared acceptance radius. These are actual water tests at the same installation and pump setting; no extrapolation or pressure/gravity guessing. Bind all calibration/profile/reference IDs after measurement. No sample values are supplied because none have been physically measured."
+    },
+    "stereo": {
+      "calibrated": false,
+      "calibration_id": null,
+      "camera_model": "pinhole",
+      "image_size": null,
+      "translation_unit": "m",
+      "K1": null,
+      "D1": null,
+      "K2": null,
+      "D2": null,
+      "R": null,
+      "T": null,
+      "notes": "Use measured GS130W calibration from tools/calibrate_stereo.py. Never replace null with guessed parameters. image_size is single-eye [width,height]. T maps left optical coordinates to right optical coordinates and uses metres."
+    },
+    "stereo_runtime": {
+      "enabled": false,
+      "physical_eye_mapping_verified": false,
+      "synchronization_verified": false,
+      "metric_depth_verified": false,
+      "verification_id": null,
+      "physical_left_topic": "/image_right_raw",
+      "physical_right_topic": "/image_left_raw",
+      "input_rotation_deg": 90.0,
+      "process_fps": 5.0,
+      "max_frame_age_s": 0.5,
+      "max_pair_skew_s": 0.012,
+      "queue_size": 16,
+      "opencv_threads": 2,
+      "require_fire_mode": true,
+      "matcher": {},
+      "notes": "Only mark verified after checking eye order, raw image rotation, exposure synchronization and held-out measured distances. Timestamp pairing alone is not synchronization. Fire mode bounds CPU work; image resolution and the YOLO/preview pipeline remain unchanged."
+    }
+  },
+  "evidence": {
+    "geometry": "2026-11-03 最新尺寸r2替换旧值。原点改为用户本次测量的水平轴参考P，T在P上方30mm；不再令P=T。原始车体系x前/y左/z上：C-P=[-95,130,0]mm，T-P=[0,0,30]mm，N-T=[7,0,5]mm。相机/喷嘴零位继续朝车左；云台基系x车左/y车后/z上，程序参数分别为[0.130,0.095,0]m、[0,0,0.030]m、[0,-0.007,0.005]m。喷口总位置N-P在车体系为[7,0,35]mm。C已确认物理左眼镜头中心；用户最新确认相机朝车左且没有仰角/侧倾，据此填入去畸变左眼光学系到云台的旋转矩阵。喷嘴几何零位定义为水平朝车左，方向填[1,0,0]，不据此填写实际编码器参考。",
+    "axes": "历史确认：电机2/ZDT水平，电机1/PD42俯仰，两轴直驱；工作范围水平左右各90度、俯仰水平向上0至60度。工作范围不是本次编码器坐标限位，故未填写运行axes。水平零位朝车左；30度为待机俯仰角，不是几何零位。本次实际编码器参考未读取。",
+    "stereo": "已绑定厂商EEPROM参数 gs130w_factory_ce8ac6b9c53913d9ad306b44（config/stereo.factory.json），输入物理左眼/image_right_raw、右眼/image_left_raw，单眼1280×1088。当前观测由R1转置把整流XYZ转换回undistorted_left_optical；安装瞄准和区域映射均以这一真实帧为待验收绑定。区域配置camera_coordinate_frame/position_frame均为undistorted_left_optical，RegionApproach已按两种明确光学帧分别绑定；DetectionArray的header.frame_id与rectified标志必须一致，且实际XYZ帧必须精确匹配配置。绑定工厂ID和坐标系不等于完成独立距离、相机姿态、曝光同步或水流验收；所有calibrated/verified仍按各草稿未通过状态保留。",
+    "water": "用户明确要求喷嘴按直线对准目标，不作水流下坠或落点补偿。已实现显式water_aim_policy=straight_ray，几何与执行器profile必须使用同一策略；仍需真实双目帧验收、轴参考、完整几何及安装/泵档身份。未测落点保持未测，water_impact/physical_hit标志不改为通过；不宣称已经可以自动灭火。区域靠近算法和实测水程门未在本轮扩展。",
+    "vehicle_reference": "C已确认左镜头中心；P相对车头中点地面垂足后250mm、右55mm、上270mm。换算C=[-345,75,270]mm；T=[-250,-55,300]mm；几何零位N=[-243,-55,305]mm。未猜测相机俯仰/横滚或水流落点。",
+    "orientation": "用户声明相机水平朝车左，俯仰0°、横滚0°。光学x右对应车前、y下对应地面下方、z前对应车左：R_camera_to_vehicle=[[1,0,0],[0,0,1],[0,-1,0]]；与既有vehicle→gimbal换基结合得R_camera_to_gimbal=[[0,0,1],[-1,0,0],[0,-1,0]]。这不是独立角度仪精密测量，也不是编码器零点验收。"
+  },
+  "assumptions": [
+    "最新尺寸r2取代旧尺寸及旧P=T原点假设；历史原文保存在source_records。",
+    "相机和喷嘴几何零位朝车左；云台基系x车左/y车后/z上，pan +z、tilt -y。实际编码器零点及方向尚需对应。",
+    "C已由用户确认为物理左眼镜头中心，P相对车头中点地面垂足的位置已记录。",
+    "相机俯仰0°、横滚0°由用户声明据此建模；不伪装为独立精密测角。当前XYZ已从整流系转回undistorted_left_optical。",
+    "用户选择直线喷嘴射线模型并明确不要水流下坠/落点补偿；这一选择不产生水流命中验收，也不补造双目或执行器参考。"
+  ],
+  "source_records": [
+    {
+      "source_kind": "user_installation_measurements",
+      "imported_at_utc": "2026-11-02T16:56:36.5945786Z",
+      "original_json": "{\r\n  \"recorded_date\": \"2026-11-03\",\r\n  \"source\": \"User measurements and confirmations in this conversation\",\r\n  \"unit\": \"mm\",\r\n  \"vehicle_frame\": \"x forward, y left, z up\",\r\n  \"origin\": \"Intersection of pan and tilt rotation axes\",\r\n  \"camera_position_vehicle_mm\": [\r\n    100,\r\n    50,\r\n    -50\r\n  ],\r\n  \"tilt_pivot_position_vehicle_mm\": [\r\n    0,\r\n    0,\r\n    0\r\n  ],\r\n  \"nozzle_position_vehicle_mm\": [\r\n    40,\r\n    0,\r\n    50\r\n  ],\r\n  \"camera_and_nozzle_initial_heading\": \"vehicle_left\",\r\n  \"exact_pitch_roll_deg\": null,\r\n  \"camera_measurement_reference_optically_verified\": false,\r\n  \"Q_vehicle_to_gimbal\": [\r\n    [\r\n      0,\r\n      1,\r\n      0\r\n    ],\r\n    [\r\n      -1,\r\n      0,\r\n      0\r\n    ],\r\n    [\r\n      0,\r\n      0,\r\n      1\r\n    ]\r\n  ],\r\n  \"confirmed_user_statements\": [\r\n    \"前方100 mm、左侧50 mm\",\r\n    \"是，轴线交点在镜头中心上方50 mm\",\r\n    \"喷口是否在俯仰轴前40 mm、上50 mm是的，喷嘴和相机初始位置朝向相同\",\r\n    \"都朝车身左侧\"\r\n  ]\r\n}"
+    },
+    {
+      "source_kind": "user_installation_measurements_revision",
+      "imported_at_utc": "2026-11-02T18:14:38.7303022Z",
+      "original_json": "{\r\n  \"recorded_date\": \"2026-11-03\",\r\n  \"revision\": 2,\r\n  \"supersedes\": \"installation_user_20261103\",\r\n  \"unit\": \"mm\",\r\n  \"vehicle_frame\": \"x forward, y left, z up\",\r\n  \"camera_relative_to_pan_mm\": [\r\n    -95,\r\n    130,\r\n    0\r\n  ],\r\n  \"tilt_relative_to_pan_mm\": [\r\n    0,\r\n    0,\r\n    30\r\n  ],\r\n  \"nozzle_relative_to_tilt_mm\": [\r\n    7,\r\n    0,\r\n    5\r\n  ],\r\n  \"initial_heading_from_previous_confirmation\": \"vehicle_left\",\r\n  \"original_user_table\": \"相机C相对水平轴P：后95mm、左130mm、高低0mm；俯仰轴T相对水平轴P：前后0mm、左右0mm、上30mm；喷嘴N相对俯仰轴T：前7mm、左右0mm、上5mm。\"\r\n}"
+    },
+    {
+      "source_kind": "user_level_camera_and_straight_nozzle_policy",
+      "imported_at_utc": "2026-11-03T10:36:12.303708+00:00",
+      "original_json": "{\"camera_heading\": \"vehicle_left\", \"camera_pitch_deg\": 0, \"camera_roll_deg\": 0, \"user_request\": \"相机没有仰角/侧倾，喷嘴按直线对准目标，不作水流下坠/落点补偿。\", \"orientation_user_statement\": {\"statement_id\": \"camera_level_left_user_20261103\", \"source\": \"explicit_user_confirmation\", \"camera_heading_vehicle\": \"left\", \"camera_pitch_deg\": 0, \"camera_roll_deg\": 0, \"reference_optical_frame\": \"undistorted_left_optical\", \"optical_axes_in_vehicle\": {\"right\": \"+vehicle_x\", \"down\": \"-vehicle_z\", \"forward\": \"+vehicle_y\"}, \"nozzle_geometric_zero_heading_vehicle\": \"left\", \"nozzle_geometric_zero_elevation_deg\": 0, \"notes\": \"Camera pitch/roll and shared leftward heading are user declarations. The nozzle vector describes the defined horizontal geometric zero, not the current standby posture or an encoder zero. No independent precision measurement, stereo verification or water impact verification is asserted.\"}, \"aiming_policy_request\": {\"requested_model\": \"straight_nozzle_ray\", \"water_drop_compensation\": false, \"water_landing_compensation\": false, \"source\": \"explicit_user_request_20261103\", \"implementation_status\": \"request_recorded_control_policy_pending\", \"notes\": \"User requests straight geometrical nozzle-to-target alignment without water trajectory/impact correction. This request does not claim a measured water impact and does not itself enable automatic spraying.\"}}"
+    }
+  ],
+  "measurement_claims": [
+    {
+      "measurement_id": "installation_user_20261103",
+      "source_claimed_measured": true,
+      "source": "user_conversation",
+      "scope": "Vehicle-frame point offsets, intersecting axes and common leftward heading only; excludes stereo, optical extrinsics, encoder reference and water impact.",
+      "superseded_by": "installation_user_20261103_r2"
+    },
+    {
+      "measurement_id": "installation_user_20261103_r2",
+      "source_claimed_measured": true,
+      "source": "latest_user_table",
+      "scope": "Three relative installation translations only; shared leftward initial heading retained from prior confirmation. Does not certify optical orientation, stereo, actuator reference or water impact."
+    }
+  ]
+}

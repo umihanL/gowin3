@@ -1,0 +1,289 @@
+{
+  "geometry": [
+    {
+      "point": 1,
+      "cell": [
+        17,
+        17
+      ],
+      "display_cm": [
+        35,
+        285
+      ],
+      "ideal_raw_cm": [
+        34.77974641540427,
+        35.81158678289398
+      ],
+      "quantization_error_mm": 8.41
+    },
+    {
+      "point": 2,
+      "cell": [
+        12,
+        80
+      ],
+      "display_cm": [
+        25,
+        159
+      ],
+      "ideal_raw_cm": [
+        25.564245810055866,
+        160.5875152998776
+      ],
+      "quantization_error_mm": 6.99
+    },
+    {
+      "point": 3,
+      "cell": [
+        17,
+        142
+      ],
+      "display_cm": [
+        35,
+        35
+      ],
+      "ideal_raw_cm": [
+        34.77974641540427,
+        285.3634438168612
+      ],
+      "quantization_error_mm": 4.25
+    },
+    {
+      "point": 4,
+      "cell": [
+        88,
+        147
+      ],
+      "display_cm": [
+        177,
+        25
+      ],
+      "ideal_raw_cm": [
+        176.0,
+        294.5410036719706
+      ],
+      "quantization_error_mm": 11.0
+    },
+    {
+      "point": 5,
+      "cell": [
+        158,
+        142
+      ],
+      "display_cm": [
+        317,
+        35
+      ],
+      "ideal_raw_cm": [
+        317.2202535845957,
+        285.3634438168612
+      ],
+      "quantization_error_mm": 4.25
+    },
+    {
+      "point": 6,
+      "cell": [
+        163,
+        80
+      ],
+      "display_cm": [
+        327,
+        159
+      ],
+      "ideal_raw_cm": [
+        326.43575418994413,
+        160.5875152998776
+      ],
+      "quantization_error_mm": 6.99
+    },
+    {
+      "point": 7,
+      "cell": [
+        158,
+        17
+      ],
+      "display_cm": [
+        317,
+        285
+      ],
+      "ideal_raw_cm": [
+        317.2202535845957,
+        35.81158678289398
+      ],
+      "quantization_error_mm": 8.41
+    },
+    {
+      "point": 8,
+      "cell": [
+        88,
+        13
+      ],
+      "display_cm": [
+        177,
+        293
+      ],
+      "ideal_raw_cm": [
+        176.0,
+        26.63402692778458
+      ],
+      "quantization_error_mm": 10.65
+    },
+    {
+      "point": 9,
+      "cell": [
+        88,
+        73
+      ],
+      "display_cm": [
+        177,
+        173
+      ],
+      "ideal_raw_cm": [
+        177.96648044692736,
+        147.85801713586292
+      ],
+      "quantization_error_mm": 12.92
+    }
+  ],
+  "cases": [
+    {
+      "point": 1,
+      "passed": true,
+      "seconds": 172.438,
+      "route_samples": 48,
+      "goal_error_manhattan_mm": 21.33,
+      "log": "sim/host_points_1.log",
+      "log_sha256": "c7ba78cc8a929aa356951a9d5f6875f783a2073c4cad9260e961aff2687d5901",
+      "route": "sim/host_point_1_route.csv"
+    },
+    {
+      "point": 2,
+      "passed": true,
+      "seconds": 389.703,
+      "route_samples": 78,
+      "goal_error_manhattan_mm": 49.92,
+      "log": "sim/host_points_2.log",
+      "log_sha256": "efddd6be2f73e45209b23dd37f390195f0dc43a3c2780529c9f9ab11f6ad9d1b",
+      "route": "sim/host_point_2_route.csv"
+    },
+    {
+      "point": 3,
+      "passed": true,
+      "seconds": 737.297,
+      "route_samples": 110,
+      "goal_error_manhattan_mm": 30.23,
+      "log": "sim/host_points_3.log",
+      "log_sha256": "822df22369c782c9ceb3641fe037c9d7890510592f8fcbf80658702d300a60a8",
+      "route": "sim/host_point_3_route.csv"
+    },
+    {
+      "point": 4,
+      "passed": true,
+      "seconds": 451.656,
+      "route_samples": 84,
+      "goal_error_manhattan_mm": 39.34,
+      "log": "sim/host_points_4.log",
+      "log_sha256": "9eb51a636f0868997fbc6f91c6a3b7e0e955dd8121cddb71cd3d149e25768c0d",
+      "route": "sim/host_point_4_route.csv"
+    },
+    {
+      "point": 5,
+      "passed": true,
+      "seconds": 449.032,
+      "route_samples": 83,
+      "goal_error_manhattan_mm": 30.23,
+      "log": "sim/host_points_5.log",
+      "log_sha256": "3acc745be8bf95bf480fd42e0d7c5e72a590c947d896cf0f242dfecc926f701d",
+      "route": "sim/host_point_5_route.csv"
+    },
+    {
+      "point": 6,
+      "passed": true,
+      "seconds": 191.922,
+      "route_samples": 51,
+      "goal_error_manhattan_mm": 42.89,
+      "log": "sim/host_points_6.log",
+      "log_sha256": "fb7e54d11aba84dadb9ac49a699e8be91485494643093f311cbc406909884c30",
+      "route": "sim/host_point_6_route.csv"
+    },
+    {
+      "point": 7,
+      "passed": true,
+      "seconds": 69.531,
+      "route_samples": 22,
+      "goal_error_manhattan_mm": 21.33,
+      "log": "sim/host_points_7.log",
+      "log_sha256": "94b4ebd46ae1b8245cc9baac8938ba2e85bf168961c3c4442bc82268e59e6917",
+      "route": "sim/host_point_7_route.csv"
+    },
+    {
+      "point": 8,
+      "passed": true,
+      "seconds": 53.438,
+      "route_samples": 13,
+      "goal_error_manhattan_mm": 38.4,
+      "log": "sim/host_points_8.log",
+      "log_sha256": "085c33cc43eeb93eb25a76fec5e1acb772dc4d3c4392314bb6494c60240d8cb2",
+      "route": "sim/host_point_8_route.csv"
+    },
+    {
+      "point": 9,
+      "passed": true,
+      "seconds": 318.609,
+      "route_samples": 73,
+      "goal_error_manhattan_mm": 62.62,
+      "log": "sim/host_points_9.log",
+      "log_sha256": "dc0fe2a855c545796c5d9e048d5c5051efa7b8ae5b0d946a6b007695d5b4a79a",
+      "route": "sim/host_point_9_route.csv"
+    }
+  ],
+  "inputs": {
+    "sim/host_points_tb.sv": "5fcda038cac7273a18443b5313f197c67e00c4a612d4f8e2d2949981597fc353",
+    "src/navigation/astar_grid.v": "a5a041e28a3d39c1a7366672e12f836f0e79516d7bca3063e2b2d41d42e4f142",
+    "src/navigation/navigation_ui.v": "b4bf6cb923695fa53f3751b9018852c1beacacddf952f5c82d242966460e15aa",
+    "src/navigation/nav_barrier_overlay.v": "bf5ab21bbed56363cb617041e01d21f5e9b14770794c4490767179a98f67c1e5",
+    "src/navigation/nav_control.v": "801bb443855b119c7e6df8c109d2cb7362f1be0a75b998bc0dd3d8c9ba767843",
+    "src/navigation/nav_map_rom.v": "b89898772b21d4a132636e8539fd687a93c98d2a457aaa47dbf18b9bd1787405",
+    "src/navigation/nav_path_refiner.v": "4ac2f9c7c094a120f007631266ae12fd7af15a132b6301ca05e1b85c3f6f5cc2",
+    "src/navigation/nav_renderer.v": "b02723cb58887e86634b4c0f498c0b75a638ea710608ee499e005a08a7f9a7ac",
+    "src/navigation/nav_road_planner.v": "1fcffee0ce695a499321d3f0b6da75a85bea4dcb7e9c5a42459a0067ae5c8a65",
+    "src/navigation/vehicle_settings.v": "e6739f4b03a0163cc19afa84408ff4f89cebb79257283492988fce5d0d635c3d",
+    "src/vehicle/host_uart_rx.v": "4f77c892c2adc04b1960e29b44ba1def45aa83510d75b8c51669f3aceff3bf1a",
+    "src/vehicle/vehicle_bypass.v": "c6152618718b7268cd3ac4b18a1b1350054958e5a98d0d7d49a58dc23363a19c",
+    "src/vehicle/vehicle_host_link.v": "974924f325a9f1539915adffffe0f3869db011b7e7be33630f3c88265613f425",
+    "src/vehicle/vehicle_motion.v": "0b165d51d3c08fccde93596a5458ce3a9bdb11973eb40336e2a1935d2f24227b",
+    "src/vehicle/vehicle_odometry.v": "30153e70b240b97d39861f468fffcfdfad0e13c145396d02fbc64a0a77c2b43f",
+    "src/vehicle/vehicle_route_profile.v": "5b9c9ba9afa19b8f91998662491a5e8b4863df2ee0e16079860522d448876791",
+    "src/vehicle/vehicle_sincos.v": "d24c9d668718ae73def36c9e56916ae3110feb82d8682977ed27127ec56e138d",
+    "src/vehicle/vehicle_subsystem.v": "258e23856bf4103abdee88d707393fe113fda4bcbacd2b71b973f643cbfde233",
+    "src/vehicle/vehicle_tracker.v": "e835346e4d65a518088a6d71c929f8ead513815b7a03b5eac2952060757b2519",
+    "src/vehicle/motor/motor_closed_loop.v": "63390a0e59f23b05a2e8e8c12dac12a89eda08879fc654f54e872c04b8678465",
+    "src/vehicle/motor/motor_encoder.v": "3f727ac320e9dfd46305aa7121d5def2f9cd45cb5631c88c305b7c7db7aeeedc",
+    "src/vehicle/motor/motor_pi.v": "69286e15b990e1ec214d2879bc2681f4984556432c7fa2b1b563ff5477d4fe36",
+    "src/vehicle/motor/motor_PWM.v": "bdd728b1d7d89c5a2761396eca56fbf9b6dbbb08be6f2b4a2da402a69f34cb28",
+    "src/vehicle/motor/motor_speed.v": "29d35e90b4153bf3cc91bffddbdd91b03f46291b90e9d06ee46d9a5a858a1364",
+    "src/vehicle/motor/motor_target_counts.v": "760a9380ce21cce038594da07c95b742859875afe1abad31d0156c90cebde813",
+    "src/vehicle/motor/ps2_reference_controller.v": "ba9a0aef22317ff02ef186db2d07fccacd522e39262f9e63ab716089633241c6",
+    "src/vehicle/motor/ps2_reference_serial.v": "31c0abeab9e806440d20ed5e8381a20443c56da5ec608808d8bc25e70d82f73a",
+    "src/vehicle/motor/ps2_test_control.v": "6158a6eea8adde4e1349387816c80a746ccd764aaf785daecc8200e4603f9c5e",
+    "src/vehicle/motor/servo_pwm.v": "f2ea99f9601c3e0db4a708f9629aea55ba03e64c5d377993f0b2dff4c31d0b46",
+    "src/vehicle/motor/speed_to_pwm.v": "c6a4dd854e4044df7ee87788f7f09fcc4d6d86bf65f6f2e88394b99cbcf6215a",
+    "src/vehicle/motor/uart_byte_tx.v": "5d39e5aaf9b8f8c201c729d74017d05f3cc3398ce84e96e38174322916667093",
+    "src/vehicle/motor/vl53l0x_array_controller.v": "4f7764514e8e4e840124f0b14066b0c2c80d8cd7ce409ed9e6480de488ad9f46",
+    "src/vehicle/motor/vl53l0x_i2c_master.v": "7a6cbdd5cb211285a12adbdd39218d95e58acf135662527c82f5f77e779538d3",
+    "src/vehicle/motor/vl53l1x_array_controller.v": "dd91ec12ef9490b7b506d826f1ccab01f860d22bf85448ac99e1cc7d0aed4a53",
+    "src/vehicle/motor/vl53l1x_i2c_master.v": "53fab283b7900221c5fa0c8e49b7c8ca161fd5bd3a3d581aaf6e1d6a42cc3b49",
+    "src/vehicle/motor/vofa_firewater_tx.v": "0122c87098188171c2070fe525a696a0769ce298c134c9813ff12be6ef7f765d",
+    "src/imu/imu_math.v": "2663da396408c1ed487f5893bfbb883b6995f2f62ff77f0f458f96e1ef5d1835",
+    "src/navigation/nav_centerline_bitmap.vh": "144b2cc6e5caa7e4dbd230d3ff23ed8ec4695dcf2fb37b32d8276c47b051624a",
+    "src/navigation/nav_centerline_config.vh": "1f0c6f5702ac30f04d368cedd1ad6acac601017664bfedcaa8ae5b401a7431d9",
+    "src/navigation/nav_centerline_init.vh": "bbdbe256d89f677747f625282908c4021b255208e2236852ed1eff1325c92501",
+    "src/navigation/nav_centerline_junctions.vh": "3f53e8b78b22da10be750c320cf1914895d04d6e69613f2062a7e8722286f030",
+    "src/navigation/nav_centerline_reverse.vh": "40c02c8a11fb3e3bd9080facbfff06cd4cda0b1f7bf4af998da01e5f55677e1a",
+    "src/navigation/nav_destinations.vh": "0e02cfdf074e5b1b4d08725558d88f5efc2d3756bb6791654c3cb2d22f06bcaf",
+    "src/navigation/nav_font.vh": "753c6a2f340405e2bb2e22393e1eaf2ba4cbc0cc834450351973e5c0830febf0",
+    "src/navigation/nav_map_init.vh": "3106bc18b4e9d920af5b1c2a13c23f7df42ea3260d839600a1f63424c2e99ca2",
+    "src/navigation/nav_metadata.vh": "660427c816cb899f6414ed3d316bf9a916255192381f05e0ee30ff868070d13f",
+    "src/vehicle/vehicle_config.vh": "c06c9ead985ac7ec84cbaf2b3ad261a161a8729638f39014d9a3deb63837f53a"
+  }
+}

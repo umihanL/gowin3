@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IMU 三维姿态</title>
+<style>
+:root{font-family:"Microsoft YaHei",system-ui,sans-serif;color:#172339;background:#f3f6fa}*{box-sizing:border-box}body{margin:0;padding:32px;max-width:1280px;margin-inline:auto}header{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:24px}h1{font-size:25px;margin:0 0 6px;font-weight:650}p{margin:0;color:#68788d;font-size:14px;line-height:1.8}.actions{display:flex;gap:10px;flex-wrap:wrap}button{border:1px solid #dae2ed;border-radius:9px;background:white;padding:11px 17px;color:#203752;font:inherit;font-size:14px;cursor:pointer}button.primary{background:#1769db;color:white;border-color:#1769db}button:disabled{opacity:.45;cursor:default}.layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:20px}.card{background:white;border:1px solid #e0e7ef;border-radius:16px;overflow:hidden;box-shadow:0 4px 18px #19355206}.scene{position:relative;min-height:500px}.pill{position:absolute;left:22px;top:20px;color:#61748e;background:#eef3f9;border-radius:20px;padding:7px 12px;font-size:12px}canvas{display:block;width:100%;height:500px}.caption{border-top:1px solid #eef2f7;padding:15px 22px;color:#6f7c90;font-size:13px;line-height:1.8}.details{padding:24px}h2{font-size:15px;margin:0 0 20px}.axes{display:grid;gap:14px;margin-bottom:28px}.axis{display:flex;align-items:center;justify-content:space-between}.axis span{font-size:14px}.axis strong{font:600 27px ui-monospace,Consolas,monospace}.x{color:#d25252}.y{color:#26996a}.z{color:#3078dc}.rows{font:13px ui-monospace,Consolas,monospace;display:grid;gap:10px;color:#65748a}.row{display:flex;justify-content:space-between;gap:15px}.status{margin-top:20px;padding:15px 18px;border-radius:10px;background:#e9eef6;font-size:13px;line-height:1.7;color:#4d617e}.note{margin-top:18px}footer{margin-top:20px;color:#748297;font-size:12px;line-height:1.9}@media(max-width:850px){body{padding:18px}header{align-items:flex-start;flex-direction:column}.layout{grid-template-columns:1fr}canvas{height:380px}.scene{min-height:380px}}
+</style>
+<header><div><h1>IMU 三维姿态</h1><p>完整姿态随动 · 支持倒置与连续翻转</p></div><div class="actions"><button id="connect" class="primary">连接串口</button><button id="disconnect" disabled>断开</button><button id="save" disabled>保存记录</button></div></header>
+<main class="layout"><section class="card"><div class="scene"><span class="pill" id="source">等待姿态数据</span><canvas id="scene" aria-label="由四元数驱动的三维姿态模型"></canvas></div><div class="caption">红色 X 轴 · 绿色 Y 轴 · 蓝色 Z 轴。模型跟随相对校零姿态；开发板显示 RUN 后再开始测量。</div></section><section class="card details"><h2>三轴旋转向量</h2><div class="axes"><div class="axis x"><span>RotX</span><strong id="rx">—</strong></div><div class="axis y"><span>RotY</span><strong id="ry">—</strong></div><div class="axis z"><span>RotZ</span><strong id="rz">—</strong></div></div><h2>欧拉角</h2><div class="rows"><div class="row"><span>Roll</span><span id="roll">—</span></div><div class="row"><span>Pitch</span><span id="pitch">—</span></div><div class="row"><span>Yaw</span><span id="yaw">—</span></div></div><p class="note">欧拉角数值在 ±90° 附近可能切换分支，三维模型直接使用四元数，不依赖这三个数值。</p><div class="status" id="status">请用 Edge 或 Chrome 打开本页。连接前先关闭 VOFA 的串口连接，再选择 FPGA 使用的串口（115200）。</div></section></main>
+<footer>姿态以校零时的模块坐标为参考。六轴融合不提供绝对航向；本页不自动归零，也不对实际测量偏差作隐藏或补偿。保存记录为收到的原始 FireWater 帧，最多保留最近 12000 帧。</footer>
+<script id="pose-math">
+const PoseMath = (() => {
+  function normalize(q) {
+    const n=Math.hypot(...q);
+    if(!Number.isFinite(n)||n<0.5||n>1.5) throw new Error('无效四元数');
+    return q.map(x=>x/n);
+  }
+  function fromVector(v) {
+    const a=Math.hypot(...v)*Math.PI/180;
+    if(a===0) return [1,0,0,0];
+    const k=Math.sin(a/2)/Math.hypot(...v);
+    return [Math.cos(a/2),...v.map(x=>x*k)];
+  }
+  function rotate(v,q) {
+    const [w,x,y,z]=q,[a,b,c]=v;
+    const tx=2*(y*c-z*b),ty=2*(z*a-x*c),tz=2*(x*b-y*a);
+    return [a+w*tx+y*tz-z*ty,b+w*ty+z*tx-x*tz,c+w*tz+x*ty-y*tx];
+  }
+  function parse(line) {
+    if(!line.trim().startsWith('samples:')) return null;
+    const tokens=line.trim().slice(8).split(',');
+    if(tokens.some(t=>!t.trim())) return null;
+    const a=tokens.map(Number);
+    if((a.length!==3&&a.length!==10)||a.some(x=>!Number.isFinite(x))) return null;
+    try {
+      return {vector:a.slice(0,3),euler:a.length===10?a.slice(3,6):null,
+        q:a.length===10?normalize(a.slice(6,10)):fromVector(a),extended:a.length===10};
+    } catch { return null; }
+  }
+  return {normalize,fromVector,rotate,parse};
+})();
+</script>
+<script>
+(() => {
+  const get=id=>document.getElementById(id),canvas=get('scene'),ctx=canvas.getContext('2d');
+  let port=null,reader=null,reading=false,buffer='',lastSample=0,q=[1,0,0,0],records=[],count=0;
+  const vertices=[[-.65,-.65,-.4],[.65,-.65,-.4],[.65,.65,-.4],[-.65,.65,-.4],[-.65,-.65,.4],[.65,-.65,.4],[.65,.65,.4],[-.65,.65,.4]];
+  const faces=[[0,1,2,3],[0,1,5,4],[1,2,6,5],[2,3,7,6],[3,0,4,7],[4,5,6,7]];
+  const colors=['#5889ca','#2e78d1','#66a9eb','#5998dc','#3989de','#92c3ef'];
+  function display(line) {
+    const pose=PoseMath.parse(line);if(!pose)return;
+    q=pose.q;lastSample=performance.now();count++;
+    records.push(line.trim());if(records.length>12000)records.shift();get('save').disabled=false;
+    ['rx','ry','rz'].forEach((id,i)=>get(id).textContent=pose.vector[i].toFixed(1)+'°');
+    ['roll','pitch','yaw'].forEach((id,i)=>get(id).textContent=pose.euler?pose.euler[i].toFixed(1)+'°':'—');
+    get('source').textContent=pose.extended?'完整四元数姿态':'由旋转向量还原姿态';
+    get('status').textContent=`正在接收 · ${count} 帧。当前为相对姿态，航向可能随时间漂移。`;
+  }
+  async function disconnect() {
+    reading=false;
+    if(reader){try{await reader.cancel();}catch{}}
+  }
+  get('connect').onclick=async()=>{
+    if(!('serial' in navigator)) {get('status').textContent='当前浏览器不支持串口，请使用桌面版 Edge 或 Chrome。';return;}
+    get('connect').disabled=true;
+    try {
+      port=await navigator.serial.requestPort();
+      await port.open({baudRate:115200,dataBits:8,stopBits:1,parity:'none',flowControl:'none'});
+      reading=true;buffer='';lastSample=0;count=0;
+      get('disconnect').disabled=false;get('status').textContent='串口已连接，等待有效 FireWater 姿态帧。';
+      reader=port.readable.getReader();const decoder=new TextDecoder();
+      while(reading) {
+        const {value,done}=await reader.read();if(done)break;
+        buffer+=decoder.decode(value,{stream:true});
+        const lines=buffer.split('\n');buffer=lines.pop();
+        if(buffer.length>2048)buffer='';
+        for(const line of lines)display(line);
+      }
+    } catch(e) {get('status').textContent='连接未完成：'+e.message;}
+    finally {
+      reading=false;
+      if(reader){try{reader.releaseLock();}catch{}reader=null;}
+      if(port){try{await port.close();}catch{}port=null;}
+      get('connect').disabled=false;get('disconnect').disabled=true;
+      if(lastSample)get('status').textContent='连接已断开。模型保留最后姿态，当前没有实时测量。';
+    }
+  };
+  get('disconnect').onclick=disconnect;
+  get('save').onclick=()=>{
+    const u=URL.createObjectURL(new Blob([records.join('\r\n')+'\r\n'],{type:'text/plain'}));
+    const a=document.createElement('a');a.href=u;a.download='imu_pose_'+new Date().toISOString().replace(/[:.]/g,'-')+'.txt';a.click();
+    setTimeout(()=>URL.revokeObjectURL(u),1000);
+  };
+  function draw() {
+    const rect=canvas.getBoundingClientRect(),dpr=window.devicePixelRatio||1;
+    const w=rect.width,h=rect.height;
+    if(canvas.width!==Math.round(w*dpr)||canvas.height!==Math.round(h*dpr)){canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);}
+    ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);
+    const scale=Math.min(w,h)*.24;
+    const project=([x,y,z])=>[w/2+(x-y)*.7071*scale,h*.53+((x+y)*.35355-z*.866)*scale];
+    const depth=([x,y,z])=>(x+y)*.61237+z*.5;
+    const line=(a,b,color,width=1)=>{const p=project(a),v=project(b);ctx.beginPath();ctx.moveTo(...p);ctx.lineTo(...v);ctx.strokeStyle=color;ctx.lineWidth=width;ctx.stroke();};
+    for(let i=-4;i<=4;i++){line([i*.4,-1.6,-.8],[i*.4,1.6,-.8],'#eef2f7');line([-1.6,i*.4,-.8],[1.6,i*.4,-.8],'#eef2f7');}
+    const rotated=vertices.map(v=>PoseMath.rotate(v,q));
+    faces.map((f,i)=>({f,i,d:f.reduce((sum,j)=>sum+depth(rotated[j]),0)/4})).sort((a,b)=>a.d-b.d).forEach(({f,i})=>{
+      ctx.beginPath();f.forEach((j,k)=>{const p=project(rotated[j]);if(k)ctx.lineTo(...p);else ctx.moveTo(...p);});ctx.closePath();ctx.fillStyle=colors[i];ctx.fill();ctx.strokeStyle='#ffffff99';ctx.lineWidth=1;ctx.stroke();
+    });
+    [[1.5,0,0],[0,1.5,0],[0,0,1.5]].forEach((v,i)=>{
+      const tip=PoseMath.rotate(v,q),color=['#d25252','#26996a','#3078dc'][i];
+      line([0,0,0],tip,color,3);const p=project(tip);ctx.fillStyle=color;ctx.beginPath();ctx.arc(...p,4,0,2*Math.PI);ctx.fill();ctx.font='600 15px system-ui';ctx.fillText('XYZ'[i],p[0]+9,p[1]-7);
+    });
+    if(reading&&lastSample&&performance.now()-lastSample>1000)get('status').textContent='数据已超过 1 秒未更新。模型保留最后姿态，请检查开发板的 IMU 状态。';
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+</html>

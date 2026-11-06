@@ -1,0 +1,443 @@
+{
+  "schema_version": 1,
+  "dry_run": false,
+  "comment": "Mixed ZDT_XS pan on physical 3 TX/5 RX (ttyS3), PD42 tilt on 8 TX/10 RX (ttyS1). Axis roles were swapped; references/directions/gearing/limits must be commissioned for this installation, not copied from the former axes. Dry-run only until per-start encoder reference, direction, ratio, limits, supported load and ZDT readback snapshot are verified. No homing, zero, calibration, firmware switching or pump enable is automatic.",
+  "servo": {
+    "backend": "mixed_serial",
+    "transport": "ttl",
+    "baudrate": 115200,
+    "poll_hz": 8.0,
+    "timeout_s": 0.15,
+    "feedback_timeout_s": 0.6,
+    "position_tolerance_deg": 0.5,
+    "stop_policy": "disable",
+    "enable_on_command": true,
+    "reference_confirmed_this_start": true,
+    "load_supported_verified": true,
+    "calibration_confirmed": true,
+    "pan": {
+      "port": "/dev/ttyS3",
+      "address": 1,
+      "min_angle_deg": -90.0,
+      "max_angle_deg": 90.0,
+      "reference_angle_deg": 0.0,
+      "reference_counts": 17,
+      "direction": 1,
+      "gear_ratio": 1.0,
+      "acceleration": 100,
+      "protocol": "zdt_xs",
+      "motion_enabled": true,
+      "zdt_verified_snapshot": null,
+      "zdt_fd8_snapshot": {
+        "profile": "zdt_emm_target_closed_loop_v2",
+        "version": {
+          "firmware_raw": 206,
+          "firmware": "2.0.6",
+          "hardware_raw": 8980,
+          "hardware_series": 2,
+          "hardware_type": 3,
+          "hardware_version_raw": 20
+        },
+        "config_data_hex": "21 15 19 02 02 02 00 10 01 00 04 b0 0b b8 13 88 05 07 01 00 01 01 00 08 08 98 07 d0 00 08",
+        "options_raw_hex": "04 26",
+        "reference_position_counts": 17,
+        "retained_target_counts": -16347,
+        "realtime_target_counts": -16347,
+        "startup_position_counts": -16367,
+        "startup_encoder_offset_counts": 64241,
+        "startup_reference_id": "manual-zero-c43af59c020d405cbc3337cb5aacf4d6",
+        "startup_boot_id": "a86a8d11-e045-43f5-a6d8-5a6ca9a5ec9b"
+      }
+    },
+    "tilt": {
+      "port": "/dev/ttyS1",
+      "address": 1,
+      "min_angle_deg": 0.0,
+      "max_angle_deg": 60.0,
+      "reference_angle_deg": 0.0,
+      "reference_counts": 22247,
+      "direction": 1,
+      "gear_ratio": 1.0,
+      "acceleration": 100,
+      "protocol": "pd42",
+      "motion_enabled": true
+    },
+    "reference_id": "manual-zero-c43af59c020d405cbc3337cb5aacf4d6",
+    "live_readback_until_reference": false,
+    "feedback_limit_tolerance_deg": 0.2,
+    "absolute_reference_restore_allowed": true,
+    "absolute_reference_restore_reason": "",
+    "absolute_reference": {
+      "schema_version": 1,
+      "reference_id": "manual-zero-c43af59c020d405cbc3337cb5aacf4d6",
+      "axes": {
+        "pan": {
+          "protocol": "zdt_xs",
+          "reference_angle_deg": 0.0,
+          "direction": 1,
+          "gear_ratio": 1.0,
+          "min_angle_deg": -90.0,
+          "max_angle_deg": 90.0,
+          "counts_per_turn": 65536,
+          "zero_absolute_counts": 1312
+        },
+        "tilt": {
+          "protocol": "pd42",
+          "reference_angle_deg": 0.0,
+          "direction": 1,
+          "gear_ratio": 1.0,
+          "min_angle_deg": 0.0,
+          "max_angle_deg": 60.0,
+          "counts_per_turn": 51200,
+          "zero_absolute_counts": 22247
+        }
+      }
+    }
+  },
+  "pump": {
+    "backend": "fpga_uart",
+    "enabled": false,
+    "pin": "B13",
+    "active_high": true,
+    "max_duration_ms": 1000,
+    "feedback_timeout_s": 0.6,
+    "setting_id": null,
+    "fixed_camera_landing_calibration_id": null,
+    "geometry_calibration_id": null,
+    "camera_nozzle_mount_id": null
+  },
+  "commissioning": {
+    "reference": "saved mechanical origin restored from stationary absolute encoder readback",
+    "pan_range_deg": [
+      -90,
+      90
+    ],
+    "tilt_range_deg": [
+      0,
+      60
+    ],
+    "drive_ratio": 1,
+    "tilt_physical_direction_verified": true,
+    "camera_to_nozzle_calibrated": false,
+    "boot_id": "a86a8d11-e045-43f5-a6d8-5a6ca9a5ec9b",
+    "evidence": {
+      "version": {
+        "firmware_raw": 206,
+        "firmware": "2.0.6",
+        "hardware_raw": 8980,
+        "hardware_series": 2,
+        "hardware_type": 3,
+        "hardware_version_raw": 20
+      },
+      "config_data_hex": "21 15 19 02 02 02 00 10 01 00 04 b0 0b b8 13 88 05 07 01 00 01 01 00 08 08 98 07 d0 00 08",
+      "options_raw_hex": "04 26",
+      "measurements": [
+        {
+          "tilt": {
+            "voltage_v": 11.58383846282959,
+            "current_ma": 53,
+            "flux_mwb": 3.818897247314453,
+            "resistance_ohm": 1.8292286396026611,
+            "inductance_mh": 4.24755334854126,
+            "speed_rpm": 0,
+            "target_counts": 26408,
+            "position_counts": 26408,
+            "position_error_counts": 0,
+            "pulse_count": 0,
+            "enabled": true,
+            "arrived": true,
+            "stalled": false,
+            "group_address": false
+          },
+          "pan": {
+            "position_before_counts": -7,
+            "retained_target_counts": -5,
+            "realtime_target_counts": -5,
+            "position_error_deg": 0.010986328125,
+            "speed_rpm": 0.0,
+            "position_counts": -7
+          }
+        },
+        {
+          "tilt": {
+            "voltage_v": 11.5733642578125,
+            "current_ma": 46,
+            "flux_mwb": 3.818897247314453,
+            "resistance_ohm": 1.8292286396026611,
+            "inductance_mh": 4.24755334854126,
+            "speed_rpm": 0,
+            "target_counts": 26408,
+            "position_counts": 26408,
+            "position_error_counts": 0,
+            "pulse_count": 0,
+            "enabled": true,
+            "arrived": true,
+            "stalled": false,
+            "group_address": false
+          },
+          "pan": {
+            "position_before_counts": -7,
+            "retained_target_counts": -5,
+            "realtime_target_counts": -5,
+            "position_error_deg": 0.010986328125,
+            "speed_rpm": 0.0,
+            "position_counts": -7
+          }
+        },
+        {
+          "tilt": {
+            "voltage_v": 11.58383846282959,
+            "current_ma": 44,
+            "flux_mwb": 3.818897247314453,
+            "resistance_ohm": 1.8292286396026611,
+            "inductance_mh": 4.24755334854126,
+            "speed_rpm": 0,
+            "target_counts": 26408,
+            "position_counts": 26408,
+            "position_error_counts": 0,
+            "pulse_count": 0,
+            "enabled": true,
+            "arrived": true,
+            "stalled": false,
+            "group_address": false
+          },
+          "pan": {
+            "position_before_counts": -7,
+            "retained_target_counts": -5,
+            "realtime_target_counts": -5,
+            "position_error_deg": 0.010986328125,
+            "speed_rpm": 0.0,
+            "position_counts": -7
+          }
+        }
+      ],
+      "captured_at": 1793616484.9982316
+    },
+    "tilt_positive_direction": "up",
+    "tilt_direction_evidence": "operator observed positive 1.8 degree PD42 probe then measured return to level reference",
+    "tilt_direction_verified_at": 1793616929.8307083,
+    "known_return_evidence": {
+      "reason": "Same-boot original zero retained after operator-requested bounded return",
+      "time": 1793620623.5983438,
+      "rows": [
+        {
+          "pan": {
+            "READ_POSITION": 15,
+            "READ_TARGET_POSITION": 16,
+            "READ_REALTIME_TARGET_POSITION": 16,
+            "READ_SPEED": 0,
+            "READ_POSITION_ERROR": 1,
+            "READ_STATUS": {
+              "raw": 3,
+              "enabled": true,
+              "arrived": true,
+              "stalled": false,
+              "stall_protection": false,
+              "left_limit": false,
+              "right_limit": false,
+              "power_cycle_marker": false
+            }
+          },
+          "tilt": {
+            "voltage_v": 11.52099609375,
+            "current_ma": 40,
+            "flux_mwb": 3.818897247314453,
+            "resistance_ohm": 1.8292286396026611,
+            "inductance_mh": 4.24755334854126,
+            "speed_rpm": 0,
+            "target_counts": 26408,
+            "position_counts": 26408,
+            "position_error_counts": 0,
+            "pulse_count": 0,
+            "enabled": true,
+            "arrived": true,
+            "stalled": false,
+            "group_address": false
+          }
+        },
+        {
+          "pan": {
+            "READ_POSITION": 15,
+            "READ_TARGET_POSITION": 16,
+            "READ_REALTIME_TARGET_POSITION": 16,
+            "READ_SPEED": 0,
+            "READ_POSITION_ERROR": 1,
+            "READ_STATUS": {
+              "raw": 3,
+              "enabled": true,
+              "arrived": true,
+              "stalled": false,
+              "stall_protection": false,
+              "left_limit": false,
+              "right_limit": false,
+              "power_cycle_marker": false
+            }
+          },
+          "tilt": {
+            "voltage_v": 11.52099609375,
+            "current_ma": 39,
+            "flux_mwb": 3.818897247314453,
+            "resistance_ohm": 1.8292286396026611,
+            "inductance_mh": 4.24755334854126,
+            "speed_rpm": 0,
+            "target_counts": 26408,
+            "position_counts": 26408,
+            "position_error_counts": 0,
+            "pulse_count": 0,
+            "enabled": true,
+            "arrived": true,
+            "stalled": false,
+            "group_address": false
+          }
+        },
+        {
+          "pan": {
+            "READ_POSITION": 15,
+            "READ_TARGET_POSITION": 16,
+            "READ_REALTIME_TARGET_POSITION": 16,
+            "READ_SPEED": 0,
+            "READ_POSITION_ERROR": 1,
+            "READ_STATUS": {
+              "raw": 3,
+              "enabled": true,
+              "arrived": true,
+              "stalled": false,
+              "stall_protection": false,
+              "left_limit": false,
+              "right_limit": false,
+              "power_cycle_marker": false
+            }
+          },
+          "tilt": {
+            "voltage_v": 11.52099609375,
+            "current_ma": 41,
+            "flux_mwb": 3.818897247314453,
+            "resistance_ohm": 1.8292286396026611,
+            "inductance_mh": 4.24755334854126,
+            "speed_rpm": 0,
+            "target_counts": 26408,
+            "position_counts": 26408,
+            "position_error_counts": 0,
+            "pulse_count": 0,
+            "enabled": true,
+            "arrived": true,
+            "stalled": false,
+            "group_address": false
+          }
+        }
+      ]
+    },
+    "final_zero_recheck": {
+      "time": 1793621601.4802635,
+      "rows": [
+        {
+          "pan": {
+            "READ_POSITION": -7,
+            "READ_TARGET_POSITION": -6,
+            "READ_REALTIME_TARGET_POSITION": -6,
+            "READ_SPEED": 0,
+            "READ_STATUS": {
+              "raw": 3,
+              "enabled": true,
+              "arrived": true,
+              "stalled": false,
+              "stall_protection": false,
+              "left_limit": false,
+              "right_limit": false,
+              "power_cycle_marker": false
+            }
+          },
+          "tilt": {
+            "voltage_v": 11.510522842407227,
+            "current_ma": -17,
+            "flux_mwb": 3.818897247314453,
+            "resistance_ohm": 1.8292286396026611,
+            "inductance_mh": 4.24755334854126,
+            "speed_rpm": 0,
+            "target_counts": 26408,
+            "position_counts": 26408,
+            "position_error_counts": 0,
+            "pulse_count": 0,
+            "enabled": true,
+            "arrived": true,
+            "stalled": false,
+            "group_address": false
+          }
+        },
+        {
+          "pan": {
+            "READ_POSITION": -7,
+            "READ_TARGET_POSITION": -6,
+            "READ_REALTIME_TARGET_POSITION": -6,
+            "READ_SPEED": 0,
+            "READ_STATUS": {
+              "raw": 3,
+              "enabled": true,
+              "arrived": true,
+              "stalled": false,
+              "stall_protection": false,
+              "left_limit": false,
+              "right_limit": false,
+              "power_cycle_marker": false
+            }
+          },
+          "tilt": {
+            "voltage_v": 11.500049591064453,
+            "current_ma": -18,
+            "flux_mwb": 3.818897247314453,
+            "resistance_ohm": 1.8292286396026611,
+            "inductance_mh": 4.24755334854126,
+            "speed_rpm": 0,
+            "target_counts": 26408,
+            "position_counts": 26408,
+            "position_error_counts": 0,
+            "pulse_count": 0,
+            "enabled": true,
+            "arrived": true,
+            "stalled": false,
+            "group_address": false
+          }
+        },
+        {
+          "pan": {
+            "READ_POSITION": -7,
+            "READ_TARGET_POSITION": -6,
+            "READ_REALTIME_TARGET_POSITION": -6,
+            "READ_SPEED": 0,
+            "READ_STATUS": {
+              "raw": 3,
+              "enabled": true,
+              "arrived": true,
+              "stalled": false,
+              "stall_protection": false,
+              "left_limit": false,
+              "right_limit": false,
+              "power_cycle_marker": false
+            }
+          },
+          "tilt": {
+            "voltage_v": 11.510522842407227,
+            "current_ma": -17,
+            "flux_mwb": 3.818897247314453,
+            "resistance_ohm": 1.8292286396026611,
+            "inductance_mh": 4.24755334854126,
+            "speed_rpm": 0,
+            "target_counts": 26408,
+            "position_counts": 26408,
+            "position_error_counts": 0,
+            "pulse_count": 0,
+            "enabled": true,
+            "arrived": true,
+            "stalled": false,
+            "group_address": false
+          }
+        }
+      ],
+      "mechanical_reference_preserved": true
+    }
+  },
+  "live_reference": {
+    "workspace": "/root/rescue/system_20261010/ros2_ws",
+    "profile_path": "/run/rescue/gimbal-profile.json"
+  }
+}

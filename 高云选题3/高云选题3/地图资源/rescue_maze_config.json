@@ -1,0 +1,61 @@
+{
+  "title": "社区消防救援 · 薄墙街区训练场",
+  "units": "m",
+  "official_dimensions": false,
+  "dimension_note": "12×8米和所有设施尺寸均为可调整工程假设，非2026高云赛道规定尺寸。",
+  "site": [12, 8],
+  "wall_thickness": 0.06,
+  "wall_height": 0.85,
+  "robot": {"length": 0.48, "width": 0.42, "height": 0.28, "camera_height": 0.48, "clearance_margin": 0.12},
+  "walls": [
+    {"id":"boundary_s", "a":[0.1,0.1], "b":[11.9,0.1], "height":0.70, "art":"calm"},
+    {"id":"boundary_n", "a":[0.1,7.9], "b":[11.9,7.9], "height":0.70, "art":"calm"},
+    {"id":"boundary_w", "a":[0.1,0.1], "b":[0.1,7.9], "height":0.70, "art":"people"},
+    {"id":"boundary_e", "a":[11.9,0.1], "b":[11.9,7.9], "height":0.70, "art":"calm"},
+    {"id":"A_s", "a":[2,2], "b":[4.8,2], "art":"calm"},
+    {"id":"A_w", "a":[2,2], "b":[2,3.25], "art":"people"},
+    {"id":"A_e_FIRE", "a":[4.8,2], "b":[4.8,3.25], "art":"fire"},
+    {"id":"A_n1", "a":[2,3.25], "b":[3.05,3.25], "art":"calm"},
+    {"id":"A_n2", "a":[4.15,3.25], "b":[4.8,3.25], "art":"people"},
+    {"id":"B_n", "a":[7.2,3.25], "b":[9.8,3.25], "art":"people"},
+    {"id":"B_w_FIRE", "a":[7.2,2], "b":[7.2,3.25], "art":"fire"},
+    {"id":"B_e", "a":[9.8,2], "b":[9.8,3.25], "art":"calm"},
+    {"id":"B_s1", "a":[7.2,2], "b":[7.9,2], "art":"calm"},
+    {"id":"B_s2", "a":[9.05,2], "b":[9.8,2], "art":"people"},
+    {"id":"C_s_FIRE", "a":[7.2,4.75], "b":[9.8,4.75], "art":"fire"},
+    {"id":"C_w", "a":[7.2,4.75], "b":[7.2,6], "art":"calm"},
+    {"id":"C_e", "a":[9.8,4.75], "b":[9.8,6], "art":"people"},
+    {"id":"C_n1", "a":[7.2,6], "b":[7.85,6], "art":"calm"},
+    {"id":"C_n2", "a":[9,6], "b":[9.8,6], "art":"calm"},
+    {"id":"P_w", "a":[2,4.75], "b":[2,7.9], "art":"calm"},
+    {"id":"P_s", "a":[2,4.75], "b":[4.8,4.75], "art":"people"},
+    {"id":"P_e1", "a":[4.8,4.75], "b":[4.8,5.15], "art":"calm"},
+    {"id":"P_e2", "a":[4.8,6.65], "b":[4.8,7.9], "art":"calm"}
+  ],
+  "courtyards": [
+    {"id":"A", "bounds":[2.04,4.76,2.04,3.21]},
+    {"id":"B", "bounds":[7.24,9.76,2.04,3.21]},
+    {"id":"C", "bounds":[7.24,9.76,4.79,5.96]}
+  ],
+  "parking": {"bounds":[2.04,4.76,4.79,7.86], "bay_centers":[[2.87,5.4],[2.87,6.35],[2.87,7.3]], "bay_size":[1.30,0.75]},
+  "gate": {"pivot":[4.87,5.22,0.25], "arm_length":1.36, "arm_thickness":0.075, "axis":"X", "closed_deg":0, "open_deg":82, "keyframes":[[1,0],[65,0],[110,82],[205,82],[250,0],[300,0]]},
+  "construction": {"center":[6,6.55], "width":2.18, "thickness":0.16, "height":0.62, "cones":[[5.17,6.5],[6.83,6.5]], "sign":[6,6.52]},
+  "traffic_lights": [{"id":"TL1", "position":[7.08,3.30], "facing_deg":-90}, {"id":"TL2", "position":[4.92,4.70], "facing_deg":90}],
+  "crosswalks": [{"center":[6,3.0], "axis":"Y", "road_width":1.8, "length":0.66}, {"center":[10.85,4], "axis":"X", "road_width":1.5, "length":0.7}],
+  "semantic_points": {
+    "start":[1.05,1.05], "junction":[6,4], "parking_entrance":[5.55,5.9],
+    "parking_aisle":[4.03,5.9], "parking_bay_1":[2.87,5.4],
+    "fire_A_approach":[5.75,2.63], "fire_B_approach":[6.25,2.63],
+    "fire_C_approach":[8.5,4], "north_goal":[6,7.25]
+  },
+  "routes": {
+    "start_to_fire_C":[[1.05,1.05],[6,1.05],[6,4],[8.5,4]],
+    "start_to_fire_A":[[1.05,1.05],[6,1.05],[6,2.63],[5.75,2.63]],
+    "start_to_fire_B":[[1.05,1.05],[6,1.05],[6.25,2.63]],
+    "construction_detour":[[6,4],[10.85,4],[10.85,7.25],[6,7.25]],
+    "parking_gate_open":[[6,4],[6,5.9],[4.03,5.9],[4.03,5.4],[2.87,5.4]],
+    "west_patrol":[[1.05,1.05],[1.05,7.1],[1.05,4],[6,4]],
+    "blocked_direct_north":[[6,4],[6,7.25]]
+  },
+  "animation": {"fps":30, "frame_start":1, "frame_end":300, "default_frame":145, "note":"道闸关键帧与红绿灯为演示；不是小车控制器或碰撞动力学。"}
+}

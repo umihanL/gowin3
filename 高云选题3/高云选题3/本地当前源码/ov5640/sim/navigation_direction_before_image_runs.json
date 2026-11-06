@@ -1,0 +1,20 @@
+[
+  {
+    "name": "image",
+    "passed": true,
+    "expected_failure": true,
+    "exit_code": 1,
+    "seconds": 8.64,
+    "inputs": {
+      "sim/navigation_image_start_tb.sv": "b705fa12f8bcb4c7aa9736eea61e3bc51bc82205945d593d12007488e0476210",
+      "impl/baseline_navigation_direction_20261027/src/portrait/vision_video.v": "7ba6696b6c301763291b023aa3e9226dc0d598242a3d830c7971ed0344bd5324",
+      "impl/baseline_navigation_direction_20261027/src/portrait/vision_zebra.v": "ce3fb9e91c5699362829acef44d79d1987b6aefc3b647f1c2b39c79b8b874483",
+      "impl/baseline_navigation_direction_20261027/src/vehicle/vehicle_vision_fusion.v": "76a7bd3ada1f2b2c3fc7e55a0f5ab28c05897d9182226e526f78882ea6b5eb26",
+      "src/portrait/vision_camera_config.vh": "b7a332f55c15038a635321756bb2419ab0f0c8192dddf372a4e7b34d4595a636",
+      "src/portrait/vision_ipm_lut.vh": "d7d63c3db888683f0b44f73f25e80a05556fc50242d8ff573323cec342a8de43",
+      "src/vehicle/vehicle_config.vh": "1df9114f5c2291a385854a6b454d45adf3141eb4f951ccbd31833ed52f11b04c"
+    },
+    "log": "sim/navigation_direction_before_image.log",
+    "sha256": "c0a665cb7b491e68a136022c057485042b4fa3bc4db495e91f039141ca1a0e47"
+  }
+]

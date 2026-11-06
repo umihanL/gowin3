@@ -1,0 +1,54 @@
+*** GOWIN Tcl Command Line Console  *** 
+Open project C:/Users/whuzy/Desktop/FPGA_WorkSpace/ov5640/impl/vision_probe/vision_probe.gprj finished
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v'
+Analyzing included file 'C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_camera_config.vh'("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":4)
+Back to file 'C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v'("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":4)
+Analyzing included file 'C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_ipm_lut.vh'("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":22)
+Back to file 'C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v'("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":22)
+Analyzing Verilog file 'C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_zebra.v'
+Compiling module 'vision_video'("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":5)
+Extracting RAM for identifier 'bank0'("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":23)
+Extracting RAM for identifier 'bank1'("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":23)
+Extracting RAM for identifier 'scale_lut'("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":92)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 7("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":43)
+Compiling module 'vision_zebra'("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_zebra.v":3)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 10("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":68)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 10("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":71)
+WARN  (EX3791) : Expression size 12 truncated to fit in target size 9("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":85)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 9("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":86)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":185)
+WARN  (EX3791) : Expression size 10 truncated to fit in target size 9("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":187)
+WARN  (EX3791) : Expression size 27 truncated to fit in target size 3("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":269)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 9("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":262)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 9("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":263)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 9("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":264)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 11("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":275)
+WARN  (EX3791) : Expression size 12 truncated to fit in target size 11("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":398)
+WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":431)
+NOTE  (EX0101) : Current top module is "vision_video"
+[5%] Running netlist conversion ...
+WARN  (CV0020) : Input rgb[13:11] is unused("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":12)
+WARN  (CV0020) : Input rgb[8:5] is unused("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":12)
+WARN  (CV0020) : Input rgb[2:0] is unused("C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\src\portrait\vision_video.v":12)
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\impl\vision_probe\impl\gwsynthesis\vision_probe.vg" completed
+[100%] Generate report file "C:\Users\whuzy\Desktop\FPGA_WorkSpace\ov5640\impl\vision_probe\impl\gwsynthesis\vision_probe_syn.rpt.html" completed
+GowinSynthesis finish
+PASS synthesized vision:      384000 preview pixels and           6 normalized lane arithmetics match RTL using actual Gowin BSRAM
+sim/vision_netlist_tb.sv:47: $finish called at 23491786000 (1ps)

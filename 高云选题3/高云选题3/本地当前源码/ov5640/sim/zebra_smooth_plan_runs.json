@@ -1,0 +1,42 @@
+[
+  {
+    "name": "s_forward",
+    "passed": true,
+    "seconds": 12.5,
+    "log": "sim/zebra_smooth_plan_s_forward.log",
+    "log_sha256": "086f355139bf9f9be9fa2e5efa377c5a1a5d79fe4b5c4c1cfe11891e57570e52",
+    "route": "sim/zebra_smooth_s_forward_route.csv"
+  },
+  {
+    "name": "s_reverse",
+    "passed": true,
+    "seconds": 11.95,
+    "log": "sim/zebra_smooth_plan_s_reverse.log",
+    "log_sha256": "51f1758758bd771e66a7921ad18bb3810d7664d188014d8c2deda8ef861553a7",
+    "route": "sim/zebra_smooth_s_reverse_route.csv"
+  },
+  {
+    "name": "outer_left",
+    "passed": true,
+    "seconds": 5.14,
+    "log": "sim/zebra_smooth_plan_outer_left.log",
+    "log_sha256": "2f74f3a0f1b30b1bec3fa5f37a8a18d67e1fb5908c42fd160ec758bc0609da9d",
+    "route": "sim/zebra_smooth_outer_left_route.csv"
+  },
+  {
+    "name": "outer_right",
+    "passed": true,
+    "seconds": 6.19,
+    "log": "sim/zebra_smooth_plan_outer_right.log",
+    "log_sha256": "9c03ff65361dde4f0173f75f907aeb0106ded0e78208efc4e2a3a0c3e0d1cd76",
+    "route": "sim/zebra_smooth_outer_right_route.csv"
+  },
+  {
+    "name": "photo",
+    "passed": true,
+    "seconds": 145.64,
+    "log": "sim/zebra_smooth_plan_photo.log",
+    "log_sha256": "cf71ea39fdee6e1f25a67353ebeaa764c8a4cc803444484923d3b006d614af9e",
+    "route": "sim/zebra_smooth_photo_route.csv"
+  }
+]

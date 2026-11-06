@@ -1,0 +1,14 @@
+{
+  "calibrated": false,
+  "calibration_id": null,
+  "camera_model": "pinhole",
+  "image_size": null,
+  "translation_unit": "m",
+  "K1": null,
+  "D1": null,
+  "K2": null,
+  "D2": null,
+  "R": null,
+  "T": null,
+  "notes": "Use measured GS130W calibration from tools/calibrate_stereo.py. Never replace null with guessed parameters. image_size is single-eye [width,height]. T maps left optical coordinates to right optical coordinates and uses metres."
+}

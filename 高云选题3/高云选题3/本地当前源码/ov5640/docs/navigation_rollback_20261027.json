@@ -1,0 +1,29 @@
+{
+  "action": "restore_release_before_photographed_navigation_request",
+  "restored_at": "2026-10-27T12:31:45.122661+00:00",
+  "release": "host_navigation_20261027",
+  "baseline": "impl/baseline_navigation_visual_20261027",
+  "snapshot_files_verified": 162,
+  "source_files_verified": 110,
+  "sha256": "536e8b1d5c724ed80eeb78a268820be2633a9c452d8d64cd0a9259acfe857dfe",
+  "bitstream": "impl/pnr/ov5640.fs",
+  "release_bitstream": "impl/pnr/ov5640_restored_host_navigation_20261027.fs",
+  "prior_current_sha256": "8f89bd29e31d992ec9d36541accf11dd94a9de9fd88e3ae86ee47fc75516e04d",
+  "removed_later_source_files": [
+    "src/vehicle/vehicle_visual_localizer.v"
+  ],
+  "archive": "impl/before_requested_rollback_20261027_203120",
+  "rebuilt": false,
+  "flashed": false,
+  "original_generated_utc": "2026-10-26T17:39:26.465924+00:00",
+  "original_violated_endpoints": {
+    "Setup": 0,
+    "Hold": 0
+  },
+  "original_min_slack_ns": {
+    "Setup": 0.007,
+    "Hold": 0.045,
+    "Recovery": 2.587,
+    "Removal": 0.517
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "bind": "127.0.0.1",
+  "port": 18088,
+  "allowed_hosts": ["127.0.0.1", "localhost"],
+  "token_file": "~/.local/state/rescue_robot/dashboard.token",
+  "preview_hz": 1.0,
+  "preview_max_width": 640,
+  "note": "SSH forwards PC 18088 to X5 18088. Keep both ports equal for HTTP Host validation."
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "enabled": true,
+  "forward_image_side": "right",
+  "stable_frames": 3,
+  "center_tolerance_norm": 0.05,
+  "observation_s": 1.5,
+  "settle_s": 2.0,
+  "max_advance_cm": 60.0,
+  "leg_max_cm": 30.0,
+  "max_move_s": 12.0,
+  "capture_ttl_s": 0.6,
+  "installation_note": "用户于2026-11-03确认画面右半边对应车头前方。前进时静止目标应向左移动到垂直中线。",
+  "measurement_note": "图像中线用于沿道路前进后的并排观察，不代表测得喷嘴距离或喷水命中。自动灭火继续使用现有实测几何与水流参数。",
+  "centering_tolerance_norm": 0.05
+}

@@ -1,0 +1,306 @@
+{
+  "checks": [
+    {
+      "name": "metric_scale",
+      "pass": true,
+      "detail": "1 Blender unit = 1 metre"
+    },
+    {
+      "name": "default_camera",
+      "pass": true,
+      "detail": "CAM_01_全景"
+    },
+    {
+      "name": "default_frame",
+      "pass": true,
+      "detail": 145
+    },
+    {
+      "name": "packed_images",
+      "pass": true,
+      "detail": [
+        {
+          "name": "barrier_stripes.png",
+          "packed": true,
+          "size": [
+            2048,
+            256
+          ]
+        },
+        {
+          "name": "construction_sign.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "facade_calm.png",
+          "packed": true,
+          "size": [
+            3072,
+            1536
+          ]
+        },
+        {
+          "name": "facade_fire.png",
+          "packed": true,
+          "size": [
+            3072,
+            1536
+          ]
+        },
+        {
+          "name": "facade_people.png",
+          "packed": true,
+          "size": [
+            3072,
+            1536
+          ]
+        },
+        {
+          "name": "parking_sign.png",
+          "packed": true,
+          "size": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "name": "road_wallpaper.png",
+          "packed": true,
+          "size": [
+            4608,
+            3072
+          ]
+        }
+      ]
+    },
+    {
+      "name": "thin_walls",
+      "pass": true,
+      "detail": "Horizontal wall local thickness = 0.06m"
+    },
+    {
+      "name": "gate_frame_1",
+      "pass": true,
+      "detail": "Expected 0 degrees; got 0.0"
+    },
+    {
+      "name": "closed_gate_intersects_robot_height",
+      "pass": true,
+      "detail": "Closed arm bottom 0.2125m; assumed robot height 0.28m"
+    },
+    {
+      "name": "gate_frame_145",
+      "pass": true,
+      "detail": "Expected 82 degrees; got 82.00000000512816"
+    },
+    {
+      "name": "open_gate_retracts",
+      "pass": true,
+      "detail": [
+        4.869999885559082,
+        5.409275054931641,
+        1.5967645645141602
+      ]
+    },
+    {
+      "name": "gate_frame_300",
+      "pass": true,
+      "detail": "Expected 0 degrees; got 0.0"
+    },
+    {
+      "name": "TL1_frame_30",
+      "pass": true,
+      "detail": {
+        "red": 3.0,
+        "amber": 0.0,
+        "green": 0.0
+      }
+    },
+    {
+      "name": "TL2_frame_30",
+      "pass": true,
+      "detail": {
+        "red": 3.0,
+        "amber": 0.0,
+        "green": 0.0
+      }
+    },
+    {
+      "name": "TL1_frame_145",
+      "pass": true,
+      "detail": {
+        "red": 0.0,
+        "amber": 0.0,
+        "green": 3.0
+      }
+    },
+    {
+      "name": "TL2_frame_145",
+      "pass": true,
+      "detail": {
+        "red": 0.0,
+        "amber": 0.0,
+        "green": 3.0
+      }
+    },
+    {
+      "name": "TL1_frame_235",
+      "pass": true,
+      "detail": {
+        "red": 0.0,
+        "amber": 3.0,
+        "green": 0.0
+      }
+    },
+    {
+      "name": "TL2_frame_235",
+      "pass": true,
+      "detail": {
+        "red": 0.0,
+        "amber": 3.0,
+        "green": 0.0
+      }
+    },
+    {
+      "name": "TL1_frame_280",
+      "pass": true,
+      "detail": {
+        "red": 3.0,
+        "amber": 0.0,
+        "green": 0.0
+      }
+    },
+    {
+      "name": "TL2_frame_280",
+      "pass": true,
+      "detail": {
+        "red": 3.0,
+        "amber": 0.0,
+        "green": 0.0
+      }
+    },
+    {
+      "name": "glb_container",
+      "pass": true,
+      "detail": 4113680
+    },
+    {
+      "name": "glb_embedded_textures",
+      "pass": true,
+      "detail": 7
+    },
+    {
+      "name": "glb_static_snapshot",
+      "pass": true,
+      "detail": "No animation/camera exported; frame 145 snapshot"
+    }
+  ],
+  "gate_samples": [
+    {
+      "frame": 1,
+      "degrees": 0.0,
+      "arm_end": [
+        4.869999885559082,
+        6.579999923706055,
+        0.25
+      ]
+    },
+    {
+      "frame": 145,
+      "degrees": 82.00000000512816,
+      "arm_end": [
+        4.869999885559082,
+        5.409275054931641,
+        1.5967645645141602
+      ]
+    },
+    {
+      "frame": 300,
+      "degrees": 0.0,
+      "arm_end": [
+        4.869999885559082,
+        6.579999923706055,
+        0.25
+      ]
+    }
+  ],
+  "signal_samples": [
+    {
+      "frame": 30,
+      "id": "TL1",
+      "strengths": {
+        "red": 3.0,
+        "amber": 0.0,
+        "green": 0.0
+      }
+    },
+    {
+      "frame": 30,
+      "id": "TL2",
+      "strengths": {
+        "red": 3.0,
+        "amber": 0.0,
+        "green": 0.0
+      }
+    },
+    {
+      "frame": 145,
+      "id": "TL1",
+      "strengths": {
+        "red": 0.0,
+        "amber": 0.0,
+        "green": 3.0
+      }
+    },
+    {
+      "frame": 145,
+      "id": "TL2",
+      "strengths": {
+        "red": 0.0,
+        "amber": 0.0,
+        "green": 3.0
+      }
+    },
+    {
+      "frame": 235,
+      "id": "TL1",
+      "strengths": {
+        "red": 0.0,
+        "amber": 3.0,
+        "green": 0.0
+      }
+    },
+    {
+      "frame": 235,
+      "id": "TL2",
+      "strengths": {
+        "red": 0.0,
+        "amber": 3.0,
+        "green": 0.0
+      }
+    },
+    {
+      "frame": 280,
+      "id": "TL1",
+      "strengths": {
+        "red": 3.0,
+        "amber": 0.0,
+        "green": 0.0
+      }
+    },
+    {
+      "frame": 280,
+      "id": "TL2",
+      "strengths": {
+        "red": 3.0,
+        "amber": 0.0,
+        "green": 0.0
+      }
+    }
+  ],
+  "all_pass": true
+}

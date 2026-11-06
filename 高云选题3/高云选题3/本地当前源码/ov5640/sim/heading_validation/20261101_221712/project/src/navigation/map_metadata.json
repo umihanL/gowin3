@@ -1,0 +1,96 @@
+{
+  "width_cm": 352,
+  "height_cm": 320,
+  "rom_resolution_cm": 1,
+  "planner_resolution_cm": 2,
+  "car_width_mm": 190,
+  "car_length_mm": 300,
+  "inflation_radius_cm": 9.5,
+  "origin": "bottom-left; x right; y up",
+  "wheelbase_mm": 142,
+  "max_front_wheel_angle_deg": 28,
+  "min_rear_axle_turn_radius_mm": 268,
+  "front_from_rear_axle_mm": 219,
+  "rear_overhang_mm": 101,
+  "path_reference": "nose_midpoint",
+  "address": "top-down raster: row*width+column",
+  "planner_cell_centre": "x_mm=20*x+10; y_mm=3200-(20*y+10)",
+  "measured_dimensions_mm": [
+    3271,
+    2952,
+    715,
+    1200,
+    1430,
+    807,
+    1468,
+    533,
+    545,
+    510,
+    794,
+    1210,
+    262
+  ],
+  "island_bounds_mm": [
+    [
+      389,
+      2095,
+      928,
+      2800
+    ],
+    [
+      389,
+      1093,
+      928,
+      1884
+    ],
+    [
+      389,
+      388,
+      928,
+      885
+    ],
+    [
+      1152,
+      1594,
+      2364,
+      2800
+    ],
+    [
+      1152,
+      388,
+      2364,
+      1845
+    ],
+    [
+      2592,
+      1379,
+      3135,
+      2800
+    ],
+    [
+      2592,
+      388,
+      3135,
+      1171
+    ]
+  ],
+  "source_sha256": "5e6f230da82ada0aae72efbc2a6e7021d2dba7b93a13c49aeef60216ceb385cc",
+  "raw_free_cells": 42634,
+  "planner_free_cells": 4000,
+  "bridge": "static deck assumed traversable; no live bridge state",
+  "calibration": "image-derived; confirm against physical map before driving",
+  "estimated_mechanical_limit_deg": 28,
+  "rear_track_mm": 168,
+  "front_track_mm": 178,
+  "left_front_wheel_limit_deg": 28,
+  "right_front_wheel_limit_deg": 28,
+  "servo_center_deg": 90,
+  "servo_limits_deg": [
+    40,
+    150
+  ],
+  "body_length_mm": 320,
+  "front_extent_from_rear_axle_mm": 219,
+  "rear_extent_from_rear_axle_mm": 101,
+  "front_overhang_mm": 77
+}

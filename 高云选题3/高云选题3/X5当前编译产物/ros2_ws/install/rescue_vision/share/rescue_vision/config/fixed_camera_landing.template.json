@@ -1,0 +1,19 @@
+{
+  "mode": "fixed_camera_measured_angular_grid",
+  "calibrated": false,
+  "calibration_id": null,
+  "measurement_session_id": null,
+  "geometry_calibration_id": null,
+  "stereo_calibration_id": null,
+  "actuator_reference_id": null,
+  "pump_setting_id": null,
+  "camera_nozzle_mount_id": null,
+  "angle_convention": "actuator_joint_delta_deg",
+  "distance_reference": "nominal_nozzle_forward_ray_m",
+  "measurement_unit": "m",
+  "acceptance_radius_m": null,
+  "water_impact_angle_tolerance_deg": null,
+  "measurements": [],
+  "independent_validation": [],
+  "notes": "UNMEASURED. Separate from moving-camera pixel tables. Measure angular corrections at a complete nominal-pan/nominal-tilt/nozzle-distance grid (at least 2 values per axis). Every row requires a unique measurement_id, measured=true, nominal_pan_deg, nominal_tilt_deg, nozzle_distance_m, angle_correction_deg=[pan_delta,tilt_delta] and actual measured_impact_error_m=[x,y,z]. Every interpolation cell also needs a distinct strictly-interior validation measurement with commanded_angles_deg equal to the interpolated target and actual measured_impact_error_m within the declared acceptance radius. These are actual water tests at the same installation and pump setting; no extrapolation or pressure/gravity guessing. Bind all calibration/profile/reference IDs after measurement. No sample values are supplied because none have been physically measured."
+}

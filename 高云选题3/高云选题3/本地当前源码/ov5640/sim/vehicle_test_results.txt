@@ -1,0 +1,67 @@
+PASS vehicle math: full-circle sin/cos and signed pure pursuit distance/bearing/steering
+sim/vehicle_math_tb.sv:38: $finish called at 31680000 (1ps)
+PASS gradual stop: real two-second delay, slew limit, 200 mm/s cruise, range slowdown and no restart
+PASS mode exits, IMU fault, stale range/yaw, single-beam emergency, encoder stall
+PASS route execution: ordered path RAM, start coordinates, locked waypoint, encoder origin and endpoint
+PASS vertical straight startup: route tangent rebased before drive, no launch turn and bounded lateral drift
+PASS Ackermann curve tracking: independent bicycle model, wheel counts and IMU, 90-degree corner
+PASS obstacle bypass: depart line, observe inner-side obstacle, pass, merge back, continue and stop
+PASS right bypass, nonzero encoder baseline, single-wheel feedback loss, missing/cancelled route
+PASS committed bypass: startup direction stays latched; same-obstacle emergency echo is ignored while detouring
+PASS configurable braking: 25/50/200cm, right priority, left fallback, blocked gradual stop, profile-ready wait, yaw wrap, reverse-feedback stop, swept body collision check
+PASS L1X motion range: valid 3.5m front samples authorize cruise and retain distance memory
+PASS range dropout: only one front sensor required; both side sensors may be absent
+PASS range dropout: all echoes lost before braking, odometry completes stop at remembered obstacle
+PASS range dropout: communication loss during braking preserves the distance plan
+PASS range dropout: frozen scan is spent using measured travel, not refreshed stale data
+PASS range dropout: healthy side scans cannot refresh not-ready front channels holding old E00 data
+PASS range dropout: completed noecho cruises at configured initial speed
+PASS range dropout: startup bus failure does not authorize motion; surviving/recovered near beam still stops
+PASS range dropout: cached right clearance selects right bypass, front beams may disappear throughout maneuver
+PASS range dropout: asynchronous scan pulses confirm tail; all four beams may vanish before merge and final stop
+PASS range dropout: missing unobserved obstacle tail limits parallel travel and brakes without merging blindly
+PASS range dropout: exit/re-entry clears prior-run obstacle and side certificates
+PASS range recovery: a real front echo replaces bounded search and completes odometry stop
+PASS side clearance: a newer near reading revokes remembered open right side and selects left
+PASS bypass policy: larger side, each single-front obstacle, noecho versus E09, adjustable delayed trigger
+PASS adaptive braking: independent 80/400mm/s initial speeds, 25/200cm zones, odometry stop
+PASS smooth low-speed stop: 80mm/s over 100cm uses no >2mm/s command step
+PASS navigation dynamic obstacle: bypass, same-line rejoin, skip passed samples, resume and stop at route goal
+sim/vehicle_motion_tb.sv:396: $finish called at 94052040000 (1ps)
+PASS route profile: ordered locked segments, millimetres, per-wheel counts/revolutions, yaw endpoints, curvature and invalidation
+sim/vehicle_profile_tb.sv:36: $finish called at 88610000 (1ps)
+INFO vehicle I/O: four range sensors ready
+INFO vehicle I/O: forward M2 polarity and encoder feedback verified
+INFO vehicle I/O: 40/150 servo pulses, reverse M2 polarity and encoder feedback verified
+PASS integrated I/O: four real VL53L1X I2C models/order/mean, PS2 handshaking, menu rearm, link loss, 40/90/150 servo pulses, 142/168mm differential with steering slew, M2 bridge swap and forward/reverse encoder feedback, per-wheel UART target exports, 600mm/s beyond old cap, manual/remote hardware arbitration
+sim/vehicle_io_tb.sv:133: $finish called at 4994182000000 (1ps)
+PASS gradual stop: real two-second delay, slew limit, 200 mm/s cruise, range slowdown and no restart
+PASS mode exits, IMU fault, stale range/yaw, single-beam emergency, encoder stall
+PASS route execution: ordered path RAM, start coordinates, locked waypoint, encoder origin and endpoint
+PASS vertical straight startup: route tangent rebased before drive, no launch turn and bounded lateral drift
+PASS Ackermann curve tracking: independent bicycle model, wheel counts and IMU, 90-degree corner
+PASS obstacle bypass: depart line, observe inner-side obstacle, pass, merge back, continue and stop
+PASS right bypass, nonzero encoder baseline, single-wheel feedback loss, missing/cancelled route
+PASS committed bypass: startup direction stays latched; same-obstacle emergency echo is ignored while detouring
+PASS configurable braking: 25/50/200cm, right priority, left fallback, blocked gradual stop, profile-ready wait, yaw wrap, reverse-feedback stop, swept body collision check
+PASS L1X motion range: valid 3.5m front samples authorize cruise and retain distance memory
+PASS range dropout: only one front sensor required; both side sensors may be absent
+PASS range dropout: all echoes lost before braking, odometry completes stop at remembered obstacle
+PASS range dropout: communication loss during braking preserves the distance plan
+PASS range dropout: frozen scan is spent using measured travel, not refreshed stale data
+PASS range dropout: healthy side scans cannot refresh not-ready front channels holding old E00 data
+PASS range dropout: completed noecho cruises at configured initial speed
+PASS range dropout: startup bus failure does not authorize motion; surviving/recovered near beam still stops
+PASS range dropout: cached right clearance selects right bypass, front beams may disappear throughout maneuver
+PASS range dropout: asynchronous scan pulses confirm tail; all four beams may vanish before merge and final stop
+PASS range dropout: missing unobserved obstacle tail limits parallel travel and brakes without merging blindly
+PASS range dropout: exit/re-entry clears prior-run obstacle and side certificates
+PASS range recovery: a real front echo replaces bounded search and completes odometry stop
+PASS side clearance: a newer near reading revokes remembered open right side and selects left
+PASS bypass policy: larger side, each single-front obstacle, noecho versus E09, adjustable delayed trigger
+PASS adaptive braking: independent 80/400mm/s initial speeds, 25/200cm zones, odometry stop
+PASS smooth low-speed stop: 80mm/s over 100cm uses no >2mm/s command step
+PASS navigation dynamic obstacle: bypass, same-line rejoin, skip passed samples, resume and stop at route goal
+sim/vehicle_motion_tb.sv:396: $finish called at 94052040000 (1ps)
+PASS route profile: ordered locked segments, millimetres, per-wheel counts/revolutions, yaw endpoints, curvature and invalidation
+sim/vehicle_profile_tb.sv:36: $finish called at 92480000 (1ps)

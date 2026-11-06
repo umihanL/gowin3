@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "boot_id": "ce6eef5d-54a5-4b47-9171-9132acfd5868",
+  "operator_zero_confirmed": true,
+  "reference_id": "pan-zero-5f7fd0e5528d4806be36034de2a2a474",
+  "absolute_encoder_reference_saved": true,
+  "io_config": {
+    "path": "/root/rescue/system_20261010/ros2_ws/config/actuator_io.mixed.local.json",
+    "sha256": "bc418f62959775b753674a96fe106275b017bb26dd5645bea8bcaeaa51739219"
+  },
+  "control_config": {
+    "path": "/root/rescue/system_20261010/ros2_ws/config/local_fire_control.local.json",
+    "sha256": "21410fdea8d120ae67470d36b87fda4dc036a55fa26a306950207ee7dfca3124"
+  }
+}

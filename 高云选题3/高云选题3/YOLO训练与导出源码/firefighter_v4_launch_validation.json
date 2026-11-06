@@ -1,0 +1,243 @@
+{
+  "recorded_at": "2026-10-08T23:51:38.589053+08:00",
+  "user_instruction": "加入训练集然后继续开始训练吧",
+  "run": "wallpaper_yolo11n_firefighter_v4_20261008",
+  "training_kind": "new_finetune",
+  "initialization": "runs/wallpaper_yolo11n_observation_v3_20261008/paused_by_user_20261008_220602/weights/best.pt",
+  "initialization_sha256": "3eef83ce6c6668c68f8ee1560f0a442d6c76d922e9460d046158f475a6585efd",
+  "initialization_epoch": 16,
+  "dataset": "dataset_firefighter_v4/data.yaml",
+  "dataset_manifest_sha256": "b502b287d290204c954debae9c9b709bec83101f3350e090319a1ddcc35118f0",
+  "dataset_audit": {
+    "passed": true,
+    "manifest_sha256": "b502b287d290204c954debae9c9b709bec83101f3350e090319a1ddcc35118f0",
+    "schema": "frozen-baseline-plus-train-captures-v1",
+    "checked_images": 5160,
+    "boxes": 48240,
+    "class_instances": {
+      "person": 33134,
+      "fire": 10098,
+      "firefighter": 5008
+    },
+    "split_images": {
+      "train": 4656,
+      "val": 252,
+      "test": 252
+    },
+    "old_data_byte_identical": true,
+    "old_val_test_lists_byte_identical": true,
+    "new_images": 96,
+    "new_role": "train",
+    "source_capture_audit_passed": true,
+    "no_exact_cross_split_pixels": true,
+    "no_group_leakage": true,
+    "training_performed": false,
+    "real_capture": false
+  },
+  "loader_validation": {
+    "passed": true,
+    "policy_version": "preserve-visible-tiny-v1",
+    "ultralytics": "8.3.253",
+    "torch": "2.8.0+cu128",
+    "device": "CPU preprocessing only",
+    "model_loaded": false,
+    "training_performed": false,
+    "all_train_images_checked": true,
+    "counts": {
+      "tiny_boxes_before": 8154,
+      "tiny_boxes_after": 8154,
+      "images": 4656,
+      "boxes_before": 43708,
+      "boxes_after": 43708,
+      "negative_images": 512
+    },
+    "seconds": 65.78100000000268,
+    "data_yaml_sha256": "7e663b4f29e1956f20cd763499ba79a99d6a51dd9a6bc0129a36bc995da329de",
+    "trainer_source_sha256": "9bd1736a8a7f3c62e621930af38ded8a9e3e1017892b757ef1b7d45fec9ca40a",
+    "transforms": [
+      "LetterBox",
+      "RandomHSV",
+      "Format"
+    ],
+    "boundary": "Verifies data loading, label count and coordinates. It does not establish small-object detection accuracy."
+  },
+  "review_validation": {
+    "passed": true,
+    "offline_file_url": true,
+    "browser_gpu_disabled": true,
+    "images": 5160,
+    "sources": [
+      "v5",
+      "v6",
+      "v7",
+      "v8",
+      "v9"
+    ],
+    "classes": [
+      "fire",
+      "firefighter",
+      "person"
+    ],
+    "tested": [
+      "source/split",
+      "left/right counterpart",
+      "augmentation/eye",
+      "class",
+      "negative",
+      "held-out augmentation empty state",
+      "box/tiny display",
+      "desktop/mobile overflow"
+    ],
+    "selections": [
+      {
+        "source": "v5",
+        "split": "train",
+        "counterpart_switched": true,
+        "counter": "2 / 840"
+      },
+      {
+        "source": "v5",
+        "split": "val",
+        "counterpart_switched": true,
+        "counter": "2 / 180"
+      },
+      {
+        "source": "v5",
+        "split": "test",
+        "counterpart_switched": true,
+        "counter": "2 / 180"
+      },
+      {
+        "source": "v6",
+        "split": "train",
+        "counterpart_switched": true,
+        "counter": "2 / 336"
+      },
+      {
+        "source": "v6",
+        "split": "val",
+        "counterpart_switched": true,
+        "counter": "2 / 72"
+      },
+      {
+        "source": "v6",
+        "split": "test",
+        "counterpart_switched": true,
+        "counter": "2 / 72"
+      },
+      {
+        "source": "v7",
+        "split": "train",
+        "counterpart_switched": true,
+        "counter": "2 / 720"
+      },
+      {
+        "source": "v7",
+        "split": "val",
+        "empty": true
+      },
+      {
+        "source": "v7",
+        "split": "test",
+        "empty": true
+      },
+      {
+        "source": "v8",
+        "split": "train",
+        "counterpart_switched": true,
+        "counter": "2 / 384"
+      },
+      {
+        "source": "v8",
+        "split": "val",
+        "empty": true
+      },
+      {
+        "source": "v8",
+        "split": "test",
+        "empty": true
+      },
+      {
+        "source": "v9",
+        "split": "train",
+        "counterpart_switched": true,
+        "counter": "2 / 96"
+      },
+      {
+        "source": "v9",
+        "split": "val",
+        "empty": true
+      },
+      {
+        "source": "v9",
+        "split": "test",
+        "empty": true
+      }
+    ],
+    "browser_errors": [],
+    "screenshots": [
+      "review_qa/desktop.png",
+      "review_qa/mobile.png"
+    ],
+    "note": "UI displays automatic annotation truth; no trained predictions."
+  },
+  "training_started": true,
+  "observed_batch": "       1/80      1.28G    0.06981    0.09303     0.7641         37        640: 16% ━╸────────── 91/582 2.6it/s 50.0s<3:12",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU, 2484 MiB, 26 %",
+  "status": {
+    "name": "wallpaper_yolo11n_firefighter_v4_20261008",
+    "phase": "training",
+    "started_at": "2026-10-08T23:47:21+08:00",
+    "supervisor_pid": 44908,
+    "epochs": 80,
+    "batch": 8,
+    "dataset": "D:\\工程仿真\\FPGA赛道_小车仿真\\YOLO11n_model\\dataset_firefighter_v4\\data.yaml",
+    "training_images": 4656,
+    "validation_images": 252,
+    "test_images": 252,
+    "initialization_model": "D:\\工程仿真\\FPGA赛道_小车仿真\\YOLO11n_model\\runs\\wallpaper_yolo11n_observation_v3_20261008\\paused_by_user_20261008_220602\\weights\\best.pt",
+    "training_kind": "finetune",
+    "config": "D:\\工程仿真\\FPGA赛道_小车仿真\\YOLO11n_model\\config\\yolo11n_people_finetune.yaml",
+    "patience": 20,
+    "model": "YOLO11n Detect",
+    "classes": [
+      "fire",
+      "firefighter",
+      "person"
+    ],
+    "updated_at": "2026-10-08T23:51:32+08:00",
+    "worker_pid": 146512,
+    "command": [
+      "D:\\工程仿真\\FPGA赛道_小车仿真\\YOLO11n_model\\.venv\\Scripts\\python.exe",
+      "-u",
+      "D:\\工程仿真\\FPGA赛道_小车仿真\\YOLO11n_model\\train.py",
+      "--mode",
+      "train",
+      "--model",
+      "D:\\工程仿真\\FPGA赛道_小车仿真\\YOLO11n_model\\runs\\wallpaper_yolo11n_observation_v3_20261008\\paused_by_user_20261008_220602\\weights\\best.pt",
+      "--epochs",
+      "80",
+      "--imgsz",
+      "640",
+      "--patience",
+      "20",
+      "--data",
+      "D:\\工程仿真\\FPGA赛道_小车仿真\\YOLO11n_model\\dataset_firefighter_v4\\data.yaml",
+      "--config",
+      "D:\\工程仿真\\FPGA赛道_小车仿真\\YOLO11n_model\\config\\yolo11n_people_finetune.yaml",
+      "--device",
+      "0",
+      "--batch",
+      "8",
+      "--workers",
+      "0",
+      "--name",
+      "wallpaper_yolo11n_firefighter_v4_20261008"
+    ],
+    "training_started_at": "2026-10-08T23:50:51+08:00",
+    "active_epoch": 1
+  },
+  "source_role": "96 new synthetic images promoted to training only; not independent validation for this or descendant models",
+  "real_capture": false,
+  "old_run_status": "stopped"
+}

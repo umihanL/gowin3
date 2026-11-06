@@ -1,0 +1,4 @@
+source;share/rescue_interfaces/local_setup.bash
+source;share/rescue_interfaces/local_setup.dsv
+source;share/rescue_interfaces/local_setup.sh
+source;share/rescue_interfaces/local_setup.zsh

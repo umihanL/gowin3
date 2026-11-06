@@ -1,0 +1,2 @@
+PASS road motion: actual generated  100-node line/arc route, encoder/IMU bicycle, max nose cross error=10.166673mm final=24.841658mm
+sim/road_motion_tb.sv:71: $finish called at 5786580000 (1ps)

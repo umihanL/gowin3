@@ -1,0 +1,446 @@
+{
+  "blend": "D:\\工程仿真\\FPGA赛道_小车仿真\\map_assets\\community_fire_rescue_maze.blend",
+  "object_count": 213,
+  "mesh_count": 193,
+  "packed_images": [
+    "barrier_stripes.png",
+    "construction_sign.png",
+    "facade_calm.png",
+    "facade_fire.png",
+    "facade_people.png",
+    "parking_sign.png",
+    "road_wallpaper.png"
+  ],
+  "wall_count": 23,
+  "cameras": [
+    "CAM_02_车载火场_0.48m",
+    "CAM_01_全景",
+    "CAM_03_停车道闸_0.48m",
+    "CAM_04_正俯视"
+  ],
+  "gate_frame_1_degrees": 0,
+  "gate_frame_145_degrees": 82,
+  "glb_static_frame": 145,
+  "colliders": [
+    {
+      "id": "boundary_s_thin_panel",
+      "shape": "wall",
+      "a": [
+        0.1,
+        0.1
+      ],
+      "b": [
+        11.9,
+        0.1
+      ],
+      "thickness": 0.06,
+      "height": 0.7
+    },
+    {
+      "id": "boundary_n_thin_panel",
+      "shape": "wall",
+      "a": [
+        0.1,
+        7.9
+      ],
+      "b": [
+        11.9,
+        7.9
+      ],
+      "thickness": 0.06,
+      "height": 0.7
+    },
+    {
+      "id": "boundary_w_thin_panel",
+      "shape": "wall",
+      "a": [
+        0.1,
+        0.1
+      ],
+      "b": [
+        0.1,
+        7.9
+      ],
+      "thickness": 0.06,
+      "height": 0.7
+    },
+    {
+      "id": "boundary_e_thin_panel",
+      "shape": "wall",
+      "a": [
+        11.9,
+        0.1
+      ],
+      "b": [
+        11.9,
+        7.9
+      ],
+      "thickness": 0.06,
+      "height": 0.7
+    },
+    {
+      "id": "A_s_thin_panel",
+      "shape": "wall",
+      "a": [
+        2,
+        2
+      ],
+      "b": [
+        4.8,
+        2
+      ],
+      "thickness": 0.06,
+      "height": 0.85
+    },
+    {
+      "id": "A_w_thin_panel",
+      "shape": "wall",
+      "a": [
+        2,
+        2
+      ],
+      "b": [
+        2,
+        3.25
+      ],
+      "thickness": 0.06,
+      "height": 0.85
+    },
+    {
+      "id": "A_e_FIRE_thin_panel",
+      "shape": "wall",
+      "a": [
+        4.8,
+        2
+      ],
+      "b": [
+        4.8,
+        3.25
+      ],
+      "thickness": 0.06,
+      "height": 0.85
+    },
+    {
+      "id": "A_n1_thin_panel",
+      "shape": "wall",
+      "a": [
+        2,
+        3.25
+      ],
+      "b": [
+        3.05,
+        3.25
+      ],
+      "thickness": 0.06,
+      "height": 0.85
+    },
+    {
+      "id": "A_n2_thin_panel",
+      "shape": "wall",
+      "a": [
+        4.15,
+        3.25
+      ],
+      "b": [
+        4.8,
+        3.25
+      ],
+      "thickness": 0.06,
+      "height": 0.85
+    },
+    {
+      "id": "B_n_thin_panel",
+      "shape": "wall",
+      "a": [
+        7.2,
+        3.25
+      ],
+      "b": [
+        9.8,
+        3.25
+      ],
+      "thickness": 0.06,
+      "height": 0.85
+    },
+    {
+      "id": "B_w_FIRE_thin_panel",
+      "shape": "wall",
+      "a": [
+        7.2,
+        2
+      ],
+      "b": [
+        7.2,
+        3.25
+      ],
+      "thickness": 0.06,
+      "height": 0.85
+    },
+    {
+      "id": "B_e_thin_panel",
+      "shape": "wall",
+      "a": [
+        9.8,
+        2
+      ],
+      "b": [
+        9.8,
+        3.25
+      ],
+      "thickness": 0.06,
+      "height": 0.85
+    },
+    {
+      "id": "B_s1_thin_panel",
+      "shape": "wall",
+      "a": [
+        7.2,
+        2
+      ],
+      "b": [
+        7.9,
+        2
+      ],
+      "thickness": 0.06,
+      "height": 0.85
+    },
+    {
+      "id": "B_s2_thin_panel",
+      "shape": "wall",
+      "a": [
+        9.05,
+        2
+      ],
+      "b": [
+        9.8,
+        2
+      ],
+      "thickness": 0.06,
+      "height": 0.85
+    },
+    {
+      "id": "C_s_FIRE_thin_panel",
+      "shape": "wall",
+      "a": [
+        7.2,
+        4.75
+      ],
+      "b": [
+        9.8,
+        4.75
+      ],
+      "thickness": 0.06,
+      "height": 0.85
+    },
+    {
+      "id": "C_w_thin_panel",
+      "shape": "wall",
+      "a": [
+        7.2,
+        4.75
+      ],
+      "b": [
+        7.2,
+        6
+      ],
+      "thickness": 0.06,
+      "height": 0.85
+    },
+    {
+      "id": "C_e_thin_panel",
+      "shape": "wall",
+      "a": [
+        9.8,
+        4.75
+      ],
+      "b": [
+        9.8,
+        6
+      ],
+      "thickness": 0.06,
+      "height": 0.85
+    },
+    {
+      "id": "C_n1_thin_panel",
+      "shape": "wall",
+      "a": [
+        7.2,
+        6
+      ],
+      "b": [
+        7.85,
+        6
+      ],
+      "thickness": 0.06,
+      "height": 0.85
+    },
+    {
+      "id": "C_n2_thin_panel",
+      "shape": "wall",
+      "a": [
+        9,
+        6
+      ],
+      "b": [
+        9.8,
+        6
+      ],
+      "thickness": 0.06,
+      "height": 0.85
+    },
+    {
+      "id": "P_w_thin_panel",
+      "shape": "wall",
+      "a": [
+        2,
+        4.75
+      ],
+      "b": [
+        2,
+        7.9
+      ],
+      "thickness": 0.06,
+      "height": 0.85
+    },
+    {
+      "id": "P_s_thin_panel",
+      "shape": "wall",
+      "a": [
+        2,
+        4.75
+      ],
+      "b": [
+        4.8,
+        4.75
+      ],
+      "thickness": 0.06,
+      "height": 0.85
+    },
+    {
+      "id": "P_e1_thin_panel",
+      "shape": "wall",
+      "a": [
+        4.8,
+        4.75
+      ],
+      "b": [
+        4.8,
+        5.15
+      ],
+      "thickness": 0.06,
+      "height": 0.85
+    },
+    {
+      "id": "P_e2_thin_panel",
+      "shape": "wall",
+      "a": [
+        4.8,
+        6.65
+      ],
+      "b": [
+        4.8,
+        7.9
+      ],
+      "thickness": 0.06,
+      "height": 0.85
+    },
+    {
+      "id": "Parking_P_sign_pole",
+      "shape": "cylinder",
+      "center": [
+        4.98,
+        6.77,
+        0.42
+      ],
+      "radius": 0.032,
+      "height": 0.84
+    },
+    {
+      "id": "Gate_motor_cabinet",
+      "shape": "box",
+      "center": [
+        4.87,
+        5.13,
+        0.27
+      ],
+      "size": [
+        0.2,
+        0.22,
+        0.54
+      ]
+    },
+    {
+      "id": "TL1_pole",
+      "shape": "cylinder",
+      "center": [
+        7.08,
+        3.3,
+        0.54
+      ],
+      "radius": 0.035,
+      "height": 1.08
+    },
+    {
+      "id": "TL2_pole",
+      "shape": "cylinder",
+      "center": [
+        4.92,
+        4.7,
+        0.54
+      ],
+      "radius": 0.035,
+      "height": 1.08
+    },
+    {
+      "id": "ROAD_CLOSED_collision_body",
+      "shape": "box",
+      "center": [
+        6,
+        6.55,
+        0.37
+      ],
+      "size": [
+        2.18,
+        0.16,
+        0.27
+      ]
+    },
+    {
+      "id": "Cone_0_orange",
+      "shape": "cylinder",
+      "center": [
+        5.17,
+        6.5,
+        0.17
+      ],
+      "radius": 0.12,
+      "height": 0.34
+    },
+    {
+      "id": "Cone_1_orange",
+      "shape": "cylinder",
+      "center": [
+        6.83,
+        6.5,
+        0.17
+      ],
+      "radius": 0.12,
+      "height": 0.34
+    },
+    {
+      "id": "Detour_sign",
+      "shape": "box",
+      "center": [
+        6,
+        6.52,
+        0.51
+      ],
+      "size": [
+        0.45,
+        0.22,
+        1.02
+      ]
+    }
+  ],
+  "physical_simulation_verified": false
+}

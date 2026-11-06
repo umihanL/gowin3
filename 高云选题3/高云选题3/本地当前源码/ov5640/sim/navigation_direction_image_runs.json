@@ -1,0 +1,20 @@
+[
+  {
+    "name": "image",
+    "passed": true,
+    "expected_failure": false,
+    "exit_code": 0,
+    "seconds": 33.312,
+    "inputs": {
+      "sim/navigation_image_start_tb.sv": "b705fa12f8bcb4c7aa9736eea61e3bc51bc82205945d593d12007488e0476210",
+      "src/portrait/vision_video.v": "7ba6696b6c301763291b023aa3e9226dc0d598242a3d830c7971ed0344bd5324",
+      "src/portrait/vision_zebra.v": "ce3fb9e91c5699362829acef44d79d1987b6aefc3b647f1c2b39c79b8b874483",
+      "src/vehicle/vehicle_vision_fusion.v": "cf22ced8ef5df08a60766864736c87093c2f721b9af84839b4bb082a72504281",
+      "src/portrait/vision_camera_config.vh": "b7a332f55c15038a635321756bb2419ab0f0c8192dddf372a4e7b34d4595a636",
+      "src/portrait/vision_ipm_lut.vh": "d7d63c3db888683f0b44f73f25e80a05556fc50242d8ff573323cec342a8de43",
+      "src/vehicle/vehicle_config.vh": "1df9114f5c2291a385854a6b454d45adf3141eb4f951ccbd31833ed52f11b04c"
+    },
+    "log": "sim/navigation_direction_image.log",
+    "sha256": "f93f8794a09f6294938562cd8865971b899d6995e6524de1e8c00aaf2299a601"
+  }
+]

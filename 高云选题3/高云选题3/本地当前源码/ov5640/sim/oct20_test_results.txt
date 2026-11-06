@@ -1,0 +1,110 @@
+PASS forbidden barriers: all raw/coarse addresses, four segments and edge clipping, A* detour, full-road rejection, clear/replan
+sim/nav_barrier_tb.sv:65: $finish called at 1446560000 (1ps)
+PASS barrier touch UI: horizontal/vertical endpoints, red raster, tool selection, route invalidation and clear
+sim/nav_barrier_ui_tb.sv:31: $finish called at 1690475000 (1ps)
+PASS adaptive brake envelope:       50688 integer/sqrt oracle cases; all 1cm zones 25..200cm and speeds 80..400mm/s
+sim/brake_envelope_tb.sv:23: $finish called at 91238440000 (1ps)
+TRACE phase  1 x=563.540000 y=0.000000 heading=0.000000 local=     0,     0 side=65535 diag=00000011 seen=0 tail=0
+TRACE phase  7 x=637.867873 y=7.558570 heading=15.220601 local=    74,     7 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  6 x=986.356157 y=228.489787 heading=35.085705 local=   422,   225 side=  198 diag=00111111 seen=1 tail=0
+TRACE phase  2 x=1191.953611 y=281.506666 heading=1.454635 local=   626,   279 side=  142 diag=00111111 seen=1 tail=0
+TRACE phase  3 x=1499.437695 y=284.944271 heading=0.435227 local=   934,   281 side=65535 diag=11111111 seen=1 tail=1
+TRACE phase  4 x=2261.983255 y=6.803199 heading=-1.393238 local=  1694,     1 side=65535 diag=11111111 seen=1 tail=1
+PASS physical beams           0 trigger=   35cm: 320x200 body no overlap, heading=35.085705 deg offset=285.003529 mm tail merge=1500.437666 mm
+TRACE phase  0 x=2638.112757 y=4.971524 heading=0.209953 local=     0,     0 side=  240 diag=00111111 seen=1 tail=1
+TRACE phase  1 x=563.540000 y=0.000000 heading=0.000000 local=     0,     0 side=65535 diag=11000000 seen=1 tail=1
+TRACE phase  7 x=637.867873 y=-7.558570 heading=-15.220601 local=    74,    -7 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  6 x=983.872505 y=-227.040372 heading=-34.994420 local=   419,  -228 side=  196 diag=11111100 seen=1 tail=0
+TRACE phase  2 x=1192.600758 y=-279.881837 heading=-1.398407 local=   626,  -282 side=  140 diag=11111100 seen=1 tail=0
+TRACE phase  3 x=1501.814120 y=-282.176399 heading=-0.187856 local=   935,  -284 side=65535 diag=11111111 seen=1 tail=1
+TRACE phase  4 x=2278.614107 y=3.043803 heading=1.501004 local=  1709,    -2 side=65535 diag=11111111 seen=1 tail=1
+PASS physical beams           1 trigger=   35cm: 320x200 body no overlap, heading=34.994420 deg offset=282.193882 mm tail merge=1502.814115 mm
+TRACE phase  0 x=2654.746906 y=8.182858 heading=0.594912 local=     0,     0 side=  240 diag=11111100 seen=1 tail=1
+TRACE phase  1 x=265.000000 y=0.000000 heading=0.000000 local=     0,     0 side=65535 diag=00000011 seen=1 tail=1
+TRACE phase  7 x=332.024500 y=3.494212 heading=9.750051 local=    68,     3 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  6 x=691.173205 y=222.459163 heading=34.976351 local=   426,   219 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  2 x=896.820813 y=275.782174 heading=1.456597 local=   631,   273 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  3 x=1502.058284 y=280.955422 heading=0.272454 local=  1235,   276 side=65535 diag=11111111 seen=1 tail=1
+TRACE phase  4 x=2255.515134 y=8.363671 heading=-1.388264 local=  1986,     1 side=65535 diag=11111111 seen=1 tail=1
+PASS physical beams           2 trigger=   65cm: 320x200 body no overlap, heading=35.017526 deg offset=280.985294 mm tail merge=1503.058273 mm
+TRACE phase  0 x=2632.023367 y=5.442491 heading=-0.043279 local=     0,     0 side=  240 diag=00111111 seen=1 tail=1
+TRACE phase  1 x=265.000000 y=0.000000 heading=0.000000 local=     0,     0 side=65535 diag=11000000 seen=1 tail=1
+TRACE phase  7 x=332.024500 y=-3.494212 heading=-9.750051 local=    68,    -3 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  6 x=687.761289 y=-220.284734 heading=-35.000057 local=   422,  -221 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  2 x=896.453698 y=-273.115192 heading=-1.381164 local=   629,  -276 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  3 x=1501.648200 y=-277.104004 heading=-0.161950 local=  1233,  -279 side=65535 diag=11111111 seen=1 tail=1
+TRACE phase  4 x=2272.706438 y=3.441797 heading=1.460941 local=  2002,    -2 side=65535 diag=11111111 seen=1 tail=1
+PASS physical beams           3 trigger=   65cm: 320x200 body no overlap, heading=35.000057 deg offset=277.118043 mm tail merge=1502.648196 mm
+TRACE phase  0 x=2648.895045 y=8.277108 heading=0.589983 local=     0,     0 side=  240 diag=11111100 seen=1 tail=1
+TRACE phase  1 x=0.000000 y=0.000000 heading=0.000000 local=     0,     0 side=65535 diag=00000011 seen=1 tail=1
+TRACE phase  7 x=30.709487 y=1.733362 heading=7.310377 local=    30,     1 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  6 x=399.304635 y=222.179787 heading=34.902644 local=   397,   218 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  2 x=605.293232 y=274.823013 heading=1.436542 local=   602,   272 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  3 x=1501.534783 y=281.494937 heading=0.258717 local=  1498,   275 side=65535 diag=11111111 seen=1 tail=1
+TRACE phase  4 x=2254.540267 y=9.847842 heading=-1.391470 local=  2248,     1 side=65535 diag=11111111 seen=1 tail=1
+PASS physical beams           4 trigger=  150cm: 320x200 body no overlap, heading=34.949516 deg offset=281.522691 mm tail merge=1502.534772 mm
+TRACE phase  0 x=2631.262001 y=6.720441 heading=-0.192597 local=     0,     0 side=  240 diag=00111111 seen=1 tail=1
+TRACE phase  1 x=0.000000 y=0.000000 heading=0.000000 local=     0,     0 side=65535 diag=11000000 seen=1 tail=1
+TRACE phase  7 x=30.709487 y=-1.733362 heading=-7.310377 local=    30,    -2 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  6 x=395.683583 y=-220.135503 heading=-34.995672 local=   393,  -221 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  2 x=605.371290 y=-273.000724 heading=-1.372932 local=   602,  -276 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  3 x=1502.969526 y=-276.107220 heading=0.254437 local=  1498,  -281 side=65535 diag=11111111 seen=1 tail=1
+TRACE phase  4 x=2271.727448 y=5.523755 heading=1.491135 local=  2265,    -2 side=65535 diag=11111111 seen=1 tail=1
+PASS physical beams           5 trigger=  150cm: 320x200 body no overlap, heading=34.995672 deg offset=276.631961 mm tail merge=1503.949277 mm
+TRACE phase  0 x=2647.477406 y=9.749923 heading=0.317776 local=     0,     0 side=  240 diag=11111100 seen=1 tail=1
+TRACE phase  1 x=265.000000 y=0.000000 heading=0.000000 local=     0,     0 side=  240 diag=11000000 seen=1 tail=1
+TRACE phase  7 x=332.826976 y=-3.586527 heading=-9.879803 local=    69,    -4 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  6 x=692.743609 y=-223.553703 heading=-34.996751 local=   427,  -224 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  2 x=902.422256 y=-276.417422 heading=-1.368140 local=   635,  -279 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  3 x=1501.419556 y=-280.166683 heading=-0.012955 local=  1233,  -283 side=65535 diag=11111111 seen=1 tail=1
+TRACE phase  0 x=2273.681563 y=3.465773 heading=1.501400 local=  2003,    -2 side=65535 diag=11111111 seen=1 tail=1
+PASS navigation with physical beams: close bypass, route rejoin and original goal
+TRACE phase  1 x=265.000000 y=0.000000 heading=0.000000 local=     0,     0 side=  240 diag=11000000 seen=1 tail=1
+TRACE phase  7 x=332.826976 y=-3.586527 heading=-9.879803 local=    69,    -4 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  6 x=692.743609 y=-223.553703 heading=-34.996751 local=   427,  -224 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  2 x=902.422256 y=-276.417422 heading=-1.368140 local=   635,  -279 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  3 x=1501.419556 y=-280.166683 heading=-0.012955 local=  1233,  -283 side=65535 diag=11111111 seen=1 tail=1
+TRACE phase  0 x=2273.681563 y=3.465773 heading=1.501400 local=  2003,    -2 side=65535 diag=11111111 seen=1 tail=1
+PASS passed navigation goal: bounded tracking stop after bypass, no indefinite forward resume
+TRACE phase  1 x=265.000000 y=0.000000 heading=0.000000 local=     0,     0 side=65535 diag=00000011 seen=1 tail=1
+TRACE phase  7 x=336.243627 y=4.263518 heading=10.917274 local=    72,     3 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  6 x=678.913436 y=213.887504 heading=34.948467 local=   414,   211 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  2 x=884.802951 y=266.612328 heading=1.439348 local=   619,   264 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  3 x=1263.382637 y=270.802228 heading=0.487797 local=   997,   266 side=65535 diag=11111111 seen=1 tail=1
+TRACE phase  4 x=2005.625041 y=7.398616 heading=-1.384198 local=  1737,     1 side=65535 diag=11111111 seen=1 tail=1
+PASS bypass edge case           0: short or single-front-beam box, pulsed ToF, body/tail clearance and rejoin
+TRACE phase  0 x=2382.088074 y=4.507475 heading=-0.008261 local=     0,     0 side=  240 diag=00111111 seen=1 tail=1
+TRACE phase  1 x=265.000000 y=0.000000 heading=0.000000 local=     0,     0 side=65535 diag=11000000 seen=1 tail=1
+TRACE phase  7 x=336.243627 y=-4.263518 heading=-10.917274 local=    72,    -4 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  6 x=675.481936 y=-211.687585 heading=-34.993086 local=   410,  -212 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  2 x=885.165640 y=-264.533228 heading=-1.365246 local=   618,  -267 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  3 x=1263.426241 y=-267.592151 heading=-0.189019 local=   996,  -270 side=65535 diag=11111111 seen=1 tail=1
+TRACE phase  4 x=2018.582083 y=3.129403 heading=1.510147 local=  1749,    -2 side=65535 diag=11111111 seen=1 tail=1
+PASS bypass edge case           1: short or single-front-beam box, pulsed ToF, body/tail clearance and rejoin
+TRACE phase  0 x=2394.628606 y=8.043082 heading=0.543407 local=     0,     0 side=  240 diag=11111100 seen=1 tail=1
+TRACE phase  1 x=265.000000 y=0.000000 heading=0.000000 local=     0,     0 side=65535 diag=00001111 seen=1 tail=1
+TRACE phase  7 x=312.519815 y=1.072387 heading=4.458067 local=    48,     1 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  6 x=650.225070 y=193.838124 heading=34.948467 local=   385,   191 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  2 x=855.145278 y=246.535323 heading=1.460124 local=   589,   244 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  3 x=1503.361399 y=251.939377 heading=0.262176 local=  1237,   247 side=65535 diag=11111111 seen=1 tail=1
+TRACE phase  4 x=2218.501284 y=8.138015 heading=-1.371786 local=  1949,     1 side=65535 diag=11111111 seen=1 tail=1
+PASS bypass edge case           2: short or single-front-beam box, pulsed ToF, body/tail clearance and rejoin
+TRACE phase  0 x=2595.004979 y=5.393342 heading=-0.023037 local=     0,     0 side=  240 diag=00111111 seen=1 tail=1
+TRACE phase  1 x=265.000000 y=0.000000 heading=0.000000 local=     0,     0 side=65535 diag=11110000 seen=1 tail=1
+TRACE phase  7 x=312.519815 y=-1.072387 heading=-4.458067 local=    48,    -1 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  6 x=644.351528 y=-189.895437 heading=-34.993086 local=   379,  -190 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  2 x=854.042788 y=-242.782449 heading=-1.373319 local=   587,  -245 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  3 x=1503.786522 y=-246.268545 heading=0.155175 local=  1236,  -249 side=65535 diag=11111111 seen=1 tail=1
+TRACE phase  4 x=2228.219404 y=3.461331 heading=1.491070 local=  1958,    -2 side=65535 diag=11111111 seen=1 tail=1
+PASS bypass edge case           3: short or single-front-beam box, pulsed ToF, body/tail clearance and rejoin
+TRACE phase  0 x=2604.081040 y=8.213745 heading=0.397041 local=     0,     0 side=  240 diag=11111100 seen=1 tail=1
+TRACE phase  1 x=265.000000 y=0.000000 heading=0.000000 local=     0,     0 side=  240 diag=11000000 seen=1 tail=1
+TRACE phase  7 x=332.024500 y=-3.494212 heading=-9.750051 local=    68,    -3 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  6 x=687.761289 y=-220.284734 heading=-35.000057 local=   422,  -221 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  2 x=896.453698 y=-273.115192 heading=-1.381164 local=   629,  -276 side=65535 diag=11111111 seen=0 tail=0
+TRACE phase  5 x=2894.900737 y=-270.605166 heading=0.335741 local=  2625,  -279 side=65535 diag=11111109 seen=0 tail=0
+PASS bypass missing side edge: bounded stop, no endless straight run, zero blocked steering
+sim/vehicle_close_bypass_tb.sv:263: $finish called at 78864040000 (1ps)
+PASS VL53L1X array: four XSHUT addresses, ST configuration, calibration, 16-bit register I2C, range/status readback and sample pulses
+PASS VL53L1X recovery: invalid range, missing slave, configuration NACK and data-ready timeout isolate one channel; retry restores its address and samples
+sim/vl53l1x_array_tb.sv:69: $finish called at 1015607250000 (1ps)

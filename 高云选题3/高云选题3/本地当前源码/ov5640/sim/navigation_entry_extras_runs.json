@@ -1,0 +1,26 @@
+[
+  {
+    "name": "vehicle",
+    "top": "vehicle_motion_tb",
+    "passed": true,
+    "seconds": 272.55,
+    "log": "sim/navigation_entry_vehicle.log",
+    "sha256": "aa6b6c72b6d98016a646935a03af112ff0f60fe17d6de45f76c506f3d050f58a"
+  },
+  {
+    "name": "profile",
+    "top": "vehicle_profile_tb",
+    "passed": true,
+    "seconds": 0.2,
+    "log": "sim/navigation_entry_profile.log",
+    "sha256": "f9705af0de1d6e582ceed389c811f5cbb9e09ff0652f7ca3e8d8c4ce6d9d2428"
+  },
+  {
+    "name": "zebra",
+    "top": "vision_zebra_tb",
+    "passed": true,
+    "seconds": 0.12,
+    "log": "sim/navigation_entry_zebra.log",
+    "sha256": "1df3d2b91d6ba0659cb07a0d6a9bd4d2de67af7ec71a9579e85dde57845f7458"
+  }
+]

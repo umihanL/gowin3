@@ -1,0 +1,3 @@
+# Rendering uses Blender's bundled Python; these are for data tools outside Blender.
+numpy>=1.24,<3
+Pillow>=10,<13

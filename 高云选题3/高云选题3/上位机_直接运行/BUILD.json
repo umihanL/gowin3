@@ -1,0 +1,17 @@
+{
+  "product": "TreeBird Rescue Control",
+  "built_at": "2026-11-03T13:45:01.7881152+08:00",
+  "platform": "Windows x64",
+  "app_sha256": "718B36618CC3BDDFAC98CD439513115D3F389BE3CA21ABBBA23C76CAEB53A5A4",
+  "compiler": "C:\\WINDOWS\\Microsoft.NET\\Framework64\\v4.0.30319\\csc.exe",
+  "webview2_sdk": "1.0.4258.31",
+  "sdk_url": "https://api.nuget.org/v3-flatcontainer/microsoft.web.webview2/1.0.4258.31/microsoft.web.webview2.1.0.4258.31.nupkg",
+  "sdk_sha256": "56F7F4B8BF9AEE4B8EFEFBBDD4F67D5F74EBD1B100ED0806DA71BF76AF481AA9",
+  "external_runtime": "Microsoft Edge WebView2 Evergreen Runtime",
+  "embedded_backend": false,
+  "privileges": "asInvoker",
+  "default_mode": "live X5 connection",
+  "default_endpoint": "http://192.168.127.10:8090",
+  "startup_commands_sent": false,
+  "credentials_persisted": false
+}

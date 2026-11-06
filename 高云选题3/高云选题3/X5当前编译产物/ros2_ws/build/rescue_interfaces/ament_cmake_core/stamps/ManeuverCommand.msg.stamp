@@ -1,0 +1,13 @@
+std_msgs/Header header
+string command_id
+string edge_id
+uint32 route_revision
+uint8 FOLLOW_LANE=0
+uint8 TURN_LEFT=1
+uint8 TURN_RIGHT=2
+uint8 STRAIGHT=3
+uint8 turn
+bool stop_at_end
+float32 speed_limit_m_s
+float32 distance_m
+uint16 lease_ms

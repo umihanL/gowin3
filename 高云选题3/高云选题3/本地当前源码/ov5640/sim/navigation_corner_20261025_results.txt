@@ -1,0 +1,83 @@
+PASS actual profile shape=0: independently generated S/90deg geometry and wrapped outgoing heading
+PASS actual profile shape=1: independently generated S/90deg geometry and wrapped outgoing heading
+PASS actual profile shape=2: independently generated S/90deg geometry and wrapped outgoing heading
+sim/navigation_profile_corner_tb.sv:40: $finish called at 93380000 (1ps)
+PASS committed quarter turn side=-1: early false lane, target latch, transient loss, heading wrap and clean handback
+PASS committed quarter turn side=1: early false lane, target latch, transient loss, heading wrap and clean handback
+PASS S geometry: planned 45deg exit remains 45deg
+PASS bounded fallback: heading hold, wrong-way rejection and unseen-exit watchdog
+sim/navigation_corner_tb.sv:50: $finish called at 74420000 (1ps)
+PASS skipped edge phase: left/right planned bends survive direct complete image loss without false deviation stop
+PASS visual bend memory: measured heading retains direction through FOV loss when the route tag is delayed
+PASS bend expiry: visible-road authority preserved; old curve hint cannot trigger a later blind turn
+PASS navigation response: missing frame is not a bend; two complete lost-road frames are required
+sim/navigation_response_tb.sv:57: $finish called at 13420000 (1ps)
+INFO normalized bicycle residual: -3.639638 mm, yaw 0.000246 rad
+PASS vision fusion: normalized gentle PD, fixed-time derivative, map conflict/junction evidence, independent convergence and fallback
+sim/vision_fusion_tb.sv:47: $finish called at 43660000 (1ps)
+PASS single-edge approach side=0: outer boundary survives, no full lock or false deviation stop
+PASS limited-FOV turn side=0: full 28deg wheel, IMU-bounded turn, visible exit retakes authority
+PASS single-edge approach side=1: outer boundary survives, no full lock or false deviation stop
+PASS limited-FOV turn side=1: full 28deg wheel, IMU-bounded turn, visible exit retakes authority
+PASS unseen exit: bounded yaw/travel/time stop; no repeated blind circle
+PASS straight road loss: no invented full-lock turn; bounded stop
+PASS unarmed single edge: no reliable centre or bend evidence gives bounded stop
+PASS frame/goal qualification: camera frame loss and road beyond goal cannot start a blind turn
+sim/vision_blind_turn_tb.sv:81: $finish called at 55820000 (1ps)
+BLIND entry planned=-520 hint=-1 route=-26 left=0 physicalYaw=-0.030751
+PASS integrated limited-FOV turn side=-1: real route progression, blind 28deg turn, visual exit centering, original goal
+sim/vision_turn_motion_tb.sv:83: $finish called at 2786575000 (1ps)
+BLIND entry planned=-520 hint=-1 route=-28 left=0 physicalYaw=-0.020292
+PASS integrated limited-FOV turn side=-1: real route progression, blind 28deg turn, visual exit centering, original goal
+sim/vision_turn_motion_tb.sv:83: $finish called at 2782575000 (1ps)
+BLIND entry planned=520 hint=1 route=27 left=0 physicalYaw=0.042519
+PASS integrated limited-FOV turn side=1: real route progression, blind 28deg turn, visual exit centering, original goal
+sim/vision_turn_motion_tb.sv:83: $finish called at 2794575000 (1ps)
+BLIND entry planned=492 hint=1 route=28 left=0 physicalYaw=0.029781
+PASS integrated limited-FOV turn side=1: real route progression, blind 28deg turn, visual exit centering, original goal
+sim/vision_turn_motion_tb.sv:83: $finish called at 2792575000 (1ps)
+BLIND entry planned=-520 hint=-1 route=-26 left=0 physicalYaw=-0.030751
+PASS integrated limited-FOV turn side=-1: real route progression, blind 28deg turn, visual exit centering, original goal
+sim/vision_turn_motion_tb.sv:83: $finish called at 2786575000 (1ps)
+BLIND entry planned=520 hint=1 route=27 left=0 physicalYaw=0.042519
+PASS integrated limited-FOV turn side=1: real route progression, blind 28deg turn, visual exit centering, original goal
+sim/vision_turn_motion_tb.sv:83: $finish called at 2794575000 (1ps)
+BLIND entry planned=-520 hint=-1 route=-26 left=0 physicalYaw=-0.036075
+PASS integrated limited-FOV turn side=-1: real route progression, blind 28deg turn, visual exit centering, original goal
+sim/vision_turn_motion_tb.sv:83: $finish called at 2838575000 (1ps)
+BLIND entry planned=520 hint=1 route=26 left=0 physicalYaw=0.048845
+PASS integrated limited-FOV turn side=1: real route progression, blind 28deg turn, visual exit centering, original goal
+sim/vision_turn_motion_tb.sv:83: $finish called at 2844575000 (1ps)
+BLIND entry planned=520 hint=1 route=21 left=0 physicalYaw=0.077002
+PASS integrated limited-FOV turn side=1: real route progression, blind 28deg turn, visual exit centering, original goal
+sim/vision_turn_motion_tb.sv:83: $finish called at 5528575000 (1ps)
+BLIND entry planned=520 hint=1 route=23 left=0 physicalYaw=0.071309
+PASS integrated limited-FOV turn side=1: real route progression, blind 28deg turn, visual exit centering, original goal
+sim/vision_turn_motion_tb.sv:83: $finish called at 4340575000 (1ps)
+PASS stationary steering preload: initial yaw=0 command=4 applied=4 at first driven tick
+INFO skew run: initialYaw=0 pose=1642,498 poseYaw=3 initHeading=0 visualYaw=0 target=1700,500 distance=60 forward=60 lateral=1 index=60 physical=1427.341836,532.537021
+PASS zebra speed: cap at 100 mm/s, camera-to-tail clearance hold and automatic cruise restoration
+PASS vision motion: actual navigation arbiter, independent encoder/IMU bicycle, offset black road/noisy observations, bounded correction, short loss/reacquire, prolonged-loss stop and authority beside a valid side echo
+sim/vision_motion_tb.sv:79: $finish called at 3156050000 (1ps)
+PASS stationary steering preload: initial yaw=80 command=-4 applied=-4 at first driven tick
+INFO skew run: initialYaw=80 pose=1421,460 poseYaw=-6 initHeading=75 visualYaw=0 target=1480,500 distance=72 forward=60 lateral=40 index=49 physical=1203.494286,533.636809
+PASS zebra speed: cap at 100 mm/s, camera-to-tail clearance hold and automatic cruise restoration
+PASS vision motion: actual navigation arbiter, independent encoder/IMU bicycle, offset black road/noisy observations, bounded correction, short loss/reacquire, prolonged-loss stop and authority beside a valid side echo
+sim/vision_motion_tb.sv:79: $finish called at 3156050000 (1ps)
+PASS stationary steering preload: initial yaw=-80 command=11 applied=11 at first driven tick
+INFO skew run: initialYaw=-80 pose=1477,533 poseYaw=15 initHeading=-75 visualYaw=5 target=1540,500 distance=72 forward=64 lateral=-35 index=52 physical=1260.604286,527.102446
+PASS zebra speed: cap at 100 mm/s, camera-to-tail clearance hold and automatic cruise restoration
+PASS vision motion: actual navigation arbiter, independent encoder/IMU bicycle, offset black road/noisy observations, bounded correction, short loss/reacquire, prolonged-loss stop and authority beside a valid side echo
+sim/vision_motion_tb.sv:79: $finish called at 3156050000 (1ps)
+INFO goal dense=0 vertical=0 status=3 along=1251.426805 lateral=40.897840 index=1 dist=46 dot=31500
+PASS terminal arrival: dense=0 vertical=0 shifted lane stops at goal plane; no beyond-goal bend, restart or circling
+sim/vision_goal_tb.sv:66: $finish called at 2206040000 (1ps)
+INFO goal dense=0 vertical=1 status=3 along=1242.088390 lateral=41.388668 index=1 dist=40 dot=21960
+PASS terminal arrival: dense=0 vertical=1 shifted lane stops at goal plane; no beyond-goal bend, restart or circling
+sim/vision_goal_tb.sv:66: $finish called at 2226040000 (1ps)
+INFO goal dense=1 vertical=0 status=3 along=1252.581617 lateral=41.001902 index=63 dist=46 dot=521
+PASS terminal arrival: dense=1 vertical=0 shifted lane stops at goal plane; no beyond-goal bend, restart or circling
+sim/vision_goal_tb.sv:66: $finish called at 2226040000 (1ps)
+INFO goal dense=1 vertical=1 status=3 along=1240.117958 lateral=41.091124 index=63 dist=40 dot=365
+PASS terminal arrival: dense=1 vertical=1 shifted lane stops at goal plane; no beyond-goal bend, restart or circling
+sim/vision_goal_tb.sv:66: $finish called at 2220040000 (1ps)

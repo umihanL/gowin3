@@ -1,0 +1,14 @@
+PASS nose fast brake: actual 400mm/s before 25cm trigger, 50ms range, coast tau=0.8s, drive tau=0.250000, clearance=97.702306mm
+PASS nose fast brake: actual 400mm/s before 25cm trigger, 50ms range, coast tau=0.8s, drive tau=0.400000, clearance=94.884822mm
+NOSE trace k=          0 rear=281.000000,500.000000 yaw=0.000000 nose=500.000000,500.000000 index=   1 status= 2 steer=     0
+NOSE trace k=        200 rear=580.000000,500.000000 yaw=0.000000 nose=799.000000,500.000000 index=  20 status= 2 steer=     0
+NOSE trace k=        400 rear=967.495998,512.700247 yaw=8.163621 nose=1184.276781,543.798348 index=  40 status= 2 steer=     9
+NOSE trace k=        600 rear=1249.573805,620.174647 yaw=35.823106 nose=1427.145104,748.352000 index=  57 status= 2 steer=    15
+NOSE trace k=        800 rear=1411.043494,816.464604 yaw=65.128393 nose=1503.151887,1015.152912 index=  71 status= 2 steer=    14
+NOSE trace k=       1000 rear=1485.847981,1151.115070 yaw=85.187741 nose=1504.220122,1369.343080 index=  88 status= 2 steer=     4
+NOSE trace k=       1200 rear=1499.348532,1544.640100 yaw=89.390067 nose=1501.679818,1763.627691 index= 108 status= 2 steer=     1
+PASS nose navigation: absolute nose start/goal, straight/90deg curve, 700ms IMU outage while turning, max pose error=7.991768mm recovery step=2.000000 tenths
+PASS nose IMU watchdog: 9s gap tolerated; sustained 10s loss disarms
+sim/vehicle_nose_tb.sv:232: $finish called at 9046100000 (1ps)
+PASS motor modulated brake: real encoder overspeed, 128/2000 duty slew, PI preserved, PWM brake/coast truth table, release, zero hold, reset/menu coast
+sim/motor_brake_tb.sv:50: $finish called at 101300000 (1ps)

@@ -1,0 +1,32 @@
+{
+  "detector": {
+    "roi_normalized": [0.1, 0.05, 0.9, 0.9],
+    "board_dark_value_max": 80,
+    "board_aspect_min": 0.28,
+    "board_aspect_max": 0.85,
+    "board_dark_fraction_min": 0.5,
+    "red_position_normalized": [0.5, 0.27],
+    "green_position_normalized": [0.5, 0.73],
+    "position_tolerance": 0.22,
+    "led_saturation_min": 110,
+    "led_value_min": 150,
+    "red_hue_ranges": [[0, 12], [168, 179]],
+    "green_hue_range": [38, 88]
+  },
+  "controller": {
+    "pan_min_deg": -60.0,
+    "pan_max_deg": 60.0,
+    "pan_initial_deg": 0.0,
+    "pan_step_deg": 20.0,
+    "tilt_deg": 5.0,
+    "settle_s": 0.3,
+    "scan_dwell_s": 0.45,
+    "frame_max_age_s": 0.3,
+    "lost_scan_after_s": 0.65,
+    "green_min_frames": 5,
+    "green_min_duration_s": 0.4,
+    "green_max_gap_s": 0.22,
+    "release_valid_s": 0.45,
+    "event_timeout_s": 45.0
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "verified": false,
+  "image_size_wh": [640, 480],
+  "coordinate_frame": "rectified_left_optical",
+  "roi_xyxy": null,
+  "observation_pose_id": null,
+  "gimbal_target_deg": null,
+  "comment": "Single-building facade ROI, valid only for the commissioned observation pose. Seeing a sign alone does not assign all visible people/fire to that building. Reconfigure after changing viewpoint."
+}

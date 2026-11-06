@@ -1,0 +1,20 @@
+[
+  {
+    "case": 0,
+    "exit_code": 1,
+    "log": "sim\\navigation_authority_before_0.log",
+    "fusion_sha256": "6191221c60ceda84b7464876ea50b2c1778989249c99274ea0d0f7a939f31393"
+  },
+  {
+    "case": 1,
+    "exit_code": 1,
+    "log": "sim\\navigation_authority_before_1.log",
+    "fusion_sha256": "6191221c60ceda84b7464876ea50b2c1778989249c99274ea0d0f7a939f31393"
+  },
+  {
+    "case": 2,
+    "exit_code": 1,
+    "log": "sim\\navigation_authority_before_2.log",
+    "fusion_sha256": "6191221c60ceda84b7464876ea50b2c1778989249c99274ea0d0f7a939f31393"
+  }
+]

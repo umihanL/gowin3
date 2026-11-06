@@ -1,0 +1,35 @@
+{
+  "python_executable": "D:\\Program Files\\Python310\\python.exe",
+  "python_version": "3.10.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "virtual_environment": false,
+  "packages": {
+    "yaml": {
+      "installed": true,
+      "version": "6.0.3"
+    },
+    "PIL": {
+      "installed": true,
+      "version": "12.3.0"
+    },
+    "numpy": {
+      "installed": true,
+      "version": "2.2.6"
+    },
+    "torch": {
+      "installed": false
+    },
+    "ultralytics": {
+      "installed": false
+    },
+    "onnx": {
+      "installed": false
+    }
+  },
+  "nvidia_smi": {
+    "returncode": 0,
+    "output": "NVIDIA GeForce RTX 4060 Laptop GPU, 616.92, 8188 MiB, 4079 MiB",
+    "error": ""
+  },
+  "trained_weights_present": false
+}

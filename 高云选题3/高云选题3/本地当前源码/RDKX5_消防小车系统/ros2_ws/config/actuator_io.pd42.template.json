@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "dry_run": true,
+  "comment": "PD42S1 native serial, not 50 Hz servo PWM. Two TTL axes require two separate UARTs; do not parallel their TX pins. Fill ports from inventory and verify their voltage levels. No automatic homing/zeroing. Single-turn encoder loses multi-turn position on driver power cycle: re-establish reference on every start and after any driver reset. FA disable stop requires mechanically supported tilt load. Pump is unconnected and remains disabled.",
+  "servo": {
+    "backend": "pd42_serial",
+    "transport": "ttl",
+    "baudrate": 115200,
+    "poll_hz": 10,
+    "timeout_s": 0.05,
+    "feedback_timeout_s": 0.4,
+    "position_tolerance_deg": 0.3,
+    "feedback_limit_tolerance_deg": 0.2,
+    "stop_policy": "disable",
+    "enable_on_command": false,
+    "reference_confirmed_this_start": false,
+    "load_supported_verified": false,
+    "calibration_confirmed": false,
+    "pan": {
+      "port": null,
+      "address": 1,
+      "min_angle_deg": 30.0,
+      "max_angle_deg": 150.0,
+      "reference_angle_deg": 90.0,
+      "reference_counts": null,
+      "direction": 1,
+      "gear_ratio": 1.0,
+      "acceleration": 100
+    },
+    "tilt": {
+      "port": null,
+      "address": 1,
+      "min_angle_deg": 40.0,
+      "max_angle_deg": 140.0,
+      "reference_angle_deg": 90.0,
+      "reference_counts": null,
+      "direction": 1,
+      "gear_ratio": 1.0,
+      "acceleration": 100
+    }
+  },
+  "pump": {
+    "enabled": false,
+    "gpio_chip": null,
+    "line_offset": null,
+    "active_low": null
+  }
+}

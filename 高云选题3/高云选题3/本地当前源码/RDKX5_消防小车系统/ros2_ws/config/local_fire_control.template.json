@@ -1,0 +1,14 @@
+{
+  "enabled": false,
+  "pump_enabled": false,
+  "external_pump_timeout_verified": false,
+  "max_speed_deg_s": 20.0,
+  "settle_s": 0.4,
+  "pump_guard": {
+    "burst_s": 0.4,
+    "cooldown_s": 1.0,
+    "max_bursts": 3,
+    "stable_lock_s": 0.35
+  },
+  "comment": "Template does not move hardware. Verify axis limits/direction and measured nozzle landing pixels. With fpga_uart, pump output is FPGA B13 active-high; each accepted pulse is hardware limited to <=1000ms and fresh real FPGA ready/off readback is required. Legacy GPIO backend still requires an independently verified external timed cutoff."
+}

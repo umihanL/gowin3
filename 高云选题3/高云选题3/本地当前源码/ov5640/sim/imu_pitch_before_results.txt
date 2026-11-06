@@ -1,0 +1,19 @@
+EXPECTED FAILURE: original production imu_attitude.v with the new angle-boundary regression.
+angle boundary ref=0 case=7 outer=0 got=0,895,0 expected=0,899,0
+INFO imu pitch ref=0 expected=900 measured=895 tenths of a degree
+angle boundary ref=0 case=8 outer=0 got=0,895,0 expected=0,900,0
+angle boundary ref=0 case=9 outer=0 got=1800,895,1800 expected=0,899,0
+angle boundary ref=0 case=20 outer=0 got=0,-895,0 expected=0,-899,0
+INFO imu pitch ref=0 expected=-900 measured=-895 tenths of a degree
+angle boundary ref=0 case=21 outer=0 got=0,-895,0 expected=0,-900,0
+angle boundary ref=0 case=22 outer=0 got=1800,-895,1800 expected=0,-899,0
+angle boundary ref=1 case=6 outer=0 got=-22,890,-22 expected=0,895,0
+angle boundary ref=1 case=7 outer=0 got=-76,891,-76 expected=0,899,0
+INFO imu pitch ref=1 expected=900 measured=888 tenths of a degree
+angle boundary ref=1 case=8 outer=0 got=-1350,888,-1350 expected=0,900,0
+angle boundary ref=1 case=9 outer=0 got=-1737,888,-1737 expected=0,899,0
+angle boundary ref=1 case=10 outer=0 got=-1797,886,-1797 expected=0,890,0
+angle boundary ref=1 case=20 outer=0 got=0,-895,0 expected=0,-899,0
+INFO imu pitch ref=1 expected=-900 measured=-895 tenths of a degree
+FATAL: sim/imu_angle_limits_tb.v:68: 80/376 angle boundary cases failed
+       Time: 1199240000  Scope: imu_angle_limits_tb

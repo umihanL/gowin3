@@ -1,0 +1,37 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/rescue_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/detection__type_support.c.o"
+  "CMakeFiles/rescue_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/detection__type_support.c.o.d"
+  "CMakeFiles/rescue_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/detection_array__type_support.c.o"
+  "CMakeFiles/rescue_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/detection_array__type_support.c.o.d"
+  "CMakeFiles/rescue_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/fpga_event__type_support.c.o"
+  "CMakeFiles/rescue_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/fpga_event__type_support.c.o.d"
+  "CMakeFiles/rescue_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/gimbal_command__type_support.c.o"
+  "CMakeFiles/rescue_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/gimbal_command__type_support.c.o.d"
+  "CMakeFiles/rescue_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/maneuver_command__type_support.c.o"
+  "CMakeFiles/rescue_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/maneuver_command__type_support.c.o.d"
+  "CMakeFiles/rescue_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/motion_permission__type_support.c.o"
+  "CMakeFiles/rescue_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/motion_permission__type_support.c.o.d"
+  "CMakeFiles/rescue_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/stereo_pair__type_support.c.o"
+  "CMakeFiles/rescue_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/stereo_pair__type_support.c.o.d"
+  "librescue_interfaces__rosidl_typesupport_introspection_c.pdb"
+  "librescue_interfaces__rosidl_typesupport_introspection_c.so"
+  "rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/detection__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/detection__type_support.c"
+  "rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/detection_array__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/detection_array__type_support.c"
+  "rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/fpga_event__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/fpga_event__type_support.c"
+  "rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/gimbal_command__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/gimbal_command__type_support.c"
+  "rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/maneuver_command__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/maneuver_command__type_support.c"
+  "rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/motion_permission__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/motion_permission__type_support.c"
+  "rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/stereo_pair__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/rescue_interfaces/msg/detail/stereo_pair__type_support.c"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/rescue_interfaces__rosidl_typesupport_introspection_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -1,0 +1,15 @@
+{
+  "mounting_verified": false,
+  "road_pose_verified": false,
+  "road_pan_deg": null,
+  "road_tilt_deg": null,
+  "pan_home_deg": 90.0,
+  "tilt_home_deg": 90.0,
+  "pan_limits_deg": [30.0, 150.0],
+  "tilt_limits_deg": [40.0, 140.0],
+  "pan_sign": 1,
+  "tilt_sign": 1,
+  "speed_deg_s": 20.0,
+  "extra_settle_s": 0.4,
+  "comment": "Example commands only. Measure actual mechanical limits, directions, travel speed and settling delay. Ready means current command ACK plus measured travel wait, not measured angle."
+}

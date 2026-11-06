@@ -1,0 +1,112 @@
+[
+  {
+    "top": "navigation_profile_corner_tb",
+    "variant": "profile_geometry",
+    "seconds": 0.157
+  },
+  {
+    "top": "navigation_corner_tb",
+    "variant": "corner_commit",
+    "seconds": 0.156
+  },
+  {
+    "top": "navigation_response_tb",
+    "variant": "response",
+    "seconds": 0.125
+  },
+  {
+    "top": "vision_fusion_tb",
+    "variant": "pd",
+    "seconds": 0.125
+  },
+  {
+    "top": "vision_blind_turn_tb",
+    "variant": "edge_sequence",
+    "seconds": 0.219
+  },
+  {
+    "top": "vision_turn_motion_tb",
+    "variant": "side-1_skip0",
+    "seconds": 10.484
+  },
+  {
+    "top": "vision_turn_motion_tb",
+    "variant": "side-1_skip1",
+    "seconds": 10.641
+  },
+  {
+    "top": "vision_turn_motion_tb",
+    "variant": "side1_skip0",
+    "seconds": 10.5
+  },
+  {
+    "top": "vision_turn_motion_tb",
+    "variant": "side1_skip1",
+    "seconds": 10.375
+  },
+  {
+    "top": "vision_turn_motion_tb",
+    "variant": "false_lane-1",
+    "seconds": 10.359
+  },
+  {
+    "top": "vision_turn_motion_tb",
+    "variant": "false_lane1",
+    "seconds": 10.469
+  },
+  {
+    "top": "vision_turn_motion_tb",
+    "variant": "profile-1",
+    "seconds": 10.609
+  },
+  {
+    "top": "vision_turn_motion_tb",
+    "variant": "profile1",
+    "seconds": 10.61
+  },
+  {
+    "top": "vision_turn_motion_tb",
+    "variant": "speed60",
+    "seconds": 20.109
+  },
+  {
+    "top": "vision_turn_motion_tb",
+    "variant": "speed80",
+    "seconds": 15.797
+  },
+  {
+    "top": "vision_motion_tb",
+    "variant": "yaw0",
+    "seconds": 9.703
+  },
+  {
+    "top": "vision_motion_tb",
+    "variant": "yaw80",
+    "seconds": 9.844
+  },
+  {
+    "top": "vision_motion_tb",
+    "variant": "yaw-80",
+    "seconds": 9.75
+  },
+  {
+    "top": "vision_goal_tb",
+    "variant": "dense0_vertical0",
+    "seconds": 7.203
+  },
+  {
+    "top": "vision_goal_tb",
+    "variant": "dense0_vertical1",
+    "seconds": 7.359
+  },
+  {
+    "top": "vision_goal_tb",
+    "variant": "dense1_vertical0",
+    "seconds": 7.328
+  },
+  {
+    "top": "vision_goal_tb",
+    "variant": "dense1_vertical1",
+    "seconds": 7.391
+  }
+]

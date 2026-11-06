@@ -1,0 +1,227 @@
+{
+  "target": {
+    "implementation_name": "cpython",
+    "implementation_version": "3.10.9",
+    "os_name": "posix",
+    "platform_machine": "aarch64",
+    "platform_release": "10",
+    "platform_system": "Linux",
+    "platform_version": "10.0.26200",
+    "python_full_version": "3.10.12",
+    "platform_python_implementation": "CPython",
+    "python_version": "3.10",
+    "sys_platform": "linux",
+    "extra": ""
+  },
+  "preinstalled_imports": {
+    "opencv-python": "4.11.0"
+  },
+  "files": [
+    {
+      "filename": "certifi-2026.7.22-py3-none-any.whl",
+      "name": "certifi",
+      "version": "2026.7.22",
+      "bytes": 136983,
+      "sha256": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775"
+    },
+    {
+      "filename": "cffi-2.1.1-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "name": "cffi",
+      "version": "2.1.1",
+      "bytes": 218652,
+      "sha256": "5a59cc1c4442bc3d5c703bf720b51138d0bfc173618807c9ee2490a7541dd3d9"
+    },
+    {
+      "filename": "charset_normalizer-3.5.2-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "name": "charset-normalizer",
+      "version": "3.5.2",
+      "bytes": 260860,
+      "sha256": "9373ad13ef0d2c0fb761e04e55bfdee5a08b52cef2c882c8fbe9935b1517152e"
+    },
+    {
+      "filename": "colorama-0.4.6-py2.py3-none-any.whl",
+      "name": "colorama",
+      "version": "0.4.6",
+      "bytes": 25335,
+      "sha256": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"
+    },
+    {
+      "filename": "coloredlogs-15.0.1-py2.py3-none-any.whl",
+      "name": "coloredlogs",
+      "version": "15.0.1",
+      "bytes": 46018,
+      "sha256": "612ee75c546f53e92e70049c9dbfcc18c935a2b9a53b66085ce9ef6a6e5c0934"
+    },
+    {
+      "filename": "flatbuffers-25.12.19-py2.py3-none-any.whl",
+      "name": "flatbuffers",
+      "version": "25.12.19",
+      "bytes": 26661,
+      "sha256": "7634f50c427838bb021c2d66a3d1168e9d199b0607e6329399f04846d42e20b4"
+    },
+    {
+      "filename": "humanfriendly-10.0-py2.py3-none-any.whl",
+      "name": "humanfriendly",
+      "version": "10.0",
+      "bytes": 86794,
+      "sha256": "1697e1a8a8f550fd43c2865cd84542fc175a61dcb779b6fee18cf6b6ccba1477"
+    },
+    {
+      "filename": "idna-3.20-py3-none-any.whl",
+      "name": "idna",
+      "version": "3.20",
+      "bytes": 69583,
+      "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c"
+    },
+    {
+      "filename": "mpmath-1.3.0-py3-none-any.whl",
+      "name": "mpmath",
+      "version": "1.3.0",
+      "bytes": 536198,
+      "sha256": "a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c"
+    },
+    {
+      "filename": "numpy-1.26.4-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "name": "numpy",
+      "version": "1.26.4",
+      "bytes": 14219016,
+      "sha256": "d209d8969599b27ad20994c8e41936ee0964e6da07478d6c35016bc386b66ad4"
+    },
+    {
+      "filename": "onnxruntime-1.20.1-cp310-cp310-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+      "name": "onnxruntime",
+      "version": "1.20.1",
+      "bytes": 11954010,
+      "sha256": "7b2908b50101a19e99c4d4e97ebb9905561daf61829403061c1adc1b588bc0de"
+    },
+    {
+      "filename": "packaging-26.3-py3-none-any.whl",
+      "name": "packaging",
+      "version": "26.3",
+      "bytes": 129956,
+      "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+    },
+    {
+      "filename": "pillow-11.3.0-cp310-cp310-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+      "name": "pillow",
+      "version": "11.3.0",
+      "bytes": 5963350,
+      "sha256": "f1f182ebd2303acf8c380a54f615ec883322593320a9b00438eb842c1f37ae50"
+    },
+    {
+      "filename": "protobuf-7.36.2-cp310-abi3-manylinux2014_aarch64.whl",
+      "name": "protobuf",
+      "version": "7.36.2",
+      "bytes": 344219,
+      "sha256": "e11e1f0180583a2af89db6a2ecd9e8dc40aa6d2988ca175bfd0e6d12ea72d74e"
+    },
+    {
+      "filename": "pyclipper-1.3.0.post6-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "name": "pyclipper",
+      "version": "1.3.0.post6",
+      "bytes": 929511,
+      "sha256": "a63002f6bb0f1efa87c0b81634cbb571066f237067e23707dabf746306c92ba5"
+    },
+    {
+      "filename": "pycparser-3.11-py3-none-any.whl",
+      "name": "pycparser",
+      "version": "3.11",
+      "bytes": 51178,
+      "sha256": "51d5a8ba2be0bbe440b99d2112604c95bbbc3c2748a64260186c541e1729cd80"
+    },
+    {
+      "filename": "pyreadline3-3.5.6-py3-none-any.whl",
+      "name": "pyreadline3",
+      "version": "3.5.6",
+      "bytes": 85243,
+      "sha256": "8449b734232e42a5dcd74048e39b60db2839a4c38cf3ae2bf7707d58b5389c0d"
+    },
+    {
+      "filename": "pyyaml-6.0.3-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "name": "pyyaml",
+      "version": "6.0.3",
+      "bytes": 740646,
+      "sha256": "b30236e45cf30d2b8e7b3e85881719e98507abed1011bf463a8fa23e9c3e98a8"
+    },
+    {
+      "filename": "rapidocr_onnxruntime-1.4.4-py3-none-any.whl",
+      "name": "rapidocr-onnxruntime",
+      "version": "1.4.4",
+      "bytes": 14915192,
+      "sha256": "971d7d5f223a7a808662229df1ef69893809d8457d834e6373d3854bc1782cbf"
+    },
+    {
+      "filename": "requests-2.34.2-py3-none-any.whl",
+      "name": "requests",
+      "version": "2.34.2",
+      "bytes": 73075,
+      "sha256": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0"
+    },
+    {
+      "filename": "shapely-2.1.2-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "name": "shapely",
+      "version": "2.1.2",
+      "bytes": 2951065,
+      "sha256": "ef4a456cc8b7b3d50ccec29642aa4aeda959e9da2fe9540a92754770d5f0cf1f"
+    },
+    {
+      "filename": "six-1.17.0-py2.py3-none-any.whl",
+      "name": "six",
+      "version": "1.17.0",
+      "bytes": 11050,
+      "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+    },
+    {
+      "filename": "sounddevice-0.5.6-py3-none-any.whl",
+      "name": "sounddevice",
+      "version": "0.5.6",
+      "bytes": 32793,
+      "sha256": "de099612311ad81e55d31ccbd83f43ea6bf4d87b48f9b6ea55a1fbcde0eee4e0"
+    },
+    {
+      "filename": "srt-3.5.3-py3-none-any.whl",
+      "name": "srt",
+      "version": "3.5.3",
+      "bytes": 22557,
+      "sha256": "8f25e02965946c44da98143f07b577e93682ed79883b4a4f23f6b53484de36b4"
+    },
+    {
+      "filename": "sympy-1.14.0-py3-none-any.whl",
+      "name": "sympy",
+      "version": "1.14.0",
+      "bytes": 6299353,
+      "sha256": "e091cc3e99d2141a0ba2847328f5479b05d94a6635cb96148ccb3f34671bd8f5"
+    },
+    {
+      "filename": "tqdm-4.70.1-py3-none-any.whl",
+      "name": "tqdm",
+      "version": "4.70.1",
+      "bytes": 80199,
+      "sha256": "c293e525e6fef9c20e8728fd4612df02a0aa31bb5fe91ecd93e123b1b7bffa73"
+    },
+    {
+      "filename": "urllib3-2.8.0-py3-none-any.whl",
+      "name": "urllib3",
+      "version": "2.8.0",
+      "bytes": 135717,
+      "sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3"
+    },
+    {
+      "filename": "vosk-0.3.45-py3-none-manylinux2014_aarch64.whl",
+      "name": "vosk",
+      "version": "0.3.45",
+      "bytes": 2368543,
+      "sha256": "54efb47dd890e544e9e20f0316413acec7f8680d04ec095c6140ab4e70262704"
+    },
+    {
+      "filename": "websockets-16.1.1-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "name": "websockets",
+      "version": "16.1.1",
+      "bytes": 187278,
+      "sha256": "90001d893bc368e302ef168d82130b4e4fdd27b85fa094682df9b667c2d48838"
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "note": "Static archive/ABI/dependency audit, not an ARM64 import or hardware test. Install RapidOCR with --no-deps to reuse board OpenCV."
+}

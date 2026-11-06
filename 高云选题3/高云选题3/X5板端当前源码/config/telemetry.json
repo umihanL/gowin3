@@ -1,0 +1,9 @@
+{
+  "bind": "127.0.0.1",
+  "port": 8088,
+  "allowed_hosts": ["127.0.0.1", "localhost"],
+  "token_file": "~/.local/state/rescue_robot/dashboard.token",
+  "preview_hz": 1.0,
+  "preview_max_width": 640,
+  "note": "局域网使用时明确改 bind 为 0.0.0.0，并在 allowed_hosts 加入 X5 的实际 IP。不配置公网端口转发。"
+}

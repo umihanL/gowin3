@@ -1,0 +1,8 @@
+*.gprj.user
+impl/*
+!impl/ov5640_process_config.json
+!impl/project_process_config.json
+sim/*.vvp
+sim/fix_test_results.txt
+sim/portrait_test_results.txt
+__pycache__/

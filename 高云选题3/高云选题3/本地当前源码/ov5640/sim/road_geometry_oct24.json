@@ -1,0 +1,11 @@
+{
+  "nodes": 1632,
+  "source_curve_samples_checked": 34374,
+  "all_inside_source_road": true,
+  "tangent_junction_pairs": 48,
+  "tangent_s_join": true,
+  "junction_entry_mm": 123.4888892202555,
+  "junction_exit_mm": 225.69690242163486,
+  "estimated_peak_steer_deg": 32.35461597699658,
+  "body_clearance_certified": false
+}

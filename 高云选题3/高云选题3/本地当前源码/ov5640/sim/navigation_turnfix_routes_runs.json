@@ -1,0 +1,253 @@
+[
+  {
+    "name": "reported_long0_yaw0_noise0",
+    "passed": true,
+    "seconds": 87.05,
+    "max_nose_error_mm": 43.917946,
+    "junctions": {
+      "upper_right_left": {
+        "turn_radians": 1.5429069999999996,
+        "no_midturn_reversal": true
+      },
+      "circled_right": {
+        "turn_radians": -1.0392080000000004,
+        "no_midturn_reversal": true
+      }
+    },
+    "log": "sim/navigation_turnfix_reported_long0_yaw0_noise0.log",
+    "trace": "sim/navigation_turnfix_reported_long0_yaw0_noise0_trace.csv",
+    "inputs": {
+      "src/vehicle/host_uart_rx.v": "4f77c892c2adc04b1960e29b44ba1def45aa83510d75b8c51669f3aceff3bf1a",
+      "src/vehicle/vehicle_bypass.v": "c6152618718b7268cd3ac4b18a1b1350054958e5a98d0d7d49a58dc23363a19c",
+      "src/vehicle/vehicle_host_link.v": "686cf09e4483bc8bd24a0e3116f4fa0da4e762810a9626a566719e1e12f225f0",
+      "src/vehicle/vehicle_motion.v": "b206752bea6aa817e22a6f64acfb836c7c819476361323c83611ad57717e9b87",
+      "src/vehicle/vehicle_odometry.v": "30153e70b240b97d39861f468fffcfdfad0e13c145396d02fbc64a0a77c2b43f",
+      "src/vehicle/vehicle_route_profile.v": "5b9c9ba9afa19b8f91998662491a5e8b4863df2ee0e16079860522d448876791",
+      "src/vehicle/vehicle_sincos.v": "d24c9d668718ae73def36c9e56916ae3110feb82d8682977ed27127ec56e138d",
+      "src/vehicle/vehicle_subsystem.v": "9a4ab115c340a3ac7edd0d5200dd9c6830ed4fc293898640360df038cc6e0225",
+      "src/vehicle/vehicle_tracker.v": "e835346e4d65a518088a6d71c929f8ead513815b7a03b5eac2952060757b2519",
+      "src/vehicle/vehicle_vision_fusion.v": "76a7bd3ada1f2b2c3fc7e55a0f5ab28c05897d9182226e526f78882ea6b5eb26",
+      "src/vehicle/vehicle_visual_localizer.v": "232821de6172267fabcb2c95bea129bb5270ac51bac0118f0e6801a1babf308d",
+      "src/imu/imu_math.v": "2663da396408c1ed487f5893bfbb883b6995f2f62ff77f0f458f96e1ef5d1835",
+      "src/vehicle/vehicle_config.vh": "1df9114f5c2291a385854a6b454d45adf3141eb4f951ccbd31833ed52f11b04c",
+      "sim/navigation_route_camera_tb.sv": "1bbb5bacc122abdeaab9b1d0f1d565813483685be08f5859c5cde6fb7eff8e3d",
+      "sim/navigation_startfix_reported_route.csv": "d97ac09ad062d97d64718dcd24206aeed17df7ae6ff97fbd452bb32f649894f1"
+    },
+    "sha256": "c891bbda93f3a22066fba00c6eff716c9548db652af866981cc975a789bc1819",
+    "input_record": "Captured after completion, with compiled-object timestamps verified newer than all source dependencies."
+  },
+  {
+    "name": "reported_long-60_yaw0_noise0",
+    "passed": true,
+    "seconds": 87.48,
+    "max_nose_error_mm": 45.161581,
+    "junctions": {
+      "upper_right_left": {
+        "turn_radians": 1.5419520000000002,
+        "no_midturn_reversal": true
+      },
+      "circled_right": {
+        "turn_radians": -1.0260130000000007,
+        "no_midturn_reversal": true
+      }
+    },
+    "log": "sim/navigation_turnfix_reported_long-60_yaw0_noise0.log",
+    "trace": "sim/navigation_turnfix_reported_long-60_yaw0_noise0_trace.csv",
+    "inputs": {
+      "src/vehicle/host_uart_rx.v": "4f77c892c2adc04b1960e29b44ba1def45aa83510d75b8c51669f3aceff3bf1a",
+      "src/vehicle/vehicle_bypass.v": "c6152618718b7268cd3ac4b18a1b1350054958e5a98d0d7d49a58dc23363a19c",
+      "src/vehicle/vehicle_host_link.v": "686cf09e4483bc8bd24a0e3116f4fa0da4e762810a9626a566719e1e12f225f0",
+      "src/vehicle/vehicle_motion.v": "b206752bea6aa817e22a6f64acfb836c7c819476361323c83611ad57717e9b87",
+      "src/vehicle/vehicle_odometry.v": "30153e70b240b97d39861f468fffcfdfad0e13c145396d02fbc64a0a77c2b43f",
+      "src/vehicle/vehicle_route_profile.v": "5b9c9ba9afa19b8f91998662491a5e8b4863df2ee0e16079860522d448876791",
+      "src/vehicle/vehicle_sincos.v": "d24c9d668718ae73def36c9e56916ae3110feb82d8682977ed27127ec56e138d",
+      "src/vehicle/vehicle_subsystem.v": "9a4ab115c340a3ac7edd0d5200dd9c6830ed4fc293898640360df038cc6e0225",
+      "src/vehicle/vehicle_tracker.v": "e835346e4d65a518088a6d71c929f8ead513815b7a03b5eac2952060757b2519",
+      "src/vehicle/vehicle_vision_fusion.v": "76a7bd3ada1f2b2c3fc7e55a0f5ab28c05897d9182226e526f78882ea6b5eb26",
+      "src/vehicle/vehicle_visual_localizer.v": "232821de6172267fabcb2c95bea129bb5270ac51bac0118f0e6801a1babf308d",
+      "src/imu/imu_math.v": "2663da396408c1ed487f5893bfbb883b6995f2f62ff77f0f458f96e1ef5d1835",
+      "src/vehicle/vehicle_config.vh": "1df9114f5c2291a385854a6b454d45adf3141eb4f951ccbd31833ed52f11b04c",
+      "sim/navigation_route_camera_tb.sv": "1bbb5bacc122abdeaab9b1d0f1d565813483685be08f5859c5cde6fb7eff8e3d",
+      "sim/navigation_startfix_reported_route.csv": "d97ac09ad062d97d64718dcd24206aeed17df7ae6ff97fbd452bb32f649894f1"
+    },
+    "sha256": "b0b64fef6ae21e29b499785316b90c9d70082456c5c0e9ed956ad3dbd4373b30",
+    "input_record": "Captured after completion, with compiled-object timestamps verified newer than all source dependencies."
+  },
+  {
+    "name": "reported_long60_yaw0_noise0",
+    "passed": true,
+    "seconds": 86.8,
+    "max_nose_error_mm": 42.749051,
+    "junctions": {
+      "upper_right_left": {
+        "turn_radians": 1.5420119999999997,
+        "no_midturn_reversal": true
+      },
+      "circled_right": {
+        "turn_radians": -1.028962,
+        "no_midturn_reversal": true
+      }
+    },
+    "log": "sim/navigation_turnfix_reported_long60_yaw0_noise0.log",
+    "trace": "sim/navigation_turnfix_reported_long60_yaw0_noise0_trace.csv",
+    "inputs": {
+      "src/vehicle/host_uart_rx.v": "4f77c892c2adc04b1960e29b44ba1def45aa83510d75b8c51669f3aceff3bf1a",
+      "src/vehicle/vehicle_bypass.v": "c6152618718b7268cd3ac4b18a1b1350054958e5a98d0d7d49a58dc23363a19c",
+      "src/vehicle/vehicle_host_link.v": "686cf09e4483bc8bd24a0e3116f4fa0da4e762810a9626a566719e1e12f225f0",
+      "src/vehicle/vehicle_motion.v": "b206752bea6aa817e22a6f64acfb836c7c819476361323c83611ad57717e9b87",
+      "src/vehicle/vehicle_odometry.v": "30153e70b240b97d39861f468fffcfdfad0e13c145396d02fbc64a0a77c2b43f",
+      "src/vehicle/vehicle_route_profile.v": "5b9c9ba9afa19b8f91998662491a5e8b4863df2ee0e16079860522d448876791",
+      "src/vehicle/vehicle_sincos.v": "d24c9d668718ae73def36c9e56916ae3110feb82d8682977ed27127ec56e138d",
+      "src/vehicle/vehicle_subsystem.v": "9a4ab115c340a3ac7edd0d5200dd9c6830ed4fc293898640360df038cc6e0225",
+      "src/vehicle/vehicle_tracker.v": "e835346e4d65a518088a6d71c929f8ead513815b7a03b5eac2952060757b2519",
+      "src/vehicle/vehicle_vision_fusion.v": "76a7bd3ada1f2b2c3fc7e55a0f5ab28c05897d9182226e526f78882ea6b5eb26",
+      "src/vehicle/vehicle_visual_localizer.v": "232821de6172267fabcb2c95bea129bb5270ac51bac0118f0e6801a1babf308d",
+      "src/imu/imu_math.v": "2663da396408c1ed487f5893bfbb883b6995f2f62ff77f0f458f96e1ef5d1835",
+      "src/vehicle/vehicle_config.vh": "1df9114f5c2291a385854a6b454d45adf3141eb4f951ccbd31833ed52f11b04c",
+      "sim/navigation_route_camera_tb.sv": "1bbb5bacc122abdeaab9b1d0f1d565813483685be08f5859c5cde6fb7eff8e3d",
+      "sim/navigation_startfix_reported_route.csv": "d97ac09ad062d97d64718dcd24206aeed17df7ae6ff97fbd452bb32f649894f1"
+    },
+    "sha256": "a20d2dd944f774472450b6e7bcadaa6f41b3676f5b80ed71e98ea65a56f90ca6",
+    "input_record": "Captured after completion, with compiled-object timestamps verified newer than all source dependencies."
+  },
+  {
+    "name": "outer_long0_yaw0_noise1",
+    "passed": true,
+    "seconds": 17.2,
+    "max_nose_error_mm": 11.459107,
+    "junctions": {},
+    "log": "sim/navigation_turnfix_outer_long0_yaw0_noise1.log",
+    "trace": "sim/navigation_turnfix_outer_long0_yaw0_noise1_trace.csv",
+    "inputs": {
+      "src/vehicle/host_uart_rx.v": "4f77c892c2adc04b1960e29b44ba1def45aa83510d75b8c51669f3aceff3bf1a",
+      "src/vehicle/vehicle_bypass.v": "c6152618718b7268cd3ac4b18a1b1350054958e5a98d0d7d49a58dc23363a19c",
+      "src/vehicle/vehicle_host_link.v": "686cf09e4483bc8bd24a0e3116f4fa0da4e762810a9626a566719e1e12f225f0",
+      "src/vehicle/vehicle_motion.v": "b206752bea6aa817e22a6f64acfb836c7c819476361323c83611ad57717e9b87",
+      "src/vehicle/vehicle_odometry.v": "30153e70b240b97d39861f468fffcfdfad0e13c145396d02fbc64a0a77c2b43f",
+      "src/vehicle/vehicle_route_profile.v": "5b9c9ba9afa19b8f91998662491a5e8b4863df2ee0e16079860522d448876791",
+      "src/vehicle/vehicle_sincos.v": "d24c9d668718ae73def36c9e56916ae3110feb82d8682977ed27127ec56e138d",
+      "src/vehicle/vehicle_subsystem.v": "9a4ab115c340a3ac7edd0d5200dd9c6830ed4fc293898640360df038cc6e0225",
+      "src/vehicle/vehicle_tracker.v": "e835346e4d65a518088a6d71c929f8ead513815b7a03b5eac2952060757b2519",
+      "src/vehicle/vehicle_vision_fusion.v": "76a7bd3ada1f2b2c3fc7e55a0f5ab28c05897d9182226e526f78882ea6b5eb26",
+      "src/vehicle/vehicle_visual_localizer.v": "232821de6172267fabcb2c95bea129bb5270ac51bac0118f0e6801a1babf308d",
+      "src/imu/imu_math.v": "2663da396408c1ed487f5893bfbb883b6995f2f62ff77f0f458f96e1ef5d1835",
+      "src/vehicle/vehicle_config.vh": "1df9114f5c2291a385854a6b454d45adf3141eb4f951ccbd31833ed52f11b04c",
+      "sim/navigation_route_camera_tb.sv": "1bbb5bacc122abdeaab9b1d0f1d565813483685be08f5859c5cde6fb7eff8e3d",
+      "sim/navigation_robust_outer_route.csv": "77e8d983448652dd62adebe7c1760ad85fbceb674b6e065ec201956dbbdde006"
+    },
+    "sha256": "ef47e556176b487edd845d8e0170c2acc8d544e0d2d6a8ab6c99cf772a476ff6",
+    "input_record": "Captured after completion, with compiled-object timestamps verified newer than all source dependencies."
+  },
+  {
+    "name": "outer_long0_yaw80_noise0",
+    "passed": true,
+    "seconds": 17.48,
+    "max_nose_error_mm": 9.207338,
+    "junctions": {},
+    "log": "sim/navigation_turnfix_outer_long0_yaw80_noise0.log",
+    "trace": "sim/navigation_turnfix_outer_long0_yaw80_noise0_trace.csv",
+    "inputs": {
+      "src/vehicle/host_uart_rx.v": "4f77c892c2adc04b1960e29b44ba1def45aa83510d75b8c51669f3aceff3bf1a",
+      "src/vehicle/vehicle_bypass.v": "c6152618718b7268cd3ac4b18a1b1350054958e5a98d0d7d49a58dc23363a19c",
+      "src/vehicle/vehicle_host_link.v": "686cf09e4483bc8bd24a0e3116f4fa0da4e762810a9626a566719e1e12f225f0",
+      "src/vehicle/vehicle_motion.v": "b206752bea6aa817e22a6f64acfb836c7c819476361323c83611ad57717e9b87",
+      "src/vehicle/vehicle_odometry.v": "30153e70b240b97d39861f468fffcfdfad0e13c145396d02fbc64a0a77c2b43f",
+      "src/vehicle/vehicle_route_profile.v": "5b9c9ba9afa19b8f91998662491a5e8b4863df2ee0e16079860522d448876791",
+      "src/vehicle/vehicle_sincos.v": "d24c9d668718ae73def36c9e56916ae3110feb82d8682977ed27127ec56e138d",
+      "src/vehicle/vehicle_subsystem.v": "9a4ab115c340a3ac7edd0d5200dd9c6830ed4fc293898640360df038cc6e0225",
+      "src/vehicle/vehicle_tracker.v": "e835346e4d65a518088a6d71c929f8ead513815b7a03b5eac2952060757b2519",
+      "src/vehicle/vehicle_vision_fusion.v": "76a7bd3ada1f2b2c3fc7e55a0f5ab28c05897d9182226e526f78882ea6b5eb26",
+      "src/vehicle/vehicle_visual_localizer.v": "232821de6172267fabcb2c95bea129bb5270ac51bac0118f0e6801a1babf308d",
+      "src/imu/imu_math.v": "2663da396408c1ed487f5893bfbb883b6995f2f62ff77f0f458f96e1ef5d1835",
+      "src/vehicle/vehicle_config.vh": "1df9114f5c2291a385854a6b454d45adf3141eb4f951ccbd31833ed52f11b04c",
+      "sim/navigation_route_camera_tb.sv": "1bbb5bacc122abdeaab9b1d0f1d565813483685be08f5859c5cde6fb7eff8e3d",
+      "sim/navigation_robust_outer_route.csv": "77e8d983448652dd62adebe7c1760ad85fbceb674b6e065ec201956dbbdde006"
+    },
+    "sha256": "408d54377825530f57ffc9c9f1040d92dd7b71632c7710f76ab2c9bc34f39d6d",
+    "input_record": "Captured after completion, with compiled-object timestamps verified newer than all source dependencies."
+  },
+  {
+    "name": "outer_long0_yaw-80_noise0",
+    "passed": true,
+    "seconds": 17.33,
+    "max_nose_error_mm": 8.569302,
+    "junctions": {},
+    "log": "sim/navigation_turnfix_outer_long0_yaw-80_noise0.log",
+    "trace": "sim/navigation_turnfix_outer_long0_yaw-80_noise0_trace.csv",
+    "inputs": {
+      "src/vehicle/host_uart_rx.v": "4f77c892c2adc04b1960e29b44ba1def45aa83510d75b8c51669f3aceff3bf1a",
+      "src/vehicle/vehicle_bypass.v": "c6152618718b7268cd3ac4b18a1b1350054958e5a98d0d7d49a58dc23363a19c",
+      "src/vehicle/vehicle_host_link.v": "686cf09e4483bc8bd24a0e3116f4fa0da4e762810a9626a566719e1e12f225f0",
+      "src/vehicle/vehicle_motion.v": "b206752bea6aa817e22a6f64acfb836c7c819476361323c83611ad57717e9b87",
+      "src/vehicle/vehicle_odometry.v": "30153e70b240b97d39861f468fffcfdfad0e13c145396d02fbc64a0a77c2b43f",
+      "src/vehicle/vehicle_route_profile.v": "5b9c9ba9afa19b8f91998662491a5e8b4863df2ee0e16079860522d448876791",
+      "src/vehicle/vehicle_sincos.v": "d24c9d668718ae73def36c9e56916ae3110feb82d8682977ed27127ec56e138d",
+      "src/vehicle/vehicle_subsystem.v": "9a4ab115c340a3ac7edd0d5200dd9c6830ed4fc293898640360df038cc6e0225",
+      "src/vehicle/vehicle_tracker.v": "e835346e4d65a518088a6d71c929f8ead513815b7a03b5eac2952060757b2519",
+      "src/vehicle/vehicle_vision_fusion.v": "76a7bd3ada1f2b2c3fc7e55a0f5ab28c05897d9182226e526f78882ea6b5eb26",
+      "src/vehicle/vehicle_visual_localizer.v": "232821de6172267fabcb2c95bea129bb5270ac51bac0118f0e6801a1babf308d",
+      "src/imu/imu_math.v": "2663da396408c1ed487f5893bfbb883b6995f2f62ff77f0f458f96e1ef5d1835",
+      "src/vehicle/vehicle_config.vh": "1df9114f5c2291a385854a6b454d45adf3141eb4f951ccbd31833ed52f11b04c",
+      "sim/navigation_route_camera_tb.sv": "1bbb5bacc122abdeaab9b1d0f1d565813483685be08f5859c5cde6fb7eff8e3d",
+      "sim/navigation_robust_outer_route.csv": "77e8d983448652dd62adebe7c1760ad85fbceb674b6e065ec201956dbbdde006"
+    },
+    "sha256": "55214c54f162ace6d61cb4c3a5176e261276adf965b05fd9c1471a63bc9f1942",
+    "input_record": "Captured after completion, with compiled-object timestamps verified newer than all source dependencies."
+  },
+  {
+    "name": "s_forward_long0_yaw0_noise0",
+    "passed": true,
+    "seconds": 21.8,
+    "max_nose_error_mm": 20.466247,
+    "junctions": {},
+    "log": "sim/navigation_turnfix_s_forward_long0_yaw0_noise0.log",
+    "trace": "sim/navigation_turnfix_s_forward_long0_yaw0_noise0_trace.csv",
+    "inputs": {
+      "src/vehicle/host_uart_rx.v": "4f77c892c2adc04b1960e29b44ba1def45aa83510d75b8c51669f3aceff3bf1a",
+      "src/vehicle/vehicle_bypass.v": "c6152618718b7268cd3ac4b18a1b1350054958e5a98d0d7d49a58dc23363a19c",
+      "src/vehicle/vehicle_host_link.v": "686cf09e4483bc8bd24a0e3116f4fa0da4e762810a9626a566719e1e12f225f0",
+      "src/vehicle/vehicle_motion.v": "b206752bea6aa817e22a6f64acfb836c7c819476361323c83611ad57717e9b87",
+      "src/vehicle/vehicle_odometry.v": "30153e70b240b97d39861f468fffcfdfad0e13c145396d02fbc64a0a77c2b43f",
+      "src/vehicle/vehicle_route_profile.v": "5b9c9ba9afa19b8f91998662491a5e8b4863df2ee0e16079860522d448876791",
+      "src/vehicle/vehicle_sincos.v": "d24c9d668718ae73def36c9e56916ae3110feb82d8682977ed27127ec56e138d",
+      "src/vehicle/vehicle_subsystem.v": "9a4ab115c340a3ac7edd0d5200dd9c6830ed4fc293898640360df038cc6e0225",
+      "src/vehicle/vehicle_tracker.v": "e835346e4d65a518088a6d71c929f8ead513815b7a03b5eac2952060757b2519",
+      "src/vehicle/vehicle_vision_fusion.v": "76a7bd3ada1f2b2c3fc7e55a0f5ab28c05897d9182226e526f78882ea6b5eb26",
+      "src/vehicle/vehicle_visual_localizer.v": "232821de6172267fabcb2c95bea129bb5270ac51bac0118f0e6801a1babf308d",
+      "src/imu/imu_math.v": "2663da396408c1ed487f5893bfbb883b6995f2f62ff77f0f458f96e1ef5d1835",
+      "src/vehicle/vehicle_config.vh": "1df9114f5c2291a385854a6b454d45adf3141eb4f951ccbd31833ed52f11b04c",
+      "sim/navigation_route_camera_tb.sv": "1bbb5bacc122abdeaab9b1d0f1d565813483685be08f5859c5cde6fb7eff8e3d",
+      "sim/navigation_robust_s_forward_route.csv": "72f7271d075976f1eb0d180acbed87b25ee2e89fc79e7ed1d813ca00aff6071a"
+    },
+    "sha256": "66f8ee175f06879c3c9755bc020710b38e014363624484fb9cda16c76c3722cf",
+    "input_record": "Captured after completion, with compiled-object timestamps verified newer than all source dependencies."
+  },
+  {
+    "name": "s_reverse_long0_yaw0_noise0",
+    "passed": true,
+    "seconds": 21.66,
+    "max_nose_error_mm": 24.16913,
+    "junctions": {},
+    "log": "sim/navigation_turnfix_s_reverse_long0_yaw0_noise0.log",
+    "trace": "sim/navigation_turnfix_s_reverse_long0_yaw0_noise0_trace.csv",
+    "inputs": {
+      "src/vehicle/host_uart_rx.v": "4f77c892c2adc04b1960e29b44ba1def45aa83510d75b8c51669f3aceff3bf1a",
+      "src/vehicle/vehicle_bypass.v": "c6152618718b7268cd3ac4b18a1b1350054958e5a98d0d7d49a58dc23363a19c",
+      "src/vehicle/vehicle_host_link.v": "686cf09e4483bc8bd24a0e3116f4fa0da4e762810a9626a566719e1e12f225f0",
+      "src/vehicle/vehicle_motion.v": "b206752bea6aa817e22a6f64acfb836c7c819476361323c83611ad57717e9b87",
+      "src/vehicle/vehicle_odometry.v": "30153e70b240b97d39861f468fffcfdfad0e13c145396d02fbc64a0a77c2b43f",
+      "src/vehicle/vehicle_route_profile.v": "5b9c9ba9afa19b8f91998662491a5e8b4863df2ee0e16079860522d448876791",
+      "src/vehicle/vehicle_sincos.v": "d24c9d668718ae73def36c9e56916ae3110feb82d8682977ed27127ec56e138d",
+      "src/vehicle/vehicle_subsystem.v": "9a4ab115c340a3ac7edd0d5200dd9c6830ed4fc293898640360df038cc6e0225",
+      "src/vehicle/vehicle_tracker.v": "e835346e4d65a518088a6d71c929f8ead513815b7a03b5eac2952060757b2519",
+      "src/vehicle/vehicle_vision_fusion.v": "76a7bd3ada1f2b2c3fc7e55a0f5ab28c05897d9182226e526f78882ea6b5eb26",
+      "src/vehicle/vehicle_visual_localizer.v": "232821de6172267fabcb2c95bea129bb5270ac51bac0118f0e6801a1babf308d",
+      "src/imu/imu_math.v": "2663da396408c1ed487f5893bfbb883b6995f2f62ff77f0f458f96e1ef5d1835",
+      "src/vehicle/vehicle_config.vh": "1df9114f5c2291a385854a6b454d45adf3141eb4f951ccbd31833ed52f11b04c",
+      "sim/navigation_route_camera_tb.sv": "1bbb5bacc122abdeaab9b1d0f1d565813483685be08f5859c5cde6fb7eff8e3d",
+      "sim/navigation_robust_s_reverse_route.csv": "60ff5bca772c389cdba5d1deb9bd7c868e60f88b351d6316603a03098086d621"
+    },
+    "sha256": "1d1b7d05709e89383cbfa384e5db8be06f302a5133ac8308f5f86a88f3e38554",
+    "input_record": "Captured after completion, with compiled-object timestamps verified newer than all source dependencies."
+  }
+]

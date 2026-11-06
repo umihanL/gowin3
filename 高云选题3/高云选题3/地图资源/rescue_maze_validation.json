@@ -1,0 +1,202 @@
+{
+  "source": "rescue_maze_config.json",
+  "status": "PASS",
+  "official_dimensions": false,
+  "model": {
+    "robot_radius_m": 0.3189,
+    "clearance_margin_m": 0.12,
+    "required_circle_clearance_m": 0.4389,
+    "wall_thickness_m": 0.06,
+    "static_2d_only": true
+  },
+  "route_checks": {
+    "start_to_fire_C": {
+      "status": "PASS",
+      "min_clearance_m": 0.66,
+      "required_clearance_m": 0.4389,
+      "closest_sample": [
+        7.075,
+        4.0
+      ],
+      "samples": 419,
+      "gate_state": "excluded",
+      "model": "sampled line segments + circular footprint; static geometry only"
+    },
+    "start_to_fire_A": {
+      "status": "PASS",
+      "min_clearance_m": 0.92,
+      "required_clearance_m": 0.4389,
+      "closest_sample": [
+        2.0,
+        1.05
+      ],
+      "samples": 275,
+      "gate_state": "excluded",
+      "model": "sampled line segments + circular footprint; static geometry only"
+    },
+    "start_to_fire_B": {
+      "status": "PASS",
+      "min_clearance_m": 0.92,
+      "required_clearance_m": 0.4389,
+      "closest_sample": [
+        2.0,
+        1.05
+      ],
+      "samples": 264,
+      "gate_state": "excluded",
+      "model": "sampled line segments + circular footprint; static geometry only"
+    },
+    "construction_detour": {
+      "status": "PASS",
+      "min_clearance_m": 0.51,
+      "required_clearance_m": 0.4389,
+      "closest_sample": [
+        7.025,
+        7.25
+      ],
+      "samples": 521,
+      "gate_state": "excluded",
+      "model": "sampled line segments + circular footprint; static geometry only"
+    },
+    "parking_gate_open": {
+      "open": {
+        "status": "PASS",
+        "min_clearance_m": 0.46,
+        "required_clearance_m": 0.4389,
+        "closest_sample": [
+          5.227,
+          5.9
+        ],
+        "samples": 227,
+        "gate_state": "excluded",
+        "model": "sampled line segments + circular footprint; static geometry only"
+      },
+      "closed": {
+        "status": "FAIL",
+        "min_clearance_m": -0.0297,
+        "required_clearance_m": 0.4389,
+        "closest_sample": [
+          4.8778,
+          5.9
+        ],
+        "samples": 227,
+        "gate_state": "closed",
+        "model": "sampled line segments + circular footprint; static geometry only"
+      },
+      "expected": "open_pass_closed_block",
+      "open_gate_model": "raised arm excluded from 2-D route obstacle"
+    },
+    "west_patrol": {
+      "status": "PASS",
+      "min_clearance_m": 0.66,
+      "required_clearance_m": 0.4389,
+      "closest_sample": [
+        4.925,
+        4.0
+      ],
+      "samples": 567,
+      "gate_state": "excluded",
+      "model": "sampled line segments + circular footprint; static geometry only"
+    },
+    "blocked_direct_north": {
+      "status": "PASS",
+      "min_clearance_m": -0.08,
+      "required_clearance_m": 0.4389,
+      "closest_sample": [
+        6.0,
+        6.55
+      ],
+      "samples": 131,
+      "gate_state": "excluded",
+      "model": "sampled line segments + circular footprint; static geometry only",
+      "expected_blocked_by_construction": true,
+      "interpretation": "PASS means the route is correctly blocked by static construction geometry."
+    }
+  },
+  "parking_check": {
+    "bay_size_m": [
+      1.3,
+      0.75
+    ],
+    "robot_size_m": [
+      0.48,
+      0.42
+    ],
+    "circular_envelope_diameter_m": 0.8778,
+    "circular_envelope_fits": false,
+    "rectangular_footprint_with_margin_fits": true,
+    "status": "PASS",
+    "note": "Parking uses an axis-aligned rectangular footprint with margin; the conservative rotated circular envelope is reported separately."
+  },
+  "derived_obstacles": [
+    {
+      "id": "parking_P_pole",
+      "center": [
+        4.98,
+        6.77
+      ],
+      "radius": 0.035,
+      "kind": "parking_pole"
+    },
+    {
+      "id": "construction_sign",
+      "center": [
+        6,
+        6.52
+      ],
+      "size": [
+        0.45,
+        0.22
+      ],
+      "kind": "construction_sign"
+    },
+    {
+      "id": "construction_foot_w",
+      "center": [
+        5.1,
+        6.55
+      ],
+      "size": [
+        0.28,
+        0.38
+      ],
+      "kind": "construction_foot"
+    },
+    {
+      "id": "construction_foot_e",
+      "center": [
+        6.9,
+        6.55
+      ],
+      "size": [
+        0.28,
+        0.38
+      ],
+      "kind": "construction_foot"
+    },
+    {
+      "id": "TL1_pole",
+      "center": [
+        7.08,
+        3.3
+      ],
+      "radius": 0.04,
+      "kind": "traffic_pole"
+    },
+    {
+      "id": "TL2_pole",
+      "center": [
+        4.92,
+        4.7
+      ],
+      "radius": 0.04,
+      "kind": "traffic_pole"
+    }
+  ],
+  "notes": [
+    "This report checks sampled 2-D line segments against static walls and obstacles.",
+    "It does not validate wheel kinematics, acceleration/braking, controller latency, swept rectangular turns, or animated gate dynamics.",
+    "The blocked_direct_north result is inverted intentionally: PASS means the expected construction blockage was detected.",
+    "The parking gate open route ignores the near-vertical open arm per the requested abstraction; closed state includes the arm."
+  ]
+}

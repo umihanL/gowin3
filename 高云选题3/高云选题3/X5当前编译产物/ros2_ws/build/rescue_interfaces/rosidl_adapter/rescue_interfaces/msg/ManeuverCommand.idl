@@ -1,0 +1,35 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rescue_interfaces/msg/ManeuverCommand.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module rescue_interfaces {
+  module msg {
+    module ManeuverCommand_Constants {
+      const uint8 FOLLOW_LANE = 0;
+      const uint8 TURN_LEFT = 1;
+      const uint8 TURN_RIGHT = 2;
+      const uint8 STRAIGHT = 3;
+    };
+    struct ManeuverCommand {
+      std_msgs::msg::Header header;
+
+      string command_id;
+
+      string edge_id;
+
+      uint32 route_revision;
+
+      uint8 turn;
+
+      boolean stop_at_end;
+
+      float speed_limit_m_s;
+
+      float distance_m;
+
+      uint16 lease_ms;
+    };
+  };
+};

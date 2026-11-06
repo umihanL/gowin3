@@ -1,0 +1,4 @@
+# Install the CPU or driver-compatible CUDA torch/torchvision wheels FIRST.
+# The setup script refuses to install this file before verifying torch.
+-r requirements-check.txt
+ultralytics==8.3.253

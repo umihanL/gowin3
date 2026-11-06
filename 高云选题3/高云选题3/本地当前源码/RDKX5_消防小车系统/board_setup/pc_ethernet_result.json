@@ -1,0 +1,16 @@
+﻿{
+    "Success":  true,
+    "Adapter":  "以太网",
+    "IPv4":  [
+                 {
+                     "IPAddress":  "192.168.127.1",
+                     "PrefixLength":  24,
+                     "AddressState":  1
+                 },
+                 {
+                     "IPAddress":  "169.254.158.112",
+                     "PrefixLength":  16,
+                     "AddressState":  4
+                 }
+             ]
+}

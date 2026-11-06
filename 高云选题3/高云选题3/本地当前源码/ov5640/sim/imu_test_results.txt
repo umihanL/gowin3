@@ -1,0 +1,51 @@
+PASS IMU full restart reference bridge: nonzero angle retained, fresh rotation still measured, no user re-zero
+PASS imu_attitude: 240 quaternion cases, arbitrary zero reference, raw bias tolerance, q/-q zero, pre-zero live angles, motion/freefall rejection, disconnect
+sim/imu_attitude_tb.v:89: $finish called at 817470000 (1ps)
+INFO imu pitch ref=0 expected=900 measured=900 tenths of a degree
+INFO imu pitch ref=0 expected=-900 measured=-900 tenths of a degree
+INFO imu pitch ref=1 expected=900 measured=900 tenths of a degree
+INFO imu pitch ref=1 expected=-900 measured=-900 tenths of a degree
+PASS imu_angle_limits: 376 rotations, 8 zero references, pitch +/-90 within 0.3 degrees, roll through +/-180, calibration retained
+sim/imu_angle_limits_tb.v:72: $finish called at 1199240000 (1ps)
+PASS IMU burst recovery: eight consecutive FFFF FIFO status reads preserve fusion reference and resume valid samples
+PASS IMU local recovery: isolated SPI error and FIFO overflow preserve fusion reference without SW_POR
+PASS IMU dead engine: FIFO retries escalate to verified full initialization and streaming resumes without board reset
+PASS IMU SPI watchdog: stuck transfer aborted, CS released, verified initialization and samples resume without board reset
+PASS imu_spi bank fault 0: page verification/retry, masked readback, retained diagnostics, ID/data/overflow recovery, mode3/endian
+sim/imu_spi_tb.v:205: $finish called at 2796075000 (1ps)
+PASS IMU burst recovery: eight consecutive FFFF FIFO status reads preserve fusion reference and resume valid samples
+PASS IMU local recovery: isolated SPI error and FIFO overflow preserve fusion reference without SW_POR
+PASS IMU dead engine: FIFO retries escalate to verified full initialization and streaming resumes without board reset
+PASS IMU SPI watchdog: stuck transfer aborted, CS released, verified initialization and samples resume without board reset
+PASS imu_spi bank fault 1: page verification/retry, masked readback, retained diagnostics, ID/data/overflow recovery, mode3/endian
+sim/imu_spi_tb.v:205: $finish called at 2796075000 (1ps)
+PASS IMU burst recovery: eight consecutive FFFF FIFO status reads preserve fusion reference and resume valid samples
+PASS IMU local recovery: isolated SPI error and FIFO overflow preserve fusion reference without SW_POR
+PASS IMU dead engine: FIFO retries escalate to verified full initialization and streaming resumes without board reset
+PASS IMU SPI watchdog: stuck transfer aborted, CS released, verified initialization and samples resume without board reset
+PASS imu_spi bank fault 2: page verification/retry, masked readback, retained diagnostics, ID/data/overflow recovery, mode3/endian
+sim/imu_spi_tb.v:205: $finish called at 2826955000 (1ps)
+PASS imu_spi bank fault 3: failed entry/exit stays offline; local retries and actual-page checks
+sim/imu_spi_tb.v:157: $finish called at 75935000 (1ps)
+PASS imu_spi bank fault 4: failed entry/exit stays offline; local retries and actual-page checks
+sim/imu_spi_tb.v:157: $finish called at 75935000 (1ps)
+PASS imu_spi bank fault 5: failed entry/exit stays offline; local retries and actual-page checks
+sim/imu_spi_tb.v:157: $finish called at 92265000 (1ps)
+PASS imu_ui: transparent background, colored labels, pre-zero live angles, error register/expected/actual/mask/step, decimal formatting, S4/S0
+sim/imu_ui_tb.v:63: $finish called at 1400000 (1ps)
+PASS imu_ui: transparent background, colored labels, pre-zero live angles, error register/expected/actual/mask/step, decimal formatting, S4/S0
+sim/imu_ui_tb.v:63: $finish called at 1400000 (1ps)
+PASS imu_firewater: CLK=1000000 BAUD=100000; TX-wire 8N1, Roll/Pitch/Yaw, signed tenths, zero, extrema, atomic frame, 20 Hz limit, no stale/offline replay, reset
+sim/imu_firewater_tb.v:150: $finish called at 2610960000 (1ps)
+PASS imu_firewater: CLK=33000000 BAUD=115200; TX-wire 8N1, Roll/Pitch/Yaw, signed tenths, zero, extrema, atomic frame, 20 Hz limit, no stale/offline replay, reset
+sim/imu_firewater_tb.v:150: $finish called at 85448240000 (1ps)
+PASS imu_pose_firewater: CLK=1000000 BAUD=100000; TX-wire 8N1, ten channels RotXYZ/Euler/WXYZ, signed tenths/four decimals, quaternion rounding, atomic frame, 20 Hz, offline, reset
+sim/imu_firewater_tb.v:150: $finish called at 2792660000 (1ps)
+PASS imu_pose_firewater: CLK=33000000 BAUD=115200; TX-wire 8N1, ten channels RotXYZ/Euler/WXYZ, signed tenths/four decimals, quaternion rounding, atomic frame, 20 Hz, offline, reset
+sim/imu_firewater_tb.v:150: $finish called at 90349540000 (1ps)
+PASS imu_motor_firewater: CLK=1000000 BAUD=100000; exactly seven TX-wire channels, absent/offline IMU zeros with live motor targets/feedback, integer mm/s signs/extrema, atomic snapshots, recovery, exact 20 Hz, reset
+sim/imu_motor_firewater_tb.v:82: $finish called at 3532080000 (1ps)
+PASS imu_motor_firewater: CLK=33000000 BAUD=115200; exactly seven TX-wire channels, absent/offline IMU zeros with live motor targets/feedback, integer mm/s signs/extrema, atomic snapshots, recovery, exact 20 Hz, reset
+sim/imu_motor_firewater_tb.v:82: $finish called at 116338000000 (1ps)
+PASS imu_rotation: 3264 compressed-sensor cases, X/Y/Z +/-150 round trips, +/-90 crossings, 9-degree axis misalignment, arbitrary zero, <=0.3-degree math error, no accumulated return bias, genuine 10-degree offset retained, +/-180 endpoints, q/-q equivalence, tiny angles, disconnect recovery
+sim/imu_rotation_tb.v:111: $finish called at 16049120000 (1ps)

@@ -1,0 +1,12 @@
+PASS road snap: off-centre finger projected to line  12, 78
+PASS road planner: ordered start/waypoint/goal,  175 nodes    714cm,    17145564 cycles
+PASS road barrier: disconnected route rejected and execution invalidated
+PASS road cancel: planning can be cancelled immediately
+sim/road_planner_tb.sv:65: $finish called at 202618240000 (1ps)
+PASS map ROM: every 1cm and 2cm cell, packed bit order, both planning ports and metadata
+sim/nav_map_rom_tb.v:25: $finish called at 2252800000 (1ps)
+PASS road UI: centre snapping, ordered waypoint, planning completes with DE always high; ready in    17216724 cycles
+PASS road UI start/stop: route navigation starts, edits invalidate, clear cancels and removes all route pixels
+sim/road_ui_tb.sv:55: $finish called at 184023975000 (1ps)
+PASS delayed TFT DE/HS/VS and RGB: every pixel of two 800x480 frames
+sim/nav_video_timing_tb.v:23: $finish called at 10971490000 (1ps)

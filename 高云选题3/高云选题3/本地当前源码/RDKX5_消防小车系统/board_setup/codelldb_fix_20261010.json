@@ -1,0 +1,13 @@
+{
+  "record_date": "2026-10-10",
+  "cause": "RDK X5 system/RTC were 2000-01-01; CodeLLDB download reported certificate is not yet valid",
+  "clock_fix": "Synchronized to Windows UTC over SSH; hwclock --systohc --utc succeeded",
+  "ntp_state": "ntp active/enabled; configured upstreams reach=0 at inspection",
+  "source": "https://github.com/vadimcn/codelldb/releases/download/v1.12.3/codelldb-linux-arm64.vsix",
+  "download": "Windows curl HTTPS with certificate verification; board curl separately failed EE certificate key too weak",
+  "sha256": "0887f67d440554617894266f80706b700907c36b95e6e49d23b95a0e05318101",
+  "remote_vsix": "/root/rescue/vscode-vsix/codelldb-linux-arm64-1.12.3.vsix",
+  "remote_extension": "/root/.vscode-server/extensions/vadimcn.vscode-lldb-1.12.3",
+  "installed": "1.12.3 linux-arm64",
+  "launcher": "打开VSCode远程工程.cmd now checks board time using sync_rdkx5_time.ps1"
+}

@@ -1,0 +1,101 @@
+{
+  "backup": "C:\\Users\\whuzy\\Desktop\\FPGA_WorkSpace\\ov5640_before_motor_merge_20261015_230457.zip",
+  "source": "C:\\Users\\whuzy\\Desktop\\FPGA_WorkSpace\\MOTOR",
+  "files": {
+    "motor_closed_loop.v": {
+      "source_sha256": "bf39367381520feb18f7d9517fc0246370e49d00786d07ee86aaa0106f50cbb2",
+      "changes": [
+        "Export existing encoder position; decoder, speed estimator and PI logic retained."
+      ],
+      "imported_sha256": "773884c6398ecbf745e3273619f32c5e5ac7acffbb640a0fa8e7e6e0a7676965"
+    },
+    "motor_encoder.v": {
+      "source_sha256": "3f727ac320e9dfd46305aa7121d5def2f9cd45cb5631c88c305b7c7db7aeeedc",
+      "changes": [],
+      "imported_sha256": "3f727ac320e9dfd46305aa7121d5def2f9cd45cb5631c88c305b7c7db7aeeedc"
+    },
+    "motor_speed.v": {
+      "source_sha256": "b5671a197de77e46cf2596fdc1d04cf53cb23e2c52dcc76604fd6d7d51b51e99",
+      "changes": [],
+      "imported_sha256": "b5671a197de77e46cf2596fdc1d04cf53cb23e2c52dcc76604fd6d7d51b51e99"
+    },
+    "motor_pi.v": {
+      "source_sha256": "892f8b746e7b0cb429a6068480ca00b8bd5daf1ccdb2bb6cff672d815b5b62f1",
+      "changes": [],
+      "imported_sha256": "892f8b746e7b0cb429a6068480ca00b8bd5daf1ccdb2bb6cff672d815b5b62f1"
+    },
+    "motor_PWM.v": {
+      "source_sha256": "bdd728b1d7d89c5a2761396eca56fbf9b6dbbb08be6f2b4a2da402a69f34cb28",
+      "changes": [],
+      "imported_sha256": "bdd728b1d7d89c5a2761396eca56fbf9b6dbbb08be6f2b4a2da402a69f34cb28"
+    },
+    "motor_target_counts.v": {
+      "source_sha256": "4dc5ea59c196b6bd5bffcde8337b15990791c1f8ea4428f8f92e52d4413fc85e",
+      "changes": [
+        "Map the small synchronous conversion ROM to logic to meet the chip BSRAM limit; values and latency unchanged."
+      ],
+      "imported_sha256": "c5faee906f14c6b5d62039b2f415785b89658da9f4d702ea83b42b093997bb1b"
+    },
+    "speed_to_pwm.v": {
+      "source_sha256": "c6a4dd854e4044df7ee87788f7f09fcc4d6d86bf65f6f2e88394b99cbcf6215a",
+      "changes": [],
+      "imported_sha256": "c6a4dd854e4044df7ee87788f7f09fcc4d6d86bf65f6f2e88394b99cbcf6215a"
+    },
+    "servo_pwm.v": {
+      "source_sha256": "adbfba4427c4b102636eb971ea7d70227af1b22be782bd3abef69821f631bc25",
+      "changes": [],
+      "imported_sha256": "d2de6f4fbff6b9175ac54df1455a844faf5ccae20526530d5d93030a67fab23d"
+    },
+    "ps2_reference_controller.v": {
+      "source_sha256": "ba9a0aef22317ff02ef186db2d07fccacd522e39262f9e63ab716089633241c6",
+      "changes": [],
+      "imported_sha256": "ba9a0aef22317ff02ef186db2d07fccacd522e39262f9e63ab716089633241c6"
+    },
+    "ps2_reference_serial.v": {
+      "source_sha256": "31c0abeab9e806440d20ed5e8381a20443c56da5ec608808d8bc25e70d82f73a",
+      "changes": [],
+      "imported_sha256": "31c0abeab9e806440d20ed5e8381a20443c56da5ec608808d8bc25e70d82f73a"
+    },
+    "ps2_test_control.v": {
+      "source_sha256": "65e11dc7f19e7b7b2ed5f27d85ad86492f6df7f9d26e44f09706daccbceff1ee",
+      "changes": [
+        "Map the small synchronous axis ROMs to logic to meet the chip BSRAM limit; values, latency and controller behavior unchanged."
+      ],
+      "imported_sha256": "992309a30c43fc71ced403082a0dbd2f86c886dd585f7a4a88ef62861441b393"
+    },
+    "vl53l0x_array_controller.v": {
+      "source_sha256": "66318fd8851df95c3917b8d587e5e3699ae06d3a0dcb30dabcadc3e600917e7a",
+      "changes": [],
+      "imported_sha256": "5fef7f1162cc2f0a9e345cb5827751d5f1f11910e054dc10a899dc7227cf5142"
+    },
+    "vl53l0x_i2c_master.v": {
+      "source_sha256": "7a6cbdd5cb211285a12adbdd39218d95e58acf135662527c82f5f77e779538d3",
+      "changes": [],
+      "imported_sha256": "7a6cbdd5cb211285a12adbdd39218d95e58acf135662527c82f5f77e779538d3"
+    },
+    "vofa_firewater_tx.v": {
+      "source_sha256": "0122c87098188171c2070fe525a696a0769ce298c134c9813ff12be6ef7f765d",
+      "changes": [],
+      "imported_sha256": "0122c87098188171c2070fe525a696a0769ce298c134c9813ff12be6ef7f765d"
+    },
+    "uart_byte_tx.v": {
+      "source_sha256": "5d39e5aaf9b8f8c201c729d74017d05f3cc3398ce84e96e38174322916667093",
+      "changes": [],
+      "imported_sha256": "5d39e5aaf9b8f8c201c729d74017d05f3cc3398ce84e96e38174322916667093"
+    },
+    "vl53l1x_array_controller.v": {
+      "source": "C:\\Users\\whuzy\\Desktop\\FPGA_WorkSpace\\MOTOR\\backup\\vl53l1x\\vl53l1x_array_controller.v",
+      "source_sha256": "14fc03ba1ac3a910ed028e43063bd09f79aa0b778cbcf35816aa28e3c8aff738",
+      "changes": [
+        "Adapted the four-sensor XSHUT/address assignment flow for the top-level vehicle interface; added VL53L1X ID/configuration/calibration/range-status handling, per-sensor retry diagnostics, and valid sample/observation pulses."
+      ],
+      "imported_sha256": "dd91ec12ef9490b7b506d826f1ccab01f860d22bf85448ac99e1cc7d0aed4a53"
+    },
+    "vl53l1x_i2c_master.v": {
+      "source": "C:\\Users\\whuzy\\Desktop\\FPGA_WorkSpace\\MOTOR\\backup\\vl53l1x\\vl53l1x_i2c_master.v",
+      "source_sha256": "53fab283b7900221c5fa0c8e49b7c8ca161fd5bd3a3d581aaf6e1d6a42cc3b49",
+      "changes": [],
+      "imported_sha256": "53fab283b7900221c5fa0c8e49b7c8ca161fd5bd3a3d581aaf6e1d6a42cc3b49"
+    }
+  }
+}

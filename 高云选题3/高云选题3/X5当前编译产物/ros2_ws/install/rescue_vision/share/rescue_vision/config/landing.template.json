@@ -1,0 +1,11 @@
+{
+  "landing_calibrated": false,
+  "calibration_id": null,
+  "image_size_wh": [640, 480],
+  "eye": "left",
+  "pump_setting_id": null,
+  "camera_nozzle_mount_id": null,
+  "measurements": [],
+  "measurement_format": {"distance_m": 0.6, "landing_pixel": [null, null]},
+  "comment": "Enter actual observed water landing pixels at two or more distances, sorted ascending. Keep pump settings and rigid mounting unchanged. This distance-only approximation is valid only within the experimentally verified pitch/target-height regime; changing tilt may require a distance-by-tilt calibration. Values shown are only the schema; no landing points have been measured."
+}

@@ -1,0 +1,3 @@
+PASS quaternion endpoint analysis: +/-90 and +/-150 round trip, q/-q equivalence, real 1.8-degree offset retained
+PASS browser pose: 1444 arbitrary-axis rotations from -540 to +540, +/-90 and 180 crossings, independent Rodrigues oracle, q/-q, legacy vector/extended quaternion streams, malformed frames, simulated Web Serial/UI/recording
+{"viewer_sha256": "74b0d115374a5dc82674aaca0cebf6b05f300c0df794441cf42b51e579d75a93", "source": "simulated browser/serial input; not hardware measurements"}

@@ -1,0 +1,74 @@
+[
+  {
+    "point": 1,
+    "all_samples_on_graph": true,
+    "directed_edges_valid": true,
+    "samples": 48,
+    "goal_error_manhattan_mm": 21.328,
+    "length_cm": 197.426
+  },
+  {
+    "point": 2,
+    "all_samples_on_graph": true,
+    "directed_edges_valid": true,
+    "samples": 78,
+    "goal_error_manhattan_mm": 49.922,
+    "length_cm": 314.478
+  },
+  {
+    "point": 3,
+    "all_samples_on_graph": true,
+    "directed_edges_valid": true,
+    "samples": 110,
+    "goal_error_manhattan_mm": 30.234,
+    "length_cm": 443.483
+  },
+  {
+    "point": 4,
+    "all_samples_on_graph": true,
+    "directed_edges_valid": true,
+    "samples": 84,
+    "goal_error_manhattan_mm": 39.336,
+    "length_cm": 336.362
+  },
+  {
+    "point": 5,
+    "all_samples_on_graph": true,
+    "directed_edges_valid": true,
+    "samples": 83,
+    "goal_error_manhattan_mm": 30.234,
+    "length_cm": 331.444
+  },
+  {
+    "point": 6,
+    "all_samples_on_graph": true,
+    "directed_edges_valid": true,
+    "samples": 51,
+    "goal_error_manhattan_mm": 42.891,
+    "length_cm": 211.538
+  },
+  {
+    "point": 7,
+    "all_samples_on_graph": true,
+    "directed_edges_valid": true,
+    "samples": 22,
+    "goal_error_manhattan_mm": 21.328,
+    "length_cm": 85.387
+  },
+  {
+    "point": 8,
+    "all_samples_on_graph": true,
+    "directed_edges_valid": true,
+    "samples": 13,
+    "goal_error_manhattan_mm": 38.398,
+    "length_cm": 51.547
+  },
+  {
+    "point": 9,
+    "all_samples_on_graph": true,
+    "directed_edges_valid": true,
+    "samples": 73,
+    "goal_error_manhattan_mm": 62.617,
+    "length_cm": 174.49
+  }
+]

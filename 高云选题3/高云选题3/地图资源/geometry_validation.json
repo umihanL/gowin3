@@ -1,0 +1,276 @@
+{
+  "source": "scene-config.json",
+  "status": "PASS",
+  "required_clearance_m": 0.439,
+  "semantic_checks": [
+    {
+      "id": "start",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 0.825,
+      "required_m": 0.439
+    },
+    {
+      "id": "goal_return",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 0.825,
+      "required_m": 0.439
+    },
+    {
+      "id": "junction_center",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 1.2578,
+      "required_m": 0.439
+    },
+    {
+      "id": "junction_north",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 0.95,
+      "required_m": 0.439
+    },
+    {
+      "id": "junction_south",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 1.8474,
+      "required_m": 0.439
+    },
+    {
+      "id": "west_gate",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 0.9095,
+      "required_m": 0.439
+    },
+    {
+      "id": "east_gate",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 0.9095,
+      "required_m": 0.439
+    },
+    {
+      "id": "north_west",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 0.7078,
+      "required_m": 0.439
+    },
+    {
+      "id": "north_east",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 0.9135,
+      "required_m": 0.439
+    },
+    {
+      "id": "south_west",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 0.9135,
+      "required_m": 0.439
+    },
+    {
+      "id": "south_east",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 0.7078,
+      "required_m": 0.439
+    },
+    {
+      "id": "north_cone_avoid_in",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 0.8208,
+      "required_m": 0.439
+    },
+    {
+      "id": "north_cone_avoid_out",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 0.8208,
+      "required_m": 0.439
+    },
+    {
+      "id": "south_cone_avoid_in",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 0.7679,
+      "required_m": 0.439
+    },
+    {
+      "id": "south_cone_avoid_out",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 0.7679,
+      "required_m": 0.439
+    },
+    {
+      "id": "door_D1",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 0.5021,
+      "required_m": 0.439
+    },
+    {
+      "id": "door_D2",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 0.6622,
+      "required_m": 0.439
+    },
+    {
+      "id": "door_D3",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 0.6622,
+      "required_m": 0.439
+    },
+    {
+      "id": "door_D4",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 0.5021,
+      "required_m": 0.439
+    },
+    {
+      "id": "fire_F1",
+      "status": "PASS",
+      "navigation_pose": "approach_pose",
+      "clearance_m": 0.681,
+      "required_m": 0.439
+    },
+    {
+      "id": "fire_F2",
+      "status": "PASS",
+      "navigation_pose": "approach_pose",
+      "clearance_m": 0.681,
+      "required_m": 0.439
+    },
+    {
+      "id": "water_source_stop",
+      "status": "PASS",
+      "navigation_pose": "pose",
+      "clearance_m": 0.6,
+      "required_m": 0.439
+    }
+  ],
+  "route_checks": [
+    {
+      "id": "route_start_goal_east",
+      "status": "PASS",
+      "samples": 195,
+      "min_clearance_m": 0.8,
+      "required_m": 0.439,
+      "fire_targets_resolved_to_approach": true
+    },
+    {
+      "id": "route_start_goal_north",
+      "status": "PASS",
+      "samples": 295,
+      "min_clearance_m": 0.61,
+      "required_m": 0.439,
+      "fire_targets_resolved_to_approach": true
+    },
+    {
+      "id": "route_start_goal_south",
+      "status": "PASS",
+      "samples": 296,
+      "min_clearance_m": 0.61,
+      "required_m": 0.439,
+      "fire_targets_resolved_to_approach": true
+    },
+    {
+      "id": "route_start_north_door",
+      "status": "PASS",
+      "samples": 173,
+      "min_clearance_m": 0.5021,
+      "required_m": 0.439,
+      "fire_targets_resolved_to_approach": true
+    },
+    {
+      "id": "route_start_south_fire",
+      "status": "PASS",
+      "samples": 165,
+      "min_clearance_m": 0.681,
+      "required_m": 0.439,
+      "fire_targets_resolved_to_approach": true
+    },
+    {
+      "id": "route_return",
+      "status": "PASS",
+      "samples": 166,
+      "min_clearance_m": 0.681,
+      "required_m": 0.439,
+      "fire_targets_resolved_to_approach": true
+    }
+  ],
+  "official_task_mapping": [
+    {
+      "task": "1_multisensor_perception",
+      "status": "PASS",
+      "evidence": [
+        "camera_z",
+        "lidar_z",
+        "IMU external"
+      ]
+    },
+    {
+      "task": "2_motion_control",
+      "status": "PASS",
+      "evidence": [
+        "start",
+        "goal_return",
+        "junction_center"
+      ]
+    },
+    {
+      "task": "3_realtime_obstacle_avoidance",
+      "status": "PASS",
+      "evidence": [
+        "wall_nw_outer",
+        "wall_nw_inner",
+        "wall_ne_outer",
+        "wall_ne_inner",
+        "wall_sw_outer",
+        "wall_sw_inner",
+        "wall_se_outer",
+        "wall_se_inner",
+        "traffic_light_pole",
+        "traffic_light_head",
+        "barrier_post",
+        "barrier_arm",
+        "bollard_north",
+        "bollard_south",
+        "water_source",
+        "obstacle_bin_1",
+        "obstacle_bin_2",
+        "obstacle_cone_1",
+        "obstacle_cone_2",
+        "low_obstacle_1",
+        "low_obstacle_2",
+        "column_1",
+        "column_2"
+      ]
+    },
+    {
+      "task": "4_autonomous_navigation",
+      "status": "PASS",
+      "evidence": [
+        "route_start_goal_east",
+        "route_start_goal_north",
+        "route_start_goal_south",
+        "route_start_north_door",
+        "route_start_south_fire",
+        "route_return"
+      ]
+    }
+  ],
+  "notes": [
+    "fire target pose is surface/debug-only; navigation uses approach_pose",
+    "raw occupancy is not pre-inflated"
+  ]
+}

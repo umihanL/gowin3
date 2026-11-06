@@ -1,0 +1,244 @@
+{
+  "body_mm": [
+    320,
+    200
+  ],
+  "nose_from_rear_mm": 219,
+  "route_step_mm": 2.5,
+  "footprint_grid_mm": 5,
+  "initial_yaw": "first route tangent; continuous across every subsequent join",
+  "steering_formula": "atan(wheelbase*tan(nose_tangent-body_yaw)/nose_offset)",
+  "occupancy_source": "original drawing, 1cm cells; not metrically calibrated to measured lane widths",
+  "body_clearance_certified": false,
+  "source_mask_sweep_passed": false,
+  "cases": [
+    {
+      "case": 0,
+      "poses": 137,
+      "body_hits_source_mask": 0,
+      "minimum_source_mask_clearance_mm": 20.0,
+      "ideal_polyline_peak_steer_deg": 0,
+      "first_source_mask_hit": null
+    },
+    {
+      "case": 1,
+      "poses": 1426,
+      "body_hits_source_mask": 1106,
+      "minimum_source_mask_clearance_mm": -100.0,
+      "ideal_polyline_peak_steer_deg": 43.27697359586274,
+      "first_source_mask_hit": {
+        "nose_mm": [
+          283.19227430555554,
+          440.0998263888889
+        ],
+        "yaw_deg": -84.05711853979902,
+        "body_point_mm": [
+          380.06641078141496,
+          475.31916315232843
+        ],
+        "along_mm": -25.0,
+        "left_mm": 100.0
+      }
+    },
+    {
+      "case": 2,
+      "poses": 3233,
+      "body_hits_source_mask": 2145,
+      "minimum_source_mask_clearance_mm": -106.3014581273465,
+      "ideal_polyline_peak_steer_deg": 40.04654713900033,
+      "first_source_mask_hit": {
+        "nose_mm": [
+          283.19227430555554,
+          440.0998263888889
+        ],
+        "yaw_deg": -84.05711853979902,
+        "body_point_mm": [
+          380.06641078141496,
+          475.31916315232843
+        ],
+        "along_mm": -25.0,
+        "left_mm": 100.0
+      }
+    },
+    {
+      "case": 3,
+      "poses": 5513,
+      "body_hits_source_mask": 4998,
+      "minimum_source_mask_clearance_mm": -100.0,
+      "ideal_polyline_peak_steer_deg": 41.22710295632303,
+      "first_source_mask_hit": {
+        "nose_mm": [
+          282.81684027777777,
+          1915.2777777777778
+        ],
+        "yaw_deg": 83.44074060302673,
+        "body_point_mm": [
+          380.4488027759711,
+          1888.9528865386603
+        ],
+        "along_mm": -15.0,
+        "left_mm": -100.0
+      }
+    },
+    {
+      "case": 4,
+      "poses": 3246,
+      "body_hits_source_mask": 1442,
+      "minimum_source_mask_clearance_mm": -80.0,
+      "ideal_polyline_peak_steer_deg": 36.33858998036163,
+      "first_source_mask_hit": {
+        "nose_mm": [
+          1048.3203125,
+          350.1953125
+        ],
+        "yaw_deg": -88.5015447168611,
+        "body_point_mm": [
+          939.9865103793181,
+          667.4708824988212
+        ],
+        "along_mm": -320.0,
+        "left_mm": -100.0
+      }
+    },
+    {
+      "case": 5,
+      "poses": 373,
+      "body_hits_source_mask": 237,
+      "minimum_source_mask_clearance_mm": -80.0,
+      "ideal_polyline_peak_steer_deg": 36.15532159347358,
+      "first_source_mask_hit": {
+        "nose_mm": [
+          2398.486328125,
+          273.4375
+        ],
+        "yaw_deg": 4.591493250931459,
+        "body_point_mm": [
+          2355.593557920862,
+          370.31479488489583
+        ],
+        "along_mm": -35.0,
+        "left_mm": 100.0
+      }
+    },
+    {
+      "case": 6,
+      "poses": 373,
+      "body_hits_source_mask": 237,
+      "minimum_source_mask_clearance_mm": -80.0,
+      "ideal_polyline_peak_steer_deg": 36.15532159347358,
+      "first_source_mask_hit": {
+        "nose_mm": [
+          2398.486328125,
+          273.4375
+        ],
+        "yaw_deg": 4.591493250931459,
+        "body_point_mm": [
+          2355.593557920862,
+          370.31479488489583
+        ],
+        "along_mm": -35.0,
+        "left_mm": 100.0
+      }
+    },
+    {
+      "case": 7,
+      "poses": 954,
+      "body_hits_source_mask": 821,
+      "minimum_source_mask_clearance_mm": -90.0,
+      "ideal_polyline_peak_steer_deg": 36.25556489542509,
+      "first_source_mask_hit": {
+        "nose_mm": [
+          1051.1783854166667,
+          1384.7200520833333
+        ],
+        "yaw_deg": 87.78561388525634,
+        "body_point_mm": [
+          1150.1377423504834,
+          1355.8748501383736
+        ],
+        "along_mm": -25.0,
+        "left_mm": -100.0
+      }
+    },
+    {
+      "case": 8,
+      "poses": 1396,
+      "body_hits_source_mask": 713,
+      "minimum_source_mask_clearance_mm": -100.0,
+      "ideal_polyline_peak_steer_deg": 36.14718953008075,
+      "first_source_mask_hit": {
+        "nose_mm": [
+          2908.671875,
+          2933.671875
+        ],
+        "yaw_deg": 180.0,
+        "body_point_mm": [
+          3228.671875,
+          3033.671875
+        ],
+        "along_mm": -320.0,
+        "left_mm": -100.0
+      }
+    },
+    {
+      "case": 9,
+      "poses": 2130,
+      "body_hits_source_mask": 1125,
+      "minimum_source_mask_clearance_mm": -80.0,
+      "ideal_polyline_peak_steer_deg": 36.16012334349394,
+      "first_source_mask_hit": {
+        "nose_mm": [
+          3248.120659722222,
+          470.34288194444446
+        ],
+        "yaw_deg": -93.65977864884711,
+        "body_point_mm": [
+          3149.920386363751,
+          501.6750748508063
+        ],
+        "along_mm": -25.0,
+        "left_mm": -100.0
+      }
+    },
+    {
+      "case": 10,
+      "poses": 1763,
+      "body_hits_source_mask": 1065,
+      "minimum_source_mask_clearance_mm": -100.0,
+      "ideal_polyline_peak_steer_deg": 36.15199128063904,
+      "first_source_mask_hit": {
+        "nose_mm": [
+          3236.8077256944443,
+          2748.1423611111113
+        ],
+        "yaw_deg": 95.94288146020094,
+        "body_point_mm": [
+          3139.933589218585,
+          2712.923024347672
+        ],
+        "along_mm": -25.0,
+        "left_mm": 100.0
+      }
+    },
+    {
+      "case": 11,
+      "poses": 955,
+      "body_hits_source_mask": 808,
+      "minimum_source_mask_clearance_mm": -100.0,
+      "ideal_polyline_peak_steer_deg": 36.21575120985566,
+      "first_source_mask_hit": {
+        "nose_mm": [
+          2468.8216145833335,
+          2058.1315104166665
+        ],
+        "yaw_deg": -92.21451470539104,
+        "body_point_mm": [
+          2369.8623223879235,
+          2086.976934459025
+        ],
+        "along_mm": -25.0,
+        "left_mm": -100.0
+      }
+    }
+  ]
+}

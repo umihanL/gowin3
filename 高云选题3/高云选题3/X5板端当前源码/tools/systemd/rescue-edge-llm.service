@@ -1,0 +1,21 @@
+[Unit]
+Description=Local Qwen language model for rescue ROS scene dialogue
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/rescue/ros2_ws
+ExecStart=/bin/bash /root/rescue/ros2_ws/tools/run_edge_llm.sh
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=15
+Nice=5
+CPUWeight=30
+CPUQuota=400%
+MemoryMax=2560M
+NoNewPrivileges=true
+Environment=OMP_NUM_THREADS=4
+Environment=OMP_WAIT_POLICY=PASSIVE
+
+[Install]
+WantedBy=multi-user.target

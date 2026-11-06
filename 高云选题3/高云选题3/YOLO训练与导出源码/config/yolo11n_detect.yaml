@@ -1,0 +1,32 @@
+# Three-class bounding-box detection. CLI owns data/model/run settings.
+task: detect
+deterministic: true
+optimizer: auto
+pretrained: true
+cache: false
+amp: true
+rect: false
+multi_scale: false
+val: true
+plots: true
+save: true
+save_period: 10
+exist_ok: false
+# TinyTargetDetectionTrainer: LetterBox + HSV only; preserve every tiny box.
+# Upstream RandomPerspective would discard boxes <=2px even at zero motion.
+hsv_h: 0.008
+hsv_s: 0.20
+hsv_v: 0.20
+degrees: 0.0
+translate: 0.0
+scale: 0.0
+shear: 0.0
+perspective: 0.0
+flipud: 0.0
+fliplr: 0.0
+bgr: 0.0
+mosaic: 0.0
+close_mosaic: 0
+mixup: 0.0
+copy_paste: 0.0
+cutmix: 0.0

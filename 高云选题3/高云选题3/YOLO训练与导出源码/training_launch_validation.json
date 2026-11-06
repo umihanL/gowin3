@@ -1,0 +1,68 @@
+{
+  "recorded_at": "2026-10-08T14:50:19.897529+08:00",
+  "status": "running",
+  "run": "D:\\工程仿真\\FPGA赛道_小车仿真\\YOLO11n_model\\runs\\wallpaper_yolo11n_gpu_20261008",
+  "completed_epochs_at_check": 1,
+  "first_epoch": {
+    "epoch": "1",
+    "time": "135.287",
+    "train/box_loss": "1.01941",
+    "train/cls_loss": "1.77325",
+    "train/dfl_loss": "0.87003",
+    "metrics/precision(B)": "0.84782",
+    "metrics/recall(B)": "0.39893",
+    "metrics/mAP50(B)": "0.47918",
+    "metrics/mAP50-95(B)": "0.32372",
+    "val/box_loss": "1.20208",
+    "val/cls_loss": "4.08245",
+    "val/dfl_loss": "0.80559",
+    "lr/pg0": "0.000474713",
+    "lr/pg1": "0.000474713",
+    "lr/pg2": "0.000474713"
+  },
+  "gpu_preflight": {
+    "passed": true,
+    "torch": "2.8.0+cu128",
+    "torchvision": "0.23.0+cu128",
+    "ultralytics": "8.3.253",
+    "cuda_build": "12.8",
+    "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "checkpoint_loaded": true,
+    "checkpoint_task": "detect",
+    "initialization_class_count": 80,
+    "forward_input_shape": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "forward_output_shape": [
+      1,
+      84,
+      8400
+    ],
+    "forward_on_cuda": true,
+    "max_allocated_memory_mb": 69.4,
+    "weights_sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+    "training_performed": false
+  },
+  "tiny_loader_validation": "tiny_target_loader_validation.json",
+  "environment": "environment.local.json",
+  "package_lock": "requirements.installed.txt",
+  "automatic_test_after_training": true,
+  "training_complete": false,
+  "final_metrics_available": false,
+  "checkpoint_files": [
+    "best.pt",
+    "epoch0.pt",
+    "last.pt"
+  ],
+  "source_hashes": {
+    "train.py": "09a0d58e879971ac99327bedc3e4e3a3ff9312cb3008e73708a064d2a489d7f7",
+    "tiny_target_training.py": "9bd1736a8a7f3c62e621930af38ded8a9e3e1017892b757ef1b7d45fec9ca40a",
+    "config/yolo11n_detect.yaml": "45ec3303579359cdad56a754918b7b85f29276c0454020ffbbb486082be50b41",
+    "tools/run_training_job.py": "0a25a4f6a00f9dfbc7074d5b31a8b94dd4bf3d723e46b826f0238db7a81dfe8e",
+    "dataset/manifest.json": "b956675c0b0e2ee29a1052809d88d5108d17cf84124c8efb6e0bd54c86961e6b"
+  },
+  "live_status": "runs/_jobs/wallpaper_yolo11n_gpu_20261008/status.json"
+}

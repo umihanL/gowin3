@@ -1,0 +1,56 @@
+[
+  {
+    "name": "before_0",
+    "passed": false,
+    "expected_failure": true,
+    "exit_code": 1,
+    "log": "sim/navigation_followup_20261026_before_0.log",
+    "sha256": "4a5958276fdea9bb5c4772953a2a3669fe0553998d14696782d39425a5049e45",
+    "seconds": 0.156
+  },
+  {
+    "name": "after_0",
+    "passed": true,
+    "expected_failure": false,
+    "exit_code": 0,
+    "log": "sim/navigation_followup_20261026_after_0.log",
+    "sha256": "2c3a6c1442b9ded120f94d7b6a7725e1124fbddab882a62a42bb000f2f5c428f",
+    "seconds": 0.11
+  },
+  {
+    "name": "before_1",
+    "passed": false,
+    "expected_failure": true,
+    "exit_code": 1,
+    "log": "sim/navigation_followup_20261026_before_1.log",
+    "sha256": "dfd20c0450ec48416422aa2afe167bb4e6ff30fe17de360015347cb75c47cbc5",
+    "seconds": 0.109
+  },
+  {
+    "name": "after_1",
+    "passed": true,
+    "expected_failure": false,
+    "exit_code": 0,
+    "log": "sim/navigation_followup_20261026_after_1.log",
+    "sha256": "065d46e0d51b0b635fc086a91d2eb368bee81f3f1594ad2263f1a1b70cbf187c",
+    "seconds": 0.141
+  },
+  {
+    "name": "before_2",
+    "passed": false,
+    "expected_failure": true,
+    "exit_code": 1,
+    "log": "sim/navigation_followup_20261026_before_2.log",
+    "sha256": "5edcc5db15a6e576ad9bfbf38a877a88843b28abced38bac9e0552998226b856",
+    "seconds": 0.109
+  },
+  {
+    "name": "after_2",
+    "passed": true,
+    "expected_failure": false,
+    "exit_code": 0,
+    "log": "sim/navigation_followup_20261026_after_2.log",
+    "sha256": "050ff0efa0c95a32f00066330730cc7975c4869dcf428f56d761bf87a1547335",
+    "seconds": 0.125
+  }
+]

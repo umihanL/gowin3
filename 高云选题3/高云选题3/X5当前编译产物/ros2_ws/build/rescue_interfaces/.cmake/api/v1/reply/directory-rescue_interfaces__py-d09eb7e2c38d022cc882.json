@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "rescue_interfaces__py",
+		"source" : "/root/rescue/system_20261010/ros2_ws/build/rescue_interfaces/rescue_interfaces__py"
+	}
+}

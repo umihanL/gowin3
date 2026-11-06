@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "pump_enabled": true,
+  "external_pump_timeout_verified": false,
+  "max_speed_deg_s": 6.0,
+  "settle_s": 0.4,
+  "pump_guard": {
+    "burst_s": 0.4,
+    "cooldown_s": 1.0,
+    "max_bursts": 3,
+    "stable_lock_s": 0.35
+  },
+  "comment": "Explicitly enabled finite FPGA B13 pulses; always starts disarmed and requires live output feedback, stationary vehicle and calibrated target for automatic firing."
+}

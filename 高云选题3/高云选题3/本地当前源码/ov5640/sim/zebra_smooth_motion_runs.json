@@ -1,0 +1,114 @@
+[
+  {
+    "name": "photo",
+    "passed": true,
+    "seconds": 37.5,
+    "log": "sim/zebra_smooth_motion_photo.log",
+    "log_sha256": "bf9b1cbe6a4e3feb16b14f9c5922eb9907897213bf9b89dbee83ee42f939bc24",
+    "metrics": {
+      "status": 3.0,
+      "index": 225.0,
+      "count": 226.0,
+      "max_cross_mm": 19.976806,
+      "max_pose_mm": 9.488246
+    },
+    "s_transition": {
+      "max_cross_mm": 7.426787,
+      "maximum_command_step_deg": 3,
+      "near_zero_command_ms": 200
+    },
+    "trace": "sim/zebra_smooth_photo_trace.csv"
+  },
+  {
+    "name": "s_forward",
+    "passed": true,
+    "seconds": 13.86,
+    "log": "sim/zebra_smooth_motion_s_forward.log",
+    "log_sha256": "954b0534365623644ee2ad63e4286b46ce46bef81f0d36c54740c5f437dc4051",
+    "metrics": {
+      "status": 3.0,
+      "index": 124.0,
+      "count": 125.0,
+      "max_cross_mm": 17.634791,
+      "max_pose_mm": 7.157136
+    },
+    "s_transition": {
+      "max_cross_mm": 7.573056,
+      "maximum_command_step_deg": 2,
+      "near_zero_command_ms": 220
+    },
+    "trace": "sim/zebra_smooth_s_forward_trace.csv"
+  },
+  {
+    "name": "s_reverse",
+    "passed": true,
+    "seconds": 14.14,
+    "log": "sim/zebra_smooth_motion_s_reverse.log",
+    "log_sha256": "2c34bcf0e8c42d55001dddff5aa7ef915e2983d1e047ab6ef5c6cc8db0171c3a",
+    "metrics": {
+      "status": 3.0,
+      "index": 124.0,
+      "count": 125.0,
+      "max_cross_mm": 17.107864,
+      "max_pose_mm": 5.338775
+    },
+    "s_transition": {
+      "max_cross_mm": 5.270305,
+      "maximum_command_step_deg": 2,
+      "near_zero_command_ms": 160
+    },
+    "trace": "sim/zebra_smooth_s_reverse_trace.csv"
+  },
+  {
+    "name": "outer_left",
+    "passed": true,
+    "seconds": 10.06,
+    "log": "sim/zebra_smooth_motion_outer_left.log",
+    "log_sha256": "962fb8753cd5831cf7cf6b8a408d05cba3f5478b0ec9dc3ecc2b48faef7d0471",
+    "metrics": {
+      "status": 3.0,
+      "index": 48.0,
+      "count": 49.0,
+      "max_cross_mm": 5.549139,
+      "max_pose_mm": 2.750202
+    },
+    "identical_to_previous_release": true,
+    "trace": "sim/zebra_smooth_outer_left_trace.csv"
+  },
+  {
+    "name": "outer_right",
+    "passed": true,
+    "seconds": 10.0,
+    "log": "sim/zebra_smooth_motion_outer_right.log",
+    "log_sha256": "e07dc6139fa743e61dec72dd03668d5c0667c2099ec45fdcb37e6d87fe2f702a",
+    "metrics": {
+      "status": 3.0,
+      "index": 48.0,
+      "count": 49.0,
+      "max_cross_mm": 5.602668,
+      "max_pose_mm": 4.401191
+    },
+    "identical_to_previous_release": true,
+    "trace": "sim/zebra_smooth_outer_right_trace.csv"
+  },
+  {
+    "name": "s_forward_zebra",
+    "passed": true,
+    "seconds": 14.23,
+    "log": "sim/zebra_smooth_motion_s_forward_zebra.log",
+    "log_sha256": "e448947105a7f217019e613acb40cc064bc40a37849a797752067495820f1169",
+    "metrics": {
+      "status": 3.0,
+      "index": 124.0,
+      "count": 125.0,
+      "max_cross_mm": 18.110143,
+      "max_pose_mm": 7.485476
+    },
+    "s_transition": {
+      "max_cross_mm": 7.696491,
+      "maximum_command_step_deg": 2,
+      "near_zero_command_ms": 160
+    },
+    "trace": "sim/zebra_smooth_s_forward_zebra_trace.csv"
+  }
+]

@@ -1,0 +1,96 @@
+{
+  "status": "source_and_digital_regressions_passed_with_unresolved_body_clearance",
+  "measured_camera": {
+    "height_mm": 175,
+    "behind_nose_mm": 25,
+    "left_mm": 5,
+    "mechanical_pitch_deg": 25,
+    "centre_ground_ahead_mm": 388
+  },
+  "accepted_merge_controller_preserved": true,
+  "standalone_bypass_decision": "latched once at actual trigger",
+  "side_minimum_confirm": {
+    "rise_mm": 8,
+    "completed_rising_observations": 2,
+    "extra_encoder_run_mm": 0,
+    "minimum_post_minimum_travel_for_finite_rise_mm": 5,
+    "noecho_requires_prior_valid_obstacle_hit": true
+  },
+  "road_graph": {
+    "nodes": 1632,
+    "shortest_path_cases": 12,
+    "all_centre_edges_inside_source_map": true,
+    "tangent_junction_pairs": 48
+  },
+  "road_body_sweep": {
+    "passed": false,
+    "report": "docs/road_body_sweep_oct24.json",
+    "limitation": "Continuous 320x200 mm rectangular body overlaps source-map blocked cells on curved routes. Metric map registration and calibrated steering/vehicle outline remain unresolved."
+  },
+  "fpga_build": {
+    "completed": true,
+    "bitstream": "impl/pnr/ov5640.fs",
+    "input_manifest": "impl/repair_20261024_synthesis_inputs.json",
+    "resources": {
+      "Logic": {
+        "used": 48085.0,
+        "total": 59904.0,
+        "percent": 80.27
+      },
+      "Register": {
+        "used": 16477.0,
+        "total": 60780.0,
+        "percent": 27.11
+      },
+      "CLS": {
+        "used": 26504.0,
+        "total": 29952.0,
+        "percent": 88.49
+      },
+      "BSRAM": {
+        "used": 105.0,
+        "total": 118.0,
+        "percent": 88.98
+      },
+      "DSP": {
+        "used": 96.0,
+        "total": 118.0,
+        "percent": 81.36
+      },
+      "I/O Port": {
+        "used": 122.0,
+        "total": 297.0,
+        "percent": 41.08
+      }
+    },
+    "timing_violations": {
+      "Setup": 0,
+      "Hold": 0
+    },
+    "sha256": "d8738888eb2a23069266031206c068f1b1aadc99eb8c19cea22a049aa0cdcf83"
+  },
+  "synthesized_rom_audits": {
+    "road": true,
+    "map": true,
+    "font": true
+  },
+  "hardware_programmed": false,
+  "real_car_verified": false,
+  "release_ready": false,
+  "simulation_logs": [
+    "sim/vehicle_test_results.txt",
+    "sim/centerline_test_results.txt",
+    "sim/vision_test_results.txt",
+    "sim/road_global_test_results.txt",
+    "sim/vision_netlist_results.txt"
+  ],
+  "body_clearance_task": "PARTIAL: tangent curves and delayed entries generated, complete vehicle-in-road requirement is not satisfied/verified",
+  "synthesized_vision_equivalence_passed": true,
+  "synthesized_vision_preview_pixels_compared": 384000,
+  "synthesized_vision_metric_projections_compared": 1,
+  "curve_motion_results_mm": {
+    "s_forward_max_nose_error": 15.849187,
+    "s_reverse_max_nose_error": 15.389781,
+    "five_segment_max_nose_error": 18.985759
+  }
+}

@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rescue_interfaces/msg/Detection.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+
+module rescue_interfaces {
+  module msg {
+    typedef float float__4[4];
+    struct Detection {
+      int32 class_id;
+
+      string class_name;
+
+      float confidence;
+
+      @verbatim (language="comment", text=
+        "Original selected-eye pixels; rectified if DetectionArray.rectified is true.")
+      float__4 bbox_xyxy;
+
+      boolean depth_valid;
+
+      geometry_msgs::msg::Point position_m;
+
+      float depth_m;
+
+      string depth_reason;
+    };
+  };
+};

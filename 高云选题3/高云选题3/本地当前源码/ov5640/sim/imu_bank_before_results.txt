@@ -1,0 +1,7 @@
+OLD RTL expected failure, injected BANK_FAULT=1:
+FATAL: sim/imu_spi_tb.v:158: failure telemetry does not identify the lost embedded write
+       Time: 59385000  Scope: imu_spi_tb
+
+OLD RTL expected failure, injected BANK_FAULT=2:
+FATAL: sim/imu_spi_tb.v:158: failure telemetry does not identify the lost embedded write
+       Time: 59385000  Scope: imu_spi_tb

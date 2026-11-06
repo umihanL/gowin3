@@ -1,0 +1,7 @@
+/root/rescue/system_20261010/ros2_ws/build/rescue_interfaces/rosidl_adapter/rescue_interfaces:msg/StereoPair.idl
+/root/rescue/system_20261010/ros2_ws/build/rescue_interfaces/rosidl_adapter/rescue_interfaces:msg/Detection.idl
+/root/rescue/system_20261010/ros2_ws/build/rescue_interfaces/rosidl_adapter/rescue_interfaces:msg/DetectionArray.idl
+/root/rescue/system_20261010/ros2_ws/build/rescue_interfaces/rosidl_adapter/rescue_interfaces:msg/FpgaEvent.idl
+/root/rescue/system_20261010/ros2_ws/build/rescue_interfaces/rosidl_adapter/rescue_interfaces:msg/GimbalCommand.idl
+/root/rescue/system_20261010/ros2_ws/build/rescue_interfaces/rosidl_adapter/rescue_interfaces:msg/MotionPermission.idl
+/root/rescue/system_20261010/ros2_ws/build/rescue_interfaces/rosidl_adapter/rescue_interfaces:msg/ManeuverCommand.idl

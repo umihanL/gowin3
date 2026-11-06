@@ -1,0 +1,32 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rescue_interfaces/msg/DetectionArray.msg
+// generated code does not contain a copyright notice
+
+#include "rescue_interfaces/msg/Detection.idl"
+#include "std_msgs/msg/Header.idl"
+
+module rescue_interfaces {
+  module msg {
+    struct DetectionArray {
+      std_msgs::msg::Header header;
+
+      uint64 sequence;
+
+      uint32 width;
+
+      uint32 height;
+
+      boolean rectified;
+
+      boolean detector_available;
+
+      string status;
+
+      @verbatim (language="comment", text=
+        "Empty unless a verified stereo depth producer enriched this exact exposure.")
+      string stereo_calibration_id;
+
+      sequence<rescue_interfaces::msg::Detection> detections;
+    };
+  };
+};

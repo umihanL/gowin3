@@ -1,0 +1,38 @@
+[
+  {
+    "name": "fusion_navigation_next_entry_tb",
+    "passed": true,
+    "seconds": 2.953,
+    "log": "sim/host_fusion_navigation_next_entry_tb_netlist.log",
+    "sha256": "0d5187a8f25d3afbba1da09a755edb8c05e5f78c3ae237b324001f7db804a506",
+    "inputs": {
+      "src/vehicle/vehicle_vision_fusion.v": "e82295aff2f9ec90b5cbfa25b2311152c9793e3aede51a2840d267252f958d19",
+      "sim/navigation_next_entry_tb.sv": "3be435af68d1d2d6b78138efbbcb8a144063f026f10e155f55d0e145ea690b56"
+    }
+  },
+  {
+    "name": "fusion_navigation_handoff_tb",
+    "passed": true,
+    "seconds": 4.235,
+    "log": "sim/host_fusion_navigation_handoff_tb_netlist.log",
+    "sha256": "bf60058956e9028d39b78f8d8acdef1a651098e15266af9f6fc5d367936e6b58",
+    "inputs": {
+      "src/vehicle/vehicle_vision_fusion.v": "e82295aff2f9ec90b5cbfa25b2311152c9793e3aede51a2840d267252f958d19",
+      "sim/navigation_handoff_tb.sv": "39599a144a9c9e6089068599c9e072ad49986a9f9e8c2c2d47b3a27d620972fe"
+    }
+  },
+  {
+    "name": "uart_vehicle_host_link_tb",
+    "passed": true,
+    "seconds": 16.141,
+    "log": "sim/host_uart_vehicle_host_link_tb_netlist.log",
+    "sha256": "b50db2c95ef430ce5fa58143f8c7a7d4f667efc2f528972f00b47965631966a0",
+    "inputs": {
+      "src/vehicle/vehicle_host_link.v": "686cf09e4483bc8bd24a0e3116f4fa0da4e762810a9626a566719e1e12f225f0",
+      "src/vehicle/host_uart_rx.v": "4f77c892c2adc04b1960e29b44ba1def45aa83510d75b8c51669f3aceff3bf1a",
+      "src/vehicle/motor/uart_byte_tx.v": "5d39e5aaf9b8f8c201c729d74017d05f3cc3398ce84e96e38174322916667093",
+      "impl\\host_uart_probe\\wrapper.v": "700d40913e808946744da2c295b40bbb5bab343ffa08776eb4a73af93bc32a2b",
+      "sim/vehicle_host_link_tb.sv": "30a63701e96022da597a717786dcbd8273ed5abb2f48f92a651ed573b79e9d44"
+    }
+  }
+]

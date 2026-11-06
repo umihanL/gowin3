@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "dry_run": true,
+  "comment": "X5 physical pins 32/33 were checked against controller 34170000.pwm, channels 0/1, currently pwmchip0. Numbering may change after reboot: real mode verifies the resolved controller. Do not use 34110000.lpwm (camera sync, currently pwmchip2). Pulse/angle examples are NOT calibration. Pump is disabled until its actual GPIO/polarity are configured. PWM/GPIO may remain active after process crash; use a hardware emergency stop/pump interlock.",
+  "servo": {
+    "backend": "pwm_sysfs",
+    "frequency_hz": 50,
+    "calibration_confirmed": false,
+    "pan": {
+      "chip": "/sys/class/pwm/pwmchip0",
+      "controller": "34170000.pwm",
+      "channel": 0,
+      "min_angle_deg": 0,
+      "max_angle_deg": 180,
+      "min_pulse_us": 1000,
+      "max_pulse_us": 2000,
+      "invert": false
+    },
+    "tilt": {
+      "chip": "/sys/class/pwm/pwmchip0",
+      "controller": "34170000.pwm",
+      "channel": 1,
+      "min_angle_deg": 0,
+      "max_angle_deg": 180,
+      "min_pulse_us": 1000,
+      "max_pulse_us": 2000,
+      "invert": false
+    }
+  },
+  "pump": {
+    "enabled": false,
+    "gpio_chip": null,
+    "line_offset": null,
+    "active_low": null
+  }
+}

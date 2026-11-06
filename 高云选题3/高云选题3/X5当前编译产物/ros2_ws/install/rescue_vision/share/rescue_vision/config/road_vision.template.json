@@ -1,0 +1,15 @@
+{
+  "process_fps": 10.0,
+  "frame_max_age_s": 0.3,
+  "traffic_width": 640,
+  "visualization_fps": 8.0,
+  "notes": [
+    "Traffic lights only: no crosswalk classifier or /road/observation publication.",
+    "10 Hz is a configured ceiling, not a measured board guarantee. Diagnostics expose actual processing_fps and stage_ms.",
+    "Only supplies single-frame evidence; mission owns multi-frame confirmation, stop and crossing release.",
+    "Source is physical left /image_right_raw. Analysis resize does not change the YOLO input or full-resolution preview.",
+    "Explicit traffic observation requires a verified settled traffic pose; fixed-camera preview never grants motion.",
+    "Traffic detector uses configured red/yellow/green fixture geometry plus emission evidence, not lens color alone.",
+    "One decode and resize per capture; unchanged interpolation, 640-pixel analysis width and JPEG quality 90."
+  ]
+}

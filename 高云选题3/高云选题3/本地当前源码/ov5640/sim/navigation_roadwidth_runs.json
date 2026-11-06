@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "recorded_utc": "2026-10-27T15:59:24.648660+00:00",
+  "road_widths_mm": {
+    "inner": 340,
+    "s_bend": 340,
+    "outer": 373
+  },
+  "cases": [
+    {
+      "name": "measured_lanes",
+      "passed": true,
+      "seconds": 183.75,
+      "log": "sim/vision_wide_road_measured_lanes.log",
+      "sha256": "4a7d6cbe41bdfb005f2f4d03bcdb3940b55b5e6b736beafb2f0c04e83ba6fb49",
+      "inputs": {
+        "sim/vision_wide_road_tb.sv": "134e9b00048c06afa5a9f1e6309b1e0434745473182314f2a5e15ae46dfeaa55",
+        "src/portrait/vision_video.v": "dcdaae45ebd0ff5cde94a9ec33b707f88cd239db2e2deaa1f71fe1935ae53ab8",
+        "src/portrait/vision_zebra.v": "ce3fb9e91c5699362829acef44d79d1987b6aefc3b647f1c2b39c79b8b874483",
+        "src/vehicle/vehicle_vision_fusion.v": "9bf9c98e0ab1cde4f49ed50d879bc306f6954b72a6577fb27addc05ee708815d"
+      }
+    },
+    {
+      "name": "lane_transitions_and_curves",
+      "passed": true,
+      "seconds": 49.703,
+      "log": "sim/vision_wide_road_lane_transitions_and_curves.log",
+      "sha256": "ee55b4670882cda82168c8d096a6c6853f7d5ec65574aea6eb8d8801b5f494bd",
+      "inputs": {
+        "sim/vision_wide_road_tb.sv": "134e9b00048c06afa5a9f1e6309b1e0434745473182314f2a5e15ae46dfeaa55",
+        "src/portrait/vision_video.v": "dcdaae45ebd0ff5cde94a9ec33b707f88cd239db2e2deaa1f71fe1935ae53ab8",
+        "src/portrait/vision_zebra.v": "ce3fb9e91c5699362829acef44d79d1987b6aefc3b647f1c2b39c79b8b874483",
+        "src/vehicle/vehicle_vision_fusion.v": "9bf9c98e0ab1cde4f49ed50d879bc306f6954b72a6577fb27addc05ee708815d"
+      }
+    }
+  ]
+}

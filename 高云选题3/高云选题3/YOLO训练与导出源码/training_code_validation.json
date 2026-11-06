@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "tests_run": 15,
+  "test_command": "python -m unittest discover -s tests -p test_training_entry.py -v",
+  "test_scope": "Path/input protections, mode routing, resume policy and actual metrics serialization API stubs; no real training in these tests.",
+  "syntax_checks": {
+    "python_files": 3,
+    "vscode_json_files": 3,
+    "powershell_setup_parser": "passed"
+  },
+  "launcher_checks": {
+    "powershell_51_external_python_script_with_chinese_path": "passed",
+    "cmd_02_03_04_missing_venv": "all exit1 with setup hint",
+    "missing_training_dependency_gate": "exit2 with torch and ultralytics hints",
+    "cuda_device_selection": "CPU allowed; missing CUDA and out-of-range GPU indices rejected"
+  },
+  "pretrained_checkpoint": {
+    "source_type": "existing_local_checkpoint",
+    "source_path": "D:\\yolo_data\\yolo11n.pt",
+    "sha256_verified": true,
+    "remote_release_reauthenticated": false,
+    "torch_load_performed": false
+  },
+  "real_training_performed": false,
+  "real_model_evaluation_performed": false,
+  "environment": "environment.initial.json",
+  "dataset_integration": "Full validator CLI agreed: tools/validate_merged_dataset.py --dataset <resolved dataset root>. Final full merged-dataset validation owned by main agent, not rerun in this code review.",
+  "files": {
+    "train.py": "09a0d58e879971ac99327bedc3e4e3a3ff9312cb3008e73708a064d2a489d7f7",
+    "config/yolo11n_detect.yaml": "45ec3303579359cdad56a754918b7b85f29276c0454020ffbbb486082be50b41",
+    "tools/check_environment.py": "1e6d655913acaddad1c43609dbbe6737862cb91a95ecf9595ebd2c20be6afe1c",
+    "scripts/setup_environment.ps1": "fdfbc51e41977da9ec609f6abc8ee3f09bfe751ac52cbcd97b891617062630c5",
+    "tests/test_training_entry.py": "8cab9f4e374a9f5b5c8f2ec3ce4c15f3a60782464cdf87e2d7ff2e30e8ce9f5e",
+    "TRAINING_GUIDE.md": "8ede81bcda6e3d314ceee6b6d6a8843c30b30675439baa10ac85ef33be014814",
+    "01_setup_environment.cmd": "6bdab26eec8c85a1af2a2c03e6e80be97312f18659f28103700b812396a0bce7",
+    "02_check_dataset.cmd": "7d02e1d2ca75c12e05068e58223221a6468237f8a3dbb7b05b98f3e9037198e8",
+    "03_smoke_cpu.cmd": "a11b86cbe967756fc9a09bfa397fe36d56a5d05766c740ef5bda48b9b65fadc0",
+    "04_train_gpu.cmd": "9a811abe2bc09112d9136dd5369033b8e6068b5323767cfcd21402f9946ca473",
+    "tiny_target_training.py": "9bd1736a8a7f3c62e621930af38ded8a9e3e1017892b757ef1b7d45fec9ca40a",
+    "requirements-train.txt": "c7474c375d052b603f903d91a5e7fde3b1e7303e60d42fbd6372e86b0400c304",
+    "tests/test_tiny_target_transform.py": "0232809ffe763eba51dc99c4a1717f8485a048010e06afb58d907fcd8a6fb2c8",
+    "tools/verify_tiny_targets.py": "d83e3b278ca56b6c15a80bd0ee8bd9ce365d97a927d88087464cf1e2eb765abb"
+  },
+  "tiny_target_transform_tests": {
+    "status": "passed",
+    "tests": 4,
+    "environment": "project .venv: ultralytics8.3.253 + torch2.8.0+cu128",
+    "scope": "Real CPU LetterBox/HSV/Format: one-pixel and extreme-aspect boxes; negatives; close_mosaic rebuild; geometry guard"
+  },
+  "real_train_loader_validation": {
+    "status": "passed",
+    "report": "tiny_target_loader_validation.json",
+    "images": 2352,
+    "boxes_before": 20534,
+    "boxes_after": 20534,
+    "tiny_le2px_before": 3742,
+    "tiny_le2px_after": 3742,
+    "negative_images": 508,
+    "every_box_coordinate_checked": true,
+    "model_loaded": false,
+    "training_performed": false
+  }
+}

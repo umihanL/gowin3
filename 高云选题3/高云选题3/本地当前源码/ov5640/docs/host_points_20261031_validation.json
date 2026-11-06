@@ -1,0 +1,1231 @@
+{
+  "release": "host_points_20261031",
+  "status": "place_route_timing_passed",
+  "bitstream": "impl/pnr/ov5640.fs",
+  "release_bitstream": "impl/pnr/ov5640_host_points_20261031.fs",
+  "sha256": "c165639cf785e33768e4b6c14257979a8ed8ad474277b9dfecab2180b197beb5",
+  "bytes": 20706411,
+  "generated_utc": "2026-10-31T02:08:33.922170+00:00",
+  "tool": "Gowin V1.9.12.03",
+  "device": "GW5AT-LV60PG484AC1/I0 B",
+  "hardware_tested": false,
+  "flashed": false,
+  "timing_passed": true,
+  "resources": {
+    "Logic": {
+      "used": 49570.0,
+      "total": 59904.0,
+      "remaining": 10334.0,
+      "percent": 82.75
+    },
+    "Register": {
+      "used": 16754.0,
+      "total": 60780.0,
+      "remaining": 44026.0,
+      "percent": 27.56
+    },
+    "CLS": {
+      "used": 27183.0,
+      "total": 29952.0,
+      "remaining": 2769.0,
+      "percent": 90.76
+    },
+    "BSRAM": {
+      "used": 107.0,
+      "total": 118.0,
+      "remaining": 11.0,
+      "percent": 90.68
+    },
+    "DSP": {
+      "used": 85.5,
+      "total": 118.0,
+      "remaining": 32.5,
+      "percent": 72.46
+    },
+    "I/O Port": {
+      "used": 124.0,
+      "total": 297.0,
+      "remaining": 173.0,
+      "percent": 41.75
+    }
+  },
+  "timing_violations": {
+    "Setup": 0,
+    "Hold": 0
+  },
+  "min_slack_ns": {
+    "Setup": 0.038,
+    "Hold": 0.045,
+    "Recovery": 2.294,
+    "Removal": 0.538
+  },
+  "build_metrics": {
+    "exit_code": 0,
+    "seconds": 993.562
+  },
+  "hardware_inputs": {
+    "src/ov5640_ddr3_tft.cst": "5530ef7a0d7c152127766aa6d73e7fa6851b8d9c0681bea5ac9f351ce18e5d91",
+    "src/ov5640_ddr3_tft.sdc": "d608b52d19a18f8edf76a1947517c794d2a39fb85a09b93a2fe0464de493f079",
+    "src/ov5640_ddr3_tft.v": "a022e749193ca0bf763aee33aa6d0bd4a44b8baba7d454835f065c3e7dd8281e",
+    "src/pll_init.v": "3fc6bef9a7086f0920bfa47265b1766854a53f6ca1c0f75084eaf6b6ef4d6258",
+    "src/pll_mDRP_intf.v": "6380774c682f607f11088cafa39ed1556e4c4db925ee2e72b78340026d4fd6ad",
+    "src/reset_sync.v": "3eda6f46e0598da852b734d9639a6dd6861c29d124c127ac0a274929dc615011",
+    "src/camera_init/camera_init.v": "f67549489a29185e8c302be2e2a27f70b677a29c3dd9dcf981ac3807aec218ae",
+    "src/camera_init/ov5640_init_table_jpeg.v": "354b6dcf00b3070fab0a99d511d2cad8cb85fc3ebdea19211733711779903b2c",
+    "src/camera_init/ov5640_init_table_rgb.v": "bec0a49e85694837cb63aba79db0b96507c53b196d9667433e1a96622b4819ee",
+    "src/camera_init/ov7725_init_table_rgb.v": "a52cee900a4eeded8b9500755449a8c4205d42f8d0251cb8830b38d056d2e3e1",
+    "src/camera_init/i2c_control/i2c_bit_shift.v": "00ffafdc833bda4ea094bcff65ec74ac25c0cd4215559457482e29119540338a",
+    "src/camera_init/i2c_control/i2c_control.v": "7d8106cd3e377afbfe03e1a959903a6ae409c061cd06da4d1c1650f550bad829",
+    "src/ddr3_ctrl_2port/ddr3_ctrl_2port.v": "9ebf69b442b7bd74029dfdd6bb293292c589ac4c2c6c6bb5bcb9ebe8bd8db816",
+    "src/ddr3_ctrl_2port/fifo_ddr3_adapter.v": "8a6ddc686fd38dffa876e36683c005a75835f8d0d95245010460f9e4fd07ea8c",
+    "src/ddr3_memory_interface/ddr3_memory_interface.ipc": "6ae2bd59536bada0288349af68c6052cd8ab7a5af07ff544f99be152f681a70d",
+    "src/ddr3_memory_interface/ddr3_memory_interface.v": "9aa5bce36ff79ef315c622d782108faf14ad38b8b1dec648712db83693528a6d",
+    "src/ddr3_memory_interface/ddr3_memory_interface.vo": "eb770ebbfffc93f28b735a90fd96a1d21896aaeb82369ff9388e655c3f0bb369",
+    "src/ddr_pll/ddr_pll.ipc": "61a7be95bf7793994e9b65ff335b632b89e6cff76bd07dd4d61c334b33a4331f",
+    "src/ddr_pll/ddr_pll.mod": "6f05cddc246eb03b36c01f4d07eb054214f5bac39c2005d71dc6f6580a0ecaf5",
+    "src/ddr_pll/ddr_pll.v": "7371791ee9e9be4ba7a016f7527cf73759f3e23e2729705bdf4c634f36371221",
+    "src/ddr_pll/ddr_pll_mod.v": "52e0b36c890c80e39d09cff38a39908a6e9ec2ddf3476c887e5ed93b58438055",
+    "src/DVP_Capture/DVP_Capture.v": "b25858bf7a1b50c14908252de767eba37edacf6fdfabdb41bd73ba074a897a48",
+    "src/gowin_pll/gowin_pll.ipc": "9b6d52845c67f431043bec90c4c4f88acc93ca22b4d7a904c9d5bb6569a6089a",
+    "src/gowin_pll/gowin_pll.mod": "1241caa945429189554d52e6520bdde4a983638070815381fffabedc25cc5d30",
+    "src/gowin_pll/gowin_pll.v": "f445e8acd1874481fe16f966ff52cf9d4d5e0cd339e06fec593399f8516f9f0e",
+    "src/gowin_pll/gowin_pll_mod.v": "62904a7f5fa8a60f0c12f51209f5c690b5ec22071eacbc0e79ed05378479d846",
+    "src/imu/attitude_overlay.v": "261ea683222b0655ad9d856e505d78302a4b1613f75934a1e73b89cdfbce4a59",
+    "src/imu/board_buttons.v": "4b59307f11c653fe86134763540cda6a9e6085a88abd5ecbb3dad382bd110987",
+    "src/imu/imu_attitude.v": "d46a2deac5e8e2cb0c850f51fcd1f04971ec19b2d0a7a9f722667a4dfd23d314",
+    "src/imu/imu_firewater_tx.v": "3300b04dff09734ff9c691db51e29f9583093fc2dbeb2a890a62bb1346b4b70a",
+    "src/imu/imu_math.v": "2663da396408c1ed487f5893bfbb883b6995f2f62ff77f0f458f96e1ef5d1835",
+    "src/imu/imu_rotation_vector.v": "c8cf8b39c2ed1cc1116fc4bc76ed717a9e7512cef1426470c03231320bff4286",
+    "src/imu/lsm6dsv16x_spi.v": "cc7856a770180317b265620baa8f44e12baeed46144e88346344dbe2b437567e",
+    "src/imu/spi_register.v": "ea73795c866ee75943ca49be72c588f5c492b83f6880086d4198aa9bc5010a3c",
+    "src/navigation/astar_grid.v": "a5a041e28a3d39c1a7366672e12f836f0e79516d7bca3063e2b2d41d42e4f142",
+    "src/navigation/map_central_2cm.mem": "d2122371c75cfbd0c5037a8d6ecfc6bcd77279db9c0ea89636f94971873edb57",
+    "src/navigation/map_heading_2cm.mem": "f75bf818d6c862611347e723bb4b36a4064374f8aef69851cbc449ddf976e07f",
+    "src/navigation/map_metadata.mem": "326be8abd8f7624da7a0ebec1b5c7439f1ae0ac5a3a3eff5c81e87613632fd8b",
+    "src/navigation/map_plan_2cm.mem": "5cdbd6c4f73f21eccfaac0f847847efeec4e131acee086145069bc0aa2bda2fb",
+    "src/navigation/map_raw_1cm.mem": "046cfce9203f5797f96d15736f99f0e0b1df3b3dfc047201d3e21f92c8ac38ea",
+    "src/navigation/navigation_ui.v": "b4bf6cb923695fa53f3751b9018852c1beacacddf952f5c82d242966460e15aa",
+    "src/navigation/nav_barrier_overlay.v": "bf5ab21bbed56363cb617041e01d21f5e9b14770794c4490767179a98f67c1e5",
+    "src/navigation/nav_centerline_bitmap.vh": "144b2cc6e5caa7e4dbd230d3ff23ed8ec4695dcf2fb37b32d8276c47b051624a",
+    "src/navigation/nav_centerline_config.vh": "1f0c6f5702ac30f04d368cedd1ad6acac601017664bfedcaa8ae5b401a7431d9",
+    "src/navigation/nav_centerline_init.vh": "bbdbe256d89f677747f625282908c4021b255208e2236852ed1eff1325c92501",
+    "src/navigation/nav_centerline_junctions.vh": "3f53e8b78b22da10be750c320cf1914895d04d6e69613f2062a7e8722286f030",
+    "src/navigation/nav_centerline_reverse.vh": "40c02c8a11fb3e3bd9080facbfff06cd4cda0b1f7bf4af998da01e5f55677e1a",
+    "src/navigation/nav_control.v": "801bb443855b119c7e6df8c109d2cb7362f1be0a75b998bc0dd3d8c9ba767843",
+    "src/navigation/nav_destinations.vh": "0e02cfdf074e5b1b4d08725558d88f5efc2d3756bb6791654c3cb2d22f06bcaf",
+    "src/navigation/nav_font.vh": "753c6a2f340405e2bb2e22393e1eaf2ba4cbc0cc834450351973e5c0830febf0",
+    "src/navigation/nav_font_rows.mem": "203ecc0144936b0f34bce6dbc62e95de554cdaa2650b364fe20db87062f18d12",
+    "src/navigation/nav_map_init.vh": "3106bc18b4e9d920af5b1c2a13c23f7df42ea3260d839600a1f63424c2e99ca2",
+    "src/navigation/nav_map_rom.v": "b89898772b21d4a132636e8539fd687a93c98d2a457aaa47dbf18b9bd1787405",
+    "src/navigation/nav_metadata.vh": "660427c816cb899f6414ed3d316bf9a916255192381f05e0ee30ff868070d13f",
+    "src/navigation/nav_path_refiner.v": "4ac2f9c7c094a120f007631266ae12fd7af15a132b6301ca05e1b85c3f6f5cc2",
+    "src/navigation/nav_renderer.v": "b02723cb58887e86634b4c0f498c0b75a638ea710608ee499e005a08a7f9a7ac",
+    "src/navigation/nav_road_planner.v": "1fcffee0ce695a499321d3f0b6da75a85bea4dcb7e9c5a42459a0067ae5c8a65",
+    "src/navigation/vehicle_settings.v": "e6739f4b03a0163cc19afa84408ff4f89cebb79257283492988fce5d0d635c3d",
+    "src/portrait/gt911_touch.v": "c7a118ae4c691d7cb98ce3ea702b6b75efb20b941ff0f3dd3db6ab86a51e2df3",
+    "src/portrait/portrait_ddr_adapter.v": "a40a1393ae805912fbdeea30341df85dbca5ec1837a6d23b22779f8a9124bef9",
+    "src/portrait/portrait_display.v": "fc893cd13384056a2c363af799722271b3beadd9ca9253c31cbf91d465df4d48",
+    "src/portrait/portrait_tiles.v": "0728857ccf1df1a573b306d273585c3c2f1027eba9f6ac3a3009071e155869ea",
+    "src/portrait/vision_video.v": "aa6a0bc5a07d99442293fc0cf4cd354edb0eecbe771699458d6ddf5b60a36add",
+    "src/portrait/vision_zebra.v": "593a86aa499d01defb2b9c1166e9fd1b45308905b7965e57860b10b3cdc6fdfb",
+    "src/rd_data_fifo/rd_data_fifo.ipc": "a6b670a076fed98cdd29fab89aef4d7c842c0b47c4278b4451f3d341a01d3811",
+    "src/rd_data_fifo/rd_data_fifo.v": "711c5c3a61c6f8c0a6a1cd5efaa20b3941e38e7f76d495b51b8176e9b533035d",
+    "src/rd_data_fifo/rd_data_fifo.vo": "ab0833be05675be1a5a8c5ac7f5266b253ec82aeb41e63492603fef904c196ac",
+    "src/vehicle/host_uart_rx.v": "4f77c892c2adc04b1960e29b44ba1def45aa83510d75b8c51669f3aceff3bf1a",
+    "src/vehicle/rear_ratio.mem": "55e98bd36fb6392475982a11d1738663309c466f00d44683705f0ca041d49714",
+    "src/vehicle/servo_offset.mem": "428a81e9c605087f59de52390df3067c5e6b717ac28d9bd3bcd95087f6b26d17",
+    "src/vehicle/vehicle_bypass.v": "c6152618718b7268cd3ac4b18a1b1350054958e5a98d0d7d49a58dc23363a19c",
+    "src/vehicle/vehicle_config.vh": "c06c9ead985ac7ec84cbaf2b3ad261a161a8729638f39014d9a3deb63837f53a",
+    "src/vehicle/vehicle_host_link.v": "974924f325a9f1539915adffffe0f3869db011b7e7be33630f3c88265613f425",
+    "src/vehicle/vehicle_motion.v": "0b165d51d3c08fccde93596a5458ce3a9bdb11973eb40336e2a1935d2f24227b",
+    "src/vehicle/vehicle_odometry.v": "30153e70b240b97d39861f468fffcfdfad0e13c145396d02fbc64a0a77c2b43f",
+    "src/vehicle/vehicle_route_profile.v": "5b9c9ba9afa19b8f91998662491a5e8b4863df2ee0e16079860522d448876791",
+    "src/vehicle/vehicle_sincos.v": "d24c9d668718ae73def36c9e56916ae3110feb82d8682977ed27127ec56e138d",
+    "src/vehicle/vehicle_subsystem.v": "258e23856bf4103abdee88d707393fe113fda4bcbacd2b71b973f643cbfde233",
+    "src/vehicle/vehicle_tracker.v": "e835346e4d65a518088a6d71c929f8ead513815b7a03b5eac2952060757b2519",
+    "src/vehicle/motor/motor_closed_loop.v": "63390a0e59f23b05a2e8e8c12dac12a89eda08879fc654f54e872c04b8678465",
+    "src/vehicle/motor/motor_encoder.v": "3f727ac320e9dfd46305aa7121d5def2f9cd45cb5631c88c305b7c7db7aeeedc",
+    "src/vehicle/motor/motor_pi.v": "69286e15b990e1ec214d2879bc2681f4984556432c7fa2b1b563ff5477d4fe36",
+    "src/vehicle/motor/motor_PWM.v": "bdd728b1d7d89c5a2761396eca56fbf9b6dbbb08be6f2b4a2da402a69f34cb28",
+    "src/vehicle/motor/motor_speed.v": "29d35e90b4153bf3cc91bffddbdd91b03f46291b90e9d06ee46d9a5a858a1364",
+    "src/vehicle/motor/motor_target_counts.v": "760a9380ce21cce038594da07c95b742859875afe1abad31d0156c90cebde813",
+    "src/vehicle/motor/ps2_reference_controller.v": "ba9a0aef22317ff02ef186db2d07fccacd522e39262f9e63ab716089633241c6",
+    "src/vehicle/motor/ps2_reference_serial.v": "31c0abeab9e806440d20ed5e8381a20443c56da5ec608808d8bc25e70d82f73a",
+    "src/vehicle/motor/ps2_test_control.v": "6158a6eea8adde4e1349387816c80a746ccd764aaf785daecc8200e4603f9c5e",
+    "src/vehicle/motor/servo_pwm.v": "f2ea99f9601c3e0db4a708f9629aea55ba03e64c5d377993f0b2dff4c31d0b46",
+    "src/vehicle/motor/speed_to_pwm.v": "c6a4dd854e4044df7ee87788f7f09fcc4d6d86bf65f6f2e88394b99cbcf6215a",
+    "src/vehicle/motor/uart_byte_tx.v": "5d39e5aaf9b8f8c201c729d74017d05f3cc3398ce84e96e38174322916667093",
+    "src/vehicle/motor/vl53l0x_array_controller.v": "4f7764514e8e4e840124f0b14066b0c2c80d8cd7ce409ed9e6480de488ad9f46",
+    "src/vehicle/motor/vl53l0x_i2c_master.v": "7a6cbdd5cb211285a12adbdd39218d95e58acf135662527c82f5f77e779538d3",
+    "src/vehicle/motor/vl53l1x_array_controller.v": "dd91ec12ef9490b7b506d826f1ccab01f860d22bf85448ac99e1cc7d0aed4a53",
+    "src/vehicle/motor/vl53l1x_i2c_master.v": "53fab283b7900221c5fa0c8e49b7c8ca161fd5bd3a3d581aaf6e1d6a42cc3b49",
+    "src/vehicle/motor/vofa_firewater_tx.v": "0122c87098188171c2070fe525a696a0769ce298c134c9813ff12be6ef7f765d",
+    "src/vga/disp_driver.v": "bcc9ef6b4b56cac425a643eb52891cf74bb778ba122817d52a56c701d26b4ee1",
+    "src/vga/disp_parameter_cfg.v": "5caaac5fdefe821b62763857ca987ff366060f63a0ee585be4ec7cd193311ddb",
+    "src/vga/tft_video_source.v": "73fbab6c112872b1c51e9ef343989a794b44eda3ff12b4f7e04e1dc6ec5bb540",
+    "src/wr_data_fifo/wr_data_fifo.ipc": "9a208f302be269774cb00967019c49108350a96a4006c8ef527050a5b45253b5",
+    "src/wr_data_fifo/wr_data_fifo.v": "0201549b2da4cea620e3deb8be54259be474392685e638a9771533d57837b6b3",
+    "src/wr_data_fifo/wr_data_fifo.vo": "b3dfc5be5e8fd0a592503d5ca3ff7c1c8cd4834f8c28c69638caf1f46fc5c87d",
+    "ov5640.gprj": "e8f3c03d31c58c78b771413705624089d5f4938012cbb7f9f078153f1b1b58bc",
+    "build.tcl": "3059821063e40ae8729e10697d47e601d82808fa1550cf392dbd0a65741613fd"
+  },
+  "changed_hardware_sources": [
+    "src/navigation/nav_control.v",
+    "src/navigation/nav_destinations.vh",
+    "src/navigation/nav_renderer.v",
+    "src/navigation/navigation_ui.v",
+    "src/ov5640_ddr3_tft.v",
+    "src/vehicle/vehicle_host_link.v",
+    "src/vehicle/vehicle_subsystem.v"
+  ],
+  "pins_verified": 118,
+  "rom_audits": {
+    "font": {
+      "rows": 4096,
+      "pixels": 65536,
+      "rom_instances": 4
+    },
+    "map": {
+      "raw_map": {
+        "cells": 112640,
+        "free": 42634,
+        "rom_instances": 8
+      },
+      "plan_map": {
+        "cells": 28160,
+        "free": 4000,
+        "rom_instances": 2
+      },
+      "heading_clearance": {
+        "used": false,
+        "reason": "body-heading and clearance costs removed"
+      }
+    },
+    "road": {
+      "graph": {
+        "words": 1764,
+        "rom_instances": 8,
+        "checked_bits": 127008,
+        "logical_bits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75
+        ]
+      },
+      "reverse_graph": {
+        "words": 1764,
+        "rom_instances": 5,
+        "checked_bits": 67032,
+        "logical_bits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ]
+      },
+      "centre_map": {
+        "words": 1760,
+        "rom_instances": 2,
+        "checked_bits": 28160,
+        "logical_bits": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      }
+    },
+    "servo_pwm": {
+      "entries": 2048,
+      "verified_bits": 24576,
+      "rom_instances": 2,
+      "min_pulse_us": 500,
+      "max_pulse_us": 2500,
+      "step_tenths": 1
+    }
+  },
+  "host_destinations": {
+    "count": 9,
+    "select_command": 8,
+    "query_command": 9,
+    "start_command": 3,
+    "automatic_page_handoff": true
+  },
+  "visual_navigation": {
+    "steering": false,
+    "pose_correction": false
+  },
+  "zebra": {
+    "bar_directions": "transverse and longitudinal",
+    "adaptive_luma": true,
+    "preview_threshold_independent": true,
+    "limit": "min(normal/2, 60 mm/s)",
+    "clear": "next complete clear frame"
+  },
+  "s_bend": {
+    "spacing_mm": 10,
+    "geometry_unchanged": true,
+    "tracker_unchanged": true
+  },
+  "servo_center": {
+    "default_tenths": 900,
+    "minimum_tenths": 500,
+    "maximum_tenths": 1200,
+    "fine_step_tenths": 1,
+    "coarse_step_tenths": 10,
+    "lower_offset_tenths": -500,
+    "upper_offset_tenths": 600,
+    "nonlinear_table_preserved": true,
+    "persistent": false,
+    "pwm_period_us": 20000,
+    "pwm_resolution_us": 1,
+    "absolute_command_range_tenths": [
+      0,
+      1800
+    ]
+  },
+  "simulation_evidence": {
+    "numbered_points": {
+      "geometry": [
+        {
+          "point": 1,
+          "cell": [
+            17,
+            17
+          ],
+          "display_cm": [
+            35,
+            285
+          ],
+          "ideal_raw_cm": [
+            34.77974641540427,
+            35.81158678289398
+          ],
+          "quantization_error_mm": 8.41
+        },
+        {
+          "point": 2,
+          "cell": [
+            12,
+            80
+          ],
+          "display_cm": [
+            25,
+            159
+          ],
+          "ideal_raw_cm": [
+            25.564245810055866,
+            160.5875152998776
+          ],
+          "quantization_error_mm": 6.99
+        },
+        {
+          "point": 3,
+          "cell": [
+            17,
+            142
+          ],
+          "display_cm": [
+            35,
+            35
+          ],
+          "ideal_raw_cm": [
+            34.77974641540427,
+            285.3634438168612
+          ],
+          "quantization_error_mm": 4.25
+        },
+        {
+          "point": 4,
+          "cell": [
+            88,
+            147
+          ],
+          "display_cm": [
+            177,
+            25
+          ],
+          "ideal_raw_cm": [
+            176.0,
+            294.5410036719706
+          ],
+          "quantization_error_mm": 11.0
+        },
+        {
+          "point": 5,
+          "cell": [
+            158,
+            142
+          ],
+          "display_cm": [
+            317,
+            35
+          ],
+          "ideal_raw_cm": [
+            317.2202535845957,
+            285.3634438168612
+          ],
+          "quantization_error_mm": 4.25
+        },
+        {
+          "point": 6,
+          "cell": [
+            163,
+            80
+          ],
+          "display_cm": [
+            327,
+            159
+          ],
+          "ideal_raw_cm": [
+            326.43575418994413,
+            160.5875152998776
+          ],
+          "quantization_error_mm": 6.99
+        },
+        {
+          "point": 7,
+          "cell": [
+            158,
+            17
+          ],
+          "display_cm": [
+            317,
+            285
+          ],
+          "ideal_raw_cm": [
+            317.2202535845957,
+            35.81158678289398
+          ],
+          "quantization_error_mm": 8.41
+        },
+        {
+          "point": 8,
+          "cell": [
+            88,
+            13
+          ],
+          "display_cm": [
+            177,
+            293
+          ],
+          "ideal_raw_cm": [
+            176.0,
+            26.63402692778458
+          ],
+          "quantization_error_mm": 10.65
+        },
+        {
+          "point": 9,
+          "cell": [
+            88,
+            73
+          ],
+          "display_cm": [
+            177,
+            173
+          ],
+          "ideal_raw_cm": [
+            177.96648044692736,
+            147.85801713586292
+          ],
+          "quantization_error_mm": 12.92
+        }
+      ],
+      "cases": [
+        {
+          "point": 1,
+          "passed": true,
+          "seconds": 172.438,
+          "route_samples": 48,
+          "goal_error_manhattan_mm": 21.33,
+          "log": "sim/host_points_1.log",
+          "log_sha256": "c7ba78cc8a929aa356951a9d5f6875f783a2073c4cad9260e961aff2687d5901",
+          "route": "sim/host_point_1_route.csv"
+        },
+        {
+          "point": 2,
+          "passed": true,
+          "seconds": 389.703,
+          "route_samples": 78,
+          "goal_error_manhattan_mm": 49.92,
+          "log": "sim/host_points_2.log",
+          "log_sha256": "efddd6be2f73e45209b23dd37f390195f0dc43a3c2780529c9f9ab11f6ad9d1b",
+          "route": "sim/host_point_2_route.csv"
+        },
+        {
+          "point": 3,
+          "passed": true,
+          "seconds": 737.297,
+          "route_samples": 110,
+          "goal_error_manhattan_mm": 30.23,
+          "log": "sim/host_points_3.log",
+          "log_sha256": "822df22369c782c9ceb3641fe037c9d7890510592f8fcbf80658702d300a60a8",
+          "route": "sim/host_point_3_route.csv"
+        },
+        {
+          "point": 4,
+          "passed": true,
+          "seconds": 451.656,
+          "route_samples": 84,
+          "goal_error_manhattan_mm": 39.34,
+          "log": "sim/host_points_4.log",
+          "log_sha256": "9eb51a636f0868997fbc6f91c6a3b7e0e955dd8121cddb71cd3d149e25768c0d",
+          "route": "sim/host_point_4_route.csv"
+        },
+        {
+          "point": 5,
+          "passed": true,
+          "seconds": 449.032,
+          "route_samples": 83,
+          "goal_error_manhattan_mm": 30.23,
+          "log": "sim/host_points_5.log",
+          "log_sha256": "3acc745be8bf95bf480fd42e0d7c5e72a590c947d896cf0f242dfecc926f701d",
+          "route": "sim/host_point_5_route.csv"
+        },
+        {
+          "point": 6,
+          "passed": true,
+          "seconds": 191.922,
+          "route_samples": 51,
+          "goal_error_manhattan_mm": 42.89,
+          "log": "sim/host_points_6.log",
+          "log_sha256": "fb7e54d11aba84dadb9ac49a699e8be91485494643093f311cbc406909884c30",
+          "route": "sim/host_point_6_route.csv"
+        },
+        {
+          "point": 7,
+          "passed": true,
+          "seconds": 69.531,
+          "route_samples": 22,
+          "goal_error_manhattan_mm": 21.33,
+          "log": "sim/host_points_7.log",
+          "log_sha256": "94b4ebd46ae1b8245cc9baac8938ba2e85bf168961c3c4442bc82268e59e6917",
+          "route": "sim/host_point_7_route.csv"
+        },
+        {
+          "point": 8,
+          "passed": true,
+          "seconds": 53.438,
+          "route_samples": 13,
+          "goal_error_manhattan_mm": 38.4,
+          "log": "sim/host_points_8.log",
+          "log_sha256": "085c33cc43eeb93eb25a76fec5e1acb772dc4d3c4392314bb6494c60240d8cb2",
+          "route": "sim/host_point_8_route.csv"
+        },
+        {
+          "point": 9,
+          "passed": true,
+          "seconds": 318.609,
+          "route_samples": 73,
+          "goal_error_manhattan_mm": 62.62,
+          "log": "sim/host_points_9.log",
+          "log_sha256": "dc0fe2a855c545796c5d9e048d5c5051efa7b8ae5b0d946a6b007695d5b4a79a",
+          "route": "sim/host_point_9_route.csv"
+        }
+      ],
+      "inputs": {
+        "sim/host_points_tb.sv": "5fcda038cac7273a18443b5313f197c67e00c4a612d4f8e2d2949981597fc353",
+        "src/navigation/astar_grid.v": "a5a041e28a3d39c1a7366672e12f836f0e79516d7bca3063e2b2d41d42e4f142",
+        "src/navigation/navigation_ui.v": "b4bf6cb923695fa53f3751b9018852c1beacacddf952f5c82d242966460e15aa",
+        "src/navigation/nav_barrier_overlay.v": "bf5ab21bbed56363cb617041e01d21f5e9b14770794c4490767179a98f67c1e5",
+        "src/navigation/nav_control.v": "801bb443855b119c7e6df8c109d2cb7362f1be0a75b998bc0dd3d8c9ba767843",
+        "src/navigation/nav_map_rom.v": "b89898772b21d4a132636e8539fd687a93c98d2a457aaa47dbf18b9bd1787405",
+        "src/navigation/nav_path_refiner.v": "4ac2f9c7c094a120f007631266ae12fd7af15a132b6301ca05e1b85c3f6f5cc2",
+        "src/navigation/nav_renderer.v": "b02723cb58887e86634b4c0f498c0b75a638ea710608ee499e005a08a7f9a7ac",
+        "src/navigation/nav_road_planner.v": "1fcffee0ce695a499321d3f0b6da75a85bea4dcb7e9c5a42459a0067ae5c8a65",
+        "src/navigation/vehicle_settings.v": "e6739f4b03a0163cc19afa84408ff4f89cebb79257283492988fce5d0d635c3d",
+        "src/vehicle/host_uart_rx.v": "4f77c892c2adc04b1960e29b44ba1def45aa83510d75b8c51669f3aceff3bf1a",
+        "src/vehicle/vehicle_bypass.v": "c6152618718b7268cd3ac4b18a1b1350054958e5a98d0d7d49a58dc23363a19c",
+        "src/vehicle/vehicle_host_link.v": "974924f325a9f1539915adffffe0f3869db011b7e7be33630f3c88265613f425",
+        "src/vehicle/vehicle_motion.v": "0b165d51d3c08fccde93596a5458ce3a9bdb11973eb40336e2a1935d2f24227b",
+        "src/vehicle/vehicle_odometry.v": "30153e70b240b97d39861f468fffcfdfad0e13c145396d02fbc64a0a77c2b43f",
+        "src/vehicle/vehicle_route_profile.v": "5b9c9ba9afa19b8f91998662491a5e8b4863df2ee0e16079860522d448876791",
+        "src/vehicle/vehicle_sincos.v": "d24c9d668718ae73def36c9e56916ae3110feb82d8682977ed27127ec56e138d",
+        "src/vehicle/vehicle_subsystem.v": "258e23856bf4103abdee88d707393fe113fda4bcbacd2b71b973f643cbfde233",
+        "src/vehicle/vehicle_tracker.v": "e835346e4d65a518088a6d71c929f8ead513815b7a03b5eac2952060757b2519",
+        "src/vehicle/motor/motor_closed_loop.v": "63390a0e59f23b05a2e8e8c12dac12a89eda08879fc654f54e872c04b8678465",
+        "src/vehicle/motor/motor_encoder.v": "3f727ac320e9dfd46305aa7121d5def2f9cd45cb5631c88c305b7c7db7aeeedc",
+        "src/vehicle/motor/motor_pi.v": "69286e15b990e1ec214d2879bc2681f4984556432c7fa2b1b563ff5477d4fe36",
+        "src/vehicle/motor/motor_PWM.v": "bdd728b1d7d89c5a2761396eca56fbf9b6dbbb08be6f2b4a2da402a69f34cb28",
+        "src/vehicle/motor/motor_speed.v": "29d35e90b4153bf3cc91bffddbdd91b03f46291b90e9d06ee46d9a5a858a1364",
+        "src/vehicle/motor/motor_target_counts.v": "760a9380ce21cce038594da07c95b742859875afe1abad31d0156c90cebde813",
+        "src/vehicle/motor/ps2_reference_controller.v": "ba9a0aef22317ff02ef186db2d07fccacd522e39262f9e63ab716089633241c6",
+        "src/vehicle/motor/ps2_reference_serial.v": "31c0abeab9e806440d20ed5e8381a20443c56da5ec608808d8bc25e70d82f73a",
+        "src/vehicle/motor/ps2_test_control.v": "6158a6eea8adde4e1349387816c80a746ccd764aaf785daecc8200e4603f9c5e",
+        "src/vehicle/motor/servo_pwm.v": "f2ea99f9601c3e0db4a708f9629aea55ba03e64c5d377993f0b2dff4c31d0b46",
+        "src/vehicle/motor/speed_to_pwm.v": "c6a4dd854e4044df7ee87788f7f09fcc4d6d86bf65f6f2e88394b99cbcf6215a",
+        "src/vehicle/motor/uart_byte_tx.v": "5d39e5aaf9b8f8c201c729d74017d05f3cc3398ce84e96e38174322916667093",
+        "src/vehicle/motor/vl53l0x_array_controller.v": "4f7764514e8e4e840124f0b14066b0c2c80d8cd7ce409ed9e6480de488ad9f46",
+        "src/vehicle/motor/vl53l0x_i2c_master.v": "7a6cbdd5cb211285a12adbdd39218d95e58acf135662527c82f5f77e779538d3",
+        "src/vehicle/motor/vl53l1x_array_controller.v": "dd91ec12ef9490b7b506d826f1ccab01f860d22bf85448ac99e1cc7d0aed4a53",
+        "src/vehicle/motor/vl53l1x_i2c_master.v": "53fab283b7900221c5fa0c8e49b7c8ca161fd5bd3a3d581aaf6e1d6a42cc3b49",
+        "src/vehicle/motor/vofa_firewater_tx.v": "0122c87098188171c2070fe525a696a0769ce298c134c9813ff12be6ef7f765d",
+        "src/imu/imu_math.v": "2663da396408c1ed487f5893bfbb883b6995f2f62ff77f0f458f96e1ef5d1835",
+        "src/navigation/nav_centerline_bitmap.vh": "144b2cc6e5caa7e4dbd230d3ff23ed8ec4695dcf2fb37b32d8276c47b051624a",
+        "src/navigation/nav_centerline_config.vh": "1f0c6f5702ac30f04d368cedd1ad6acac601017664bfedcaa8ae5b401a7431d9",
+        "src/navigation/nav_centerline_init.vh": "bbdbe256d89f677747f625282908c4021b255208e2236852ed1eff1325c92501",
+        "src/navigation/nav_centerline_junctions.vh": "3f53e8b78b22da10be750c320cf1914895d04d6e69613f2062a7e8722286f030",
+        "src/navigation/nav_centerline_reverse.vh": "40c02c8a11fb3e3bd9080facbfff06cd4cda0b1f7bf4af998da01e5f55677e1a",
+        "src/navigation/nav_destinations.vh": "0e02cfdf074e5b1b4d08725558d88f5efc2d3756bb6791654c3cb2d22f06bcaf",
+        "src/navigation/nav_font.vh": "753c6a2f340405e2bb2e22393e1eaf2ba4cbc0cc834450351973e5c0830febf0",
+        "src/navigation/nav_map_init.vh": "3106bc18b4e9d920af5b1c2a13c23f7df42ea3260d839600a1f63424c2e99ca2",
+        "src/navigation/nav_metadata.vh": "660427c816cb899f6414ed3d316bf9a916255192381f05e0ee30ff868070d13f",
+        "src/vehicle/vehicle_config.vh": "c06c9ead985ac7ec84cbaf2b3ad261a161a8729638f39014d9a3deb63837f53a"
+      }
+    },
+    "motion": {
+      "inputs": {
+        "sim/inertial_zebra_route_tb.sv": "2734d13f0eadf7756510d24771991982465f2e7e27cd227361a3f5c785672865",
+        "src/vehicle/vehicle_motion.v": "0b165d51d3c08fccde93596a5458ce3a9bdb11973eb40336e2a1935d2f24227b",
+        "src/vehicle/vehicle_tracker.v": "e835346e4d65a518088a6d71c929f8ead513815b7a03b5eac2952060757b2519",
+        "src/vehicle/vehicle_odometry.v": "30153e70b240b97d39861f468fffcfdfad0e13c145396d02fbc64a0a77c2b43f",
+        "src/vehicle/vehicle_sincos.v": "d24c9d668718ae73def36c9e56916ae3110feb82d8682977ed27127ec56e138d",
+        "src/vehicle/vehicle_route_profile.v": "5b9c9ba9afa19b8f91998662491a5e8b4863df2ee0e16079860522d448876791",
+        "src/vehicle/vehicle_bypass.v": "c6152618718b7268cd3ac4b18a1b1350054958e5a98d0d7d49a58dc23363a19c",
+        "src/imu/imu_math.v": "2663da396408c1ed487f5893bfbb883b6995f2f62ff77f0f458f96e1ef5d1835",
+        "src/navigation/nav_centerline_bitmap.vh": "144b2cc6e5caa7e4dbd230d3ff23ed8ec4695dcf2fb37b32d8276c47b051624a",
+        "src/navigation/nav_centerline_config.vh": "1f0c6f5702ac30f04d368cedd1ad6acac601017664bfedcaa8ae5b401a7431d9",
+        "src/navigation/nav_centerline_init.vh": "bbdbe256d89f677747f625282908c4021b255208e2236852ed1eff1325c92501",
+        "src/navigation/nav_centerline_junctions.vh": "3f53e8b78b22da10be750c320cf1914895d04d6e69613f2062a7e8722286f030",
+        "src/navigation/nav_centerline_reverse.vh": "40c02c8a11fb3e3bd9080facbfff06cd4cda0b1f7bf4af998da01e5f55677e1a",
+        "src/navigation/nav_destinations.vh": "0e02cfdf074e5b1b4d08725558d88f5efc2d3756bb6791654c3cb2d22f06bcaf",
+        "src/navigation/nav_font.vh": "753c6a2f340405e2bb2e22393e1eaf2ba4cbc0cc834450351973e5c0830febf0",
+        "src/navigation/nav_map_init.vh": "3106bc18b4e9d920af5b1c2a13c23f7df42ea3260d839600a1f63424c2e99ca2",
+        "src/navigation/nav_metadata.vh": "660427c816cb899f6414ed3d316bf9a916255192381f05e0ee30ff868070d13f",
+        "src/vehicle/vehicle_config.vh": "c06c9ead985ac7ec84cbaf2b3ad261a161a8729638f39014d9a3deb63837f53a"
+      },
+      "cases": [
+        {
+          "point": 1,
+          "passed": true,
+          "seconds": 8.844,
+          "metrics": {
+            "status": 3.0,
+            "index": 47.0,
+            "count": 48.0,
+            "max_cross_mm": 5.841407,
+            "max_pose_mm": 3.031666
+          },
+          "route": "sim/host_point_1_motion_input.csv",
+          "route_sha256": "fe4956552a8fb164aa0aa7279e4e32d1283031dc4a7b0b04de344e0a799d3d2a",
+          "trace": "sim/host_point_1_motion_trace.csv",
+          "log": "sim/host_point_1_motion.log",
+          "log_sha256": "7dc32856636b472546cc3a4f6e4ae0de8eeeeae14c868e838196753d133b6ec7"
+        },
+        {
+          "point": 2,
+          "passed": true,
+          "seconds": 16.844,
+          "metrics": {
+            "status": 3.0,
+            "index": 77.0,
+            "count": 78.0,
+            "max_cross_mm": 16.118798,
+            "max_pose_mm": 4.700659
+          },
+          "route": "sim/host_point_2_motion_input.csv",
+          "route_sha256": "2bd91216d8a3ff7b5b023f2dd33b0f9a9b1bf5ea565fe481d732e4d256311a2a",
+          "trace": "sim/host_point_2_motion_trace.csv",
+          "log": "sim/host_point_2_motion.log",
+          "log_sha256": "3589677a381f03609275560f512ccfb344e8e603bbf58b688b39b9006db0c603"
+        },
+        {
+          "point": 3,
+          "passed": true,
+          "seconds": 22.984,
+          "metrics": {
+            "status": 3.0,
+            "index": 109.0,
+            "count": 110.0,
+            "max_cross_mm": 16.118798,
+            "max_pose_mm": 4.498931
+          },
+          "route": "sim/host_point_3_motion_input.csv",
+          "route_sha256": "954fbf834b08bce33a9a1f3a390ab543341a73265845bff4923282e6a4cdc6fe",
+          "trace": "sim/host_point_3_motion_trace.csv",
+          "log": "sim/host_point_3_motion.log",
+          "log_sha256": "2dbbfdd700bcb93e2779514f06ba8fb22b6d21b9df9f3ca2efca3a66876dfda3"
+        },
+        {
+          "point": 4,
+          "passed": true,
+          "seconds": 17.235,
+          "metrics": {
+            "status": 3.0,
+            "index": 83.0,
+            "count": 84.0,
+            "max_cross_mm": 15.174529,
+            "max_pose_mm": 5.161254
+          },
+          "route": "sim/host_point_4_motion_input.csv",
+          "route_sha256": "05b0481a7ea298e720fb85fe83923dd456f471b613d9d08a906169d4f8c7693b",
+          "trace": "sim/host_point_4_motion_trace.csv",
+          "log": "sim/host_point_4_motion.log",
+          "log_sha256": "f1d1ecbeebea00ffd64ddfedc3a4fb0b855d71ad4a18c01893b4bfb7d104e532"
+        },
+        {
+          "point": 5,
+          "passed": true,
+          "seconds": 17.203,
+          "metrics": {
+            "status": 3.0,
+            "index": 82.0,
+            "count": 83.0,
+            "max_cross_mm": 18.10535,
+            "max_pose_mm": 5.974083
+          },
+          "route": "sim/host_point_5_motion_input.csv",
+          "route_sha256": "2e0f28906ac196300362b0fbf2a0e9558ab048039841e5a931d45dd971c2f31d",
+          "trace": "sim/host_point_5_motion_trace.csv",
+          "log": "sim/host_point_5_motion.log",
+          "log_sha256": "d82cbd94d07e46c229fb875b074623234d004ad5edf78a25d416dde4103de3ed"
+        },
+        {
+          "point": 6,
+          "passed": true,
+          "seconds": 10.031,
+          "metrics": {
+            "status": 3.0,
+            "index": 50.0,
+            "count": 51.0,
+            "max_cross_mm": 5.250296,
+            "max_pose_mm": 3.287985
+          },
+          "route": "sim/host_point_6_motion_input.csv",
+          "route_sha256": "f281e67cbd51c5c5cf2e63042d4d29e8f3d119d76dcca96a527817d48b26a963",
+          "trace": "sim/host_point_6_motion_trace.csv",
+          "log": "sim/host_point_6_motion.log",
+          "log_sha256": "c7f2ad0734256fbb28ecb991c5b494c937c477cd6d1e91f7404edbc734deee94"
+        },
+        {
+          "point": 7,
+          "passed": true,
+          "seconds": 4.11,
+          "metrics": {
+            "status": 3.0,
+            "index": 21.0,
+            "count": 22.0,
+            "max_cross_mm": 4.243077,
+            "max_pose_mm": 2.793472
+          },
+          "route": "sim/host_point_7_motion_input.csv",
+          "route_sha256": "fdcb0d7f61f4447ab4958690f7c0e2d2a24edd0f33fe447a46affefefb0c12e5",
+          "trace": "sim/host_point_7_motion_trace.csv",
+          "log": "sim/host_point_7_motion.log",
+          "log_sha256": "c7953c3760946267c0b2010c0cfb9cafb827934e4b1d55c5037cd81ebcd09db0"
+        },
+        {
+          "point": 8,
+          "passed": true,
+          "seconds": 2.781,
+          "metrics": {
+            "status": 3.0,
+            "index": 12.0,
+            "count": 13.0,
+            "max_cross_mm": 0.0,
+            "max_pose_mm": 1.447656
+          },
+          "route": "sim/host_point_8_motion_input.csv",
+          "route_sha256": "733899e00cb6374dda9fc0b2c16842df400de917b3a9f01a1a6ad64547292aef",
+          "trace": "sim/host_point_8_motion_trace.csv",
+          "log": "sim/host_point_8_motion.log",
+          "log_sha256": "e3276aec39b81692bab5040440c3652c4ec70be360b3dac2e2e328dd802090fc"
+        },
+        {
+          "point": 9,
+          "passed": true,
+          "seconds": 9.812,
+          "metrics": {
+            "status": 3.0,
+            "index": 72.0,
+            "count": 73.0,
+            "max_cross_mm": 17.021152,
+            "max_pose_mm": 2.26662
+          },
+          "route": "sim/host_point_9_motion_input.csv",
+          "route_sha256": "0805d2d44d373de464184c397e10664db0bd28708149debcc8e9606d2f5778c4",
+          "trace": "sim/host_point_9_motion_trace.csv",
+          "log": "sim/host_point_9_motion.log",
+          "log_sha256": "bf7fb7f8a3d2c50239dc1adb29cd9501081c9454000c48fed8d7426959f3e6a3"
+        }
+      ]
+    },
+    "logs": [
+      {
+        "path": "sim/host_points_fault.log",
+        "sha256": "9ea11f7bc07bc585d006d1027053e9d823c5d2cd420f27951fb901e92cd7532e",
+        "results": [
+          "PASS destination faults: bad ID/argument, missing start, planning busy, STOP cancellation, failed route, handoff, duplicate START, watchdog, explicit resume, page/source exit"
+        ]
+      },
+      {
+        "path": "sim/host_points_ui_cancel.log",
+        "sha256": "c8c310923e1686726aa9f6f0b489368990eeed579c9372c3e7f5b59952acb77a",
+        "results": [
+          "PASS real UI faults: cancel during raster wipe/planner, back and clear invalidate routes; invalid START and fully blocked map remain stopped"
+        ]
+      },
+      {
+        "path": "sim/diguapi_navigation_test.log",
+        "sha256": "60014741aee7470e69a1cb38f9cd0bec1c46c7ba1f044db1cbf15a42588897f8",
+        "results": [
+          "PASS DiGuaPi adapter: plan/status/start order, invalid point, failed planning, persistent heartbeat, completion queue, stop on exit and concurrent cancellation"
+        ]
+      },
+      {
+        "path": "sim/host_points_python_client.log",
+        "sha256": "3041cb0b63fd4192ff29833169b175ab165e977ba79b1496a58a51402ce6bb2f",
+        "results": [
+          "PASS host Python client: fixed vectors, arbitrary chunks, corruption/resync, ACK and queued completion event"
+        ]
+      },
+      {
+        "path": "sim/host_points_settings.log",
+        "sha256": "eab501b2e75ab0bdc5adcb5e5ecf4e652174300cc411d6ac649d8587b8a8f41d",
+        "results": [
+          "PASS vehicle_settings_tb 1.703 seconds"
+        ]
+      },
+      {
+        "path": "sim/inertial_zebra_modes.log",
+        "sha256": "5a1cbb4f3f3a34f895361cdaa5b3182a6f11d0ade324939ef61cba88def1a410",
+        "results": [
+          "PASS pure navigation: camera-free startup, zebra 200->60->200, invalid-frame hold, steering independent, pause/resume",
+          "PASS repeated mode handoff: eight in-flight prior targets cannot trap navigation startup",
+          "PASS pure navigation emergency obstacle/IMU stops"
+        ]
+      },
+      {
+        "path": "sim/inertial_zebra_avoidance.log",
+        "sha256": "74b8af36ff0953a325b7a073a5975474119e58695ff5fbd2a4360ae6b901b064",
+        "results": [
+          "PASS side ToF: both avoidance settings preserve left/right pure map corrections (4 cases)",
+          "PASS OFF stop: north=0 front=161 target=(2500,500)",
+          "PASS OFF stop: north=1 front=161 target=(500,2500)",
+          "PASS OFF/ON: stopping/clearance, both headings, latched setting and next-entry activation (2 cases)",
+          "PASS ON side selection, independent avoidance task, OFF emergency and IMU stop protections"
+        ]
+      },
+      {
+        "path": "sim/inertial_zebra_zebra.log",
+        "sha256": "2b869110da40022d5940f7f1f573c608f5e66d8fea0a421589ae4d9228c874b6",
+        "results": [
+          "PASS vision zebra: both bar directions, slant, offset, noise, partial frame hold, clear release; single marking, lane boundaries, all-white image, noise and short texture rejected"
+        ]
+      },
+      {
+        "path": "sim/inertial_zebra_camera.log",
+        "sha256": "4e52a46b1cf20454cc653b4254d11648c702bd98760ff1c481940fbf257e8630",
+        "results": [
+          "PASS native camera->zebra->inertial motion: 200->60->200, low speed 80->40, incomplete-frame hold, isolated noise, false positives, unchanged targets/steering, pause, modes and emergency; frames=6"
+        ]
+      },
+      {
+        "path": "sim/inertial_zebra_uart.log",
+        "sha256": "01f72ce396ff9367bff5871606b648c683ee095075dae0f3e5df19cdc89a1d2a",
+        "results": [
+          "PASS host UART: real RX/TX bits, checksum, scope, bounds, startup/slowdown/STOP, parser timeout/bad stop, watchdog, navigation pause/resume/completion and extension event"
+        ]
+      },
+      {
+        "path": "sim/inertial_zebra_host.log",
+        "sha256": "6bbf556536fe0c7db85f5e9ba5f69b8f3c4e42804ce6907dca877ce6748e17fb",
+        "results": [
+          "PASS host integration: third source arbitration, ramp/STOP/brake, no implicit NAV START, real route/profile startup, pause/resume without reset of pose/route"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "path": "docs/host_points_map.png",
+        "sha256": "d5728efaa6cdb3c1c7c3f193bea9a0e34651a5115fa6d358440f6965926d2836"
+      },
+      {
+        "path": "docs/host_points_map_preview.png",
+        "sha256": "30ec156309b183e0a5ffc544f814edfdaeb255abc3b5b7e3c3f5ff6260cdf201"
+      }
+    ],
+    "graph_checks": [
+      {
+        "point": 1,
+        "all_samples_on_graph": true,
+        "directed_edges_valid": true,
+        "samples": 48,
+        "goal_error_manhattan_mm": 21.328,
+        "length_cm": 197.426
+      },
+      {
+        "point": 2,
+        "all_samples_on_graph": true,
+        "directed_edges_valid": true,
+        "samples": 78,
+        "goal_error_manhattan_mm": 49.922,
+        "length_cm": 314.478
+      },
+      {
+        "point": 3,
+        "all_samples_on_graph": true,
+        "directed_edges_valid": true,
+        "samples": 110,
+        "goal_error_manhattan_mm": 30.234,
+        "length_cm": 443.483
+      },
+      {
+        "point": 4,
+        "all_samples_on_graph": true,
+        "directed_edges_valid": true,
+        "samples": 84,
+        "goal_error_manhattan_mm": 39.336,
+        "length_cm": 336.362
+      },
+      {
+        "point": 5,
+        "all_samples_on_graph": true,
+        "directed_edges_valid": true,
+        "samples": 83,
+        "goal_error_manhattan_mm": 30.234,
+        "length_cm": 331.444
+      },
+      {
+        "point": 6,
+        "all_samples_on_graph": true,
+        "directed_edges_valid": true,
+        "samples": 51,
+        "goal_error_manhattan_mm": 42.891,
+        "length_cm": 211.538
+      },
+      {
+        "point": 7,
+        "all_samples_on_graph": true,
+        "directed_edges_valid": true,
+        "samples": 22,
+        "goal_error_manhattan_mm": 21.328,
+        "length_cm": 85.387
+      },
+      {
+        "point": 8,
+        "all_samples_on_graph": true,
+        "directed_edges_valid": true,
+        "samples": 13,
+        "goal_error_manhattan_mm": 38.398,
+        "length_cm": 51.547
+      },
+      {
+        "point": 9,
+        "all_samples_on_graph": true,
+        "directed_edges_valid": true,
+        "samples": 73,
+        "goal_error_manhattan_mm": 62.617,
+        "length_cm": 174.49
+      }
+    ],
+    "destination_table": {
+      "coordinate_source": "existing road_centerlines.json; source x*352/895,y*320/817",
+      "road_geometry_changed": false,
+      "numbering": "annotated user map, counterclockwise from upper-left, S=9",
+      "points": [
+        {
+          "id": 1,
+          "location": "upper_left_arc_midpoint",
+          "planner_cell": [
+            17,
+            17
+          ],
+          "display_cm": [
+            35,
+            285
+          ],
+          "nearest_graph_node": 1570,
+          "graph_q8": [
+            9324,
+            8778
+          ],
+          "graph_primitive": 194,
+          "snap_error_manhattan_mm": 21.328
+        },
+        {
+          "id": 2,
+          "location": "left_straight_midpoint",
+          "planner_cell": [
+            12,
+            80
+          ],
+          "display_cm": [
+            25,
+            159
+          ],
+          "nearest_graph_node": 871,
+          "graph_q8": [
+            6544,
+            41164
+          ],
+          "graph_primitive": 129,
+          "snap_error_manhattan_mm": 7.656
+        },
+        {
+          "id": 3,
+          "location": "lower_left_arc_midpoint",
+          "planner_cell": [
+            17,
+            142
+          ],
+          "display_cm": [
+            35,
+            35
+          ],
+          "nearest_graph_node": 1546,
+          "graph_q8": [
+            8512,
+            72634
+          ],
+          "graph_primitive": 193,
+          "snap_error_manhattan_mm": 30.234
+        },
+        {
+          "id": 4,
+          "location": "bottom_straight_midpoint",
+          "planner_cell": [
+            88,
+            147
+          ],
+          "display_cm": [
+            177,
+            25
+          ],
+          "nearest_graph_node": 737,
+          "graph_q8": [
+            45056,
+            75402
+          ],
+          "graph_primitive": 118,
+          "snap_error_manhattan_mm": 14.609
+        },
+        {
+          "id": 5,
+          "location": "lower_right_arc_midpoint",
+          "planner_cell": [
+            158,
+            142
+          ],
+          "display_cm": [
+            317,
+            35
+          ],
+          "nearest_graph_node": 1521,
+          "graph_q8": [
+            81600,
+            72634
+          ],
+          "graph_primitive": 192,
+          "snap_error_manhattan_mm": 30.234
+        },
+        {
+          "id": 6,
+          "location": "right_straight_midpoint",
+          "planner_cell": [
+            163,
+            80
+          ],
+          "display_cm": [
+            327,
+            159
+          ],
+          "nearest_graph_node": 594,
+          "graph_q8": [
+            83568,
+            41368
+          ],
+          "graph_primitive": 107,
+          "snap_error_manhattan_mm": 11.562
+        },
+        {
+          "id": 7,
+          "location": "upper_right_arc_midpoint",
+          "planner_cell": [
+            158,
+            17
+          ],
+          "display_cm": [
+            317,
+            285
+          ],
+          "nearest_graph_node": 1497,
+          "graph_q8": [
+            80788,
+            8778
+          ],
+          "graph_primitive": 191,
+          "snap_error_manhattan_mm": 21.328
+        },
+        {
+          "id": 8,
+          "location": "top_straight_midpoint",
+          "planner_cell": [
+            88,
+            13
+          ],
+          "display_cm": [
+            177,
+            293
+          ],
+          "nearest_graph_node": 489,
+          "graph_q8": [
+            45056,
+            6818
+          ],
+          "graph_primitive": 101,
+          "snap_error_manhattan_mm": 13.672
+        },
+        {
+          "id": 9,
+          "location": "s_bend_inflection",
+          "planner_cell": [
+            88,
+            73
+          ],
+          "display_cm": [
+            177,
+            173
+          ],
+          "nearest_graph_node": 1677,
+          "graph_q8": [
+            45619,
+            37607
+          ],
+          "graph_primitive": 196,
+          "snap_error_manhattan_mm": 12.969
+        }
+      ]
+    }
+  },
+  "software_inputs": {
+    "tools/host_serial_client.py": "a34179b86eb0093af1ec3336d0bd0f7c2d08f1d188b5bb6bcf4dc02e8bd2eb31",
+    "tools/diguapi_navigation.py": "c5c9a82a2140e2437014813bba7f5a52cbd482fc598489f07596ba5e04e67a8c",
+    "sim/diguapi_navigation_test.py": "abcf3e316f69a6ebc88c55500c10e265a3759d42e0a5b090cbaf4a24186966ef",
+    "sim/host_serial_client_test.py": "f62c347ec5088f08f74e8d86e552de28448175e5ef41dfb2a20f8b3230096089"
+  },
+  "known_limitations": [
+    "Not flashed or tested on the physical vehicle.",
+    "DiGuaPi AI application source was not present; serial API and callable adapter are provided but not deployed into that application.",
+    "Point coordinates use existing map geometry and 2 cm user grid; graph sampling, arrival tolerance and inertial drift still apply.",
+    "Encoder/IMU movement replays use an ideal bicycle model; they do not establish real vehicle centimetre accuracy.",
+    "Finished navigation sessions require leaving/re-entering the run page before a new task, as in the existing controller.",
+    "A new task after movement still requires the user to set the actual start pose; fixed goals do not provide absolute localization."
+  ]
+}

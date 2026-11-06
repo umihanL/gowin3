@@ -1,0 +1,40 @@
+﻿{
+    "Time":  "2026-10-10T11:59:04.1310947+08:00",
+    "Adapter":  "以太网",
+    "Guid":  "{71BE5E92-F39D-4BB5-B6C7-DADD61391FD4}",
+    "InterfaceIndex":  13,
+    "Dhcp":  "Enabled",
+    "Addresses":  [
+                      {
+                          "IPAddress":  "169.254.158.112",
+                          "PrefixLength":  16
+                      }
+                  ],
+    "Routes":  [
+                   {
+                       "DestinationPrefix":  "255.255.255.255/32",
+                       "NextHop":  "0.0.0.0",
+                       "RouteMetric":  256
+                   },
+                   {
+                       "DestinationPrefix":  "224.0.0.0/4",
+                       "NextHop":  "0.0.0.0",
+                       "RouteMetric":  256
+                   },
+                   {
+                       "DestinationPrefix":  "169.254.255.255/32",
+                       "NextHop":  "0.0.0.0",
+                       "RouteMetric":  256
+                   },
+                   {
+                       "DestinationPrefix":  "169.254.158.112/32",
+                       "NextHop":  "0.0.0.0",
+                       "RouteMetric":  256
+                   },
+                   {
+                       "DestinationPrefix":  "169.254.0.0/16",
+                       "NextHop":  "0.0.0.0",
+                       "RouteMetric":  256
+                   }
+               ]
+}

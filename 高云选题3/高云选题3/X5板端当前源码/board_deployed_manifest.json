@@ -1,0 +1,581 @@
+{
+  "generated_utc": "2026-10-10T04:24:06.991947+00:00",
+  "scope": "Deployed application source, configs, unpacked models and docs; excludes model download archives, venv, build and mutable reports. Original delivery_manifest refers to prior ZIP.",
+  "files": [
+    {
+      "path": ".vscode/settings.json",
+      "bytes": 886,
+      "sha256": "84b55eab1a8ffd8891d37191e4fd37a08106adb71f9c0b0fbfda47b0feba06c3"
+    },
+    {
+      "path": ".vscode/tasks.json",
+      "bytes": 895,
+      "sha256": "936247ec1071ad3da5c275b31369593d0a231c3aa76614d9fe59454441cc41c7"
+    },
+    {
+      "path": "config/buildings.json",
+      "bytes": 8912,
+      "sha256": "53790fedfec05c8cbacec7b7ba4c2fe22e61377fc0772b1ef06d8a2a66352b0e"
+    },
+    {
+      "path": "config/facade.template.json",
+      "bytes": 393,
+      "sha256": "172c20d42f4debb20fbeecf1ede6e474f025e1fba4b73b669a2066e516bd7411"
+    },
+    {
+      "path": "config/landing.template.json",
+      "bytes": 659,
+      "sha256": "7ec24ed307a68b515faf63121e32efcd1d686000f1ffacf6bc017e7b1f7ecebe"
+    },
+    {
+      "path": "config/mount.template.json",
+      "bytes": 433,
+      "sha256": "16f2ff2c269bcb4525e40ab306232d2e829b87bce65f07ee920ba7d7a2eb9a0d"
+    },
+    {
+      "path": "config/navigation.json",
+      "bytes": 921,
+      "sha256": "f435ead3a542bc636a9f681de34099ae36a238f224924123bcafbad142bdcd33"
+    },
+    {
+      "path": "config/navigation_map.json",
+      "bytes": 63930,
+      "sha256": "e87f416d8228960f5865c96034109595bde4f4f408c44cb48865399ae3a9ec87"
+    },
+    {
+      "path": "config/servo.template.json",
+      "bytes": 342,
+      "sha256": "36a27d28f4bbf8ee96dde3ebeaee9c323711cfa5a210f4332240669be3583172"
+    },
+    {
+      "path": "config/stereo.template.json",
+      "bytes": 453,
+      "sha256": "46811e7222a0cbfdb3f3138e7f8e905391782b95494fd40b78cd90abd832f50f"
+    },
+    {
+      "path": "config/telemetry.board_preview.json",
+      "bytes": 298,
+      "sha256": "b7c19298f6760bd2481932482b5b1b16896be7a726c44ccdcdf0c86b03b9b876"
+    },
+    {
+      "path": "config/telemetry.json",
+      "bytes": 338,
+      "sha256": "24bc46d752e39c21f2c6ba460a0869ac1b9ac76b48f974b44b72f4d4655cc087"
+    },
+    {
+      "path": "config/traffic.json",
+      "bytes": 854,
+      "sha256": "1c7b50b3aa1d6d6bcf85707526a7ba3e866629a5312530bfc6142f10438856c8"
+    },
+    {
+      "path": "config/voice.board_preview.json",
+      "bytes": 245,
+      "sha256": "61cbfc9e6519f421cab25b4d1b560ffc0db0e7fdf8ff4084a472ad38e8d3d378"
+    },
+    {
+      "path": "config/voice.json",
+      "bytes": 585,
+      "sha256": "a040929b3cd4423963c6fa7fd56ee12b698bb422af9fcb5e330ea5864f5e9480"
+    },
+    {
+      "path": "deployment_status.json",
+      "bytes": 4100,
+      "sha256": "2edd320d4804fe0589e4f74b53729f1ae8d0a34f8efe33bdf142c8467b4e80aa"
+    },
+    {
+      "path": "docs/ROS2节点与场景报告.md",
+      "bytes": 6253,
+      "sha256": "d3f399ea38637232d98fe77b27e12a5e3a224ad5a283ce2b9a2015b1d98a9747"
+    },
+    {
+      "path": "docs/UART协议与红绿灯流程.md",
+      "bytes": 14727,
+      "sha256": "1b16d4a861a6f19aaa4cd2a0ba442da9df4105ad4961aa55f09612c03912461c"
+    },
+    {
+      "path": "docs/VSCode与板端开发_一步一步.md",
+      "bytes": 9245,
+      "sha256": "904a60c843c206111e63ad37acccf975becb4618b46c92cbda5b1ed6598c27f8"
+    },
+    {
+      "path": "docs/历史六节点版本说明.md",
+      "bytes": 18852,
+      "sha256": "8ad72493cc6165eb298e239589c513b27bb08dad424f551d6e0ff2f9815e5ea9"
+    },
+    {
+      "path": "docs/双目标定.md",
+      "bytes": 6911,
+      "sha256": "e105d23a8dd5319422788add6806f06fdd5e7a40b93923380e4458fc76b9ce51"
+    },
+    {
+      "path": "docs/地图定位与导航.md",
+      "bytes": 12713,
+      "sha256": "9e52f0867a1ecaea9058c5fe6ee3b974e4885ded4f19a0faebc20f53bfc8b8c0"
+    },
+    {
+      "path": "docs/无线网页上位机.md",
+      "bytes": 8228,
+      "sha256": "74c94375721a51f2dd3689e4881a147ed6628c070b7501997ce27736bc1ccfc3"
+    },
+    {
+      "path": "docs/板端接入与部署记录_20261010.md",
+      "bytes": 5202,
+      "sha256": "6056a10846f60399fe24559729838541266d0d9844209d7a23273886b9cef2d5"
+    },
+    {
+      "path": "docs/楼牌与语义导航.md",
+      "bytes": 7919,
+      "sha256": "d6d6c693d965322eac779f35df4f4f2738c03e8117d2776a33e17f7c2838eb22"
+    },
+    {
+      "path": "docs/红绿灯联调.md",
+      "bytes": 5837,
+      "sha256": "c33ff545ceb577c224eb3bf9337360a19beb5a8f43c524fe39b75d796087d0ba"
+    },
+    {
+      "path": "docs/语音输入与播报.md",
+      "bytes": 10435,
+      "sha256": "d738ea283b62f79613f03e55b3a0f9e65529434e2df04600ae09e88bddfd24c5"
+    },
+    {
+      "path": "env.sh",
+      "bytes": 655,
+      "sha256": "a9c118c61dcbea7313657212cc4ec67a981ab87148447c5d787faaeb112ab71b"
+    },
+    {
+      "path": "models/ocr/ch_PP-OCRv4_det_infer.onnx",
+      "bytes": 4745517,
+      "sha256": "d2a7720d45a54257208b1e13e36a8479894cb74155a5efe29462512d42f49da9"
+    },
+    {
+      "path": "models/ocr/ch_PP-OCRv4_rec_infer.onnx",
+      "bytes": 10857958,
+      "sha256": "48fc40f24f6d2a207a2b1091d3437eb3cc3eb6b676dc3ef9c37384005483683b"
+    },
+    {
+      "path": "models/ocr/ch_ppocr_mobile_v2.0_cls_infer.onnx",
+      "bytes": 585532,
+      "sha256": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c"
+    },
+    {
+      "path": "models/ocr/manifest.json",
+      "bytes": 996,
+      "sha256": "fd45a0de6e08706136d93a8724b6390fe628f89779335b788e28ab53468a3668"
+    },
+    {
+      "path": "models/voice/vosk-model-small-cn-0.22/am/final.mdl",
+      "bytes": 15901896,
+      "sha256": "91eda2c04c4f599361cb92b0e5298ccdf6b3c7a1fa52bfcefcd2c4e07aa1c131"
+    },
+    {
+      "path": "models/voice/vosk-model-small-cn-0.22/conf/mfcc.conf",
+      "bytes": 153,
+      "sha256": "6c326fea5741c2d78be12f76eb1b36ea2ace040da9e355e4cfe6bb80e5f7d5ab"
+    },
+    {
+      "path": "models/voice/vosk-model-small-cn-0.22/conf/model.conf",
+      "bytes": 289,
+      "sha256": "468a8125c07530f96adcc219a0a5f993e8e0721ccf18acbd3169b77fc685fb9b"
+    },
+    {
+      "path": "models/voice/vosk-model-small-cn-0.22/graph/disambig_tid.int",
+      "bytes": 234,
+      "sha256": "c9200318c2a265549ebfbea7e0176fa62e131e953abd140c9b0b39fe61e24015"
+    },
+    {
+      "path": "models/voice/vosk-model-small-cn-0.22/graph/Gr.fst",
+      "bytes": 26082259,
+      "sha256": "46d41a9b1723abccdcb354d731a5b58d87c060100d88ada1a3e31220f52b0434"
+    },
+    {
+      "path": "models/voice/vosk-model-small-cn-0.22/graph/HCLr.fst",
+      "bytes": 16158762,
+      "sha256": "798af0d9ba6f2d727747f58e1e7b2305f8618bc8ea7f6c51beecd8a2c965b965"
+    },
+    {
+      "path": "models/voice/vosk-model-small-cn-0.22/graph/phones/word_boundary.int",
+      "bytes": 7161,
+      "sha256": "11ca784b99f03188b451fb54714c2de3dd694e662a5f88e82df435c2789b9aec"
+    },
+    {
+      "path": "models/voice/vosk-model-small-cn-0.22/ivector/final.dubm",
+      "bytes": 168048,
+      "sha256": "e33276cbd548c0a03ae5812c98115940614997dff23a6d59968af6eaf7630ff8"
+    },
+    {
+      "path": "models/voice/vosk-model-small-cn-0.22/ivector/final.ie",
+      "bytes": 9927287,
+      "sha256": "c39d46fbff04efb7baa9660ae7a728b0e2f35a4a1250b56ed3a599e26956df86"
+    },
+    {
+      "path": "models/voice/vosk-model-small-cn-0.22/ivector/final.mat",
+      "bytes": 44975,
+      "sha256": "42706d88818070ea0d0182b4d11367ba52a13b9a2be45630f60858a422109ada"
+    },
+    {
+      "path": "models/voice/vosk-model-small-cn-0.22/ivector/global_cmvn.stats",
+      "bytes": 1090,
+      "sha256": "b267dc89c1556fdd5bc358f0a480929da1743eeccfa06a67daf8db629ca336bb"
+    },
+    {
+      "path": "models/voice/vosk-model-small-cn-0.22/ivector/online_cmvn.conf",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "models/voice/vosk-model-small-cn-0.22/ivector/splice.conf",
+      "bytes": 35,
+      "sha256": "9f0c5f7c82d18eaf25d8bce470efa9f7741f88411fe428774bc0a9bb69a24756"
+    },
+    {
+      "path": "models/voice/vosk-model-small-cn-0.22/README",
+      "bytes": 82,
+      "sha256": "7362be411c609f2a1c9d2dfe22c2d72555c15eb90bfe47c41772f49ef94840ce"
+    },
+    {
+      "path": "models/yolo/deployment_status.json",
+      "bytes": 933,
+      "sha256": "f3d285c641e9a9248f3a67265254a5d6115e0a4cbed152a07c18cefa555f7cc2"
+    },
+    {
+      "path": "models/yolo/model_contract.json",
+      "bytes": 3363,
+      "sha256": "91bd1aaf74bddd5e2014bd622fcb57c3ce976536b9a85d0a5c4528a805a94c77"
+    },
+    {
+      "path": "models/yolo/wallpaper_yolo11n_3class_bayese_640_nv12.bin",
+      "bytes": 11996866,
+      "sha256": "51192dbfdbe2be33aae6488190eb081150b04c999798729539433fb346115def"
+    },
+    {
+      "path": "README_开始使用.md",
+      "bytes": 9293,
+      "sha256": "9b5f259f8edfec901bce227073b361b2c71163a7f618ab19952027c305ab6bdb"
+    },
+    {
+      "path": "src/rescue_interfaces/CMakeLists.txt",
+      "bytes": 578,
+      "sha256": "5f7d3495e4627115df535b9887499e48b0f4f7534204a20ad47e0b627445b545"
+    },
+    {
+      "path": "src/rescue_interfaces/msg/Detection.msg",
+      "bytes": 236,
+      "sha256": "3b3f53369ef92e1cccf1fb8e7b7f3791d42f85cb41c5eef630480323ceb488d8"
+    },
+    {
+      "path": "src/rescue_interfaces/msg/DetectionArray.msg",
+      "bytes": 142,
+      "sha256": "10c5319fc80f164c41631b7a231b02c94f53cc713d47a33dd8207703e8318500"
+    },
+    {
+      "path": "src/rescue_interfaces/msg/FpgaEvent.msg",
+      "bytes": 311,
+      "sha256": "a040a84e20215489a590718cf0fd30f46316a93f4e5df4aa5176b291e84445f9"
+    },
+    {
+      "path": "src/rescue_interfaces/msg/GimbalCommand.msg",
+      "bytes": 105,
+      "sha256": "3247d3a6877f48a20531388f0dbe59b5f2e4e39925913ccbda98b7b816f9da01"
+    },
+    {
+      "path": "src/rescue_interfaces/msg/ManeuverCommand.msg",
+      "bytes": 239,
+      "sha256": "6b64bb723ce365aad68e0384a32f12740cfbd98bd821673f0def92e750074e2f"
+    },
+    {
+      "path": "src/rescue_interfaces/msg/MotionPermission.msg",
+      "bytes": 87,
+      "sha256": "3ffca0c8b3adab512a7c69ccb9d9b6e168633ec547807a0c2f2c4065a6c409a4"
+    },
+    {
+      "path": "src/rescue_interfaces/msg/StereoPair.msg",
+      "bytes": 212,
+      "sha256": "d0c5fb9c7d2b074a1a9947ee1606491ea780afde2e51c3abc79570899662f389"
+    },
+    {
+      "path": "src/rescue_interfaces/package.xml",
+      "bytes": 680,
+      "sha256": "637c040ee4a66f203a5b5ff1170af1444b688515a52d6cd2c690ae9d2e8f113d"
+    },
+    {
+      "path": "src/rescue_vision/launch/rescue.launch.py",
+      "bytes": 4093,
+      "sha256": "dcf6542f55b53878711377fb075984deb5aa74da69e2a9c2c38eabf3138248e6"
+    },
+    {
+      "path": "src/rescue_vision/package.xml",
+      "bytes": 779,
+      "sha256": "6e6c73787279658b0f1a9ac92dc14f78cc87896c72fc51c5b01f965b357e2f6b"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/__init__.py",
+      "bytes": 59,
+      "sha256": "92d8bc42ff31a6ac8f9758b3c726f72946a6917eb85be2bb9b32099b85d2c97f"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/aim_geometry.py",
+      "bytes": 1362,
+      "sha256": "897142484a33bc5367e49397ad0bc68d01a671e0b380ae5976f3759123b33b56"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/building_ocr.py",
+      "bytes": 5984,
+      "sha256": "ee105713ed158d46851f1de96b33a564288420623944816b8b7124423166be79"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/camera_node.py",
+      "bytes": 2775,
+      "sha256": "cbe8aa9ab63834b57e2a22dcd0bd639c03174b9dcaf97cc5fe885ba7c1a3a359"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/fire_aim_node.py",
+      "bytes": 5760,
+      "sha256": "bb1fcdf055ddf2befe4f61dd28dd2c91c80be79e4f0bd9a2504d43aace4b5066"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/fpga_bridge_node.py",
+      "bytes": 7683,
+      "sha256": "50a845cbb09a0ff70ba431d42fb8736c6a3ac20f4572e9d3f5cced790cf70644"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/interaction.py",
+      "bytes": 4161,
+      "sha256": "14bad05cd06671b0c9b776ef3e8daa304193ea98d92569b78a153f4e6cb5c196"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/interaction_node.py",
+      "bytes": 2398,
+      "sha256": "d7bb9f4e7f2de56f4a3917326b785764217cae3d74a5d6df9df0a254ff70530c"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/legacy_aiming.py",
+      "bytes": 9431,
+      "sha256": "7a841ca1597fddbb476a4a63241452e8ed242366eb59605888d0ccc1306d6ac5"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/legacy_detector.py",
+      "bytes": 7380,
+      "sha256": "19480777fdea29469f4009b732bdc497348170b8189ed33be09138ed8db1e0e8"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/legacy_landing_calibration.py",
+      "bytes": 1671,
+      "sha256": "4b6cad378006e5c8f12c4514b1922c45c22ae5d02d95d0978e1d07dbf2e17466"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/legacy_visual_servo.py",
+      "bytes": 3483,
+      "sha256": "2095d44d1eda6f8e80e3a7bc6bbe4f194934e39569c8e3d40189d2396ac5704a"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/mission_node.py",
+      "bytes": 11384,
+      "sha256": "ea9df214f2651b66ed0aadaeb5cd79f89b60adb4c412b203015a68b10161c2c8"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/navigation.py",
+      "bytes": 17662,
+      "sha256": "0f702dd850154555ef71b07213e8d3233e700ff390e891acfaf0eb4935ded554"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/navigation_node.py",
+      "bytes": 3195,
+      "sha256": "461f6627cedc5824e1a1d34a3075126048fec2fde8fe562d34bca8de76cbb528"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/node_common.py",
+      "bytes": 1087,
+      "sha256": "699aa0758c23735a2ef7d23eb2215ba436b5cf1f00254833516caaa5204803eb"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/perception_node.py",
+      "bytes": 3994,
+      "sha256": "5a71107286a7879e9dd6ed557370fa53bb5c08504156543dd0367735a77a8757"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/protocol.py",
+      "bytes": 7359,
+      "sha256": "4c9b5b099163b43542d76d114530269821b61c3f6f478021352ebb3765cfe78d"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/scene_node.py",
+      "bytes": 6537,
+      "sha256": "3ba00e15920c4b6e2c7f18499b9910f03b9772f206cbe4b1488b56edcedd781d"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/semantics.py",
+      "bytes": 6696,
+      "sha256": "586eb70ac28a4099f2563cd26b0ee5d3941cf1da734eb9041cebd937cfd66067"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/stereo.py",
+      "bytes": 13446,
+      "sha256": "a97b8a35127228296e35c7558d68e0af8fefb79bb37c1ffa99c50e0e63e980e5"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/telemetry.py",
+      "bytes": 12674,
+      "sha256": "1a9d14e08957791d1b07005e66b81325916994203168bf0c4036d5d4fc10d812"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/telemetry_node.py",
+      "bytes": 3329,
+      "sha256": "7628baf6441c4bfb253c908a45c10fe371c922ff9779020e62b15ca35733493a"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/traffic.py",
+      "bytes": 16485,
+      "sha256": "d983b96f1a297693dbd2edb137e457ad4d61cb057716b010a3ac022e4da86f67"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/voice.py",
+      "bytes": 7293,
+      "sha256": "457dffede693443b78d642fefe85585ae358c2c447fa2352d68e1b0e1ddcca10"
+    },
+    {
+      "path": "src/rescue_vision/rescue_vision/voice_node.py",
+      "bytes": 12398,
+      "sha256": "08f512654586ee42ffd6aabbd569ac63a1cac721fc9d72e93d809d57445b5b57"
+    },
+    {
+      "path": "src/rescue_vision/resource/rescue_vision",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "src/rescue_vision/setup.cfg",
+      "bytes": 95,
+      "sha256": "4f4ff5806fcc4a5488ca6793d48ae94b6fb673781b7113c5b9782c109b6ac487"
+    },
+    {
+      "path": "src/rescue_vision/setup.py",
+      "bytes": 1555,
+      "sha256": "d1b846e382d23292051eea0ca7511d6a1c09667ce71cce99e5a3cd6b5a37a21b"
+    },
+    {
+      "path": "tools/board_bashrc.sh",
+      "bytes": 193,
+      "sha256": "3217fee2ca817cea8e428c2134934741341283819a640c7fb7454d2e4504c0ed"
+    },
+    {
+      "path": "tools/build_board.sh",
+      "bytes": 474,
+      "sha256": "8e99207badb98cf8a5120384ed3937c6feee133452260234c35c9cb87eb941ee"
+    },
+    {
+      "path": "tools/build_navigation_map.py",
+      "bytes": 12933,
+      "sha256": "e1e7f64d00ec9a1284d0d047e986fe041782c30027ee0b42eab203fda3487111"
+    },
+    {
+      "path": "tools/calibrate_stereo.py",
+      "bytes": 9053,
+      "sha256": "d412d7a69093954b419f51dfbe6354034428ef010adfbe3943d66dc43da747c4"
+    },
+    {
+      "path": "tools/check_board.sh",
+      "bytes": 780,
+      "sha256": "3f5eedf34826f7560e479ee6876dafdf72f4f137cf394041cf0faaf8e3a115f4"
+    },
+    {
+      "path": "tools/dashboard_demo.py",
+      "bytes": 2636,
+      "sha256": "f205fdb37139c5a952a9bf49b6be9138e258b4901ca46cc8c4545d063b5876d8"
+    },
+    {
+      "path": "tools/docker/build_workspace.sh",
+      "bytes": 556,
+      "sha256": "cc3c660dadbf69c2215754b11ac10d529c7ee02642bb149a7c8f0f6e6545f212"
+    },
+    {
+      "path": "tools/docker/Dockerfile.humble-check",
+      "bytes": 666,
+      "sha256": "84bab2190365c0456ac67a92a5407c5872a06e0f1abbea84f2de03add4d14caa"
+    },
+    {
+      "path": "tools/docker/import_smoke.py",
+      "bytes": 829,
+      "sha256": "a742e2d667101736390b6f5eb6984debdaad8d1e9a372d7bcb1d9bbb7c1a541f"
+    },
+    {
+      "path": "tools/docker/README.md",
+      "bytes": 1311,
+      "sha256": "c7e2d06fb1541f48315d7e2ab46faec7ba5b760dee589b521f80d1d6a0821dc8"
+    },
+    {
+      "path": "tools/launch_smoke.py",
+      "bytes": 3337,
+      "sha256": "ad9a7c9113c919e02f3e51725fcae09766109ab85271a77407219254bf4373c3"
+    },
+    {
+      "path": "tools/package_workspace.py",
+      "bytes": 6574,
+      "sha256": "37635e5e01fa4b559a9f982687b2b5a93aa35e3ee787e8cc17b5edd90005811b"
+    },
+    {
+      "path": "tools/prepare_ocr.py",
+      "bytes": 3615,
+      "sha256": "006c3ead69b75f8a827c4d7f721761c09dc3e1c5eae090f67489cc243eaf0b04"
+    },
+    {
+      "path": "tools/prepare_voice.py",
+      "bytes": 2981,
+      "sha256": "6601506a1daeffcfe4a4ba3341bfc8e08986480c8fad5da2720af2990bbbac0e"
+    },
+    {
+      "path": "tools/prepare_workspace.py",
+      "bytes": 2082,
+      "sha256": "98e23720f9c4f6b0fd4cbc7364cba12b35cac1abe9aa64ed6cff5c41e7896b46"
+    },
+    {
+      "path": "tools/preview_service.sh",
+      "bytes": 965,
+      "sha256": "0f237881e8f00bab8cac085f40ed03bedd86dfec4ff17be59416311fba75aeaf"
+    },
+    {
+      "path": "tools/ros_integration_test.py",
+      "bytes": 9866,
+      "sha256": "26f50664e42e75eb5deed643b5427742b609f5d1354dfc93be1979d6fe3ec03b"
+    },
+    {
+      "path": "tools/run_board_preview.sh",
+      "bytes": 691,
+      "sha256": "7a9fb879719597d3b3e9b446b5000876b47d6a9b397ca1496ba62e84a7b5c1d8"
+    },
+    {
+      "path": "tools/scene_demo.py",
+      "bytes": 18604,
+      "sha256": "cbcddcea0bff5d159c4705b43a6937b983b20b897006de5db09b2fff15c0bac2"
+    },
+    {
+      "path": "tools/setup_board.sh",
+      "bytes": 1272,
+      "sha256": "ee2f054c333fdc6df4e56df857648f94682a7a88f2f457b11566a1b4ebf7fe1d"
+    },
+    {
+      "path": "tools/system_ros_integration_test.py",
+      "bytes": 15304,
+      "sha256": "f824d2b7ae4ce48a8d6ee2c36d190e6f6d58ec59b62ae2fd8d5d9e8720078756"
+    },
+    {
+      "path": "tools/telemetry_ros_integration_test.py",
+      "bytes": 9720,
+      "sha256": "fe277b1357a0ff628e0406f35929186b24b4d135563332f3deaa8efb3afe5946"
+    },
+    {
+      "path": "web/app.js",
+      "bytes": 7393,
+      "sha256": "483d6529ee9d361f9d55026f8ebb601574e9b081394b95f1a147d0e6092a22ca"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 5779,
+      "sha256": "28b108452eb58ebf54a08fe956c2447e0c351ec486b6ef1a702d34246f2684f7"
+    },
+    {
+      "path": "web/style.css",
+      "bytes": 6693,
+      "sha256": "f4372e56453b553b4216bf04a7d5daa9243abbd67629bcdf4171d93c70eaa5ec"
+    }
+  ]
+}

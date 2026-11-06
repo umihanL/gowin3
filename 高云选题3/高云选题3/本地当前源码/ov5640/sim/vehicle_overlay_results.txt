@@ -1,0 +1,3 @@
+PASS telemetry decimal display: live refresh, 072.8 cm raster, negative heading, zero and invalid ranges
+PASS vehicle overlay raster: distance and navigation screens with complete units/segment font
+sim/vehicle_overlay_tb.sv:78: $finish called at 15380481000 (1ps)

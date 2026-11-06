@@ -1,0 +1,56 @@
+[
+  {
+    "name": "navigation_entry_before_0",
+    "baseline": true,
+    "case": 0,
+    "exit_code": 1,
+    "log": "sim/navigation_entry_before_0.log",
+    "sha256": "6133144a3f985ca63f86ca6d91a9882ea3fa1c53b5402910b82ccb3a442cdd73",
+    "source_sha256": "b75aec82446d8ecd66c4f848f029485ab55f8065d8e959926a1982202249a9f5"
+  },
+  {
+    "name": "navigation_entry_before_1",
+    "baseline": true,
+    "case": 1,
+    "exit_code": 1,
+    "log": "sim/navigation_entry_before_1.log",
+    "sha256": "8f60f1252e0ab2f5f7ea1f2f2bebc6a5d04f93556830d40e65938c44638512ac",
+    "source_sha256": "b75aec82446d8ecd66c4f848f029485ab55f8065d8e959926a1982202249a9f5"
+  },
+  {
+    "name": "navigation_entry_before_2",
+    "baseline": true,
+    "case": 2,
+    "exit_code": 1,
+    "log": "sim/navigation_entry_before_2.log",
+    "sha256": "91704781f47d4572b4114d51f089c240cd4ee04740431eb2d1cccc445bc9a164",
+    "source_sha256": "b75aec82446d8ecd66c4f848f029485ab55f8065d8e959926a1982202249a9f5"
+  },
+  {
+    "name": "navigation_entry_after_0",
+    "baseline": false,
+    "case": 0,
+    "exit_code": 0,
+    "log": "sim/navigation_entry_after_0.log",
+    "sha256": "eb1b00926f634e923116f76af4159b274301f5258f5ae6c655d166299165ab87",
+    "source_sha256": "ee201d274e41494d12d9690d9143494a4e659ed17484dd46416f14731fc71ca5"
+  },
+  {
+    "name": "navigation_entry_after_1",
+    "baseline": false,
+    "case": 1,
+    "exit_code": 0,
+    "log": "sim/navigation_entry_after_1.log",
+    "sha256": "e460ce8ca9a9d87dbcd818603d880925c831029d7fa7a5ce2aeba576c81058f4",
+    "source_sha256": "ee201d274e41494d12d9690d9143494a4e659ed17484dd46416f14731fc71ca5"
+  },
+  {
+    "name": "navigation_entry_after_2",
+    "baseline": false,
+    "case": 2,
+    "exit_code": 0,
+    "log": "sim/navigation_entry_after_2.log",
+    "sha256": "bcc6d96bbeddcade62e4d229696bef3375521baaf3e0e058e8aed3478a95663d",
+    "source_sha256": "ee201d274e41494d12d9690d9143494a4e659ed17484dd46416f14731fc71ca5"
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "expected_rejection": true,
+  "generator_exit_code": 1,
+  "assets_unchanged": true,
+  "message": "ValueError: Existing junction geometry requires 32.35 deg wheel steering; the measured limit is 28 deg with a 1 deg planning margin. No road assets were overwritten. Recheck the metric road registration and feasible turn geometry; do not increase the measured servo limit to bypass this check."
+}

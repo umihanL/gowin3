@@ -1,0 +1,12 @@
+@echo off
+chcp 65001 >nul
+cd /d "%~dp0"
+if not exist "%~dp0.venv\Scripts\python.exe" (
+  echo Run 01_setup_environment.cmd first.
+  pause
+  exit /b 1
+)
+"%~dp0.venv\Scripts\python.exe" "%~dp0train.py" --check-only %*
+set "TASK_EXIT=%errorlevel%"
+pause
+exit /b %TASK_EXIT%

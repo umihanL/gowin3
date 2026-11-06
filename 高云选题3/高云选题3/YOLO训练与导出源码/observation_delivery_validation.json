@@ -1,0 +1,87 @@
+{
+  "completed_at": "2026-10-08T20:29:07.254512+08:00",
+  "implementation_complete": true,
+  "training_paused": true,
+  "training_started": false,
+  "complete_epochs": 34,
+  "test_set_inference_run": false,
+  "paused_files": {
+    "weights/best.pt": {
+      "sha256": "24772bb6f8f1125891ad13c9ec79801c6ed6adc50f8eef51d60ea10c91cc22c9",
+      "matches_pause_snapshot": true
+    },
+    "weights/last.pt": {
+      "sha256": "83346760c4193c292ca4016021ccdb8efb6113adcf50df1814cb2ef03b183b64",
+      "matches_pause_snapshot": true
+    },
+    "results.csv": {
+      "sha256": "9f9971f594a61cfd364dff175cb5dc5276728805a2682a4df2709342e5e30096",
+      "matches_pause_snapshot": true
+    },
+    "args.yaml": {
+      "sha256": "139c2e613b3517cba7d96c73f4bb5bc39171a15b16d8146c523cee915e2a45f0",
+      "matches_pause_snapshot": true
+    },
+    "augmentation_policy.json": {
+      "sha256": "fc2e0034dce7f0d47488f4dc1b60fa776b7468f3ea50e9dbc13291520539abf3",
+      "matches_pause_snapshot": true
+    }
+  },
+  "evidence": {
+    "data": {
+      "path": "dataset_observation_v3/observation_data_validation.json",
+      "sha256": "e872bd046e3f29502ec90307a7192bde4abf06f75b57a968570791c4f90f2860",
+      "passed": true
+    },
+    "dataset": {
+      "path": "dataset_observation_v3/independent_validation.json",
+      "sha256": "78dec4f0417b306b3a20be86683fe839d9f21580fc867b7137c197e06b53db6e",
+      "passed": true
+    },
+    "dataset_ui": {
+      "path": "dataset_observation_v3/review_ui_validation.json",
+      "sha256": "f473d76afb4df488289128407db25608d746c9755a0a934cb6d94e8ccb05c426",
+      "passed": true
+    },
+    "evaluation_ui": {
+      "path": "reports/observation_v1/review_ui_validation.json",
+      "sha256": "34b4d9289aeb63ce4e32b540bcc842263fd6577f23dea4a5fc032385506baace",
+      "passed": true
+    },
+    "loader": {
+      "path": "observation_v3_loader_validation.json",
+      "sha256": "e151acd0daf9b35412a9c60e8d4693bd27ce071c2d528820058d23d925ef5344",
+      "passed": true
+    }
+  },
+  "python_tests": {
+    "count": 23,
+    "passed": true,
+    "log": "reports/observation_policy_tests.log"
+  },
+  "simulator": {
+    "path": "D:\\Github_OpenCode_TreeBird\\AckermannRescueSim\\captures\\observation_verification.json",
+    "sha256": "4006a213301ae0e5d0b0f5677215e1e7cd12aad33da5f89bb9cbb0b7bedf3a00",
+    "passed": true,
+    "detector": "colour rules, not YOLO"
+  },
+  "dataset": {
+    "images": 5064,
+    "boxes": 47778,
+    "train": 4560,
+    "val": 252,
+    "test": 252,
+    "new_images": 768
+  },
+  "runtime_source_sha256": {
+    "observation.py": "3a31fa98748ef8cd0d653a1105a04e85dc32a23b21bfe8a91acb1e0643d55a3c",
+    "run_observation.py": "6f188359359df675005ea038c41a077a3c44b02327cd98f4b41397360e59784d",
+    "stereo_depth.py": "94487efc2fc06b048b3ea363f93235cc6687f97d0ba138e60b2e354e79146d2d"
+  },
+  "limits": [
+    "Synthetic same-wallpaper observations; measured GS130W calibration still required.",
+    "No qualified independent near firefighter views in original validation spatial partition.",
+    "New V8 data is prepared but untrained; no claimed accuracy gain.",
+    "RDK X5 BPU deployment and hardware drivers are not complete."
+  ]
+}

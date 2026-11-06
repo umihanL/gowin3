@@ -1,0 +1,24 @@
+[
+  {
+    "top": "navigation_start_acquire_tb",
+    "expected_failure": true,
+    "message": "START_NOISE_WAIT",
+    "log": "sim/navigation_startfix_before_navigation_start_acquire_tb.log",
+    "inputs": {
+      "impl/baseline_navigation_startfix_20261027/src/vehicle/vehicle_vision_fusion.v": "bc8b07646fca7d91744ae1b0d2906e20366855febb8905f9f9511c1b0aef145a",
+      "sim/navigation_start_acquire_tb.sv": "cbe88881d25fcfcde797a16e018e66b71911f1a76f92b40aa627fd2f13da0a22"
+    },
+    "sha256": "311bd501e285386e76339e81f87ecb09730527adb2e19c85368674bd727ff416"
+  },
+  {
+    "top": "navigation_branch_direction_tb",
+    "expected_failure": true,
+    "message": "committed branch reversed mid-turn",
+    "log": "sim/navigation_startfix_before_navigation_branch_direction_tb.log",
+    "inputs": {
+      "impl/baseline_navigation_startfix_20261027/src/vehicle/vehicle_vision_fusion.v": "bc8b07646fca7d91744ae1b0d2906e20366855febb8905f9f9511c1b0aef145a",
+      "sim/navigation_branch_direction_tb.sv": "11d4d9096547b19417530c8fe37d459357b478032997c81123c188bb79037bcf"
+    },
+    "sha256": "4ac4fffa7188be3cfb96e573fc5a397a707456935304effab3122a79b6049ea2"
+  }
+]

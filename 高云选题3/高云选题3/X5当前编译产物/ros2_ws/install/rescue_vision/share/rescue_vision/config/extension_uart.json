@@ -1,0 +1,10 @@
+{
+  "enabled": true,
+  "port": "/dev/ttyS2",
+  "baud": 115200,
+  "protocol": "ov5640_fixed10_xor_v1",
+  "side_camera_verified": false,
+  "screen_x_per_forward_sign": 0,
+  "fixed_traffic_camera_verified": false,
+  "note": "Verified UART2: physical PIN15 TX -> FPGA E13 RX, PIN22 RX <- E14 TX; GND common. Startup does not start navigation. Explicit operator commands required."
+}

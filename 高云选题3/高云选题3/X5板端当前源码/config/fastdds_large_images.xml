@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Fast DDS 2.6.10 large-image transport profile, applied before process startup.
+  Increases each participant's SHM segment to 64 MiB, with normal UDPv4 fallback.
+  No publisher/subscriber QoS is overridden. The UDP transport still limits
+  RTPS message size globally in 2.6.10; this is a larger pool, NOT zero-copy
+  or a promise that a whole 4 MiB BGR image is sent without fragmentation.
+  Field names verified against v2.6.10 parser/docs; validation used its XSD
+  with upstream undefined-type/userTransports typos repaired to match source.
+  Isolated-domain board tests passed: 450/450 NV12 frames with both peers using
+  this profile, and 360/360 with a default-profile receiver; all CRCs matched.
+  End-to-end service performance is measured separately from transport tests.
+-->
+<dds xmlns="http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles">
+  <profiles>
+    <transport_descriptors>
+      <transport_descriptor>
+        <transport_id>rescue_large_image_shm</transport_id>
+        <type>SHM</type>
+        <maxMessageSize>8388608</maxMessageSize>
+        <segment_size>67108864</segment_size>
+        <port_queue_capacity>512</port_queue_capacity>
+        <healthy_check_timeout_ms>1000</healthy_check_timeout_ms>
+      </transport_descriptor>
+      <transport_descriptor>
+        <transport_id>rescue_udp_fallback</transport_id>
+        <type>UDPv4</type>
+      </transport_descriptor>
+    </transport_descriptors>
+    <participant profile_name="rescue_large_image_participant" is_default_profile="true">
+      <rtps>
+        <userTransports>
+          <transport_id>rescue_large_image_shm</transport_id>
+          <transport_id>rescue_udp_fallback</transport_id>
+        </userTransports>
+        <useBuiltinTransports>false</useBuiltinTransports>
+      </rtps>
+    </participant>
+  </profiles>
+</dds>

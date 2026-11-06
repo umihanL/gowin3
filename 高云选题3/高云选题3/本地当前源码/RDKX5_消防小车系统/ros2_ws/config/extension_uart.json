@@ -1,0 +1,10 @@
+{
+  "enabled": false,
+  "port": "",
+  "baud": 115200,
+  "protocol": "ov5640_fixed10_xor_v1",
+  "side_camera_verified": false,
+  "screen_x_per_forward_sign": 0,
+  "fixed_traffic_camera_verified": false,
+  "note": "选择独立 FPGA UART 后启用。ttyS1(PIN8/10)、ttyS3(PIN3/5)已给两个电机使用，禁止重用。side_camera_verified 仅在相机确实固定侧视、车前进令目标水平通过画面后人工确认。"
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "test": "navigation_response_tb",
+    "expected_failure": "skipped-single-edge bend failed",
+    "exit_code": 1,
+    "log": "sim/navigation_old_navigation_response_tb.log"
+  },
+  {
+    "test": "vision_motion_tb",
+    "expected_failure": "startup drove before visual steering was prepared",
+    "exit_code": 1,
+    "log": "sim/navigation_old_vision_motion_tb.log"
+  }
+]

@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "record_updated_local_date": "2026-11-01",
+  "record_purpose": "Current architecture and verification boundaries; this file does not control runtime.",
+  "architecture": {
+    "navigation_owner": "fpga",
+    "fpga_responsibilities": [
+      "stored_map",
+      "path_planning",
+      "encoder_imu_localization",
+      "vehicle_motion",
+      "independent_obstacle_task_only"
+    ],
+    "rdkx5_responsibilities": [
+      "camera",
+      "yolo",
+      "building_ocr",
+      "on_demand_traffic_light_perception",
+      "task_coordination",
+      "gimbal_and_pump_interfaces",
+      "voice",
+      "structured_scene_and_local_text_llm"
+    ],
+    "launch": "task_modes.launch.py",
+    "initial_mode": "inspect",
+    "task_stack_node_count": 14,
+    "live_ros_domain_id": 0,
+    "live_ros_localhost_only": 0
+  },
+  "canonical_manual": "docs/完整学习与验收手册.md",
+  "offline_reader_relative_to_workspace": "../打开学习手册.html",
+  "last_preserved_board_test_date": "2026-11-01",
+  "current_board_verification": {
+    "date": "2026-11-01",
+    "ssh_host": "rdkx5-wifi",
+    "ip": "10.16.82.126",
+    "result": "deployed_and_built",
+    "runtime_health": "six_services_running; one_camera_input_has_no_frames",
+    "board_changed_this_task": true,
+    "source_files_verified": 145,
+    "installed_code_and_web_files_verified": 96,
+    "unchanged_config_files": 64,
+    "voice_stop_idle_receipts_passed": 2,
+    "actual_speech_recording_tested": false,
+    "qwen_text_generation_tested": true,
+    "fpga_real_uart_verified": true,
+    "fpga_map_signature": 1153302534,
+    "fpga_host_navigation_page_selected": false,
+    "report": "../reports/x5_deployment_20261101/部署结果.md",
+    "backup": "/root/rescue/system_20261010/update_backups/task_console_20261101T020629_9144",
+    "archive_sha256": "77868a15aefe5ac7314428ade8160738893351198df75ae84daaa5253c51426f"
+  },
+  "commissioning": {
+    "uart_and_fpga_navigation": "real_extension_uart_on_ttyS2_verified; firmware_map_signature_matches; physical_host_navigation_page_required; no_motion_test",
+    "gimbal_mount_and_pwm": "mixed_serial: pan_ZDT_ttyS3, tilt_PD42_ttyS1; fixed_camera_geometry_uncalibrated; actuator_dry_run",
+    "pump_and_mos": "pending_wiring_and_acceptance; disabled_by_default",
+    "stereo_metric_depth": "pending_sync_calibration_and_distance_acceptance; disabled_by_default",
+    "usb_microphone_and_speaker": "USB_capture_device_present; SenseVoice_configured; no_audio_recorded_this_deployment; TTS_disabled",
+    "water_impact_compensation": "code_present; measured_impact_table_pending",
+    "camera": "sif2_30fps_sif0_0fps; grab_failed_before_and_after_one_camera_service_restart"
+  },
+  "acceptance_note": "Software unit tests and historical performance logs do not prove today's board health, robot movement, stereo accuracy or water impact. accepted is not physical completion.",
+  "cleanup_manifest_relative_to_workspace": "../整理清单.json"
+}

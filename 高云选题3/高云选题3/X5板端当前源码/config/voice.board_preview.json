@@ -1,0 +1,9 @@
+{
+  "microphone_enabled": false,
+  "tts_enabled": false,
+  "auto_scene_speech": true,
+  "model_dir": "models/voice/vosk-model-small-cn-0.22",
+  "sample_rate_hz": 16000,
+  "note": "板端预览配置关闭麦克风和播报，仅保留文本交互接口。若实测后启用，PTT收音默认15秒、配置下限10秒，可手动提前结束；普通停顿不提前提交。",
+  "max_listen_seconds": 15.0
+}

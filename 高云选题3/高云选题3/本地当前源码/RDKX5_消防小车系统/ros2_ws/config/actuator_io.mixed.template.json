@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "dry_run": true,
+  "comment": "Mixed ZDT_XS pan on physical 3 TX/5 RX (ttyS3), PD42 tilt on 8 TX/10 RX (ttyS1). Axis roles were swapped; references/directions/gearing/limits must be commissioned for this installation, not copied from the former axes. Dry-run only until per-start encoder reference, direction, ratio, limits, supported load and ZDT readback snapshot are verified. No homing, zero, calibration, firmware switching or pump enable is automatic.",
+  "servo": {
+    "backend": "mixed_serial",
+    "transport": "ttl",
+    "baudrate": 115200,
+    "poll_hz": 10,
+    "timeout_s": 0.05,
+    "feedback_timeout_s": 0.4,
+    "position_tolerance_deg": 0.3,
+    "feedback_limit_tolerance_deg": 0.2,
+    "stop_policy": "disable",
+    "enable_on_command": false,
+    "reference_confirmed_this_start": false,
+    "load_supported_verified": false,
+    "calibration_confirmed": false,
+    "pan": {
+      "port": "/dev/ttyS3",
+      "address": 1,
+      "min_angle_deg": 30.0,
+      "max_angle_deg": 150.0,
+      "reference_angle_deg": 90.0,
+      "reference_counts": null,
+      "direction": 1,
+      "gear_ratio": 1.0,
+      "acceleration": 100,
+      "protocol": "zdt_xs",
+      "zdt_verified_snapshot": null
+    },
+    "tilt": {
+      "port": "/dev/ttyS1",
+      "address": 1,
+      "min_angle_deg": 40.0,
+      "max_angle_deg": 140.0,
+      "reference_angle_deg": 90.0,
+      "reference_counts": null,
+      "direction": 1,
+      "gear_ratio": 1.0,
+      "acceleration": 100,
+      "protocol": "pd42"
+    }
+  },
+  "pump": {
+    "water_aim_policy": "straight_ray",
+    "backend": "fpga_uart",
+    "enabled": false,
+    "pin": "B13",
+    "active_high": true,
+    "max_duration_ms": 1000,
+    "feedback_timeout_s": 0.6,
+    "setting_id": null,
+    "fixed_camera_landing_calibration_id": null,
+    "geometry_calibration_id": null,
+    "camera_nozzle_mount_id": null
+  }
+}

@@ -1,0 +1,1 @@
+Six ordered waypoints on current graph: greedy exact 1545cm; global exact 1468cm; global with 6/20cm waypoint touch regions 926cm. Start and goal unchanged.

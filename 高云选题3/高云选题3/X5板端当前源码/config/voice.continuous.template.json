@@ -1,0 +1,21 @@
+{
+  "microphone_enabled": false,
+  "tts_enabled": false,
+  "auto_scene_speech": true,
+  "model_dir": "models/voice/vosk-model-small-cn-0.22",
+  "audio_input_device": null,
+  "sample_rate_hz": 16000,
+  "max_listen_seconds": 15.0,
+  "min_asr_confidence": 0.65,
+  "command_ttl_s": 5.0,
+  "scene_ttl_s": 3.0,
+  "speech_cooldown_s": 12.0,
+  "speech_queue_limit": 3,
+  "tts_executable": "espeak-ng",
+  "tts_voice": "cmn",
+  "tts_words_per_minute": 145,
+  "tts_audio_device": null,
+  "note": "连续收音模板，默认禁用设备。启用后每轮最多15秒，有完整语句endpoint可提前结束；普通命令仍需唤醒词，独立停止短句可无需唤醒。诊断模式结束后连续收音保持暂停，需要明确点击开始恢复。",
+  "listening_mode": "continuous",
+  "require_wake_word": true
+}

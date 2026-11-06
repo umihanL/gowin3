@@ -1,0 +1,281 @@
+{
+  "schema": "gs130w_factory_stereo_import/v1",
+  "calibrated": true,
+  "calibration_id": "gs130w_factory_ce8ac6b9c53913d9ad306b44",
+  "calibration_source": "factory_eeprom",
+  "calibration_status": "factory_parameters_imported_unverified",
+  "camera_model": "pinhole",
+  "translation_unit": "m",
+  "image_size": [
+    1280,
+    1088
+  ],
+  "K1": [
+    [
+      666.0804443359375,
+      0.0,
+      641.4134521484375
+    ],
+    [
+      0.0,
+      666.2125854492188,
+      541.3174438476562
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "D1": [
+    0.3938693404197693,
+    -0.00864123273640871,
+    -0.00023413232702296227,
+    -7.335534610319883e-05,
+    0.0019877376034855843,
+    0.7424823641777039,
+    0.04144749045372009,
+    0.0018659953493624926
+  ],
+  "K2": [
+    [
+      666.4528198242188,
+      0.0,
+      640.4417724609375
+    ],
+    [
+      0.0,
+      666.8989868164062,
+      541.051025390625
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "D2": [
+    4.732460021972656,
+    2.046745538711548,
+    -0.00010017528984462842,
+    -0.00015451913350261748,
+    0.06431621313095093,
+    5.094394683837891,
+    3.59271240234375,
+    0.41878455877304077
+  ],
+  "R": [
+    [
+      0.9999971389770508,
+      0.0018748210277408361,
+      0.0014670448144897819
+    ],
+    [
+      -0.001874809036962688,
+      0.9999982714653015,
+      -9.56660915107932e-06
+    ],
+    [
+      -0.001467060181312263,
+      6.816153018007753e-06,
+      0.999998927116394
+    ]
+  ],
+  "T": [
+    -0.08000213623046876,
+    0.0001723271906375885,
+    4.3500795960426334e-05
+  ],
+  "baseline_m": 0.08000233365607759,
+  "input_rotation_deg": 90.0,
+  "source_topics": {
+    "left": "/image_right_raw",
+    "right": "/image_left_raw"
+  },
+  "calibration_source_topics": {
+    "left": "/image_left_raw",
+    "right": "/image_right_raw"
+  },
+  "input_topic_to_calibration_source": {
+    "/image_right_raw": "/image_left_raw",
+    "/image_left_raw": "/image_right_raw"
+  },
+  "source_order": "explicit_input_to_factory_mapping",
+  "physical_eye_mapping_verified": false,
+  "eeprom_eye_assignment_verified": false,
+  "synchronization_verified": false,
+  "metric_depth_verified": false,
+  "stereo_metric_calibration_verified": false,
+  "positive_disparity_compatible": true,
+  "matcher_compatibility_reason": "horizontal_positive_disparity",
+  "factory_rectification": {
+    "method": "cv2.stereoRectify",
+    "alpha": 0,
+    "R1": [
+      [
+        0.9999995347622641,
+        -0.00027921055605024806,
+        0.0009233183204137923
+      ],
+      [
+        0.0002792138435481576,
+        0.9999999610139261,
+        -3.4316252006258153e-06
+      ],
+      [
+        -0.0009233173262712556,
+        3.6894268611746105e-06,
+        0.9999995737356608
+      ]
+    ],
+    "R2": [
+      [
+        0.9999975322518757,
+        -0.002154027048431413,
+        -0.0005437440881184174
+      ],
+      [
+        0.002154028984434159,
+        0.9999976800724509,
+        2.9749076561068434e-06
+      ],
+      [
+        0.00054373641863997,
+        -4.146140840696678e-06,
+        0.9999998521667475
+      ]
+    ],
+    "P1": [
+      [
+        511.9110751683741,
+        0.0,
+        639.8201141357422,
+        0.0
+      ],
+      [
+        0.0,
+        511.9110751683741,
+        528.8679962158203,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "P2": [
+      [
+        511.9110751683741,
+        0.0,
+        639.8201141357422,
+        -40.95408063786167
+      ],
+      [
+        0.0,
+        511.9110751683741,
+        528.8679962158203,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "Q": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -639.8201141357422
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -528.8679962158203
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        511.9110751683741
+      ],
+      [
+        0.0,
+        0.0,
+        12.49963537687419,
+        -0.0
+      ]
+    ]
+  },
+  "provenance": {
+    "imported_at_utc": "2026-11-03T09:29:17.632407+00:00",
+    "source_snapshot": "D:\\工程仿真\\FPGA赛道_小车仿真\\RDKX5_消防小车系统\\ros2_ws\\config\\gs130w_intrinsics_20261010.json",
+    "source_sha256": "3a275e9ae7eed980dd7374767988646003ee6fa73b4664e9904452670a01d27e",
+    "source_translation_unit": "mm",
+    "translation_scale_to_m": 0.001,
+    "projection_convention": "P=K[R|T]; R/T relative to common factory reference",
+    "projection_max_abs_residual": {
+      "/image_left_raw": 0.0,
+      "/image_right_raw": 0.0
+    },
+    "input_topic_to_calibration_source": {
+      "/image_right_raw": "/image_left_raw",
+      "/image_left_raw": "/image_right_raw"
+    },
+    "mapping_evidence": {
+      "path": "D:\\工程仿真\\FPGA赛道_小车仿真\\RDKX5_消防小车系统\\reports\\stereo_factory_integration_20261103\\factory_corrected_eye_mapping.json",
+      "sha256": "ef360710b3227e7a5417eadbbb0ce82957464274c6e18623da1c0a1a390816c9"
+    },
+    "factory_slot_sources": [
+      "/image_left_raw",
+      "/image_right_raw"
+    ],
+    "snapshot_role_to_source": {
+      "left": "/image_right_raw",
+      "right": "/image_left_raw"
+    },
+    "snapshot_role_mapping_evidence": "User stood behind camera facing its viewing direction; covering physical left darkened the lower combined image. Driver combines left topic above right topic.",
+    "snapshot_provenance": {
+      "host": "rdkx5",
+      "boot_id": "e8351361-5bfe-4b34-9709-15abe8b06c69",
+      "driver_version": "mipi_cam 2.5.2",
+      "ros_domain_id": 0,
+      "source": "Live sensor_msgs/CameraInfo plus recorded EEPROM startup log",
+      "eeprom_log": "/root/.ros/log/mipi_cam_7667_946685153293.log",
+      "eeprom_header": {
+        "bus": 4,
+        "flag": "SZYGSJKJ",
+        "cal_type": 0,
+        "angle": 1,
+        "d_num": 8
+      },
+      "calibration_rotation_degrees": 90,
+      "calibration_rotation_evidence": "Official tros_2.5.2 hobot_mipi_calibration.cpp: angle 0x01 means 90 degrees; log dimensions 1280x1088",
+      "eeprom_eye_assignment_verified": false,
+      "stereo_metric_calibration_verified": false,
+      "note": "CameraInfo is copied from EEPROM in fixed index order by the official driver. Physical eye observation establishes image order, not independent per-lens calibration identity."
+    },
+    "snapshot_driver_parameters": {
+      "device_mode": "dual",
+      "dual_combine": "1",
+      "image_width": "1280",
+      "image_height": "1088",
+      "framerate": "30.0",
+      "rotation": "90.0",
+      "gdc_enable": "False",
+      "cal_rotation": "90.0",
+      "lpwm_enable": "True",
+      "frame_ts_type": "realtime",
+      "out_format": "nv12",
+      "channel": "2",
+      "channel2": "0"
+    },
+    "captured_client_date": "2026-10-10"
+  },
+  "notes": "calibrated=true records imported factory parameters, not verified metric depth. Slot names left/right identify input order; physical eye identity is unverified. Input image topics and factory parameter sources are recorded separately. The snapshot physical-role mapping is preserved as evidence and is not applied implicitly. No image, K/D or translation sign is silently rotated/flipped. Keep automatic aiming/water verification separate from factory parameter availability."
+}

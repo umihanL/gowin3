@@ -1,0 +1,22 @@
+{
+  "nozzle_calibrated": false,
+  "calibration_id": null,
+  "camera_nozzle_mount_id": null,
+  "camera_model": "pinhole",
+  "physical_eye": "left",
+  "coordinate_frame": "undistorted_left_optical",
+  "image_size_wh": [1280, 1088],
+  "camera_matrix": [
+    [436.82464992353863, 0.0, 640.2224645421431],
+    [0.0, 502.6057228760608, 539.0150333700744],
+    [0.0, 0.0, 1.0]
+  ],
+  "distortion_coefficients": [0.0, 0.0, 0.0, 0.0, 0.0],
+  "translation_unit": "m",
+  "distance_reference": "left_camera_euclidean_m",
+  "nozzle_axis": "+z",
+  "nozzle_origin_camera_m": null,
+  "R_camera_from_nozzle": null,
+  "valid_range_m": [null, null],
+  "comment": "UNMEASURED TEMPLATE. Measure nozzle outlet XYZ from physical-left optical centre in metres: camera X right, Y down, Z forward. R_camera_from_nozzle is a proper 3x3 rotation mapping nozzle axes into camera axes; its third column is the outgoing straight-jet unit direction. Verify current camera matrix against /vision/camera_info. Specify a measured minimum/maximum range, calibration ID and unchanged rigid-mount ID before setting nozzle_calibrated=true. This geometric reference compensates parallax and boresight only; it cannot enable pumping or certify water impact. Empirical landing compensation and geometric compensation are alternative absolute references and must never be added together. Re-measure after changing camera/nozzle mounting, and refresh stereo range while the gimbal moves. Pump pressure, water drop, spray and actuator backlash require actual landing calibration. Do not copy the synthetic unit-test offsets into hardware configuration."
+}

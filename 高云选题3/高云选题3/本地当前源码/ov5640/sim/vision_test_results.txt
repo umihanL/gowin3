@@ -1,0 +1,27 @@
+PASS immediate startup: initial yaw=0 first driven tick=8
+INFO skew run: initialYaw=0 pose=1680,532 poseYaw=-1 initHeading=0 target=1740,500 distance=69 forward=62 lateral=-32 index=62 physical=1464.784815,537.133785
+PASS zebra speed: cap at 100 mm/s, camera-to-tail clearance hold and automatic cruise restoration
+PASS vision motion: immediate startup, independent encoder/IMU bicycle, noisy lane convergence, short loss/reacquire, prolonged-loss route fallback and visual authority beside a valid side echo
+sim/vision_motion_tb.sv:79: $finish called at 3156050000 (1ps)
+PASS immediate startup: initial yaw=80 first driven tick=8
+INFO skew run: initialYaw=80 pose=1434,360 poseYaw=-94 initHeading=0 target=1480,500 distance=147 forward=23 lateral=145 index=49 physical=1226.906376,530.698497
+PASS zebra speed: cap at 100 mm/s, camera-to-tail clearance hold and automatic cruise restoration
+PASS vision motion: immediate startup, independent encoder/IMU bicycle, noisy lane convergence, short loss/reacquire, prolonged-loss route fallback and visual authority beside a valid side echo
+sim/vision_motion_tb.sv:79: $finish called at 3156050000 (1ps)
+PASS immediate startup: initial yaw=-80 first driven tick=8
+INFO skew run: initialYaw=-80 pose=1333,684 poseYaw=124 initHeading=0 target=1400,500 distance=195 forward=27 lateral=-194 index=45 physical=1133.706964,521.409332
+PASS zebra speed: cap at 100 mm/s, camera-to-tail clearance hold and automatic cruise restoration
+PASS vision motion: immediate startup, independent encoder/IMU bicycle, noisy lane convergence, short loss/reacquire, prolonged-loss route fallback and visual authority beside a valid side echo
+sim/vision_motion_tb.sv:79: $finish called at 3156050000 (1ps)
+INFO goal dense=0 vertical=0 status=3 along=1251.461348 lateral=45.157544 index=1 dist=50 dot=31500
+PASS terminal arrival: dense=0 vertical=0 shifted lane stops at goal plane; no beyond-goal bend, restart or circling
+sim/vision_goal_tb.sv:66: $finish called at 1802040000 (1ps)
+INFO goal dense=0 vertical=1 status=3 along=1241.718352 lateral=44.542024 index=1 dist=44 dot=21880
+PASS terminal arrival: dense=0 vertical=1 shifted lane stops at goal plane; no beyond-goal bend, restart or circling
+sim/vision_goal_tb.sv:66: $finish called at 1806040000 (1ps)
+INFO goal dense=1 vertical=0 status=3 along=1253.093731 lateral=44.981717 index=63 dist=48 dot=509
+PASS terminal arrival: dense=1 vertical=0 shifted lane stops at goal plane; no beyond-goal bend, restart or circling
+sim/vision_goal_tb.sv:66: $finish called at 1926040000 (1ps)
+INFO goal dense=1 vertical=1 status=3 along=1239.787153 lateral=44.399910 index=63 dist=43 dot=362
+PASS terminal arrival: dense=1 vertical=1 shifted lane stops at goal plane; no beyond-goal bend, restart or circling
+sim/vision_goal_tb.sv:66: $finish called at 1904040000 (1ps)

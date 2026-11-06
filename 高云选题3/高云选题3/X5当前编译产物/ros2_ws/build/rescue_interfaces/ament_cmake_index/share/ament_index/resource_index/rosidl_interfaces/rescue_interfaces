@@ -1,0 +1,14 @@
+msg/Detection.idl
+msg/Detection.msg
+msg/DetectionArray.idl
+msg/DetectionArray.msg
+msg/FpgaEvent.idl
+msg/FpgaEvent.msg
+msg/GimbalCommand.idl
+msg/GimbalCommand.msg
+msg/ManeuverCommand.idl
+msg/ManeuverCommand.msg
+msg/MotionPermission.idl
+msg/MotionPermission.msg
+msg/StereoPair.idl
+msg/StereoPair.msg

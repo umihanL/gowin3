@@ -1,0 +1,842 @@
+{
+  "generated_utc": "2026-10-10T04:06:09.423186+00:00",
+  "total": 41,
+  "verified": 41,
+  "bytes_verified": 5576310,
+  "packages": [
+    {
+      "uri": "http://ports.ubuntu.com/pool/main/e/espeak-ng/espeak-ng-data_1.50%2bdfsg-10ubuntu0.1_arm64.deb",
+      "filename": "espeak-ng-data_1.50+dfsg-10ubuntu0.1_arm64.deb",
+      "size": 3956196,
+      "sha256": "394785e1c1c912488a9f4fe0111684848616b026edc27eaace1f467d1afd6637",
+      "md5": "ed5dc8ad3f22235dd5ef9aa817c9e388",
+      "attempts": [
+        {
+          "url": "https://ports.ubuntu.com/pool/main/e/espeak-ng/espeak-ng-data_1.50%2bdfsg-10ubuntu0.1_arm64.deb",
+          "final_url": "https://ports.ubuntu.com/pool/main/e/espeak-ng/espeak-ng-data_1.50%2bdfsg-10ubuntu0.1_arm64.deb",
+          "http_status": 200,
+          "size": 3956196,
+          "sha256": "394785e1c1c912488a9f4fe0111684848616b026edc27eaace1f467d1afd6637"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "https://ports.ubuntu.com/pool/main/e/espeak-ng/espeak-ng-data_1.50%2bdfsg-10ubuntu0.1_arm64.deb"
+    },
+    {
+      "uri": "http://ports.ubuntu.com/pool/universe/e/espeak-ng/espeak-ng_1.50%2bdfsg-10ubuntu0.1_arm64.deb",
+      "filename": "espeak-ng_1.50+dfsg-10ubuntu0.1_arm64.deb",
+      "size": 343008,
+      "sha256": "1d0028a884cd27087b29360144c37a5c3e078368516e6447806e6a466250ace8",
+      "md5": "a994ff43f27121d8e03e860f0cc9c0c1",
+      "attempts": [
+        {
+          "url": "https://ports.ubuntu.com/pool/universe/e/espeak-ng/espeak-ng_1.50%2bdfsg-10ubuntu0.1_arm64.deb",
+          "final_url": "https://ports.ubuntu.com/pool/universe/e/espeak-ng/espeak-ng_1.50%2bdfsg-10ubuntu0.1_arm64.deb",
+          "http_status": 200,
+          "size": 343008,
+          "sha256": "1d0028a884cd27087b29360144c37a5c3e078368516e6447806e6a466250ace8"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "https://ports.ubuntu.com/pool/universe/e/espeak-ng/espeak-ng_1.50%2bdfsg-10ubuntu0.1_arm64.deb"
+    },
+    {
+      "uri": "http://ports.ubuntu.com/pool/main/e/espeak-ng/libespeak-ng1_1.50%2bdfsg-10ubuntu0.1_arm64.deb",
+      "filename": "libespeak-ng1_1.50+dfsg-10ubuntu0.1_arm64.deb",
+      "size": 206444,
+      "sha256": "8053445a40888e1c67c2eca26f19cd62fe56db430cd5307a0dd1d897cd216f78",
+      "md5": "357f91780dc6c7c32353453eb169142b",
+      "attempts": [
+        {
+          "url": "https://ports.ubuntu.com/pool/main/e/espeak-ng/libespeak-ng1_1.50%2bdfsg-10ubuntu0.1_arm64.deb",
+          "final_url": "https://ports.ubuntu.com/pool/main/e/espeak-ng/libespeak-ng1_1.50%2bdfsg-10ubuntu0.1_arm64.deb",
+          "http_status": 200,
+          "size": 206444,
+          "sha256": "8053445a40888e1c67c2eca26f19cd62fe56db430cd5307a0dd1d897cd216f78"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "https://ports.ubuntu.com/pool/main/e/espeak-ng/libespeak-ng1_1.50%2bdfsg-10ubuntu0.1_arm64.deb"
+    },
+    {
+      "uri": "http://ports.ubuntu.com/pool/universe/libj/libjs-jquery-hotkeys/libjs-jquery-hotkeys_0%7e20130707%2bgit2d51e3a9%2bdfsg-2ubuntu1_all.deb",
+      "filename": "libjs-jquery-hotkeys_0~20130707+git2d51e3a9+dfsg-2ubuntu1_all.deb",
+      "size": 11362,
+      "sha256": "d8d8a715d53f6641a4ee9e8d9df8e0d563a0efda3d637c7dc3f180ef8b923aa6",
+      "md5": "1dc73271d48aa240ed7ccb4cb7c2a96d",
+      "attempts": [
+        {
+          "url": "https://ports.ubuntu.com/pool/universe/libj/libjs-jquery-hotkeys/libjs-jquery-hotkeys_0%7e20130707%2bgit2d51e3a9%2bdfsg-2ubuntu1_all.deb",
+          "final_url": "https://ports.ubuntu.com/pool/universe/libj/libjs-jquery-hotkeys/libjs-jquery-hotkeys_0%7e20130707%2bgit2d51e3a9%2bdfsg-2ubuntu1_all.deb",
+          "http_status": 200,
+          "size": 11362,
+          "sha256": "d8d8a715d53f6641a4ee9e8d9df8e0d563a0efda3d637c7dc3f180ef8b923aa6"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "https://ports.ubuntu.com/pool/universe/libj/libjs-jquery-hotkeys/libjs-jquery-hotkeys_0%7e20130707%2bgit2d51e3a9%2bdfsg-2ubuntu1_all.deb"
+    },
+    {
+      "uri": "http://ports.ubuntu.com/pool/universe/libj/libjs-jquery-isonscreen/libjs-jquery-isonscreen_1.2.0-1.1_all.deb",
+      "filename": "libjs-jquery-isonscreen_1.2.0-1.1_all.deb",
+      "size": 3244,
+      "sha256": "6c640b8655693939fbc8f2e0961572ccd1c68e592d72445ce355539a9389c053",
+      "md5": "15781b3655e5bc97e135e9e15aeb6419",
+      "attempts": [
+        {
+          "url": "https://ports.ubuntu.com/pool/universe/libj/libjs-jquery-isonscreen/libjs-jquery-isonscreen_1.2.0-1.1_all.deb",
+          "final_url": "https://ports.ubuntu.com/pool/universe/libj/libjs-jquery-isonscreen/libjs-jquery-isonscreen_1.2.0-1.1_all.deb",
+          "http_status": 200,
+          "size": 3244,
+          "sha256": "6c640b8655693939fbc8f2e0961572ccd1c68e592d72445ce355539a9389c053"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "https://ports.ubuntu.com/pool/universe/libj/libjs-jquery-isonscreen/libjs-jquery-isonscreen_1.2.0-1.1_all.deb"
+    },
+    {
+      "uri": "http://ports.ubuntu.com/pool/universe/j/jquery-goodies/libjs-jquery-metadata_12-3_all.deb",
+      "filename": "libjs-jquery-metadata_12-3_all.deb",
+      "size": 7096,
+      "sha256": "f36b2d73179218d4f6ab95167e3e6163c9f0fe4a127f78af6bf4bd03b6ca5c34",
+      "md5": "b721e81756fb4bd8b9e7b5840d9f95f5",
+      "attempts": [
+        {
+          "url": "https://ports.ubuntu.com/pool/universe/j/jquery-goodies/libjs-jquery-metadata_12-3_all.deb",
+          "final_url": "https://ports.ubuntu.com/pool/universe/j/jquery-goodies/libjs-jquery-metadata_12-3_all.deb",
+          "http_status": 200,
+          "size": 7096,
+          "sha256": "f36b2d73179218d4f6ab95167e3e6163c9f0fe4a127f78af6bf4bd03b6ca5c34"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "https://ports.ubuntu.com/pool/universe/j/jquery-goodies/libjs-jquery-metadata_12-3_all.deb"
+    },
+    {
+      "uri": "http://ports.ubuntu.com/pool/universe/j/jquery-tablesorter/libjs-jquery-tablesorter_2.31.3%2bdfsg1-3_all.deb",
+      "filename": "libjs-jquery-tablesorter_1%3a2.31.3+dfsg1-3_all.deb",
+      "size": 192990,
+      "sha256": "c1194d07d08d750b8e0dc07f66a8783a4a14cc112eb7640454e23408cc7bd1da",
+      "md5": "1d0697324bf6d1390efe4a79d7955223",
+      "attempts": [
+        {
+          "url": "https://ports.ubuntu.com/pool/universe/j/jquery-tablesorter/libjs-jquery-tablesorter_2.31.3%2bdfsg1-3_all.deb",
+          "final_url": "https://ports.ubuntu.com/pool/universe/j/jquery-tablesorter/libjs-jquery-tablesorter_2.31.3%2bdfsg1-3_all.deb",
+          "http_status": 200,
+          "size": 192990,
+          "sha256": "c1194d07d08d750b8e0dc07f66a8783a4a14cc112eb7640454e23408cc7bd1da"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "https://ports.ubuntu.com/pool/universe/j/jquery-tablesorter/libjs-jquery-tablesorter_2.31.3%2bdfsg1-3_all.deb"
+    },
+    {
+      "uri": "http://ports.ubuntu.com/pool/universe/j/jquery-throttle-debounce/libjs-jquery-throttle-debounce_1.1%2bdfsg.1-2_all.deb",
+      "filename": "libjs-jquery-throttle-debounce_1.1+dfsg.1-2_all.deb",
+      "size": 12512,
+      "sha256": "9798ed5b27946229ba7b33e512150abda32267dd9dd88373ce5397710c906359",
+      "md5": "97bbbd45815a0fc485a6dfefec763c49",
+      "attempts": [
+        {
+          "url": "https://ports.ubuntu.com/pool/universe/j/jquery-throttle-debounce/libjs-jquery-throttle-debounce_1.1%2bdfsg.1-2_all.deb",
+          "final_url": "https://ports.ubuntu.com/pool/universe/j/jquery-throttle-debounce/libjs-jquery-throttle-debounce_1.1%2bdfsg.1-2_all.deb",
+          "http_status": 200,
+          "size": 12512,
+          "sha256": "9798ed5b27946229ba7b33e512150abda32267dd9dd88373ce5397710c906359"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "https://ports.ubuntu.com/pool/universe/j/jquery-throttle-debounce/libjs-jquery-throttle-debounce_1.1%2bdfsg.1-2_all.deb"
+    },
+    {
+      "uri": "http://ports.ubuntu.com/pool/main/p/pcaudiolib/libpcaudio0_1.1-6build2_arm64.deb",
+      "filename": "libpcaudio0_1.1-6build2_arm64.deb",
+      "size": 8912,
+      "sha256": "f437af502bba60f0730466cd3bb04c0ca7719b7b69d19fdd16a418cfe6bb31e9",
+      "md5": "fd8508142a4cf0e75e9014304cdb31b5",
+      "attempts": [
+        {
+          "url": "https://ports.ubuntu.com/pool/main/p/pcaudiolib/libpcaudio0_1.1-6build2_arm64.deb",
+          "final_url": "https://ports.ubuntu.com/pool/main/p/pcaudiolib/libpcaudio0_1.1-6build2_arm64.deb",
+          "http_status": 200,
+          "size": 8912,
+          "sha256": "f437af502bba60f0730466cd3bb04c0ca7719b7b69d19fdd16a418cfe6bb31e9"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "https://ports.ubuntu.com/pool/main/p/pcaudiolib/libpcaudio0_1.1-6build2_arm64.deb"
+    },
+    {
+      "uri": "http://ports.ubuntu.com/pool/universe/p/portaudio19/libportaudio2_19.6.0-1.1_arm64.deb",
+      "filename": "libportaudio2_19.6.0-1.1_arm64.deb",
+      "size": 59620,
+      "sha256": "c01c97bab1b95dd60e059e7d441a4ee42155c6659716f16fb84d546ac6b943a8",
+      "md5": "60e8a7c99555ada83cc283af99810ee4",
+      "attempts": [
+        {
+          "url": "https://ports.ubuntu.com/pool/universe/p/portaudio19/libportaudio2_19.6.0-1.1_arm64.deb",
+          "final_url": "https://ports.ubuntu.com/pool/universe/p/portaudio19/libportaudio2_19.6.0-1.1_arm64.deb",
+          "http_status": 200,
+          "size": 59620,
+          "sha256": "c01c97bab1b95dd60e059e7d441a4ee42155c6659716f16fb84d546ac6b943a8"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "https://ports.ubuntu.com/pool/universe/p/portaudio19/libportaudio2_19.6.0-1.1_arm64.deb"
+    },
+    {
+      "uri": "http://ports.ubuntu.com/pool/main/s/sonic/libsonic0_0.2.0-11build1_arm64.deb",
+      "filename": "libsonic0_0.2.0-11build1_arm64.deb",
+      "size": 9838,
+      "sha256": "0b288a852cdb98a9f41a9358065af4205d12550f3563ef17fe8c939772b0c7f0",
+      "md5": "ed3ecad52e2f21d6cd1e72c34f3f6d2c",
+      "attempts": [
+        {
+          "url": "https://ports.ubuntu.com/pool/main/s/sonic/libsonic0_0.2.0-11build1_arm64.deb",
+          "final_url": "https://ports.ubuntu.com/pool/main/s/sonic/libsonic0_0.2.0-11build1_arm64.deb",
+          "http_status": 200,
+          "size": 9838,
+          "sha256": "0b288a852cdb98a9f41a9358065af4205d12550f3563ef17fe8c939772b0c7f0"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "https://ports.ubuntu.com/pool/main/s/sonic/libsonic0_0.2.0-11build1_arm64.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-argcomplete/python3-colcon-argcomplete_0.3.3%2bupstream-1_all.deb",
+      "filename": "python3-colcon-argcomplete_0.3.3+upstream-1_all.deb",
+      "size": 5500,
+      "sha256": "1e3b542821afb538f18f1f76dbf96587eeab962d2405b3c82253b3935acf56c4",
+      "md5": "35f4d112cd594304511b127a5653ac79",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-argcomplete/python3-colcon-argcomplete_0.3.3%2bupstream-1_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-argcomplete/python3-colcon-argcomplete_0.3.3%2bupstream-1_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-argcomplete/python3-colcon-argcomplete_0.3.3%2bupstream-1_all.deb",
+          "http_status": 200,
+          "size": 5500,
+          "sha256": "1e3b542821afb538f18f1f76dbf96587eeab962d2405b3c82253b3935acf56c4"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-argcomplete/python3-colcon-argcomplete_0.3.3%2bupstream-1_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-bash/python3-colcon-bash_0.5.0-100_all.deb",
+      "filename": "python3-colcon-bash_0.5.0-100_all.deb",
+      "size": 5620,
+      "sha256": "f9be2fabed8af19f33c53b1778ea0900e6f6f094062c2ce799167470de4b180e",
+      "md5": "b3905304459b3bbcab610009c7bf9471",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-bash/python3-colcon-bash_0.5.0-100_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-bash/python3-colcon-bash_0.5.0-100_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-bash/python3-colcon-bash_0.5.0-100_all.deb",
+          "http_status": 200,
+          "size": 5620,
+          "sha256": "f9be2fabed8af19f33c53b1778ea0900e6f6f094062c2ce799167470de4b180e"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-bash/python3-colcon-bash_0.5.0-100_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-cd/python3-colcon-cd_0.2.1-100_all.deb",
+      "filename": "python3-colcon-cd_0.2.1-100_all.deb",
+      "size": 4676,
+      "sha256": "1a8e539d3bf2f98e74e2082e2532754b6f8f3e333f8f94210591444b901033b5",
+      "md5": "4f1f87f6ebf9d8df5db070301f7acf75",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-cd/python3-colcon-cd_0.2.1-100_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-cd/python3-colcon-cd_0.2.1-100_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-cd/python3-colcon-cd_0.2.1-100_all.deb",
+          "http_status": 200,
+          "size": 4676,
+          "sha256": "1a8e539d3bf2f98e74e2082e2532754b6f8f3e333f8f94210591444b901033b5"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-cd/python3-colcon-cd_0.2.1-100_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-cmake/python3-colcon-cmake_0.2.30%2bupstream-1_all.deb",
+      "filename": "python3-colcon-cmake_0.2.30+upstream-1_all.deb",
+      "size": 15532,
+      "sha256": "4148c88b691292007fd56668fd8fbabbb7b00f42c53a15530874c5679adec1d3",
+      "md5": "bdb11b52aac77b30cf455459e2d0323d",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-cmake/python3-colcon-cmake_0.2.30%2bupstream-1_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-cmake/python3-colcon-cmake_0.2.30%2bupstream-1_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-cmake/python3-colcon-cmake_0.2.30%2bupstream-1_all.deb",
+          "http_status": 200,
+          "size": 15532,
+          "sha256": "4148c88b691292007fd56668fd8fbabbb7b00f42c53a15530874c5679adec1d3"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-cmake/python3-colcon-cmake_0.2.30%2bupstream-1_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-common-extensions/python3-colcon-common-extensions_0.3.0-100_all.deb",
+      "filename": "python3-colcon-common-extensions_0.3.0-100_all.deb",
+      "size": 2972,
+      "sha256": "ee1b13abda1bc6c85509c844cf19103512577df26d0a7cf6841cae990dbd50ee",
+      "md5": "ab1c7b6b357124ac7c06206178176b1d",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-common-extensions/python3-colcon-common-extensions_0.3.0-100_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-common-extensions/python3-colcon-common-extensions_0.3.0-100_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-common-extensions/python3-colcon-common-extensions_0.3.0-100_all.deb",
+          "http_status": 200,
+          "size": 2972,
+          "sha256": "ee1b13abda1bc6c85509c844cf19103512577df26d0a7cf6841cae990dbd50ee"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-common-extensions/python3-colcon-common-extensions_0.3.0-100_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-core/python3-colcon-core_0.21.3%2bupstream-1_all.deb",
+      "filename": "python3-colcon-core_0.21.3+upstream-1_all.deb",
+      "size": 78740,
+      "sha256": "e4af4d13e5ea8e58bac13334a8ad54be48360896547e20a8a3fd97a342af3969",
+      "md5": "15da3fa8d5f2b3a7d23d239572d924d9",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-core/python3-colcon-core_0.21.3%2bupstream-1_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-core/python3-colcon-core_0.21.3%2bupstream-1_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-core/python3-colcon-core_0.21.3%2bupstream-1_all.deb",
+          "http_status": 200,
+          "size": 78740,
+          "sha256": "e4af4d13e5ea8e58bac13334a8ad54be48360896547e20a8a3fd97a342af3969"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-core/python3-colcon-core_0.21.3%2bupstream-1_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-defaults/python3-colcon-defaults_0.2.9%2bupstream-1_all.deb",
+      "filename": "python3-colcon-defaults_0.2.9+upstream-1_all.deb",
+      "size": 5776,
+      "sha256": "ac69a0545b8fbd380d741232e8c0d088d83b2d5cf2cbd34c51728ba9204c57bf",
+      "md5": "e930d3135d951e5c602a2e8d7d34d667",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-defaults/python3-colcon-defaults_0.2.9%2bupstream-1_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-defaults/python3-colcon-defaults_0.2.9%2bupstream-1_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-defaults/python3-colcon-defaults_0.2.9%2bupstream-1_all.deb",
+          "http_status": 200,
+          "size": 5776,
+          "sha256": "ac69a0545b8fbd380d741232e8c0d088d83b2d5cf2cbd34c51728ba9204c57bf"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-defaults/python3-colcon-defaults_0.2.9%2bupstream-1_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-devtools/python3-colcon-devtools_0.3.0-100_all.deb",
+      "filename": "python3-colcon-devtools_0.3.0-100_all.deb",
+      "size": 4856,
+      "sha256": "3d0e55f174253368b028573f229676f47b1cef8c73aca26bda671c07799b0fce",
+      "md5": "17e96392c3e7defbec13c111b2e00ad6",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-devtools/python3-colcon-devtools_0.3.0-100_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-devtools/python3-colcon-devtools_0.3.0-100_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-devtools/python3-colcon-devtools_0.3.0-100_all.deb",
+          "http_status": 200,
+          "size": 4856,
+          "sha256": "3d0e55f174253368b028573f229676f47b1cef8c73aca26bda671c07799b0fce"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-devtools/python3-colcon-devtools_0.3.0-100_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-installed-package-information/python3-colcon-installed-package-information_0.2.1-100_all.deb",
+      "filename": "python3-colcon-installed-package-information_0.2.1-100_all.deb",
+      "size": 7680,
+      "sha256": "892e5bcc87d5ffa69a48a95b4878c8792a1cbd0ae5998570a093ee207ada7739",
+      "md5": "6eea4def3805f6010036ebbb4d8f385c",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-installed-package-information/python3-colcon-installed-package-information_0.2.1-100_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-installed-package-information/python3-colcon-installed-package-information_0.2.1-100_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-installed-package-information/python3-colcon-installed-package-information_0.2.1-100_all.deb",
+          "http_status": 200,
+          "size": 7680,
+          "sha256": "892e5bcc87d5ffa69a48a95b4878c8792a1cbd0ae5998570a093ee207ada7739"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-installed-package-information/python3-colcon-installed-package-information_0.2.1-100_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-library-path/python3-colcon-library-path_0.2.1-100_all.deb",
+      "filename": "python3-colcon-library-path_0.2.1-100_all.deb",
+      "size": 3544,
+      "sha256": "d58c8de4234fd5681bd4fe786187ab7a1a448401a45045f65f0eae3a14d06c96",
+      "md5": "eca4e76ce5757910a38f5536522b6e05",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-library-path/python3-colcon-library-path_0.2.1-100_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-library-path/python3-colcon-library-path_0.2.1-100_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-library-path/python3-colcon-library-path_0.2.1-100_all.deb",
+          "http_status": 200,
+          "size": 3544,
+          "sha256": "d58c8de4234fd5681bd4fe786187ab7a1a448401a45045f65f0eae3a14d06c96"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-library-path/python3-colcon-library-path_0.2.1-100_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-metadata/python3-colcon-metadata_0.3.1%2bupstream-1_all.deb",
+      "filename": "python3-colcon-metadata_0.3.1+upstream-1_all.deb",
+      "size": 9676,
+      "sha256": "0b2f04ed18abf9c98d1852a1d7777e999618ea175f78c812dbd0883ef1b0fb3f",
+      "md5": "bd2e5b70c287974af85b5d55aa87b0de",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-metadata/python3-colcon-metadata_0.3.1%2bupstream-1_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-metadata/python3-colcon-metadata_0.3.1%2bupstream-1_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-metadata/python3-colcon-metadata_0.3.1%2bupstream-1_all.deb",
+          "http_status": 200,
+          "size": 9676,
+          "sha256": "0b2f04ed18abf9c98d1852a1d7777e999618ea175f78c812dbd0883ef1b0fb3f"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-metadata/python3-colcon-metadata_0.3.1%2bupstream-1_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-notification/python3-colcon-notification_0.3.3%2bupstream-1_all.deb",
+      "filename": "python3-colcon-notification_0.3.3+upstream-1_all.deb",
+      "size": 11036,
+      "sha256": "ecce53334d1ca1a91ee5d3d4e025b3addac63326f4c8320a6ec59bc98cb687d9",
+      "md5": "2b1a373574bfd062706d5f5d29901eba",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-notification/python3-colcon-notification_0.3.3%2bupstream-1_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-notification/python3-colcon-notification_0.3.3%2bupstream-1_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-notification/python3-colcon-notification_0.3.3%2bupstream-1_all.deb",
+          "http_status": 200,
+          "size": 11036,
+          "sha256": "ecce53334d1ca1a91ee5d3d4e025b3addac63326f4c8320a6ec59bc98cb687d9"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-notification/python3-colcon-notification_0.3.3%2bupstream-1_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-output/python3-colcon-output_0.2.15%2bupstream-1_all.deb",
+      "filename": "python3-colcon-output_0.2.15+upstream-1_all.deb",
+      "size": 7020,
+      "sha256": "d36c988acff17128ecfbce3fb1530e39b9460ab1d106296763295ea187895739",
+      "md5": "900e427da5e807e949243034e45656e7",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-output/python3-colcon-output_0.2.15%2bupstream-1_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-output/python3-colcon-output_0.2.15%2bupstream-1_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-output/python3-colcon-output_0.2.15%2bupstream-1_all.deb",
+          "http_status": 200,
+          "size": 7020,
+          "sha256": "d36c988acff17128ecfbce3fb1530e39b9460ab1d106296763295ea187895739"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-output/python3-colcon-output_0.2.15%2bupstream-1_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-override-check/python3-colcon-override-check_0.0.1-100_all.deb",
+      "filename": "python3-colcon-override-check_0.0.1-100_all.deb",
+      "size": 5212,
+      "sha256": "386836833f81a90afac56786ebf86e73d5921264bc4128c6b8ff7be5126fa7a3",
+      "md5": "068b583ba8375b60ee150e79c5cb85eb",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-override-check/python3-colcon-override-check_0.0.1-100_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-override-check/python3-colcon-override-check_0.0.1-100_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-override-check/python3-colcon-override-check_0.0.1-100_all.deb",
+          "http_status": 200,
+          "size": 5212,
+          "sha256": "386836833f81a90afac56786ebf86e73d5921264bc4128c6b8ff7be5126fa7a3"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-override-check/python3-colcon-override-check_0.0.1-100_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-package-information/python3-colcon-package-information_0.4.1%2bupstream-1_all.deb",
+      "filename": "python3-colcon-package-information_0.4.1+upstream-1_all.deb",
+      "size": 8716,
+      "sha256": "90881e9794e8b568d16a75247da8ff26c56895f1226c29149b85c9c61b81c17b",
+      "md5": "720b480777b0e7e2135cbf8b2e0e39a4",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-package-information/python3-colcon-package-information_0.4.1%2bupstream-1_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-package-information/python3-colcon-package-information_0.4.1%2bupstream-1_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-package-information/python3-colcon-package-information_0.4.1%2bupstream-1_all.deb",
+          "http_status": 200,
+          "size": 8716,
+          "sha256": "90881e9794e8b568d16a75247da8ff26c56895f1226c29149b85c9c61b81c17b"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-package-information/python3-colcon-package-information_0.4.1%2bupstream-1_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-package-selection/python3-colcon-package-selection_0.2.10-100_all.deb",
+      "filename": "python3-colcon-package-selection_0.2.10-100_all.deb",
+      "size": 7540,
+      "sha256": "16f55bc9fb28515dd62f7c7f94a30101af727a80982cd3533c8fe960791523a7",
+      "md5": "b3e01a59cb57a5be91ffc1a4ded1fdd5",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-package-selection/python3-colcon-package-selection_0.2.10-100_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-package-selection/python3-colcon-package-selection_0.2.10-100_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-package-selection/python3-colcon-package-selection_0.2.10-100_all.deb",
+          "http_status": 200,
+          "size": 7540,
+          "sha256": "16f55bc9fb28515dd62f7c7f94a30101af727a80982cd3533c8fe960791523a7"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-package-selection/python3-colcon-package-selection_0.2.10-100_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-parallel-executor/python3-colcon-parallel-executor_0.3.0-100_all.deb",
+      "filename": "python3-colcon-parallel-executor_0.3.0-100_all.deb",
+      "size": 5532,
+      "sha256": "b30768928ce2870a753ce0eb63f6f651399c179bc8ef1f3fb3cc083a1e053a9a",
+      "md5": "a06bb1f4666f0884b2a0c0afccf0a471",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-parallel-executor/python3-colcon-parallel-executor_0.3.0-100_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-parallel-executor/python3-colcon-parallel-executor_0.3.0-100_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-parallel-executor/python3-colcon-parallel-executor_0.3.0-100_all.deb",
+          "http_status": 200,
+          "size": 5532,
+          "sha256": "b30768928ce2870a753ce0eb63f6f651399c179bc8ef1f3fb3cc083a1e053a9a"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-parallel-executor/python3-colcon-parallel-executor_0.3.0-100_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-pkg-config/python3-colcon-pkg-config_0.1.0-100_all.deb",
+      "filename": "python3-colcon-pkg-config_0.1.0-100_all.deb",
+      "size": 3204,
+      "sha256": "e8e376bfae40aef23d356eae3441263a30a296054913802ca566017dabd447af",
+      "md5": "cafad22da3e2dd6668ead1c062e4d325",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-pkg-config/python3-colcon-pkg-config_0.1.0-100_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-pkg-config/python3-colcon-pkg-config_0.1.0-100_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-pkg-config/python3-colcon-pkg-config_0.1.0-100_all.deb",
+          "http_status": 200,
+          "size": 3204,
+          "sha256": "e8e376bfae40aef23d356eae3441263a30a296054913802ca566017dabd447af"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-pkg-config/python3-colcon-pkg-config_0.1.0-100_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-powershell/python3-colcon-powershell_0.5.0%2bupstream-1_all.deb",
+      "filename": "python3-colcon-powershell_0.5.0+upstream-1_all.deb",
+      "size": 7016,
+      "sha256": "a653fec4f9c13e7aace6fae986d91e7733de26a50d55cd2fde8ea84f15b7c237",
+      "md5": "bdaf6d74b60cf5af593e6983bf8f1033",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-powershell/python3-colcon-powershell_0.5.0%2bupstream-1_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-powershell/python3-colcon-powershell_0.5.0%2bupstream-1_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-powershell/python3-colcon-powershell_0.5.0%2bupstream-1_all.deb",
+          "http_status": 200,
+          "size": 7016,
+          "sha256": "a653fec4f9c13e7aace6fae986d91e7733de26a50d55cd2fde8ea84f15b7c237"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-powershell/python3-colcon-powershell_0.5.0%2bupstream-1_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-python-setup-py/python3-colcon-python-setup-py_0.2.9-100_all.deb",
+      "filename": "python3-colcon-python-setup-py_0.2.9-100_all.deb",
+      "size": 6596,
+      "sha256": "f81ee695cfa2c372fe88441680279616af879615fe1b73b8fdd798c5a47923d5",
+      "md5": "1ad8db7a4a370d27a4e41e652ee8bdac",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-python-setup-py/python3-colcon-python-setup-py_0.2.9-100_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-python-setup-py/python3-colcon-python-setup-py_0.2.9-100_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-python-setup-py/python3-colcon-python-setup-py_0.2.9-100_all.deb",
+          "http_status": 200,
+          "size": 6596,
+          "sha256": "f81ee695cfa2c372fe88441680279616af879615fe1b73b8fdd798c5a47923d5"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-python-setup-py/python3-colcon-python-setup-py_0.2.9-100_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-recursive-crawl/python3-colcon-recursive-crawl_0.2.3-100_all.deb",
+      "filename": "python3-colcon-recursive-crawl_0.2.3-100_all.deb",
+      "size": 3896,
+      "sha256": "4bc0666c0d4821d7fc213aaff4bebaed3eabcc8c8da5312ca10be592abf86934",
+      "md5": "32050b7151777156389a714db43c7705",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-recursive-crawl/python3-colcon-recursive-crawl_0.2.3-100_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-recursive-crawl/python3-colcon-recursive-crawl_0.2.3-100_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-recursive-crawl/python3-colcon-recursive-crawl_0.2.3-100_all.deb",
+          "http_status": 200,
+          "size": 3896,
+          "sha256": "4bc0666c0d4821d7fc213aaff4bebaed3eabcc8c8da5312ca10be592abf86934"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-recursive-crawl/python3-colcon-recursive-crawl_0.2.3-100_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-ros/python3-colcon-ros_0.5.0%2bupstream-1_all.deb",
+      "filename": "python3-colcon-ros_0.5.0+upstream-1_all.deb",
+      "size": 12588,
+      "sha256": "a42cdf0b4d0d1997e29867fb41fabe77d87ced80bd1f8b951ade2b1dc0b4b0b7",
+      "md5": "38d4a8b886251faf64e565207b0f5a3b",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-ros/python3-colcon-ros_0.5.0%2bupstream-1_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-ros/python3-colcon-ros_0.5.0%2bupstream-1_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-ros/python3-colcon-ros_0.5.0%2bupstream-1_all.deb",
+          "http_status": 200,
+          "size": 12588,
+          "sha256": "a42cdf0b4d0d1997e29867fb41fabe77d87ced80bd1f8b951ade2b1dc0b4b0b7"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-ros/python3-colcon-ros_0.5.0%2bupstream-1_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-test-result/python3-colcon-test-result_0.3.8-100_all.deb",
+      "filename": "python3-colcon-test-result_0.3.8-100_all.deb",
+      "size": 7172,
+      "sha256": "01c0dea2ce5b038585bf75a2b3f840dd2286cf636126a7ae0aee5fc8eac66910",
+      "md5": "1227073afbbe5fdc009eb182d8ba4c22",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-test-result/python3-colcon-test-result_0.3.8-100_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-test-result/python3-colcon-test-result_0.3.8-100_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-test-result/python3-colcon-test-result_0.3.8-100_all.deb",
+          "http_status": 200,
+          "size": 7172,
+          "sha256": "01c0dea2ce5b038585bf75a2b3f840dd2286cf636126a7ae0aee5fc8eac66910"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-test-result/python3-colcon-test-result_0.3.8-100_all.deb"
+    },
+    {
+      "uri": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-zsh/python3-colcon-zsh_0.5.0-100_all.deb",
+      "filename": "python3-colcon-zsh_0.5.0-100_all.deb",
+      "size": 5560,
+      "sha256": "a62a1f4b3dfaa57db070d0eecd7b16bfc336eb412fedfba90fd4edc2c4e2635a",
+      "md5": "9f325b2f7e6d29c099cbcc8c99a754e2",
+      "attempts": [
+        {
+          "url": "https://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-zsh/python3-colcon-zsh_0.5.0-100_all.deb",
+          "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)>"
+        },
+        {
+          "url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-zsh/python3-colcon-zsh_0.5.0-100_all.deb",
+          "final_url": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-zsh/python3-colcon-zsh_0.5.0-100_all.deb",
+          "http_status": 200,
+          "size": 5560,
+          "sha256": "a62a1f4b3dfaa57db070d0eecd7b16bfc336eb412fedfba90fd4edc2c4e2635a"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-colcon-zsh/python3-colcon-zsh_0.5.0-100_all.deb"
+    },
+    {
+      "uri": "http://ports.ubuntu.com/pool/universe/c/cov-core/python3-cov-core_1.15.0-3build1_all.deb",
+      "filename": "python3-cov-core_1.15.0-3build1_all.deb",
+      "size": 7652,
+      "sha256": "1e76a97b2b6783f91c02f202d86733528393f97b979595824f8d2fa6b6d31d2a",
+      "md5": "5fd3b7ab93eda43627a40d599369cafd",
+      "attempts": [
+        {
+          "url": "https://ports.ubuntu.com/pool/universe/c/cov-core/python3-cov-core_1.15.0-3build1_all.deb",
+          "final_url": "https://ports.ubuntu.com/pool/universe/c/cov-core/python3-cov-core_1.15.0-3build1_all.deb",
+          "http_status": 200,
+          "size": 7652,
+          "sha256": "1e76a97b2b6783f91c02f202d86733528393f97b979595824f8d2fa6b6d31d2a"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "https://ports.ubuntu.com/pool/universe/c/cov-core/python3-cov-core_1.15.0-3build1_all.deb"
+    },
+    {
+      "uri": "http://ports.ubuntu.com/pool/universe/p/python-coverage/python3-coverage_6.2%2bdfsg1-2build1_arm64.deb",
+      "filename": "python3-coverage_6.2+dfsg1-2build1_arm64.deb",
+      "size": 131148,
+      "sha256": "042a845d9254b211e32918f4e7266a994a0c11e5adcf44ed0579f18d5ab4abe0",
+      "md5": "b9373be996ffcf8fd4cb2a84e8be9ee5",
+      "attempts": [
+        {
+          "url": "https://ports.ubuntu.com/pool/universe/p/python-coverage/python3-coverage_6.2%2bdfsg1-2build1_arm64.deb",
+          "final_url": "https://ports.ubuntu.com/pool/universe/p/python-coverage/python3-coverage_6.2%2bdfsg1-2build1_arm64.deb",
+          "http_status": 200,
+          "size": 131148,
+          "sha256": "042a845d9254b211e32918f4e7266a994a0c11e5adcf44ed0579f18d5ab4abe0"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "https://ports.ubuntu.com/pool/universe/p/python-coverage/python3-coverage_6.2%2bdfsg1-2build1_arm64.deb"
+    },
+    {
+      "uri": "http://ports.ubuntu.com/pool/universe/d/distlib/python3-distlib_0.3.4-1_all.deb",
+      "filename": "python3-distlib_0.3.4-1_all.deb",
+      "size": 269258,
+      "sha256": "959d724b03031e8053b589202a1ac9b33daedfdd123ce2498d96b7e20457b444",
+      "md5": "fe7466a71b5be472a00cb87ff5c245e7",
+      "attempts": [
+        {
+          "url": "https://ports.ubuntu.com/pool/universe/d/distlib/python3-distlib_0.3.4-1_all.deb",
+          "final_url": "https://ports.ubuntu.com/pool/universe/d/distlib/python3-distlib_0.3.4-1_all.deb",
+          "http_status": 200,
+          "size": 269258,
+          "sha256": "959d724b03031e8053b589202a1ac9b33daedfdd123ce2498d96b7e20457b444"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "https://ports.ubuntu.com/pool/universe/d/distlib/python3-distlib_0.3.4-1_all.deb"
+    },
+    {
+      "uri": "http://ports.ubuntu.com/pool/universe/n/nose2/python3-nose2_0.9.2-1_all.deb",
+      "filename": "python3-nose2_0.9.2-1_all.deb",
+      "size": 89380,
+      "sha256": "3d48d73eccd30e48cc8d54b106f21dfff61362b2e85be436a9dc259bf4274ad4",
+      "md5": "01e9d53df3769c4cc0ed57737ab82aab",
+      "attempts": [
+        {
+          "url": "https://ports.ubuntu.com/pool/universe/n/nose2/python3-nose2_0.9.2-1_all.deb",
+          "final_url": "https://ports.ubuntu.com/pool/universe/n/nose2/python3-nose2_0.9.2-1_all.deb",
+          "http_status": 200,
+          "size": 89380,
+          "sha256": "3d48d73eccd30e48cc8d54b106f21dfff61362b2e85be436a9dc259bf4274ad4"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "https://ports.ubuntu.com/pool/universe/n/nose2/python3-nose2_0.9.2-1_all.deb"
+    },
+    {
+      "uri": "http://ports.ubuntu.com/pool/universe/p/python-notify2/python3-notify2_0.3-4_all.deb",
+      "filename": "python3-notify2_0.3-4_all.deb",
+      "size": 10956,
+      "sha256": "7012db28119594c1e3897c53208baa86982dd4c955a995d1a8683a7503b7a91d",
+      "md5": "72d9b318c7aa2e9ec6a77b4ecb77e4cd",
+      "attempts": [
+        {
+          "url": "https://ports.ubuntu.com/pool/universe/p/python-notify2/python3-notify2_0.3-4_all.deb",
+          "final_url": "https://ports.ubuntu.com/pool/universe/p/python-notify2/python3-notify2_0.3-4_all.deb",
+          "http_status": 200,
+          "size": 10956,
+          "sha256": "7012db28119594c1e3897c53208baa86982dd4c955a995d1a8683a7503b7a91d"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "https://ports.ubuntu.com/pool/universe/p/python-notify2/python3-notify2_0.3-4_all.deb"
+    },
+    {
+      "uri": "http://ports.ubuntu.com/pool/universe/p/python-pytest-cov/python3-pytest-cov_3.0.0-1_all.deb",
+      "filename": "python3-pytest-cov_3.0.0-1_all.deb",
+      "size": 21034,
+      "sha256": "41bf55171b71b309b021e5fa258ada786839abedf08594b3f8cb1c362230b8e4",
+      "md5": "52ed18060cfa9ebc1c93fb2ff0dd5f14",
+      "attempts": [
+        {
+          "url": "https://ports.ubuntu.com/pool/universe/p/python-pytest-cov/python3-pytest-cov_3.0.0-1_all.deb",
+          "final_url": "https://ports.ubuntu.com/pool/universe/p/python-pytest-cov/python3-pytest-cov_3.0.0-1_all.deb",
+          "http_status": 200,
+          "size": 21034,
+          "sha256": "41bf55171b71b309b021e5fa258ada786839abedf08594b3f8cb1c362230b8e4"
+        }
+      ],
+      "status": "verified_download",
+      "downloaded_from": "https://ports.ubuntu.com/pool/universe/p/python-pytest-cov/python3-pytest-cov_3.0.0-1_all.deb"
+    }
+  ]
+}

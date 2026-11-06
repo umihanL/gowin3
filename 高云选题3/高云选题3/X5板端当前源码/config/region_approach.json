@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "calibration_verified": false,
+  "map_registration_verified": false,
+  "spray_range_verified": false,
+  "body_envelope_verified": false,
+  "time_sync_verified": false,
+  "reference": "nose_midpoint",
+  "position_frame": "undistorted_left_optical",
+  "camera_coordinate_frame": "undistorted_left_optical",
+  "stereo_calibration_id": "gs130w_factory_ce8ac6b9c53913d9ad306b44",
+  "R_camera_to_vehicle": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      -1,
+      0
+    ]
+  ],
+  "t_camera_to_vehicle_m": [
+    -0.345,
+    0.075,
+    0.27
+  ],
+  "nozzle_origin_vehicle_m": [
+    -0.243,
+    -0.055,
+    0.305
+  ],
+  "spray_range_m": null,
+  "fire_height_range_m": null,
+  "body_clearance_m": null,
+  "capture_ttl_s": 0.6,
+  "max_pose_gap_s": 0.7,
+  "stopped_pose_slop_s": 0.12,
+  "pose_speed_limit_mps": 0.8,
+  "pose_turn_limit_deg_s": 180.0,
+  "map_sha256": "7946ee6c68ebb2d04a8ba98e323d45ca6a4b5e43671f34a42eda2538627da7ed",
+  "map_signature": 1153302534,
+  "planner_cells_sha256": "83efefa33d23ec35f3e56e40e9d33f25ef5fba6f905df9f9c2715332eb814893",
+  "traversability": "region_traversability.json",
+  "instructions": [
+    "User confirms level camera facing vehicle left: undistorted optical right/down/forward maps to vehicle +x/-z/+y, so R_camera_to_vehicle=[[1,0,0],[0,0,1],[0,-1,0]]. This user-declared installation orientation and recorded translation use the nose-midpoint ground projection; they are not rectified optical axes or an independent precision calibration.",
+    "camera_coordinate_frame identifies detection pixels and position_frame identifies stereo XYZ; they are separate concepts with the same undistorted_left_optical label in the current sidecar. Both bind to factory stereo gs130w_factory_ce8ac6b9c53913d9ad306b44. Factory parameters and frame identity do not certify metric depth; installation rotation is separately sourced to the user declaration.",
+    "Verify the printed map physical scale and manual start-reference placement before map_registration_verified; UART map signature proves map identity, not actual localization accuracy.",
+    "Measure nozzle origin and reliable short-pulse 3D distance interval plus target height interval; enable spray_range_verified only after impact tests.",
+    "body_clearance_m is required lateral radius including mounting protrusions and margin; this can only further erode the already-inflated FPGA planner corridor. FPGA turn/vehicle geometry remains authoritative.",
+    "Verify capture and UART pose timestamp error under movement. A moving capture requires same-task bracketing poses. A one-sided pose needs real stop telemetry and two stationary samples.",
+    "Do not set verification flags true until the corresponding measurements pass; autonomous region approach stays unavailable meanwhile.",
+    "Approach goals are sampled from the actual directed FPGA execution ROM, filtered by inflated free space; mathematical junction centers are not assumed executable stopping points.",
+    "The consumer supports explicitly bound rectified_left_optical or undistorted_left_optical XYZ and requires an exact source-frame match. DetectionArray header.frame_id and rectified must agree; conflicting metadata is rejected. The current binding is undistorted_left_optical, not rectified_left_optical.",
+    "User requests straight nozzle-ray alignment without water-drop/landing correction. aiming_policy_request records this requirement only. The nozzle aiming/pump path now supports explicit straight_ray policy; the autonomous region-approach range and physical-verification gates remain separate and unchanged. Water-impact verification must not be synthesized."
+  ],
+  "planner_graph_sha256": "8afacfdea86f79e22fdb412697583c491097597ae7f6e78cb752b57bdc6df9d2",
+  "planner_heading_sha256": "9d814fb25aaa88b9cb92d08588058a85eb61ced2ac35e4911055b84b6279d953",
+  "vehicle_reference_measurements": {
+    "measurement_id": "vehicle_reference_user_20261103",
+    "unit": "m",
+    "vehicle_frame": "x_forward_y_left_z_up",
+    "origin": "ground_projection_of_nose_midpoint",
+    "pan_origin_vehicle_m": [
+      -0.25,
+      -0.055,
+      0.27
+    ],
+    "camera_reference": "physical_left_lens_center",
+    "camera_origin_vehicle_m": [
+      -0.345,
+      0.075,
+      0.27
+    ],
+    "tilt_origin_vehicle_m": [
+      -0.25,
+      -0.055,
+      0.3
+    ],
+    "nozzle_origin_at_geometric_zero_vehicle_m": [
+      -0.243,
+      -0.055,
+      0.305
+    ],
+    "source": "User confirmed C is left lens centre; P is 25cm behind, 5.5cm right, 27cm above ground relative to nose midpoint. Combined with installation_user_20261103_r2 offsets.",
+    "camera_orientation_measured": false,
+    "water_impact_measured": false,
+    "camera_orientation_source": "explicit_user_level_left_declaration_20261103"
+  },
+  "reference_height_convention": "nose_midpoint_ground_projection; world Z is height above level ground",
+  "orientation_user_statement": {
+    "statement_id": "camera_level_left_user_20261103",
+    "source": "explicit_user_confirmation",
+    "camera_heading_vehicle": "left",
+    "camera_pitch_deg": 0,
+    "camera_roll_deg": 0,
+    "reference_optical_frame": "undistorted_left_optical",
+    "optical_axes_in_vehicle": {
+      "right": "+vehicle_x",
+      "down": "-vehicle_z",
+      "forward": "+vehicle_y"
+    },
+    "nozzle_geometric_zero_heading_vehicle": "left",
+    "nozzle_geometric_zero_elevation_deg": 0,
+    "notes": "Camera pitch/roll and shared leftward heading are user declarations. The nozzle vector describes the defined horizontal geometric zero, not the current standby posture or an encoder zero. No independent precision measurement, stereo verification or water impact verification is asserted."
+  },
+  "aiming_policy_request": {
+    "requested_model": "straight_nozzle_ray",
+    "water_drop_compensation": false,
+    "water_landing_compensation": false,
+    "source": "explicit_user_request_20261103",
+    "implementation_status": "implemented_pending_stereo_and_axis_commissioning",
+    "notes": "Explicit straight_ray policy is implemented. Automatic operation still requires verified current stereo frames, calibrated geometry and actual encoder reference, plus matching geometry/mount/pump profile identities. No water-impact claim or automatic readiness is asserted."
+  }
+}

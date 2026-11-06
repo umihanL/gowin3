@@ -1,0 +1,23 @@
+{
+  "passed": 10,
+  "checks": [
+    "All payload sizes/SHA256/Python syntax verified",
+    "Only allowlisted geometry/template settings and create-only defaults are included",
+    "Mixed template remains dry-run, pump disabled, no enable-on-command or assumed reference",
+    "Missing numbered-map and default configs are supplied without enabling UART",
+    "Existing active source UART is skipped unchanged and excluded from applied hashes",
+    "Missing source config recovers existing installed values rather than defaults",
+    "Supplied configs satisfy preflight while absent calibration is rejected; historical task service guarded",
+    "Protected settings, parent traversal, and model paths rejected",
+    "Corrupted payload rejected before applying",
+    "Offline CLI verification makes no workspace writes"
+  ],
+  "archive_sha256": "dcf1e58b55af9235d804c03da9a5088493fd9ff7e7d63b646e8450816f0fb818",
+  "files": 205,
+  "board_connected": false,
+  "deployment_executed": false,
+  "limits": [
+    "Board build/service restart was not run",
+    "Update installer has not been tested on X5 this turn"
+  ]
+}

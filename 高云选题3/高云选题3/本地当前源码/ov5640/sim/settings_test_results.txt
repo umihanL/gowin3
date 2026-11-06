@@ -1,0 +1,7 @@
+PASS new parameters: 35/150cm bypass bounds, invalid 34 rejected, 80/400mm/s independent brake speed
+PASS settings: manual default/200, all menus, keypad/delete/confirm/limits, +/-5/50, touch driving, PS2 ignored in manual, circle/R1/R2 edge debounce, synchronized target, disarm/rearm, disconnect and reset
+sim/vehicle_settings_tb.sv:115: $finish called at 361090000 (1ps)
+INFO response 0->200: new=        560 ms old=       3670 ms peak=200.616793 final=200.036221
+INFO response 200->600: new=        370 ms old=          0 ms (0 means >6000 ms) peak=600.279697 final=599.680203
+PASS motor response: all 2001 signed speed conversions, 0->200/200->600 faster than prior PI, bounded overshoot, downstep settling, four load/friction/inertia variants including reverse, reset; independent friction/inertia plant, not physical measurements
+sim/motor_response_tb.sv:72: $finish called at 3181650000 (1ps)

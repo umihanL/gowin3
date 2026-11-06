@@ -1,0 +1,10 @@
+{
+  "enabled": false,
+  "endpoint": "http://127.0.0.1:8088/v1/chat/completions",
+  "model": "qwen2.5-0.5b-instruct",
+  "timeout_s": 75.0,
+  "note": "Local Qwen2.5-0.5B-Instruct Q4_K_M text model on X5 CPU. No Internet or direct camera input. Ordinary dialogue targets 40-80 Chinese characters with a 90-character wire budget; audited ROS2/YOLO/FPGA/stereo explanations use domain_reference. Generated output never controls actuators.",
+  "mode": "generate",
+  "max_tokens": 256,
+  "answer_timeout_s": 80.0
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "name": "first_frame",
+    "passed": true,
+    "seconds": 0.109,
+    "log": "sim/navigation_ipm_first_frame.log",
+    "sha256": "7a34c416763d2587e5111d6a92e17b88a13e018346bb5e69787b894a8e560d4a"
+  },
+  {
+    "name": "single_front",
+    "passed": true,
+    "seconds": 0.344,
+    "log": "sim/navigation_ipm_single_front.log",
+    "sha256": "ebc2807251e562ee9a2101465db973883ebf5f4b0698b98da306aedb119c3d0e"
+  },
+  {
+    "name": "dual_front",
+    "passed": true,
+    "seconds": 0.797,
+    "log": "sim/navigation_ipm_dual_front.log",
+    "sha256": "75028ebe627d7e336b537852a197e660eaed1adee184ba311b3f9e2f3dfa6f85"
+  },
+  {
+    "name": "handoff_rtl",
+    "passed": true,
+    "seconds": 0.203,
+    "log": "sim/navigation_ipm_handoff_rtl.log",
+    "sha256": "eb248a7898d19df9a82ed10181bdb771282b7ae42ef9fe7bc379607514c734f6"
+  },
+  {
+    "name": "vision_rejoin",
+    "passed": true,
+    "seconds": 31.203,
+    "log": "sim/navigation_ipm_vision_rejoin.log",
+    "sha256": "225965bb3529a76386fb12da1461153661f4a84d99f20ee4c60ce0a7b68f1225"
+  },
+  {
+    "name": "motion_regression",
+    "passed": true,
+    "seconds": 268.766,
+    "log": "sim/navigation_ipm_motion_regression.log",
+    "sha256": "aa6b6c72b6d98016a646935a03af112ff0f60fe17d6de45f76c506f3d050f58a"
+  },
+  {
+    "name": "profile",
+    "passed": true,
+    "seconds": 0.187,
+    "log": "sim/navigation_ipm_profile.log",
+    "sha256": "f9705af0de1d6e582ceed389c811f5cbb9e09ff0652f7ca3e8d8c4ce6d9d2428"
+  }
+]

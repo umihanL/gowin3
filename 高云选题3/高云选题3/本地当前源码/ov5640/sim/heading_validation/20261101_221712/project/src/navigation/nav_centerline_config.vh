@@ -1,0 +1,3 @@
+`define ROAD_NODES 1764
+`define ROAD_BITS 11
+`define ROAD_WORD_BITS 79

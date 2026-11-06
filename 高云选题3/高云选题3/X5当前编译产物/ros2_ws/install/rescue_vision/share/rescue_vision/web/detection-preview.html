@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>消防小车 · YOLO 画面</title>
+<style>
+:root{color-scheme:light;--ink:#17332f;--muted:#71837c;--line:#dce5df;--green:#087f72}*{box-sizing:border-box}body{margin:0;background:#f3f5f1;color:var(--ink);font-family:Inter,"Microsoft YaHei","PingFang SC",sans-serif}.shell{max-width:1320px;margin:auto;padding:24px 28px}header{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:17px}h1{font-size:21px;font-weight:650;letter-spacing:-.3px;margin:0}.eyebrow{font-size:10px;letter-spacing:2px;color:var(--green);font-weight:650;margin-bottom:7px}.controls{display:flex;align-items:center;gap:22px}.status{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px}.dot{width:7px;height:7px;background:#a5b6ac;border-radius:50%}.dot.live{background:var(--green);box-shadow:0 0 0 4px #087f7212}.dot.warn{background:#c48b34}.toggle{display:flex;align-items:center;gap:9px;font-size:13px;cursor:pointer;white-space:nowrap}.toggle input{appearance:none;width:39px;height:23px;border:0;border-radius:20px;background:#bcc8c0;margin:0;position:relative;cursor:pointer;transition:background .15s}.toggle input:before{content:"";position:absolute;width:17px;height:17px;left:3px;top:3px;border-radius:50%;background:#fff;transition:transform .15s}.toggle input:checked{background:var(--green)}.toggle input:checked:before{transform:translateX(16px)}.toggle input:focus-visible{outline:3px solid #96cbb6;outline-offset:3px}.toggle input:disabled{opacity:.6;cursor:wait}.viewer{border-radius:15px;overflow:hidden;border:1px solid var(--line);background:white}.stage{position:relative;display:grid;place-items:center;background:#162e2b;min-height:280px;aspect-ratio:1280/1088}canvas{display:block;width:100%;height:auto;max-height:80vh;object-fit:contain}.placeholder{position:absolute;inset:0;display:grid;place-items:center;color:#a8c3b8;font-size:14px}.overlay{position:absolute;left:15px;top:15px;max-width:calc(100% - 30px);border-radius:8px;padding:8px 11px;background:#14352be6;color:#c7efdc;font-size:12px;pointer-events:none}.overlay.warn{background:#775624eb;color:#fff4db}.viewfoot{padding:12px 16px;display:flex;justify-content:space-between;gap:15px;font-size:11px;color:var(--muted)}footer{font-size:11px;color:#84928b;line-height:1.7;padding-top:11px}.hidden{display:none}@media(max-width:650px){.shell{padding:18px 12px}h1{font-size:18px}.eyebrow{font-size:9px}.controls{gap:10px;align-items:flex-end;flex-direction:column}.status{font-size:11px}.toggle{font-size:12px}.viewfoot{gap:6px;flex-direction:column}.stage{min-height:220px}canvas{max-height:none}} 
+</style>
+</head>
+<body><div class="shell">
+<header><div><div class="eyebrow">RESCUE ROBOT / VISION</div><h1 id="recognitionTitle">YOLO · 场景识别</h1></div><div class="controls"><div class="status" aria-live="polite"><span id="dot" class="dot"></span><span id="status">正在连接</span></div><label class="toggle">画面传输<input id="streamToggle" type="checkbox" checked aria-label="画面传输，所有预览页面共享"></label></div></header>
+<section class="viewer"><div class="stage"><canvas id="canvas" width="1280" height="1088" aria-label="物理左眼画面与同帧YOLO检测框"></canvas><div class="placeholder" id="placeholder">等待识别画面</div><div class="overlay" id="overlay">正在连接</div></div><div class="viewfoot"><span id="frameInfo">物理左眼 · 尚无画面</span><span id="timing">—</span></div></section>
+<footer id="footnote">关闭画面传输后，板端识别继续运行。开关由所有预览页面共享。</footer>
+</div>
+<script>
+'use strict';
+const el=id=>document.getElementById(id),canvas=el('canvas'),ctx=canvas.getContext('2d'),decoder=new TextDecoder('utf-8',{fatal:true});
+const names={fire:'火焰',firefighter:'消防员',person:'人物'},colors={fire:'#ff8a4d',firefighter:'#4ae1b5',person:'#83adff'};
+let token='',frame=null,bitmap=null,state='waiting',requested=true,generation=null,controlEpoch=0,toggleBusy=false,polling=false,timer=null,inflight=null,pageHidden=false;
+const displayedAt=[];
+function text(id,value){const target=el(id),content=String(value);if(target.textContent!==content)target.textContent=content;}
+function fps(now){while(displayedAt.length&&now-displayedAt[0]>2000)displayedAt.shift();return displayedAt.length>1?1000*(displayedAt.length-1)/(displayedAt.at(-1)-displayedAt[0]):0;}
+function draw(){
+  if(!bitmap||!frame)return;
+  if(canvas.width!==frame.width||canvas.height!==frame.height){canvas.width=frame.width;canvas.height=frame.height;canvas.parentElement.style.aspectRatio=`${frame.width}/${frame.height}`;}
+  ctx.drawImage(bitmap,0,0,canvas.width,canvas.height);
+  const font=Math.max(18,Math.round(canvas.width/45));ctx.font=`600 ${font}px "Microsoft YaHei",sans-serif`;ctx.lineWidth=Math.max(2,canvas.width/320);
+  for(const d of frame.detections){
+    if(!Array.isArray(d.bbox_xyxy)||d.bbox_xyxy.length!==4||!d.bbox_xyxy.every(Number.isFinite)||!Number.isFinite(d.confidence))continue;
+    const [ax,ay,bx,by]=d.bbox_xyxy,x=Math.max(0,Math.min(canvas.width,ax)),y=Math.max(0,Math.min(canvas.height,ay)),w=Math.max(0,Math.min(canvas.width,bx)-x),h=Math.max(0,Math.min(canvas.height,by)-y);if(!w||!h)continue;
+    const color=state==='live'?(colors[d.class_name]||'#e1e9e7'):'#a9b3b1',label=`${names[d.class_name]||d.class_name}  ${(d.confidence*100).toFixed(1)}%`,tw=Math.min(canvas.width,ctx.measureText(label).width+18),th=font+15,lx=Math.min(x,canvas.width-tw),ly=y>=th?y-th:Math.min(canvas.height-th,y+4);
+    ctx.strokeStyle=color;ctx.strokeRect(x,y,w,h);ctx.fillStyle=color;ctx.fillRect(lx,ly,tw,th);ctx.fillStyle='#142c31';ctx.fillText(label,lx+9,ly+font+2);
+  }
+}
+function showState(next,age=null){
+  const changed=next!==state;state=next;
+  el('dot').className='dot '+(state==='live'?'live':state==='paused'||state==='stale'?'warn':'');
+  el('overlay').className='overlay '+(state==='paused'||state==='stale'?'warn':'');
+  text('status',state==='live'?`实时 · ${fps(performance.now()).toFixed(1)} 帧/秒`:state==='paused'?'已暂停传输':state==='stale'?'画面已过期':'等待新画面');
+  text('overlay',state==='live'?'实时 · 图像与检测框来自同一帧':state==='paused'?'已暂停传输 · 识别继续运行':state==='stale'?'画面已过期 · 请勿视为当前结果':bitmap?'等待新画面 · 当前保留上次画面':'等待识别画面');
+  text('frameInfo',frame?`物理左眼 · ${frame.width} × ${frame.height} · 第 ${frame.sequence} 帧`:'物理左眼 · 尚无画面');
+  text('timing',state==='live'&&Number.isFinite(age)?`图像年龄 ${Math.round(age*1000)} ms`:state==='paused'?'画面与检测框保留为上次结果':'—');
+  if(changed)draw();
+}
+function unpack(buffer){
+  if(buffer.byteLength<4)throw new Error('预览数据不完整');
+  const length=new DataView(buffer).getUint32(0,false);if(length<2||length>4*1024*1024||4+length>buffer.byteLength)throw new Error('预览元数据长度无效');
+  const data=JSON.parse(decoder.decode(new Uint8Array(buffer,4,length)));if(data.transport_version!==1)throw new Error('不支持的预览协议');
+  const jpeg=new Blob([new Uint8Array(buffer,4+length)],{type:'image/jpeg'});if((data.frame===null&&jpeg.size)||(data.frame!==null&&!jpeg.size))throw new Error('图像与元数据包不一致');
+  return {data,jpeg};
+}
+async function update(data,jpeg,startedAt,epoch){
+  if(epoch!==controlEpoch||!pageVisible())return;
+  const classes=data.performance?.enabled_classes;
+  if(Array.isArray(classes))text('recognitionTitle','YOLO · '+classes.map(c=>names[c]||c).join(' / '));
+  const stream=data.stream||{};
+  if(Number.isInteger(generation)&&Number.isInteger(stream.generation)&&stream.generation<generation)return;
+  if(generation!==stream.generation){generation=stream.generation;token='';displayedAt.length=0;}
+  requested=stream.enabled!==false;el('streamToggle').checked=requested;
+  let changed=false;
+  if(requested&&stream.active!==false&&data.frame&&data.frame.token!==token){
+    if(!jpeg?.size||!Number.isInteger(data.frame.width)||!Number.isInteger(data.frame.height)||data.frame.width<=0||data.frame.height<=0||!Array.isArray(data.frame.detections))throw new Error('无效预览帧');
+    const image=await createImageBitmap(jpeg);
+    if(epoch!==controlEpoch){image.close();return;}
+    if(image.width!==data.frame.width||image.height!==data.frame.height){image.close();throw new Error('图像与检测尺寸不一致');}
+    const old=bitmap;bitmap=image;frame=data.frame;token=frame.token;changed=true;old?.close();el('placeholder').classList.add('hidden');
+  }
+  const elapsed=(performance.now()-startedAt)/1000,age=Number.isFinite(data.frame_age_s)?data.frame_age_s+elapsed:null,updateAge=Number.isFinite(data.update_age_s)?data.update_age_s+elapsed:null,limit=Number.isFinite(data.stale_after_s)?data.stale_after_s:3;
+  let next=!requested?'paused':stream.active===false?'waiting':data.state;
+  // A status-only response cannot make an old local bitmap current again.
+  if(requested&&jpeg===null)next='waiting';
+  if(next==='live'&&(age===null||age<0||age>limit||updateAge===null||updateAge<0||updateAge>limit))next='stale';
+  if(changed&&next==='live')displayedAt.push(performance.now());
+  const prior=state;showState(next,age);if(changed&&prior===state)draw();
+}
+function pageVisible(){return !document.hidden&&!pageHidden;}
+function schedule(delay){clearTimeout(timer);timer=null;if(pageVisible()&&!toggleBusy)timer=setTimeout(poll,delay);}
+function suspendPreview(){
+  controlEpoch++;clearTimeout(timer);timer=null;inflight?.abort();displayedAt.length=0;
+  showState(requested?'waiting':'paused');
+}
+async function poll(){
+  if(polling||toggleBusy||!pageVisible())return;polling=true;
+  const startedAt=performance.now(),epoch=controlEpoch;inflight=new AbortController();const timeout=setTimeout(()=>inflight?.abort(),2500);
+  try{
+    const binary=requested,url=binary?'/api/frame?after='+encodeURIComponent(token):'/api/state?images=0&after='+encodeURIComponent(token);
+    const response=await fetch(url,{cache:'no-store',signal:inflight.signal});if(!response.ok)throw new Error('HTTP '+response.status);
+    if(binary){const packet=unpack(await response.arrayBuffer());await update(packet.data,packet.jpeg,startedAt,epoch);}else{await update(await response.json(),null,startedAt,epoch);}
+  }catch(error){if(epoch===controlEpoch&&!toggleBusy){showState(requested?'stale':'paused');text('status','预览连接中断');}}
+  finally{clearTimeout(timeout);inflight=null;polling=false;if(!toggleBusy)schedule(requested?Math.max(0,1000/30-(performance.now()-startedAt)):1000);}
+}
+el('streamToggle').addEventListener('change',async()=>{
+  const desired=el('streamToggle').checked,epoch=++controlEpoch;toggleBusy=true;el('streamToggle').disabled=true;inflight?.abort();clearTimeout(timer);requested=desired;
+  if(!desired)showState('paused');else showState('waiting');
+  try{
+    const startedAt=performance.now(),response=await fetch('/api/stream',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({enabled:desired}),signal:AbortSignal.timeout(2500)});
+    if(!response.ok)throw new Error('HTTP '+response.status);await update(await response.json(),null,startedAt,epoch);
+    text('footnote','关闭画面传输后，板端识别继续运行。开关由所有预览页面共享。');
+  }catch(error){text('status','开关操作未确认');text('footnote','未能确认服务器开关状态，正在重新查询。');}
+  finally{toggleBusy=false;el('streamToggle').disabled=false;schedule(0);}
+});
+document.addEventListener('visibilitychange',()=>{
+  if(!pageVisible())suspendPreview();else{showState(requested?'waiting':'paused');schedule(0);}
+});
+window.addEventListener('pagehide',()=>{
+  pageHidden=true;suspendPreview();bitmap?.close();bitmap=null;frame=null;token='';
+});
+window.addEventListener('pageshow',()=>{pageHidden=false;if(pageVisible())schedule(0);});
+poll();
+</script>
+</body></html>

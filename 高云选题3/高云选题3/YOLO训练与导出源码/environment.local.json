@@ -1,0 +1,44 @@
+{
+  "python_executable": "D:\\工程仿真\\FPGA赛道_小车仿真\\YOLO11n_model\\.venv\\Scripts\\python.exe",
+  "python_version": "3.10.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "virtual_environment": true,
+  "packages": {
+    "yaml": {
+      "installed": true,
+      "version": "6.0.3"
+    },
+    "PIL": {
+      "installed": true,
+      "version": "12.3.0"
+    },
+    "numpy": {
+      "installed": true,
+      "version": "2.2.6"
+    },
+    "torch": {
+      "installed": true,
+      "version": "2.8.0+cu128"
+    },
+    "ultralytics": {
+      "installed": true,
+      "version": "8.3.253"
+    },
+    "onnx": {
+      "installed": false
+    }
+  },
+  "nvidia_smi": {
+    "returncode": 0,
+    "output": "NVIDIA GeForce RTX 4060 Laptop GPU, 616.92, 8188 MiB, 5161 MiB",
+    "error": ""
+  },
+  "trained_weights_present": false,
+  "torch_runtime": {
+    "cuda_available": true,
+    "cuda_build": "12.8",
+    "devices": [
+      "NVIDIA GeForce RTX 4060 Laptop GPU"
+    ]
+  }
+}

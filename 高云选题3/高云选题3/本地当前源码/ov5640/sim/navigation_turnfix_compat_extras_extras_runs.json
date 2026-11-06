@@ -1,0 +1,26 @@
+[
+  {
+    "name": "vehicle",
+    "top": "vehicle_motion_tb",
+    "passed": true,
+    "seconds": 290.44,
+    "log": "sim/navigation_turnfix_compat_extras_vehicle.log",
+    "sha256": "aa6b6c72b6d98016a646935a03af112ff0f60fe17d6de45f76c506f3d050f58a"
+  },
+  {
+    "name": "profile",
+    "top": "vehicle_profile_tb",
+    "passed": true,
+    "seconds": 0.22,
+    "log": "sim/navigation_turnfix_compat_extras_profile.log",
+    "sha256": "23fb01f6b75da39f5d646aff807fe8a09763fa4160a2825e15fe82482e8da33a"
+  },
+  {
+    "name": "zebra",
+    "top": "vision_zebra_tb",
+    "passed": true,
+    "seconds": 0.14,
+    "log": "sim/navigation_turnfix_compat_extras_zebra.log",
+    "sha256": "1df3d2b91d6ba0659cb07a0d6a9bd4d2de67af7ec71a9579e85dde57845f7458"
+  }
+]

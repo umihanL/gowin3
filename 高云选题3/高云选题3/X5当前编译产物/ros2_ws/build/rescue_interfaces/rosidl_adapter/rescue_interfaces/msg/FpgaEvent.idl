@@ -1,0 +1,39 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rescue_interfaces/msg/FpgaEvent.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module rescue_interfaces {
+  module msg {
+    module FpgaEvent_Constants {
+      const uint8 CROSSWALK = 16;
+      const uint8 CROSSING_COMPLETE = 17;
+      const uint8 STATUS = 18;
+      const uint8 ACK = 19;
+    };
+    struct FpgaEvent {
+      std_msgs::msg::Header header;
+
+      uint8 event_type;
+
+      uint16 wire_sequence;
+
+      uint32 event_id;
+
+      boolean vehicle_stopped;
+
+      boolean gimbal_settled;
+
+      boolean measured_angles_valid;
+
+      float pan_deg;
+
+      float tilt_deg;
+
+      uint16 acknowledged_sequence;
+
+      uint8 acknowledgement_result;
+    };
+  };
+};

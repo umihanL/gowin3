@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-11-04T13:59:01.782462+08:00",
+  "groups": [
+    {
+      "directory": "ov5640/src",
+      "files": 113,
+      "missing": 0,
+      "all_bytes_match_original": true
+    },
+    {
+      "directory": "ov5640/tools",
+      "files": 94,
+      "missing": 0,
+      "all_bytes_match_original": true
+    },
+    {
+      "directory": "RDKX5_消防小车系统/ros2_ws/src",
+      "files": 141,
+      "missing": 0,
+      "all_bytes_match_original": true
+    },
+    {
+      "directory": "RDKX5_消防小车系统/ros2_ws/config",
+      "files": 45,
+      "missing": 0,
+      "all_bytes_match_original": true
+    },
+    {
+      "directory": "RDKX5_消防小车系统/ros2_ws/web",
+      "files": 11,
+      "missing": 0,
+      "all_bytes_match_original": true
+    },
+    {
+      "directory": "RDKX5_消防小车系统/ros2_ws/tools",
+      "files": 96,
+      "missing": 0,
+      "all_bytes_match_original": true
+    },
+    {
+      "directory": "RDKX5_消防小车系统/ros2_ws/tests",
+      "files": 214,
+      "missing": 0,
+      "all_bytes_match_original": true
+    },
+    {
+      "directory": "RDKX5_消防小车系统/desktop/src",
+      "files": 5,
+      "missing": 0,
+      "all_bytes_match_original": true
+    }
+  ],
+  "fpga_project_file_references": 73,
+  "fpga_project_references_present_and_identical": true,
+  "added_local_required_files": [],
+  "added_board_source_files": [],
+  "method": "Complete source directory coverage and byte comparison; archive CRC check",
+  "models_and_runtime_binaries_included": false,
+  "firefighter_change_deployed": false
+}

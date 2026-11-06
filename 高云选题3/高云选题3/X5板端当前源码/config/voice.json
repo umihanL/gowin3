@@ -1,0 +1,19 @@
+{
+  "microphone_enabled": false,
+  "tts_enabled": false,
+  "auto_scene_speech": true,
+  "model_dir": "models/voice/vosk-model-small-cn-0.22",
+  "audio_input_device": null,
+  "sample_rate_hz": 16000,
+  "max_listen_seconds": 15.0,
+  "min_asr_confidence": 0.65,
+  "command_ttl_s": 5.0,
+  "scene_ttl_s": 3.0,
+  "speech_cooldown_s": 12.0,
+  "speech_queue_limit": 3,
+  "tts_executable": "espeak-ng",
+  "tts_voice": "cmn",
+  "tts_words_per_minute": 145,
+  "tts_audio_device": null,
+  "note": "默认关闭麦克风和播报，接入硬件实测后启用。正式PTT收音默认15秒、配置下限10秒，可手动提前结束；完整多句统一处理，普通停顿不提前执行，独立且置信度达标的停止或停泵短句例外。"
+}

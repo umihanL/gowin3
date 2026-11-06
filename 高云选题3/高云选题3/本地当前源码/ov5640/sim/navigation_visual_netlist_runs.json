@@ -1,0 +1,46 @@
+[
+  {
+    "name": "fusion_navigation_next_entry_tb",
+    "passed": true,
+    "seconds": 3.641,
+    "log": "sim/navigation_visual_fusion_navigation_next_entry_tb_netlist.log",
+    "sha256": "052b2b0f189567c4bd3030190851b11639371a0ae5d7c3b651765279f070bb3f",
+    "inputs": {
+      "src/vehicle/vehicle_vision_fusion.v": "bc8b07646fca7d91744ae1b0d2906e20366855febb8905f9f9511c1b0aef145a",
+      "sim/navigation_next_entry_tb.sv": "3be435af68d1d2d6b78138efbbcb8a144063f026f10e155f55d0e145ea690b56"
+    }
+  },
+  {
+    "name": "fusion_navigation_handoff_tb",
+    "passed": true,
+    "seconds": 4.625,
+    "log": "sim/navigation_visual_fusion_navigation_handoff_tb_netlist.log",
+    "sha256": "75800b02f21dc8c342802ad44db57705196da378baa51d5500c8b47bdefcd11c",
+    "inputs": {
+      "src/vehicle/vehicle_vision_fusion.v": "bc8b07646fca7d91744ae1b0d2906e20366855febb8905f9f9511c1b0aef145a",
+      "sim/navigation_handoff_tb.sv": "39599a144a9c9e6089068599c9e072ad49986a9f9e8c2c2d47b3a27d620972fe"
+    }
+  },
+  {
+    "name": "fusion_navigation_branch_direction_tb",
+    "passed": true,
+    "seconds": 3.453,
+    "log": "sim/navigation_visual_fusion_navigation_branch_direction_tb_netlist.log",
+    "sha256": "702cdd615b2474a0a10301cec087ea6410fb56786ea668b985ee0bda4f601d77",
+    "inputs": {
+      "src/vehicle/vehicle_vision_fusion.v": "bc8b07646fca7d91744ae1b0d2906e20366855febb8905f9f9511c1b0aef145a",
+      "sim/navigation_branch_direction_tb.sv": "7438f52aba968264cdc43ac6fb0899ee1ba348393dca50751e0954a29c6eba26"
+    }
+  },
+  {
+    "name": "localizer_visual_localizer_tb",
+    "passed": true,
+    "seconds": 322.532,
+    "log": "sim/navigation_visual_localizer_visual_localizer_tb_netlist.log",
+    "sha256": "04dd7311f458869460120e6e2fac06e0aabba83ebecf0404e36bac11e3478086",
+    "inputs": {
+      "src/vehicle/vehicle_visual_localizer.v": "799ca7ad78c20419691ea51ab87029eb24c7eadd2c6b8d56eac807e8a30ac280",
+      "sim/visual_localizer_tb.sv": "c3569f8597c05b5d1d8f8bd3726ab89780f5ef5956d506d922939593b9009afe"
+    }
+  }
+]

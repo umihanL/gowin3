@@ -1,0 +1,33 @@
+{
+  "name": "control",
+  "top": "navigation_avoidance_tb",
+  "passed": true,
+  "seconds": 141.25,
+  "log": "sim/navigation_avoidance_control.log",
+  "log_sha256": "f05425e81c08e140b82d50f59fb55d58938d61562324f3cd6e8fd4901e35f8ff",
+  "inputs": {
+    "sim/navigation_avoidance_tb.sv": "f9cf5a8ad5e6e0358a77a620687d9b50059768ac5703976b4d8a6db00addb936",
+    "src/imu/imu_math.v": "2663da396408c1ed487f5893bfbb883b6995f2f62ff77f0f458f96e1ef5d1835",
+    "src/navigation/nav_centerline_bitmap.vh": "144b2cc6e5caa7e4dbd230d3ff23ed8ec4695dcf2fb37b32d8276c47b051624a",
+    "src/navigation/nav_centerline_config.vh": "736e51bcae64518c7eb3c9be6ca212e32ef86aa875cf9d1b53962e075bacc837",
+    "src/navigation/nav_centerline_init.vh": "9bd98141518017bd03abd7afe9abd5a869fe7cca908577ab7ee3666b41025236",
+    "src/navigation/nav_centerline_junctions.vh": "3f53e8b78b22da10be750c320cf1914895d04d6e69613f2062a7e8722286f030",
+    "src/navigation/nav_centerline_reverse.vh": "871b8b9f5c6e6b8198454ed262e8240509d8ae094b8ab503004151f199c68003",
+    "src/navigation/nav_font.vh": "54575b446e7f50bfa66dfe32608ac631a895574d38b318ae6d0d44b64483a998",
+    "src/navigation/nav_map_init.vh": "3106bc18b4e9d920af5b1c2a13c23f7df42ea3260d839600a1f63424c2e99ca2",
+    "src/navigation/nav_metadata.vh": "660427c816cb899f6414ed3d316bf9a916255192381f05e0ee30ff868070d13f",
+    "src/portrait/vision_camera_config.vh": "844eea281c4879e641dfe0989cef33866d3b3d9d2da249be69515599f66ee9e3",
+    "src/portrait/vision_ipm_lut.vh": "2106684a4d15c6f6503a28a7096b970decbdff1c1f31d6af3da23700c43307ff",
+    "src/vehicle/host_uart_rx.v": "4f77c892c2adc04b1960e29b44ba1def45aa83510d75b8c51669f3aceff3bf1a",
+    "src/vehicle/vehicle_bypass.v": "c6152618718b7268cd3ac4b18a1b1350054958e5a98d0d7d49a58dc23363a19c",
+    "src/vehicle/vehicle_config.vh": "1df9114f5c2291a385854a6b454d45adf3141eb4f951ccbd31833ed52f11b04c",
+    "src/vehicle/vehicle_host_link.v": "686cf09e4483bc8bd24a0e3116f4fa0da4e762810a9626a566719e1e12f225f0",
+    "src/vehicle/vehicle_motion.v": "2c65a5f0da017a6358b1b81c6721fdc567e914cc72bcc79353c4ecbe5eb64b36",
+    "src/vehicle/vehicle_odometry.v": "30153e70b240b97d39861f468fffcfdfad0e13c145396d02fbc64a0a77c2b43f",
+    "src/vehicle/vehicle_route_profile.v": "5b9c9ba9afa19b8f91998662491a5e8b4863df2ee0e16079860522d448876791",
+    "src/vehicle/vehicle_sincos.v": "d24c9d668718ae73def36c9e56916ae3110feb82d8682977ed27127ec56e138d",
+    "src/vehicle/vehicle_subsystem.v": "2e37d9e5c5a680ed8c66fae8c6ba73c6f269fcdbb0650205253ab75078c9fe82",
+    "src/vehicle/vehicle_tracker.v": "e835346e4d65a518088a6d71c929f8ead513815b7a03b5eac2952060757b2519",
+    "src/vehicle/vehicle_vision_fusion.v": "a826e787186efa21eeec614b38219f2d3e2e1abf48728f065afee9886226ceeb"
+  }
+}

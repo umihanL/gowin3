@@ -1,0 +1,11 @@
+PASS skipped edge phase: left/right planned bends survive direct complete image loss without false deviation stop
+PASS visual bend memory: measured heading retains direction through FOV loss when the route tag is delayed
+PASS bend expiry: visible-road authority preserved; old curve hint cannot trigger a later blind turn
+PASS navigation response: missing frame is not a bend; two complete lost-road frames are required
+sim/navigation_response_tb.sv:57: $finish called at 13420000 (1ps)
+INFO normalized bicycle residual: -3.532460 mm, yaw 0.000492 rad
+PASS vision fusion: normalized gentle PD, fixed-time derivative, map conflict/junction evidence, independent convergence and fallback
+sim/vision_fusion_tb.sv:47: $finish called at 43660000 (1ps)
+PASS single-edge approach side=0: outer boundary survives, no full lock or false deviation stop
+FATAL: sim/vision_blind_turn_tb.sv:50: exit-lane reacquisition failed side=0 state=5 steer=0
+       Time: 20600000  Scope: vision_blind_turn_tb

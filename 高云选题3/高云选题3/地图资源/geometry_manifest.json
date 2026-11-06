@@ -1,0 +1,1120 @@
+{
+  "source": "scene-config.json",
+  "units": "m",
+  "coordinate_frame": {
+    "origin": "southwest_ground_corner",
+    "x": "east",
+    "y": "north",
+    "z": "up",
+    "right_handed": true
+  },
+  "items": [
+    {
+      "id": "ground",
+      "type": "box",
+      "center": [
+        6.0,
+        4.0,
+        -0.025
+      ],
+      "size": [
+        12.0,
+        8.0,
+        0.05
+      ],
+      "color": "ground",
+      "collision": true,
+      "render": true,
+      "lidar_visible": false,
+      "printable": true
+    },
+    {
+      "id": "boundary_west",
+      "type": "box",
+      "center": [
+        0.075,
+        4.0,
+        0.15
+      ],
+      "size": [
+        0.15,
+        8.0,
+        0.3
+      ],
+      "color": "boundary",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "printable": true
+    },
+    {
+      "id": "boundary_east",
+      "type": "box",
+      "center": [
+        11.925,
+        4.0,
+        0.15
+      ],
+      "size": [
+        0.15,
+        8.0,
+        0.3
+      ],
+      "color": "boundary",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "printable": true
+    },
+    {
+      "id": "boundary_south",
+      "type": "box",
+      "center": [
+        6.0,
+        0.075,
+        0.15
+      ],
+      "size": [
+        11.7,
+        0.15,
+        0.3
+      ],
+      "color": "boundary",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "printable": true
+    },
+    {
+      "id": "boundary_north",
+      "type": "box",
+      "center": [
+        6.0,
+        7.925,
+        0.15
+      ],
+      "size": [
+        11.7,
+        0.15,
+        0.3
+      ],
+      "color": "boundary",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "printable": true
+    },
+    {
+      "id": "road_east_west",
+      "type": "box",
+      "center": [
+        6.0,
+        4.0,
+        0.001
+      ],
+      "size": [
+        11.0,
+        1.8000000000000003,
+        0.002
+      ],
+      "color": "road",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "road_east_west",
+      "printable": false
+    },
+    {
+      "id": "road_north_south",
+      "type": "box",
+      "center": [
+        6.0,
+        4.0,
+        0.001
+      ],
+      "size": [
+        1.8000000000000007,
+        7.0,
+        0.002
+      ],
+      "color": "road",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "road_north_south",
+      "printable": false
+    },
+    {
+      "id": "north_connector",
+      "type": "box",
+      "center": [
+        6.0,
+        6.199999999999999,
+        0.001
+      ],
+      "size": [
+        4.800000000000001,
+        1.2999999999999998,
+        0.002
+      ],
+      "color": "road",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "north_connector",
+      "printable": false
+    },
+    {
+      "id": "south_connector",
+      "type": "box",
+      "center": [
+        6.0,
+        1.8,
+        0.001
+      ],
+      "size": [
+        4.800000000000001,
+        1.3000000000000003,
+        0.002
+      ],
+      "color": "road",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "south_connector",
+      "printable": false
+    },
+    {
+      "id": "west_link",
+      "type": "box",
+      "center": [
+        4.6,
+        4.0,
+        0.001
+      ],
+      "size": [
+        1.2000000000000002,
+        5.699999999999999,
+        0.002
+      ],
+      "color": "road",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "west_link",
+      "printable": false
+    },
+    {
+      "id": "east_link",
+      "type": "box",
+      "center": [
+        7.4,
+        4.0,
+        0.001
+      ],
+      "size": [
+        1.2000000000000002,
+        5.699999999999999,
+        0.002
+      ],
+      "color": "road",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "east_link",
+      "printable": false
+    },
+    {
+      "id": "B1",
+      "type": "box",
+      "center": [
+        2.0,
+        6.35,
+        0.9
+      ],
+      "size": [
+        3.0,
+        2.3,
+        1.8
+      ],
+      "color": "building",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "source_id": "B1",
+      "printable": false
+    },
+    {
+      "id": "D1_panel",
+      "type": "box",
+      "center": [
+        3.506,
+        6.35,
+        0.7020000000000001
+      ],
+      "size": [
+        0.012,
+        0.738,
+        1.4040000000000001
+      ],
+      "color": "door",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "D1",
+      "door_recess_visual": true,
+      "printable": true
+    },
+    {
+      "id": "D1_frame_left",
+      "type": "box",
+      "center": [
+        3.514,
+        5.8999999999999995,
+        0.7420000000000001
+      ],
+      "size": [
+        0.018,
+        0.045,
+        1.4840000000000002
+      ],
+      "color": "frame",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "D1",
+      "door_recess_visual": true,
+      "printable": true
+    },
+    {
+      "id": "D1_frame_right",
+      "type": "box",
+      "center": [
+        3.514,
+        6.8,
+        0.7420000000000001
+      ],
+      "size": [
+        0.018,
+        0.045,
+        1.4840000000000002
+      ],
+      "color": "frame",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "D1",
+      "door_recess_visual": true,
+      "printable": true
+    },
+    {
+      "id": "D1_frame_top",
+      "type": "box",
+      "center": [
+        3.514,
+        6.35,
+        1.4840000000000002
+      ],
+      "size": [
+        0.018,
+        0.9450000000000001,
+        0.045
+      ],
+      "color": "frame",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "D1",
+      "door_recess_visual": true,
+      "printable": true
+    },
+    {
+      "id": "B2",
+      "type": "box",
+      "center": [
+        10.0,
+        6.35,
+        0.9
+      ],
+      "size": [
+        3.0,
+        2.3,
+        1.8
+      ],
+      "color": "building",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "source_id": "B2",
+      "printable": false
+    },
+    {
+      "id": "D2_panel",
+      "type": "box",
+      "center": [
+        8.494,
+        6.35,
+        0.7020000000000001
+      ],
+      "size": [
+        0.012,
+        0.738,
+        1.4040000000000001
+      ],
+      "color": "door",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "D2",
+      "door_recess_visual": true,
+      "printable": true
+    },
+    {
+      "id": "D2_frame_left",
+      "type": "box",
+      "center": [
+        8.486,
+        5.8999999999999995,
+        0.7420000000000001
+      ],
+      "size": [
+        0.018,
+        0.045,
+        1.4840000000000002
+      ],
+      "color": "frame",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "D2",
+      "door_recess_visual": true,
+      "printable": true
+    },
+    {
+      "id": "D2_frame_right",
+      "type": "box",
+      "center": [
+        8.486,
+        6.8,
+        0.7420000000000001
+      ],
+      "size": [
+        0.018,
+        0.045,
+        1.4840000000000002
+      ],
+      "color": "frame",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "D2",
+      "door_recess_visual": true,
+      "printable": true
+    },
+    {
+      "id": "D2_frame_top",
+      "type": "box",
+      "center": [
+        8.486,
+        6.35,
+        1.4840000000000002
+      ],
+      "size": [
+        0.018,
+        0.9450000000000001,
+        0.045
+      ],
+      "color": "frame",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "D2",
+      "door_recess_visual": true,
+      "printable": true
+    },
+    {
+      "id": "B3",
+      "type": "box",
+      "center": [
+        2.0,
+        1.65,
+        0.9
+      ],
+      "size": [
+        3.0,
+        2.3,
+        1.8
+      ],
+      "color": "building",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "source_id": "B3",
+      "printable": false
+    },
+    {
+      "id": "D3_panel",
+      "type": "box",
+      "center": [
+        3.506,
+        1.65,
+        0.7020000000000001
+      ],
+      "size": [
+        0.012,
+        0.738,
+        1.4040000000000001
+      ],
+      "color": "door",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "D3",
+      "door_recess_visual": true,
+      "printable": true
+    },
+    {
+      "id": "D3_frame_left",
+      "type": "box",
+      "center": [
+        3.514,
+        1.2,
+        0.7420000000000001
+      ],
+      "size": [
+        0.018,
+        0.045,
+        1.4840000000000002
+      ],
+      "color": "frame",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "D3",
+      "door_recess_visual": true,
+      "printable": true
+    },
+    {
+      "id": "D3_frame_right",
+      "type": "box",
+      "center": [
+        3.514,
+        2.1,
+        0.7420000000000001
+      ],
+      "size": [
+        0.018,
+        0.045,
+        1.4840000000000002
+      ],
+      "color": "frame",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "D3",
+      "door_recess_visual": true,
+      "printable": true
+    },
+    {
+      "id": "D3_frame_top",
+      "type": "box",
+      "center": [
+        3.514,
+        1.65,
+        1.4840000000000002
+      ],
+      "size": [
+        0.018,
+        0.9450000000000001,
+        0.045
+      ],
+      "color": "frame",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "D3",
+      "door_recess_visual": true,
+      "printable": true
+    },
+    {
+      "id": "B4",
+      "type": "box",
+      "center": [
+        10.0,
+        1.65,
+        0.9
+      ],
+      "size": [
+        3.0,
+        2.3,
+        1.8
+      ],
+      "color": "building",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "source_id": "B4",
+      "printable": false
+    },
+    {
+      "id": "D4_panel",
+      "type": "box",
+      "center": [
+        8.494,
+        1.65,
+        0.7020000000000001
+      ],
+      "size": [
+        0.012,
+        0.738,
+        1.4040000000000001
+      ],
+      "color": "door",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "D4",
+      "door_recess_visual": true,
+      "printable": true
+    },
+    {
+      "id": "D4_frame_left",
+      "type": "box",
+      "center": [
+        8.486,
+        1.2,
+        0.7420000000000001
+      ],
+      "size": [
+        0.018,
+        0.045,
+        1.4840000000000002
+      ],
+      "color": "frame",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "D4",
+      "door_recess_visual": true,
+      "printable": true
+    },
+    {
+      "id": "D4_frame_right",
+      "type": "box",
+      "center": [
+        8.486,
+        2.1,
+        0.7420000000000001
+      ],
+      "size": [
+        0.018,
+        0.045,
+        1.4840000000000002
+      ],
+      "color": "frame",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "D4",
+      "door_recess_visual": true,
+      "printable": true
+    },
+    {
+      "id": "D4_frame_top",
+      "type": "box",
+      "center": [
+        8.486,
+        1.65,
+        1.4840000000000002
+      ],
+      "size": [
+        0.018,
+        0.9450000000000001,
+        0.045
+      ],
+      "color": "frame",
+      "collision": false,
+      "render": true,
+      "lidar_visible": false,
+      "source_id": "D4",
+      "door_recess_visual": true,
+      "printable": true
+    },
+    {
+      "id": "wall_nw_outer",
+      "type": "box",
+      "center": [
+        3.56,
+        5.18,
+        0.6
+      ],
+      "color": "wall",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "thin_wall",
+      "source_id": "wall_nw_outer",
+      "printable": true,
+      "size": [
+        0.08,
+        0.52,
+        1.2
+      ]
+    },
+    {
+      "id": "wall_nw_inner",
+      "type": "box",
+      "center": [
+        3.78,
+        5.48,
+        0.6
+      ],
+      "color": "wall",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "thin_wall",
+      "source_id": "wall_nw_inner",
+      "printable": true,
+      "size": [
+        0.42,
+        0.08,
+        1.2
+      ]
+    },
+    {
+      "id": "wall_ne_outer",
+      "type": "box",
+      "center": [
+        8.44,
+        5.18,
+        0.6
+      ],
+      "color": "wall",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "thin_wall",
+      "source_id": "wall_ne_outer",
+      "printable": true,
+      "size": [
+        0.08,
+        0.52,
+        1.2
+      ]
+    },
+    {
+      "id": "wall_ne_inner",
+      "type": "box",
+      "center": [
+        8.22,
+        5.48,
+        0.6
+      ],
+      "color": "wall",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "thin_wall",
+      "source_id": "wall_ne_inner",
+      "printable": true,
+      "size": [
+        0.42,
+        0.08,
+        1.2
+      ]
+    },
+    {
+      "id": "wall_sw_outer",
+      "type": "box",
+      "center": [
+        3.56,
+        2.82,
+        0.6
+      ],
+      "color": "wall",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "thin_wall",
+      "source_id": "wall_sw_outer",
+      "printable": true,
+      "size": [
+        0.08,
+        0.52,
+        1.2
+      ]
+    },
+    {
+      "id": "wall_sw_inner",
+      "type": "box",
+      "center": [
+        3.78,
+        2.52,
+        0.6
+      ],
+      "color": "wall",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "thin_wall",
+      "source_id": "wall_sw_inner",
+      "printable": true,
+      "size": [
+        0.42,
+        0.08,
+        1.2
+      ]
+    },
+    {
+      "id": "wall_se_outer",
+      "type": "box",
+      "center": [
+        8.44,
+        2.82,
+        0.6
+      ],
+      "color": "wall",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "thin_wall",
+      "source_id": "wall_se_outer",
+      "printable": true,
+      "size": [
+        0.08,
+        0.52,
+        1.2
+      ]
+    },
+    {
+      "id": "wall_se_inner",
+      "type": "box",
+      "center": [
+        8.22,
+        2.52,
+        0.6
+      ],
+      "color": "wall",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "thin_wall",
+      "source_id": "wall_se_inner",
+      "printable": true,
+      "size": [
+        0.42,
+        0.08,
+        1.2
+      ]
+    },
+    {
+      "id": "traffic_light_pole",
+      "type": "box",
+      "center": [
+        5.3,
+        5.16,
+        0.82
+      ],
+      "color": "traffic",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "traffic_light",
+      "source_id": "traffic_light_pole",
+      "printable": true,
+      "size": [
+        0.08,
+        0.08,
+        1.64
+      ]
+    },
+    {
+      "id": "traffic_light_head",
+      "type": "box",
+      "center": [
+        5.3,
+        5.16,
+        1.58
+      ],
+      "color": "traffic",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "traffic_light",
+      "source_id": "traffic_light_head",
+      "printable": true,
+      "size": [
+        0.18,
+        0.12,
+        0.28
+      ]
+    },
+    {
+      "id": "barrier_post",
+      "type": "box",
+      "center": [
+        9.35,
+        5.08,
+        0.55
+      ],
+      "color": "barrier",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "barrier_gate",
+      "source_id": "barrier_post",
+      "printable": true,
+      "size": [
+        0.12,
+        0.12,
+        1.1
+      ]
+    },
+    {
+      "id": "barrier_arm",
+      "type": "box",
+      "center": [
+        9.8,
+        5.08,
+        1.02
+      ],
+      "color": "barrier",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "barrier_gate",
+      "source_id": "barrier_arm",
+      "printable": true,
+      "size": [
+        0.9,
+        0.08,
+        0.08
+      ]
+    },
+    {
+      "id": "bollard_north",
+      "type": "cylinder",
+      "center": [
+        8.12,
+        6.95,
+        0.45
+      ],
+      "color": "obstacle",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "bollard",
+      "source_id": "bollard_north",
+      "printable": true,
+      "radius": 0.1,
+      "height": 0.9,
+      "approximation": null
+    },
+    {
+      "id": "bollard_south",
+      "type": "cylinder",
+      "center": [
+        3.88,
+        1.05,
+        0.45
+      ],
+      "color": "obstacle",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "bollard",
+      "source_id": "bollard_south",
+      "printable": true,
+      "radius": 0.1,
+      "height": 0.9,
+      "approximation": null
+    },
+    {
+      "id": "water_source",
+      "type": "box",
+      "center": [
+        6.0,
+        7.15,
+        0.4
+      ],
+      "color": "water",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "water_source",
+      "source_id": "water_source",
+      "printable": false,
+      "size": [
+        0.4,
+        0.4,
+        0.8
+      ]
+    },
+    {
+      "id": "obstacle_bin_1",
+      "type": "box",
+      "center": [
+        1.25,
+        3.0,
+        0.35
+      ],
+      "color": "obstacle",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "trash_can",
+      "source_id": "obstacle_bin_1",
+      "printable": false,
+      "size": [
+        0.35,
+        0.35,
+        0.7
+      ]
+    },
+    {
+      "id": "obstacle_bin_2",
+      "type": "box",
+      "center": [
+        10.75,
+        5.0,
+        0.35
+      ],
+      "color": "obstacle",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "trash_can",
+      "source_id": "obstacle_bin_2",
+      "printable": false,
+      "size": [
+        0.35,
+        0.35,
+        0.7
+      ]
+    },
+    {
+      "id": "obstacle_cone_1",
+      "type": "cylinder",
+      "center": [
+        4.25,
+        3.0,
+        0.25
+      ],
+      "color": "obstacle",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "cone",
+      "source_id": "obstacle_cone_1",
+      "printable": false,
+      "radius": 0.15,
+      "height": 0.5,
+      "approximation": "cone_as_conservative_cylinder"
+    },
+    {
+      "id": "obstacle_cone_2",
+      "type": "cylinder",
+      "center": [
+        7.75,
+        5.0,
+        0.25
+      ],
+      "color": "obstacle",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "cone",
+      "source_id": "obstacle_cone_2",
+      "printable": false,
+      "radius": 0.15,
+      "height": 0.5,
+      "approximation": "cone_as_conservative_cylinder"
+    },
+    {
+      "id": "low_obstacle_1",
+      "type": "box",
+      "center": [
+        3.0,
+        4.95,
+        0.075
+      ],
+      "color": "low",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "low_obstacle",
+      "source_id": "low_obstacle_1",
+      "printable": false,
+      "size": [
+        0.45,
+        0.3,
+        0.15
+      ]
+    },
+    {
+      "id": "low_obstacle_2",
+      "type": "box",
+      "center": [
+        9.0,
+        3.05,
+        0.1
+      ],
+      "color": "low",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "low_obstacle",
+      "source_id": "low_obstacle_2",
+      "printable": false,
+      "size": [
+        0.45,
+        0.3,
+        0.2
+      ]
+    },
+    {
+      "id": "column_1",
+      "type": "cylinder",
+      "center": [
+        4.3,
+        6.95,
+        0.5
+      ],
+      "color": "obstacle",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "column",
+      "source_id": "column_1",
+      "printable": false,
+      "radius": 0.1,
+      "height": 1.0,
+      "approximation": null
+    },
+    {
+      "id": "column_2",
+      "type": "cylinder",
+      "center": [
+        7.7,
+        1.05,
+        0.5
+      ],
+      "color": "obstacle",
+      "collision": true,
+      "render": true,
+      "lidar_visible": true,
+      "semantic": "column",
+      "source_id": "column_2",
+      "printable": false,
+      "radius": 0.1,
+      "height": 1.0,
+      "approximation": null
+    }
+  ],
+  "notes": [
+    "roads are flat visual-only overlays",
+    "door panels/frames are facade visuals, not openings",
+    "cone objects use conservative cylinders"
+  ]
+}

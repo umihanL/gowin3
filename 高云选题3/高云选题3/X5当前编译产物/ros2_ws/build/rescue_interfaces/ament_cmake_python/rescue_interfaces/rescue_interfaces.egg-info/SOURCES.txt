@@ -1,0 +1,14 @@
+setup.py
+rescue_interfaces/__init__.py
+rescue_interfaces.egg-info/PKG-INFO
+rescue_interfaces.egg-info/SOURCES.txt
+rescue_interfaces.egg-info/dependency_links.txt
+rescue_interfaces.egg-info/top_level.txt
+rescue_interfaces/msg/__init__.py
+rescue_interfaces/msg/_detection.py
+rescue_interfaces/msg/_detection_array.py
+rescue_interfaces/msg/_fpga_event.py
+rescue_interfaces/msg/_gimbal_command.py
+rescue_interfaces/msg/_maneuver_command.py
+rescue_interfaces/msg/_motion_permission.py
+rescue_interfaces/msg/_stereo_pair.py

@@ -1,0 +1,16 @@
+[
+  {
+    "side": -1,
+    "passed": true,
+    "early_guard_mm": 2,
+    "log": "sim/host_physical_entry_-1.log",
+    "sha256": "9c1a4840af3d2f32cc581194386e83baff82c5e70c918b77246084cffcf4fa52"
+  },
+  {
+    "side": 1,
+    "passed": true,
+    "early_guard_mm": 2,
+    "log": "sim/host_physical_entry_1.log",
+    "sha256": "a995852e3d50e35a7a69f81c338fe6dfe7a827614e0bef3caf9bc32528dedfee"
+  }
+]

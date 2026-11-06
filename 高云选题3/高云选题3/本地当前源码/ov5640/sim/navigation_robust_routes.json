@@ -1,0 +1,115 @@
+{
+  "photo": {
+    "file": "sim/navigation_robust_photo_route.csv",
+    "count": 187,
+    "cost_cm": 634,
+    "selected_points": [
+      [
+        327,
+        144
+      ],
+      [
+        193,
+        26
+      ],
+      [
+        181,
+        138
+      ],
+      [
+        247,
+        82
+      ]
+    ]
+  },
+  "s_forward": {
+    "file": "sim/navigation_robust_s_forward_route.csv",
+    "count": 72,
+    "cost_cm": 232,
+    "selected_points": [
+      [
+        104,
+        215
+      ],
+      [
+        248,
+        80
+      ]
+    ]
+  },
+  "s_reverse": {
+    "file": "sim/navigation_robust_s_reverse_route.csv",
+    "count": 71,
+    "cost_cm": 231,
+    "selected_points": [
+      [
+        248,
+        80
+      ],
+      [
+        104,
+        215
+      ]
+    ]
+  },
+  "outer": {
+    "file": "sim/navigation_robust_outer_route.csv",
+    "count": 56,
+    "cost_cm": 193,
+    "selected_points": [
+      [
+        327,
+        100
+      ],
+      [
+        180,
+        27
+      ]
+    ]
+  },
+  "junction": {
+    "file": "sim/navigation_robust_junction_route.csv",
+    "count": 57,
+    "cost_cm": 189,
+    "selected_points": [
+      [
+        190,
+        27
+      ],
+      [
+        105,
+        150
+      ]
+    ]
+  },
+  "s_forward_exit": {
+    "file": "sim/navigation_robust_s_forward_exit_route.csv",
+    "count": 87,
+    "cost_cm": 283,
+    "selected_points": [
+      [
+        104,
+        215
+      ],
+      [
+        248,
+        27
+      ]
+    ]
+  },
+  "s_reverse_exit": {
+    "file": "sim/navigation_robust_s_reverse_exit_route.csv",
+    "count": 87,
+    "cost_cm": 280,
+    "selected_points": [
+      [
+        248,
+        80
+      ],
+      [
+        104,
+        260
+      ]
+    ]
+  }
+}

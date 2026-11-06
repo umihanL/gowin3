@@ -1,0 +1,7 @@
+{
+  "source": "impl/baseline_navigation_robust_20261025/src/vehicle/vehicle_vision_fusion.v",
+  "source_sha256": "f6cc966b78f4f75f86a075cfdf0931c2dd05768a2b6d91b7666848a6e6c540ec",
+  "exit_code": 1,
+  "log": "sim/navigation_robust_old_failure.log",
+  "expected_failure": "MAP_HANDOFF_FAILED"
+}

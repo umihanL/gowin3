@@ -1,0 +1,177 @@
+{
+  "inputs": {
+    "sim/inertial_zebra_route_tb.sv": "2734d13f0eadf7756510d24771991982465f2e7e27cd227361a3f5c785672865",
+    "src/vehicle/vehicle_motion.v": "0b165d51d3c08fccde93596a5458ce3a9bdb11973eb40336e2a1935d2f24227b",
+    "src/vehicle/vehicle_tracker.v": "e835346e4d65a518088a6d71c929f8ead513815b7a03b5eac2952060757b2519",
+    "src/vehicle/vehicle_odometry.v": "30153e70b240b97d39861f468fffcfdfad0e13c145396d02fbc64a0a77c2b43f",
+    "src/vehicle/vehicle_sincos.v": "d24c9d668718ae73def36c9e56916ae3110feb82d8682977ed27127ec56e138d",
+    "src/vehicle/vehicle_route_profile.v": "5b9c9ba9afa19b8f91998662491a5e8b4863df2ee0e16079860522d448876791",
+    "src/vehicle/vehicle_bypass.v": "c6152618718b7268cd3ac4b18a1b1350054958e5a98d0d7d49a58dc23363a19c",
+    "src/imu/imu_math.v": "2663da396408c1ed487f5893bfbb883b6995f2f62ff77f0f458f96e1ef5d1835",
+    "src/navigation/nav_centerline_bitmap.vh": "144b2cc6e5caa7e4dbd230d3ff23ed8ec4695dcf2fb37b32d8276c47b051624a",
+    "src/navigation/nav_centerline_config.vh": "1f0c6f5702ac30f04d368cedd1ad6acac601017664bfedcaa8ae5b401a7431d9",
+    "src/navigation/nav_centerline_init.vh": "bbdbe256d89f677747f625282908c4021b255208e2236852ed1eff1325c92501",
+    "src/navigation/nav_centerline_junctions.vh": "3f53e8b78b22da10be750c320cf1914895d04d6e69613f2062a7e8722286f030",
+    "src/navigation/nav_centerline_reverse.vh": "40c02c8a11fb3e3bd9080facbfff06cd4cda0b1f7bf4af998da01e5f55677e1a",
+    "src/navigation/nav_destinations.vh": "0e02cfdf074e5b1b4d08725558d88f5efc2d3756bb6791654c3cb2d22f06bcaf",
+    "src/navigation/nav_font.vh": "753c6a2f340405e2bb2e22393e1eaf2ba4cbc0cc834450351973e5c0830febf0",
+    "src/navigation/nav_map_init.vh": "3106bc18b4e9d920af5b1c2a13c23f7df42ea3260d839600a1f63424c2e99ca2",
+    "src/navigation/nav_metadata.vh": "660427c816cb899f6414ed3d316bf9a916255192381f05e0ee30ff868070d13f",
+    "src/vehicle/vehicle_config.vh": "c06c9ead985ac7ec84cbaf2b3ad261a161a8729638f39014d9a3deb63837f53a"
+  },
+  "cases": [
+    {
+      "point": 1,
+      "passed": true,
+      "seconds": 8.844,
+      "metrics": {
+        "status": 3.0,
+        "index": 47.0,
+        "count": 48.0,
+        "max_cross_mm": 5.841407,
+        "max_pose_mm": 3.031666
+      },
+      "route": "sim/host_point_1_motion_input.csv",
+      "route_sha256": "fe4956552a8fb164aa0aa7279e4e32d1283031dc4a7b0b04de344e0a799d3d2a",
+      "trace": "sim/host_point_1_motion_trace.csv",
+      "log": "sim/host_point_1_motion.log",
+      "log_sha256": "7dc32856636b472546cc3a4f6e4ae0de8eeeeae14c868e838196753d133b6ec7"
+    },
+    {
+      "point": 2,
+      "passed": true,
+      "seconds": 16.844,
+      "metrics": {
+        "status": 3.0,
+        "index": 77.0,
+        "count": 78.0,
+        "max_cross_mm": 16.118798,
+        "max_pose_mm": 4.700659
+      },
+      "route": "sim/host_point_2_motion_input.csv",
+      "route_sha256": "2bd91216d8a3ff7b5b023f2dd33b0f9a9b1bf5ea565fe481d732e4d256311a2a",
+      "trace": "sim/host_point_2_motion_trace.csv",
+      "log": "sim/host_point_2_motion.log",
+      "log_sha256": "3589677a381f03609275560f512ccfb344e8e603bbf58b688b39b9006db0c603"
+    },
+    {
+      "point": 3,
+      "passed": true,
+      "seconds": 22.984,
+      "metrics": {
+        "status": 3.0,
+        "index": 109.0,
+        "count": 110.0,
+        "max_cross_mm": 16.118798,
+        "max_pose_mm": 4.498931
+      },
+      "route": "sim/host_point_3_motion_input.csv",
+      "route_sha256": "954fbf834b08bce33a9a1f3a390ab543341a73265845bff4923282e6a4cdc6fe",
+      "trace": "sim/host_point_3_motion_trace.csv",
+      "log": "sim/host_point_3_motion.log",
+      "log_sha256": "2dbbfdd700bcb93e2779514f06ba8fb22b6d21b9df9f3ca2efca3a66876dfda3"
+    },
+    {
+      "point": 4,
+      "passed": true,
+      "seconds": 17.235,
+      "metrics": {
+        "status": 3.0,
+        "index": 83.0,
+        "count": 84.0,
+        "max_cross_mm": 15.174529,
+        "max_pose_mm": 5.161254
+      },
+      "route": "sim/host_point_4_motion_input.csv",
+      "route_sha256": "05b0481a7ea298e720fb85fe83923dd456f471b613d9d08a906169d4f8c7693b",
+      "trace": "sim/host_point_4_motion_trace.csv",
+      "log": "sim/host_point_4_motion.log",
+      "log_sha256": "f1d1ecbeebea00ffd64ddfedc3a4fb0b855d71ad4a18c01893b4bfb7d104e532"
+    },
+    {
+      "point": 5,
+      "passed": true,
+      "seconds": 17.203,
+      "metrics": {
+        "status": 3.0,
+        "index": 82.0,
+        "count": 83.0,
+        "max_cross_mm": 18.10535,
+        "max_pose_mm": 5.974083
+      },
+      "route": "sim/host_point_5_motion_input.csv",
+      "route_sha256": "2e0f28906ac196300362b0fbf2a0e9558ab048039841e5a931d45dd971c2f31d",
+      "trace": "sim/host_point_5_motion_trace.csv",
+      "log": "sim/host_point_5_motion.log",
+      "log_sha256": "d82cbd94d07e46c229fb875b074623234d004ad5edf78a25d416dde4103de3ed"
+    },
+    {
+      "point": 6,
+      "passed": true,
+      "seconds": 10.031,
+      "metrics": {
+        "status": 3.0,
+        "index": 50.0,
+        "count": 51.0,
+        "max_cross_mm": 5.250296,
+        "max_pose_mm": 3.287985
+      },
+      "route": "sim/host_point_6_motion_input.csv",
+      "route_sha256": "f281e67cbd51c5c5cf2e63042d4d29e8f3d119d76dcca96a527817d48b26a963",
+      "trace": "sim/host_point_6_motion_trace.csv",
+      "log": "sim/host_point_6_motion.log",
+      "log_sha256": "c7f2ad0734256fbb28ecb991c5b494c937c477cd6d1e91f7404edbc734deee94"
+    },
+    {
+      "point": 7,
+      "passed": true,
+      "seconds": 4.11,
+      "metrics": {
+        "status": 3.0,
+        "index": 21.0,
+        "count": 22.0,
+        "max_cross_mm": 4.243077,
+        "max_pose_mm": 2.793472
+      },
+      "route": "sim/host_point_7_motion_input.csv",
+      "route_sha256": "fdcb0d7f61f4447ab4958690f7c0e2d2a24edd0f33fe447a46affefefb0c12e5",
+      "trace": "sim/host_point_7_motion_trace.csv",
+      "log": "sim/host_point_7_motion.log",
+      "log_sha256": "c7953c3760946267c0b2010c0cfb9cafb827934e4b1d55c5037cd81ebcd09db0"
+    },
+    {
+      "point": 8,
+      "passed": true,
+      "seconds": 2.781,
+      "metrics": {
+        "status": 3.0,
+        "index": 12.0,
+        "count": 13.0,
+        "max_cross_mm": 0.0,
+        "max_pose_mm": 1.447656
+      },
+      "route": "sim/host_point_8_motion_input.csv",
+      "route_sha256": "733899e00cb6374dda9fc0b2c16842df400de917b3a9f01a1a6ad64547292aef",
+      "trace": "sim/host_point_8_motion_trace.csv",
+      "log": "sim/host_point_8_motion.log",
+      "log_sha256": "e3276aec39b81692bab5040440c3652c4ec70be360b3dac2e2e328dd802090fc"
+    },
+    {
+      "point": 9,
+      "passed": true,
+      "seconds": 9.812,
+      "metrics": {
+        "status": 3.0,
+        "index": 72.0,
+        "count": 73.0,
+        "max_cross_mm": 17.021152,
+        "max_pose_mm": 2.26662
+      },
+      "route": "sim/host_point_9_motion_input.csv",
+      "route_sha256": "0805d2d44d373de464184c397e10664db0bd28708149debcc8e9606d2f5778c4",
+      "trace": "sim/host_point_9_motion_trace.csv",
+      "log": "sim/host_point_9_motion.log",
+      "log_sha256": "bf7fb7f8a3d2c50239dc1adb29cd9501081c9454000c48fed8d7426959f3e6a3"
+    }
+  ]
+}

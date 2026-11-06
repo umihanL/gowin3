@@ -1,0 +1,99 @@
+{
+  "status": "expanded_and_gpu_finetune_running",
+  "run": "wallpaper_yolo11n_people_v2_20261008",
+  "baseline_completed_epochs": 41,
+  "initialization_model": "runs/wallpaper_yolo11n_gpu_20261008/stopped_for_data_expansion/best.pt",
+  "initialization_sha256": "0b8f1eb89899a097592b2162f421a099ee8c91f737bb82f5d609820125503e14",
+  "new_optimizer": true,
+  "resume_old_optimizer": false,
+  "dataset": "dataset_people_v2/data.yaml",
+  "baseline_dataset": "dataset/data.yaml",
+  "added_stereo_pairs": 360,
+  "added_images": 1440,
+  "images": {
+    "train": 3792,
+    "val": 252,
+    "test": 252
+  },
+  "class_instances": {
+    "train": {
+      "fire": 7694,
+      "firefighter": 3794,
+      "person": 24766
+    },
+    "val": {
+      "fire": 336,
+      "firefighter": 158,
+      "person": 1550
+    },
+    "test": {
+      "fire": 492,
+      "firefighter": 200,
+      "person": 1796
+    }
+  },
+  "totals": {
+    "boxes": 40786,
+    "images": 4296
+  },
+  "frozen_evaluation": {
+    "val": {
+      "images": 252,
+      "image_list_sha256": "6e89c58030f04167a551550bd02b8b50127a5816280b79a798a4d777a4797497",
+      "images_labels_annotations_byte_identical": true
+    },
+    "test": {
+      "images": 252,
+      "image_list_sha256": "711d08c29f96cd888fb4b17c84a08f7d535090fc9e6942f5b1f63bf460554a70",
+      "images_labels_annotations_byte_identical": true
+    }
+  },
+  "first_epoch": {
+    "epoch": "1",
+    "time": "179.98",
+    "train/box_loss": "0.2856",
+    "train/cls_loss": "0.22736",
+    "train/dfl_loss": "0.77652",
+    "metrics/precision(B)": "0.86044",
+    "metrics/recall(B)": "0.47329",
+    "metrics/mAP50(B)": "0.6106",
+    "metrics/mAP50-95(B)": "0.44604",
+    "val/box_loss": "0.97893",
+    "val/cls_loss": "1.06854",
+    "val/dfl_loss": "0.77795",
+    "lr/pg0": "9.9789e-05",
+    "lr/pg1": "9.9789e-05",
+    "lr/pg2": "9.9789e-05"
+  },
+  "completed_epochs_at_report": 1,
+  "actual_train_args": {
+    "file": "runs/wallpaper_yolo11n_people_v2_20261008/args.yaml",
+    "sha256": "139c2e613b3517cba7d96c73f4bb5bc39171a15b16d8146c523cee915e2a45f0"
+  },
+  "audits": {
+    "source": {
+      "file": "source_data/v7_people_focus/render_audit.json",
+      "sha256": "efffec4c6abe8e1ee749d0af03dc843946c116b788711dec4d55802a1959bcfa"
+    },
+    "merged": {
+      "file": "dataset_people_v2/independent_validation.json",
+      "sha256": "56f03db0215037b8290c75231662e7e9890c1fb3cd416f7d42033a445ef7afb0"
+    },
+    "ui": {
+      "file": "dataset_people_v2/review_ui_validation.json",
+      "sha256": "c5187cf9b37454a8ab34833e5bbdceb21edb1019b3e4cc7f9f6dff76811cdfa5"
+    },
+    "loader": {
+      "file": "people_v2_loader_validation.json",
+      "sha256": "c534f20866c5f59a03b8012a3171b0f3b0d05a83f8709cdb1450e0476012644e"
+    }
+  },
+  "source_code": {
+    "train.py": "09a0d58e879971ac99327bedc3e4e3a3ff9312cb3008e73708a064d2a489d7f7",
+    "tiny_target_training.py": "9bd1736a8a7f3c62e621930af38ded8a9e3e1017892b757ef1b7d45fec9ca40a",
+    "config/yolo11n_people_finetune.yaml": "b89364142065c22baf6cb56e1986d625fb22b8ecda6f6719ce31d752cc5cbf0b",
+    "tools/run_training_job.py": "de0ff339fe5206e60325eac93a45e05c7381f439fd5c4c8ce094d00e0eda35dc"
+  },
+  "final_accuracy_available": false,
+  "note": "Live run continues. Rendering/label checks and first-epoch success do not prove improved held-out accuracy; compare the unchanged val split after training."
+}
